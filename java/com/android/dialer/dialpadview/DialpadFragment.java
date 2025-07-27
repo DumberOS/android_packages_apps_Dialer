@@ -902,7 +902,7 @@ public class DialpadFragment extends Fragment
   @Override
   public boolean onKey(View view, int keyCode, KeyEvent event) {
     if (view.getId() == R.id.digits) {
-      if (keyCode == KeyEvent.KEYCODE_ENTER) {
+      if (keyCode == KeyEvent.KEYCODE_ENTER || keyCode == KeyEvent.KEYCODE_CALL) {
         handleDialButtonPressed();
         return true;
       }
