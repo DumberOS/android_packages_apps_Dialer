@@ -1167,6 +1167,14 @@ public class DialpadFragment extends Fragment
     selectedAccount = null;
   }
 
+  public boolean removeLastDigit() {
+    if (!isDigitsEmpty()) {
+      keyPressed(KeyEvent.KEYCODE_DEL);
+      return true;
+    }
+    return false;
+  }
+
   private void handleDialButtonClickWithEmptyDigits() {
     if (phoneIsCdma() && isPhoneInUse()) {
       // TODO: Move this logic into services/Telephony

@@ -298,7 +298,8 @@ public class MainSearchController implements SearchBarListener {
   public boolean onBackPressed() {
     if (isDialpadVisible() && !TextUtils.isEmpty(dialpadFragment.getQuery())) {
       LogUtil.i("MainSearchController.onBackPressed", "Dialpad visible with query");
-      hideDialpad(/* animate=*/ true);
+      if (!dialpadFragment.removeLastDigit())
+        hideDialpad(/* animate=*/ true);
       return true;
     } else if (isSearchVisible()) {
       LogUtil.i("MainSearchController.onBackPressed", "Search is visible");
