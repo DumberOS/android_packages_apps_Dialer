@@ -22,6 +22,7 @@ import android.Manifest.permission;
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Insets;
 import android.os.Bundle;
@@ -89,6 +90,7 @@ public class InCallFragment extends Fragment
 
   private final List<ButtonController> buttonControllers = new ArrayList<>();
   private View endCallButton;
+  private View minimizeButton;
   private InCallPaginator paginator;
   private LockableViewPager pager;
   private InCallPagerAdapter adapter;
@@ -198,6 +200,10 @@ public class InCallFragment extends Fragment
 
     endCallButton = view.findViewById(R.id.incall_end_call);
     endCallButton.setOnClickListener(this);
+    minimizeButton = view.findViewById(R.id.incall_minimize);
+    if (minimizeButton != null) {
+      minimizeButton.setOnClickListener(this);
+    }
 
     if (ContextCompat.checkSelfPermission(getContext(), permission.READ_PHONE_STATE)
         != PackageManager.PERMISSION_GRANTED) {
@@ -283,6 +289,12 @@ public class InCallFragment extends Fragment
     if (view == endCallButton) {
       LogUtil.i("InCallFragment.onClick", "end call button clicked");
       inCallScreenDelegate.onEndCallClicked();
+    } else if (view == minimizeButton) {
+      LogUtil.i("InCallFragment.onClick", "minimize button clicked");
+      Intent homeIntent = new Intent(Intent.ACTION_MAIN);
+      homeIntent.addCategory(Intent.CATEGORY_HOME);
+      homeIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+      startActivity(homeIntent);
     } else {
       LogUtil.e("InCallFragment.onClick", "unknown view: " + view);
       Assert.createAssertionFailException("");
@@ -360,6 +372,9 @@ public class InCallFragment extends Fragment
   public void setEndCallButtonEnabled(boolean enabled, boolean animate) {
     if (endCallButton != null) {
       endCallButton.setEnabled(enabled);
+    }
+    if (minimizeButton != null) {
+      minimizeButton.setEnabled(enabled);
     }
   }
 

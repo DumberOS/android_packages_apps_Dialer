@@ -118,6 +118,26 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:contentDescription="@string/incall_content_description_end_call"/>
+
+    <TextView
+        android:id="@+id/incall_minimize"
+        style="@style/Dialer.Incall.TextAppearance.Label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/incall_end_call"
+        android:layout_alignBottom="@id/incall_end_call"
+        android:layout_marginStart="16dp"
+        android:minWidth="96dp"
+        android:paddingStart="14dp"
+        android:paddingTop="10dp"
+        android:paddingEnd="14dp"
+        android:paddingBottom="10dp"
+        android:background="@drawable/incall_minimize_button_background"
+        android:gravity="center"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:text="@string/incall_label_minimize"
+        android:contentDescription="@string/incall_content_description_minimize_call"/>
   </RelativeLayout>
 
   <FrameLayout
