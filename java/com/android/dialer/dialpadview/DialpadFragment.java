@@ -445,9 +445,11 @@ public class DialpadFragment extends Fragment
     dialpadChooser.setOnItemClickListener(this);
 
     floatingActionButton = fragmentView.findViewById(R.id.dialpad_floating_action_button);
-    floatingActionButton.setOnClickListener(this);
-    floatingActionButtonController =
-        new FloatingActionButtonController(getActivity(), floatingActionButton);
+    if (floatingActionButton != null) {
+      floatingActionButton.setOnClickListener(this);
+      floatingActionButtonController =
+          new FloatingActionButtonController(getActivity(), floatingActionButton);
+    }
     Trace.endSection();
     Trace.endSection();
     return fragmentView;
@@ -524,6 +526,18 @@ public class DialpadFragment extends Fragment
 
   private boolean isLayoutReady() {
     return digits != null;
+  }
+
+  private void showFloatingActionButton() {
+    if (floatingActionButtonController != null) {
+      floatingActionButtonController.scaleIn();
+    }
+  }
+
+  private void hideFloatingActionButton() {
+    if (floatingActionButtonController != null) {
+      floatingActionButtonController.scaleOut();
+    }
   }
 
   public EditText getDigitsWidget() {
@@ -714,9 +728,12 @@ public class DialpadFragment extends Fragment
     if (MotorolaUtils.isWifiCallingAvailable(getContext())) {
       iconId = R.drawable.ic_wifi_calling;
     }
-    floatingActionButtonController.changeIcon(
-        getContext(), iconId, res.getString(R.string.description_dial_button));
-    floatingActionButtonController.changeIconColor(getContext(), R.color.dialer_call_icon_color);
+    if (floatingActionButtonController != null) {
+      floatingActionButtonController.changeIcon(
+          getContext(), iconId, res.getString(R.string.description_dial_button));
+      floatingActionButtonController.changeIconColor(
+          getContext(), R.color.dialer_call_icon_color);
+    }
 
     // if the mToneGenerator creation fails, just continue without it.  It is
     // a local audio signal, and is not as important as the dtmf tone itself.
@@ -812,7 +829,7 @@ public class DialpadFragment extends Fragment
     LogUtil.enterBlock("DialpadFragment.onStop");
     super.onStop();
 
-    floatingActionButtonController.scaleOut();
+    hideFloatingActionButton();
     synchronized (toneGeneratorLock) {
       if (toneGenerator != null) {
         toneGenerator.release();
@@ -1304,7 +1321,7 @@ public class DialpadFragment extends Fragment
         overflowPopupMenu.dismiss();
       }
 
-      floatingActionButtonController.scaleOut();
+      hideFloatingActionButton();
       dialpadChooser.setVisibility(View.VISIBLE);
 
       // Instantiate the DialpadChooserAdapter and hook it up to the
@@ -1319,7 +1336,7 @@ public class DialpadFragment extends Fragment
         LogUtil.i("DialpadFragment.showDialpadChooser", "mDialpadView not null");
         dialpadView.setVisibility(View.VISIBLE);
         if (isDialpadSlideUp()) {
-          floatingActionButtonController.scaleIn();
+          showFloatingActionButton();
         }
       } else {
         LogUtil.i("DialpadFragment.showDialpadChooser", "mDialpadView null");
@@ -1620,7 +1637,7 @@ public class DialpadFragment extends Fragment
     slideDown.setAnimationListener(listener);
     slideDown.setDuration(animate ? dialpadSlideInDuration : 0);
     getView().startAnimation(slideDown);
-    floatingActionButtonController.scaleOut();
+    hideFloatingActionButton();
   }
 
   /** Animate the dialpad up onto the screen. */
@@ -1643,7 +1660,7 @@ public class DialpadFragment extends Fragment
 
           @Override
           public void onAnimationEnd(Animation animation) {
-            floatingActionButtonController.scaleIn();
+            showFloatingActionButton();
           }
 
           @Override
