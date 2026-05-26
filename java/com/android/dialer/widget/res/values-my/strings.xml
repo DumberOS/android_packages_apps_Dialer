@@ -7,4 +7,5 @@
   <string name="permission_single_turn_on">ဖွင့်ရန်</string>
   <string name="permission_no_contacts">အဆက်အသွယ်များကိုကြည့်ရန်၊ အဆက်အသွယ်ခွင့်ပြုချက်ကို ဖွင့်ပါ။</string>
   <string name="add_contact_not_available">အဆက်အသွယ်များ app မရှိပါ</string>
+  <string name="import_from_google">Google မှ တင်သွင်းရန်</string>
 </resources>

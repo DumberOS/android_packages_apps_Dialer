@@ -7,4 +7,5 @@
   <string name="permission_single_turn_on">เปิด</string>
   <string name="permission_no_contacts">หากต้องการดูรายชื่อติดต่อ ให้เปิดสิทธิ์เข้าถึงรายชื่อติดต่อ</string>
   <string name="add_contact_not_available">ไม่มีแอปรายชื่อติดต่อที่พร้อมใช้งาน</string>
+  <string name="import_from_google">นำเข้าจาก Google</string>
 </resources>

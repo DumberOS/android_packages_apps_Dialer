@@ -7,4 +7,5 @@
   <string name="permission_single_turn_on">Aktivizo</string>
   <string name="permission_no_contacts">Për të parë kontaktet, aktivizo lejen e Kontakteve.</string>
   <string name="add_contact_not_available">Nuk ka asnjë aplikacion për kontaktet</string>
+  <string name="import_from_google">Importo nga Google</string>
 </resources>

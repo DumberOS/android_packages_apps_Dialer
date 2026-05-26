@@ -7,4 +7,5 @@
   <string name="permission_single_turn_on">Įjungti</string>
   <string name="permission_no_contacts">Jei norite peržiūrėti kontaktus, įjunkite Kontaktų leidimą.</string>
   <string name="add_contact_not_available">Nepasiekiama jokia kontaktų programa</string>
+  <string name="import_from_google">Importuoti iš Google</string>
 </resources>

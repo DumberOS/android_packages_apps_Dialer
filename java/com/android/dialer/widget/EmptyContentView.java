@@ -44,9 +44,12 @@ public class EmptyContentView extends LinearLayout implements View.OnClickListen
 
   private final ImageView imageView;
   private final TextView descriptionView;
+  private final Button secondaryActionView;
   private final Button actionView;
   private OnEmptyViewActionButtonClickedListener onActionButtonClickedListener;
+  private OnEmptyViewActionButtonClickedListener onSecondaryActionButtonClickedListener;
 
+  private @StringRes int secondaryActionLabel;
   private @StringRes int actionLabel;
 
   public EmptyContentView(Context context) {
@@ -69,6 +72,8 @@ public class EmptyContentView extends LinearLayout implements View.OnClickListen
     setClickable(true);
     imageView = (ImageView) findViewById(R.id.empty_list_view_image);
     descriptionView = (TextView) findViewById(R.id.empty_list_view_message);
+    secondaryActionView = findViewById(R.id.empty_list_view_secondary_action);
+    secondaryActionView.setOnClickListener(this);
     actionView = findViewById(R.id.empty_list_view_action);
     actionView.setOnClickListener(this);
 
@@ -111,9 +116,25 @@ public class EmptyContentView extends LinearLayout implements View.OnClickListen
     return actionLabel;
   }
 
+  public void setSecondaryActionLabel(@StringRes int resourceId) {
+    secondaryActionLabel = resourceId;
+    if (resourceId == NO_LABEL) {
+      secondaryActionView.setText(null);
+      secondaryActionView.setVisibility(View.GONE);
+    } else {
+      secondaryActionView.setText(resourceId);
+      secondaryActionView.setVisibility(View.VISIBLE);
+    }
+  }
+
+  public @StringRes int getSecondaryActionLabel() {
+    return secondaryActionLabel;
+  }
+
   public boolean isShowingContent() {
     return imageView.getVisibility() == View.VISIBLE
         || descriptionView.getVisibility() == View.VISIBLE
+        || secondaryActionView.getVisibility() == View.VISIBLE
         || actionView.getVisibility() == View.VISIBLE;
   }
 
@@ -121,9 +142,15 @@ public class EmptyContentView extends LinearLayout implements View.OnClickListen
     onActionButtonClickedListener = listener;
   }
 
+  public void setSecondaryActionClickedListener(OnEmptyViewActionButtonClickedListener listener) {
+    onSecondaryActionButtonClickedListener = listener;
+  }
+
   @Override
   public void onClick(View v) {
-    if (onActionButtonClickedListener != null) {
+    if (v == secondaryActionView && onSecondaryActionButtonClickedListener != null) {
+      onSecondaryActionButtonClickedListener.onEmptyViewActionButtonClicked();
+    } else if (v == actionView && onActionButtonClickedListener != null) {
       onActionButtonClickedListener.onEmptyViewActionButtonClicked();
     }
   }

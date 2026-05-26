@@ -7,4 +7,5 @@
   <string name="permission_single_turn_on">Aktivera</string>
   <string name="permission_no_contacts">Du måste aktivera behörigheten Kontakter för att visa kontakterna.</string>
   <string name="add_contact_not_available">Det finns inga appar för kontakter</string>
+  <string name="import_from_google">Importera från Google</string>
 </resources>

@@ -7,4 +7,5 @@
   <string name="permission_single_turn_on">ჩართვა</string>
   <string name="permission_no_contacts">კონტაქტების სანახავად ჩართეთ კონტაქტების ნებართვა.</string>
   <string name="add_contact_not_available">კონტაქტების აპი მიუწვდომელია</string>
+  <string name="import_from_google">Google-იდან იმპორტი</string>
 </resources>

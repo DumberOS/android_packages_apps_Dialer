@@ -7,4 +7,5 @@
   <string name="permission_single_turn_on">Միացնել</string>
   <string name="permission_no_contacts">Ձեր կոնտակտները տեսնելու համար միացրեք Կոնտակտների թույլտվությունը:</string>
   <string name="add_contact_not_available">Կոնտակտների հավելված չկա</string>
+  <string name="import_from_google">Ներմուծել Google-ից</string>
 </resources>

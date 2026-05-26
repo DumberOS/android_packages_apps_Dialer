@@ -7,4 +7,5 @@
   <string name="permission_single_turn_on">Aktiv edin</string>
   <string name="permission_no_contacts">Kontaktları görmək üçün Kontakt icazəsini aktiv edin.</string>
   <string name="add_contact_not_available">Kontakt tətbiqi əlçatan deyil</string>
+  <string name="import_from_google">Google-dan idxal et</string>
 </resources>

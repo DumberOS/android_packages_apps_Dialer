@@ -7,4 +7,5 @@
   <string name="permission_single_turn_on">Вклучи</string>
   <string name="permission_no_contacts">За да ги видите контактите, вклучете ја дозволата за контакти.</string>
   <string name="add_contact_not_available">Нема достапна апликација за контакти</string>
+  <string name="import_from_google">Увези од Google</string>
 </resources>

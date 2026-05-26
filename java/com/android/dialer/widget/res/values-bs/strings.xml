@@ -7,4 +7,5 @@
   <string name="permission_single_turn_on">Uključi</string>
   <string name="permission_no_contacts">Da vidite kontakte, uključite odobrenje za Kontakte.</string>
   <string name="add_contact_not_available">Nije dostupna nijedna aplikacija za kontakte</string>
+  <string name="import_from_google">Uvezi s Google-a</string>
 </resources>

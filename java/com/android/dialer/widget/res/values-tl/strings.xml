@@ -7,4 +7,5 @@
   <string name="permission_single_turn_on">I-on</string>
   <string name="permission_no_contacts">Upang makita ang iyong mga contact, i-on ang pahintulot ng Mga Contact.</string>
   <string name="add_contact_not_available">Walang available na app ng mga contact</string>
+  <string name="import_from_google">Mag-import mula sa Google</string>
 </resources>

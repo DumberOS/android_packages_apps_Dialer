@@ -7,4 +7,5 @@
   <string name="permission_single_turn_on">Aktifkan</string>
   <string name="permission_no_contacts">Untuk melihat kontak, aktifkan izin Kontak.</string>
   <string name="add_contact_not_available">Aplikasi kontak tidak tersedia</string>
+  <string name="import_from_google">Impor dari Google</string>
 </resources>

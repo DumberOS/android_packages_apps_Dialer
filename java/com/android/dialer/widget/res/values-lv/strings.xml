@@ -7,4 +7,5 @@
   <string name="permission_single_turn_on">Ieslēgt</string>
   <string name="permission_no_contacts">Lai skatītu savas kontaktpersonas, ieslēdziet atļauju Kontaktpersonas.</string>
   <string name="add_contact_not_available">Nav pieejama neviena kontaktpersonu lietotne.</string>
+  <string name="import_from_google">Importēt no Google</string>
 </resources>

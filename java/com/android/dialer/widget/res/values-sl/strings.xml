@@ -7,4 +7,5 @@
   <string name="permission_single_turn_on">Vklopi</string>
   <string name="permission_no_contacts">Če si želite ogledati stike, vklopite dovoljenje za stike.</string>
   <string name="add_contact_not_available">Na voljo ni nobene aplikacije za stike</string>
+  <string name="import_from_google">Uvozi iz Google</string>
 </resources>

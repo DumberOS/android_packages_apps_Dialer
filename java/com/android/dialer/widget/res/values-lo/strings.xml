@@ -7,4 +7,5 @@
   <string name="permission_single_turn_on">ເປີດໃຊ້</string>
   <string name="permission_no_contacts">ເພື່ອເບິ່ງລາຍຊື່ຜູ້ຕິດຕໍ່ຂອງທ່ານ, ໃຫ້ເປີດການອະນຸຍາດລາຍຊື່ຜູ້ຕິດຕໍ່ກ່ອນ</string>
   <string name="add_contact_not_available">ບໍ່ມີແອັບລາຍຊື່ຜູ້ຕິດຕໍ່ທີ່ສາມາດໃຊ້ໄດ້</string>
+  <string name="import_from_google">ນຳເຂົ້າຈາກ Google</string>
 </resources>

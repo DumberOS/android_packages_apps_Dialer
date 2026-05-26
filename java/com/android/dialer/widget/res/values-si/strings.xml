@@ -7,4 +7,5 @@
   <string name="permission_single_turn_on">ක්‍රියාත්මක කරන්න</string>
   <string name="permission_no_contacts">ඔබේ සම්බන්ධතා බැලීමට, සම්බන්ධතා අවසරය ක්‍රියාත්මක කරන්න.</string>
   <string name="add_contact_not_available">සබඳතා යෙදුම ලබා ගැනීමට නොහැකිය</string>
+  <string name="import_from_google">Google වෙතින් ආයාත කරන්න</string>
 </resources>

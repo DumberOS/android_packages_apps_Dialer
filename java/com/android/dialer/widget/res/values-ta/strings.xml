@@ -7,4 +7,5 @@
   <string name="permission_single_turn_on">இயக்கு</string>
   <string name="permission_no_contacts">தொடர்புகளைப் பார்க்க, தொடர்புகள் அனுமதியை இயக்கவும்.</string>
   <string name="add_contact_not_available">தொடர்புகள் பயன்பாடு எதுவுமில்லை</string>
+  <string name="import_from_google">Google இலிருந்து இறக்குமதி செய்</string>
 </resources>

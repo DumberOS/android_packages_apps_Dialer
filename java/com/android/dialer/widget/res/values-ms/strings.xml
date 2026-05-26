@@ -7,4 +7,5 @@
   <string name="permission_single_turn_on">Hidupkan</string>
   <string name="permission_no_contacts">Untuk melihat kenalan anda, hidupkan kebenaran Kenalan.</string>
   <string name="add_contact_not_available">Tiada apl kenalan yang tersedia</string>
+  <string name="import_from_google">Import daripada Google</string>
 </resources>

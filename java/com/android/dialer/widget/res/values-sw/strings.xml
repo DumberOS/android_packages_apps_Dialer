@@ -7,4 +7,5 @@
   <string name="permission_single_turn_on">Washa</string>
   <string name="permission_no_contacts">Ili uone anwani zako, washa ruhusa ya Anwani.</string>
   <string name="add_contact_not_available">Hakuna programu ya anwani iliyopatikana</string>
+  <string name="import_from_google">Ingiza kutoka Google</string>
 </resources>

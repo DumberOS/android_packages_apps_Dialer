@@ -7,4 +7,5 @@
   <string name="permission_single_turn_on">Қосу</string>
   <string name="permission_no_contacts">Контактілерді көру үшін \"Контактілер\" рұқсатын қосыңыз.</string>
   <string name="add_contact_not_available">Контактілер қолданбасы қолжетімді емес</string>
+  <string name="import_from_google">Google-дан импорттау</string>
 </resources>

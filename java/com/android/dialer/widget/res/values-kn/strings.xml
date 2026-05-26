@@ -7,4 +7,5 @@
   <string name="permission_single_turn_on">ಆನ್ ಮಾಡಿ</string>
   <string name="permission_no_contacts">ನಿಮ್ಮ ಸಂಪರ್ಕಗಳನ್ನು ವೀಕ್ಷಿಸಲು, ಸಂಪರ್ಕಗಳ ಅನುಮತಿಯನ್ನು ಆನ್ ಮಾಡಿ.</string>
   <string name="add_contact_not_available">ಯಾವುದೇ ಸಂಪರ್ಕಗಳ ಅಪ್ಲಿಕೇಶನ್‌ ಲಭ್ಯವಿಲ್ಲ</string>
+  <string name="import_from_google">Google ನಿಂದ ಆಮದು ಮಾಡಿ</string>
 </resources>

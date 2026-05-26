@@ -19,12 +19,15 @@ package com.android.dialer.contactsfragment;
 
 import static android.Manifest.permission.READ_CONTACTS;
 
+import android.content.ComponentName;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
+import android.widget.Toast;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnScrollChangeListener;
@@ -61,6 +64,9 @@ public class ContactsFragment extends Fragment
     implements LoaderManager.LoaderCallbacks<Cursor>,
         OnScrollChangeListener,
         OnEmptyViewActionButtonClickedListener {
+  private static final String GOOGLE_IMPORT_PACKAGE = "com.dumbermini.davx";
+  private static final String GOOGLE_IMPORT_ACTIVITY =
+      "com.dumbermini.davx.ui.GoogleContactsSetupActivity";
 
   /** An enum for the different types of headers that be inserted at position 0 in the list. */
   @Retention(RetentionPolicy.SOURCE)
@@ -194,11 +200,13 @@ public class ContactsFragment extends Fragment
     emptyContentView = view.findViewById(R.id.empty_list_view);
     emptyContentView.setImage(R.drawable.empty_contacts);
     emptyContentView.setActionClickedListener(this);
+    emptyContentView.setSecondaryActionClickedListener(this::launchGoogleImport);
 
     if (PermissionsUtil.hasContactsReadPermissions(getContext())) {
       loadContacts();
     } else {
       emptyContentView.setDescription(R.string.permission_no_contacts);
+      emptyContentView.setSecondaryActionLabel(EmptyContentView.NO_LABEL);
       emptyContentView.setActionLabel(R.string.permission_single_turn_on);
       emptyContentView.setVisibility(View.VISIBLE);
       recyclerView.setVisibility(View.GONE);
@@ -230,6 +238,7 @@ public class ContactsFragment extends Fragment
     LogUtil.enterBlock("ContactsFragment.onLoadFinished");
     if (cursor == null || cursor.getCount() == 0) {
       emptyContentView.setDescription(R.string.all_contacts_empty);
+      emptyContentView.setSecondaryActionLabel(R.string.import_from_google);
       emptyContentView.setActionLabel(R.string.all_contacts_empty_add_contact_action);
       emptyContentView.setVisibility(View.VISIBLE);
       recyclerView.setVisibility(View.GONE);
@@ -339,6 +348,28 @@ public class ContactsFragment extends Fragment
     LoaderManager.getInstance(this).initLoader(0, null, this);
     recyclerView.setVisibility(View.VISIBLE);
     emptyContentView.setVisibility(View.GONE);
+  }
+
+  private Intent getGoogleImportIntent() {
+    Context context = getContext();
+    if (context == null) {
+      return null;
+    }
+    ComponentName componentName = new ComponentName(GOOGLE_IMPORT_PACKAGE, GOOGLE_IMPORT_ACTIVITY);
+    try {
+      context.getPackageManager().getActivityInfo(componentName, 0);
+      return new Intent().setComponent(componentName).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+    } catch (PackageManager.NameNotFoundException e) {
+      return null;
+    }
+  }
+
+  private void launchGoogleImport() {
+    Context context = getContext();
+    Intent googleImportIntent = getGoogleImportIntent();
+    if (context != null && googleImportIntent != null) {
+      context.startActivity(googleImportIntent);
+    }
   }
 
   /** Listener for contacts list scroll state. */

@@ -7,4 +7,5 @@
   <string name="permission_single_turn_on">사용</string>
   <string name="permission_no_contacts">연락처를 보려면 연락처에 액세스할 권한을 부여하세요.</string>
   <string name="add_contact_not_available">사용할 수 있는 연락처 앱이 없습니다.</string>
+  <string name="import_from_google">Google에서 가져오기</string>
 </resources>

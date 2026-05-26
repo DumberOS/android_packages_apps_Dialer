@@ -7,4 +7,5 @@
   <string name="permission_single_turn_on">Slå på</string>
   <string name="permission_no_contacts">For å se kontaktene dine må du slå på Kontakter-tillatelsen.</string>
   <string name="add_contact_not_available">Ingen kontaktapper er tilgjengelige</string>
+  <string name="import_from_google">Importer fra Google</string>
 </resources>

@@ -7,4 +7,5 @@
   <string name="permission_single_turn_on">ਚਾਲੂ ਕਰੋ</string>
   <string name="permission_no_contacts">ਆਪਣੇ ਸੰਪਰਕਾਂ ਨੂੰ  ਦੇਖਣ  ਲਈ, ਸੰਪਰਕ ਇਜਾਜ਼ਤ ਚਾਲੂ ਕਰੋ।</string>
   <string name="add_contact_not_available">ਕੋਈ ਸੰਪਰਕ ਐਪ ਉਪਲਬਧ ਨਹੀਂ ਹੈ</string>
+  <string name="import_from_google">Google ਤੋਂ ਆਯਾਤ ਕਰੋ</string>
 </resources>

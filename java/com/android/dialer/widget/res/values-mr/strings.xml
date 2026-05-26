@@ -7,4 +7,5 @@
   <string name="permission_single_turn_on">चालू करा</string>
   <string name="permission_no_contacts">आपले संपर्क पाहण्‍यासाठी, संपर्क परवानगी चालू करा.</string>
   <string name="add_contact_not_available">कोणताही संपर्क अॅप उपलब्ध नाही</string>
+  <string name="import_from_google">Google वरून आयात करा</string>
 </resources>

@@ -7,4 +7,5 @@
   <string name="permission_single_turn_on">Aktibatu</string>
   <string name="permission_no_contacts">Kontaktuak ikusteko, aktibatu Kontaktuak atzitzeko baimena.</string>
   <string name="add_contact_not_available">Ez dago kontaktu-aplikaziorik erabilgarri</string>
+  <string name="import_from_google">Inportatu Google-tik</string>
 </resources>

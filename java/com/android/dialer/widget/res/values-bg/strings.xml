@@ -7,4 +7,5 @@
   <string name="permission_single_turn_on">Включване</string>
   <string name="permission_no_contacts">За да видите контактите си, включете разрешението за Контакти.</string>
   <string name="add_contact_not_available">Няма налично приложение за контакти</string>
+  <string name="import_from_google">Импортиране от Google</string>
 </resources>

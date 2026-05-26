@@ -7,4 +7,5 @@
   <string name="permission_single_turn_on">បើក</string>
   <string name="permission_no_contacts">ដើម្បីមើលទំនាក់ទំនងរបស់អ្នក សូមបើកការ​អនុញ្ញាតកម្មវិធីទំនាក់ទំនង។</string>
   <string name="add_contact_not_available">មិនមានកម្មវិធីទំនាក់ទំនងទេ</string>
+  <string name="import_from_google">នាំចូលពី Google</string>
 </resources>

@@ -7,4 +7,5 @@
   <string name="permission_single_turn_on">አብራ</string>
   <string name="permission_no_contacts">የእርስዎን እውቂያዎች ለማየት፣ የእውቂያዎች ፍቃዱን ያብሩ።</string>
   <string name="add_contact_not_available">ምንም የእውቂያዎች መተግበሪያ አይገኝም</string>
+  <string name="import_from_google">ከGoogle አስመጣ</string>
 </resources>

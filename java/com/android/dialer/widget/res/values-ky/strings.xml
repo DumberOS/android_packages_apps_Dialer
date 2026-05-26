@@ -7,4 +7,5 @@
   <string name="permission_single_turn_on">Күйгүзүү</string>
   <string name="permission_no_contacts">Байланыштарыңызды көрүү үчүн, \"Байланыштар\" уруксатын күйгүзүңүз.</string>
   <string name="add_contact_not_available">Жеткиликтүү байланыштар колдонмосу жок</string>
+  <string name="import_from_google">Google-дан импорттоо</string>
 </resources>

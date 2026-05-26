@@ -7,4 +7,5 @@
   <string name="permission_single_turn_on">Lülita sisse</string>
   <string name="permission_no_contacts">Kontaktide vaatamiseks lülitage sisse kontaktide luba.</string>
   <string name="add_contact_not_available">Kontaktide rakendus pole saadaval</string>
+  <string name="import_from_google">Impordi Google\'ist</string>
 </resources>

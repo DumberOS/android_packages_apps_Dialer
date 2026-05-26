@@ -7,4 +7,5 @@
   <string name="permission_single_turn_on">Włącz</string>
   <string name="permission_no_contacts">Aby zobaczyć swoje kontakty, włącz uprawnienia Kontakty.</string>
   <string name="add_contact_not_available">Nie jest dostępna żadna aplikacja do obsługi kontaktów</string>
+  <string name="import_from_google">Importuj z Google</string>
 </resources>

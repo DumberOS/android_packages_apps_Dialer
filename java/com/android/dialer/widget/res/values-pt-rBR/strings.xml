@@ -7,4 +7,5 @@
   <string name="permission_single_turn_on">Ativar</string>
   <string name="permission_no_contacts">Para ver seus contatos, ative a permissão para o app Contatos.</string>
   <string name="add_contact_not_available">Nenhum app de contatos disponível</string>
+  <string name="import_from_google">Importar do Google</string>
 </resources>

@@ -7,4 +7,5 @@
   <string name="permission_single_turn_on">Ruxsat berish</string>
   <string name="permission_no_contacts">Kontaktlar ro‘yxatini ko‘rish uchun ilovaga Kontaktlarga kirishga ruxsat bering.</string>
   <string name="add_contact_not_available">Kontaktlarni ochadigan ilova yo‘q</string>
+  <string name="import_from_google">Google-dan import qilish</string>
 </resources>

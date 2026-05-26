@@ -7,4 +7,5 @@
   <string name="permission_single_turn_on">הפעלה</string>
   <string name="permission_no_contacts">עליך להפעיל את ההרשאה \'אנשי קשר\' כדי להציג את אנשי הקשר שלך.</string>
   <string name="add_contact_not_available">אין אף אפליקציה לניהול אנשי קשר</string>
+  <string name="import_from_google">ייבוא מ-Google</string>
 </resources>

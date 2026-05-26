@@ -7,4 +7,5 @@
   <string name="permission_single_turn_on">開放</string>
   <string name="permission_no_contacts">如要查看聯絡人，請開放「通訊錄」權限。</string>
   <string name="add_contact_not_available">沒有可用的聯絡人應用程式</string>
+  <string name="import_from_google">從Google匯入</string>
 </resources>

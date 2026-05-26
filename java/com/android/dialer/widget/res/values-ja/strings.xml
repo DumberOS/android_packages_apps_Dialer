@@ -7,4 +7,5 @@
   <string name="permission_single_turn_on">ON にする</string>
   <string name="permission_no_contacts">連絡先を表示するには、連絡先へのアクセスを許可する設定を ON にしてください。</string>
   <string name="add_contact_not_available">利用できる連絡先アプリがありません</string>
+  <string name="import_from_google">Google からインポート</string>
 </resources>

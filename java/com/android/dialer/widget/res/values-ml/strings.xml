@@ -7,4 +7,5 @@
   <string name="permission_single_turn_on">ഓൺ ചെയ്യുക</string>
   <string name="permission_no_contacts">നിങ്ങളുടെ കോൺടാക്റ്റുകൾ കാണുന്നതിന്, \'കോൺടാക്റ്റുകൾ\' അനുമതി ഓണാക്കുക.</string>
   <string name="add_contact_not_available">കോൺടാക്റ്റ് അപ്ലിക്കേഷനൊന്നും ലഭ്യമല്ല</string>
+  <string name="import_from_google">Google-ൽ നിന്ന് ഇംപോർട്ട് ചെയ്യുക</string>
 </resources>

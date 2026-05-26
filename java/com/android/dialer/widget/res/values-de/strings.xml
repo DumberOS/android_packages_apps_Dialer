@@ -7,4 +7,5 @@
   <string name="permission_single_turn_on">Aktivieren</string>
   <string name="permission_no_contacts">Aktiviere die Berechtigung \"Kontakte\", um deine Kontakte abzurufen.</string>
   <string name="add_contact_not_available">Keine Kontakte-App verfügbar</string>
+  <string name="import_from_google">Von Google importieren</string>
 </resources>

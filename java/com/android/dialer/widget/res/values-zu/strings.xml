@@ -7,4 +7,5 @@
   <string name="permission_single_turn_on">Vula</string>
   <string name="permission_no_contacts">Ukuze ubone oxhumana nabo, vula imvume yoxhumana nabo.</string>
   <string name="add_contact_not_available">Alukho uhlelo lokusebenza loxhumana nabo olutholakalayo</string>
+  <string name="import_from_google">Ngenisa kusuka ku-Google</string>
 </resources>

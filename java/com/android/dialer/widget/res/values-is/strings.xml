@@ -7,4 +7,5 @@
   <string name="permission_single_turn_on">Kveikja</string>
   <string name="permission_no_contacts">Kveiktu á tengiliðaheimildinni til að sjá tengiliðina þína.</string>
   <string name="add_contact_not_available">Ekkert tengiliðaforrit í boði</string>
+  <string name="import_from_google">Flytja inn frá Google</string>
 </resources>

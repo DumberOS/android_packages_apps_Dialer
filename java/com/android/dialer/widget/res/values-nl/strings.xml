@@ -7,4 +7,5 @@
   <string name="permission_single_turn_on">Inschakelen</string>
   <string name="permission_no_contacts">Als je je contacten wilt bekijken, schakel je de machtiging voor Contacten in.</string>
   <string name="add_contact_not_available">Geen app voor contacten beschikbaar</string>
+  <string name="import_from_google">Importeren vanuit Google</string>
 </resources>

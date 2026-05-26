@@ -7,4 +7,5 @@
   <string name="permission_single_turn_on">सक्रिय गर्नुहोस्</string>
   <string name="permission_no_contacts">आफ्ना सम्पर्कहरू हेर्न सम्पर्क सम्बन्धी अनुमतिलाई सक्रिय गर्नुहोस्।</string>
   <string name="add_contact_not_available">सम्पर्क सम्बन्धी कुनै अनुप्रयोग उपलब्ध छैन</string>
+  <string name="import_from_google">Google बाट आयात गर्नुहोस्</string>
 </resources>

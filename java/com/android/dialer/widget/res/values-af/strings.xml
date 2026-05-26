@@ -7,4 +7,5 @@
   <string name="permission_single_turn_on">Skakel aan</string>
   <string name="permission_no_contacts">Skakel die kontaktetoestemming aan om jou kontakte te sien.</string>
   <string name="add_contact_not_available">Geen kontakte-program beskikbaar nie</string>
+  <string name="import_from_google">Importeer vanaf Google</string>
 </resources>

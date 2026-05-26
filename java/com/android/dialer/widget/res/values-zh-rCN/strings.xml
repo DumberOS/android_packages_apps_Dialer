@@ -7,4 +7,5 @@
   <string name="permission_single_turn_on">开启</string>
   <string name="permission_no_contacts">要查看您的联系人，请开启“通讯录”权限。</string>
   <string name="add_contact_not_available">没有可用的通讯录应用</string>
+  <string name="import_from_google">从Google导入</string>
 </resources>

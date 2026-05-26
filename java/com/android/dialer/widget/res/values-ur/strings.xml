@@ -7,4 +7,5 @@
   <string name="permission_single_turn_on">آن کریں</string>
   <string name="permission_no_contacts">اپنے رابطے دیکھنے کیلئے رابطوں کی اجازت آن کریں۔</string>
   <string name="add_contact_not_available">رابطوں کی کوئی ایپ دستیاب نہیں ہے</string>
+  <string name="import_from_google">Google سے درآمد کریں</string>
 </resources>

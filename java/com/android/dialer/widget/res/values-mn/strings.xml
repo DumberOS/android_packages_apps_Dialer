@@ -7,4 +7,5 @@
   <string name="permission_single_turn_on">Асаах</string>
   <string name="permission_no_contacts">Харилцагчдаа харахын тулд Харилцагчдын зөвшөөрлийг идэвхжүүлнэ үү.</string>
   <string name="add_contact_not_available">Ямар ч харилцагчдын апликейшн байхгүй байна</string>
+  <string name="import_from_google">Google-с импортлох</string>
 </resources>

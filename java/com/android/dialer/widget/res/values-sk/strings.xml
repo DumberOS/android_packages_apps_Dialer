@@ -7,4 +7,5 @@
   <string name="permission_single_turn_on">Zapnúť</string>
   <string name="permission_no_contacts">Ak si chcete zobraziť kontakty, zapnite povolenie Kontakty.</string>
   <string name="add_contact_not_available">Nie je k dispozícii žiadna aplikácia na prácu s kontaktmi</string>
+  <string name="import_from_google">Importovať z Googlu</string>
 </resources>

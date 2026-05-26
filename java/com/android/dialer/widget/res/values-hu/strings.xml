@@ -7,4 +7,5 @@
   <string name="permission_single_turn_on">Bekapcsolás</string>
   <string name="permission_no_contacts">A névjegyek megtekintéséhez kapcsolja be a Névjegyek engedélyt.</string>
   <string name="add_contact_not_available">Nincs elérhető névjegykezelő alkalmazás</string>
+  <string name="import_from_google">Importálás a Google-ból</string>
 </resources>

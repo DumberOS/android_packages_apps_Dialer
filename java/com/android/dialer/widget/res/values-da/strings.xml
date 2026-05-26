@@ -7,4 +7,5 @@
   <string name="permission_single_turn_on">Slå til</string>
   <string name="permission_no_contacts">Slå tilladelsen Kontaktpersoner til for at se dine kontaktpersoner.</string>
   <string name="add_contact_not_available">Der er ingen tilgængelig app til kontaktpersoner</string>
+  <string name="import_from_google">Importer fra Google</string>
 </resources>

@@ -7,4 +7,5 @@
   <string name="permission_single_turn_on">Activa</string>
   <string name="permission_no_contacts">Activa el permís Contactes per veure els teus contactes.</string>
   <string name="add_contact_not_available">No hi ha cap contacte disponible</string>
+  <string name="import_from_google">Importa des de Google</string>
 </resources>

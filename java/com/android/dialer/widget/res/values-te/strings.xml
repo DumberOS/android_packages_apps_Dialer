@@ -7,4 +7,5 @@
   <string name="permission_single_turn_on">ఆన్ చేయి</string>
   <string name="permission_no_contacts">మీ పరిచయాలను చూడటానికి, పరిచయాల అనుమతిని ఆన్ చేయండి.</string>
   <string name="add_contact_not_available">పరిచయాల అనువర్తనం ఏదీ అందుబాటులో లేదు</string>
+  <string name="import_from_google">Google నుండి దిగుమతి చేయండి</string>
 </resources>

@@ -7,4 +7,5 @@
   <string name="permission_single_turn_on">Activați</string>
   <string name="permission_no_contacts">Pentru a vedea persoanele de contact, activați permisiunea pentru Agendă.</string>
   <string name="add_contact_not_available">Nu este disponibilă nicio aplicație pentru agendă</string>
+  <string name="import_from_google">Importați din Google</string>
 </resources>

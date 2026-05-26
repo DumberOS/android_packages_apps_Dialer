@@ -7,4 +7,5 @@
   <string name="permission_single_turn_on">Etkinleştir</string>
   <string name="permission_no_contacts">Kişilerinizi görmek için Kişiler iznini etkinleştirin.</string>
   <string name="add_contact_not_available">Kullanılabilir kişi uygulaması yok</string>
+  <string name="import_from_google">Google\'dan içe aktar</string>
 </resources>

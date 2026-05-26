@@ -7,4 +7,5 @@
   <string name="permission_single_turn_on">Ενεργοποίηση</string>
   <string name="permission_no_contacts">Για να δείτε τις επαφές σας, ενεργοποιήστε την άδεια πρόσβασης στις Επαφές.</string>
   <string name="add_contact_not_available">Δεν υπάρχει διαθέσιμη εφαρμογή επαφών</string>
+  <string name="import_from_google">Εισαγωγή από Google</string>
 </resources>

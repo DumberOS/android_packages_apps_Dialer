@@ -35,4 +35,5 @@
 
   <!-- Message displayed when there is no application available to handle the add contact menu option. [CHAR LIMIT=NONE] -->
   <string name="add_contact_not_available">No contacts app available</string>
+  <string name="import_from_google">Import from Google</string>
 </resources>
