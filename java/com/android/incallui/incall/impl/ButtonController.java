@@ -18,6 +18,7 @@
 package com.android.incallui.incall.impl;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.content.res.Resources;
 import android.graphics.drawable.AnimationDrawable;
 import android.telecom.CallAudioState;
@@ -530,6 +531,26 @@ interface ButtonController {
     @Override
     public void doCheckedChanged(boolean isChecked) {
       delegate.showDialpadClicked(isChecked);
+    }
+  }
+
+  class MinimizeButtonController extends SimpleNonCheckableButtonController {
+
+    public MinimizeButtonController() {
+      super(
+          null,
+          InCallButtonIds.BUTTON_MINIMIZE,
+          R.string.incall_content_description_minimize_call,
+          R.string.incall_label_minimize,
+          R.drawable.ic_incall_minimize_24);
+    }
+
+    @Override
+    public void onClick(View view) {
+      Intent homeIntent = new Intent(Intent.ACTION_MAIN);
+      homeIntent.addCategory(Intent.CATEGORY_HOME);
+      homeIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+      view.getContext().startActivity(homeIntent);
     }
   }
 

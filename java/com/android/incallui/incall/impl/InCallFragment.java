@@ -22,7 +22,6 @@ import android.Manifest.permission;
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
-import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Insets;
 import android.os.Bundle;
@@ -34,7 +33,6 @@ import android.transition.TransitionManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnAttachStateChangeListener;
-import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowInsets;
@@ -84,13 +82,10 @@ import java.util.List;
 public class InCallFragment extends Fragment
     implements InCallScreen,
         InCallButtonUi,
-        OnClickListener,
         AudioRouteSelectorPresenter,
         OnButtonGridCreatedListener {
 
   private final List<ButtonController> buttonControllers = new ArrayList<>();
-  private View endCallButton;
-  private View minimizeButton;
   private InCallPaginator paginator;
   private LockableViewPager pager;
   private InCallPagerAdapter adapter;
@@ -149,6 +144,7 @@ public class InCallFragment extends Fragment
         || id == InCallButtonIds.BUTTON_MANAGE_VOICE_CONFERENCE
         || id == InCallButtonIds.BUTTON_SWAP_SIM
         || id == InCallButtonIds.BUTTON_UPGRADE_TO_RTT
+        || id == InCallButtonIds.BUTTON_MINIMIZE
         || id == InCallButtonIds.BUTTON_RECORD_CALL;
   }
 
@@ -197,13 +193,6 @@ public class InCallFragment extends Fragment
           handler.removeCallbacks(pagerRunnable);
           return false;
         });
-
-    endCallButton = view.findViewById(R.id.incall_end_call);
-    endCallButton.setOnClickListener(this);
-    minimizeButton = view.findViewById(R.id.incall_minimize);
-    if (minimizeButton != null) {
-      minimizeButton.setOnClickListener(this);
-    }
 
     if (ContextCompat.checkSelfPermission(getContext(), permission.READ_PHONE_STATE)
         != PackageManager.PERMISSION_GRANTED) {
@@ -254,6 +243,11 @@ public class InCallFragment extends Fragment
     buttonControllers.add(new ButtonController.MuteButtonController(inCallButtonUiDelegate));
     buttonControllers.add(new ButtonController.SpeakerButtonController(inCallButtonUiDelegate));
     buttonControllers.add(new ButtonController.DialpadButtonController(inCallButtonUiDelegate));
+    ButtonController.MinimizeButtonController minimizeButtonController =
+        new ButtonController.MinimizeButtonController();
+    minimizeButtonController.setAllowed(true);
+    minimizeButtonController.setEnabled(true);
+    buttonControllers.add(minimizeButtonController);
     buttonControllers.add(new ButtonController.HoldButtonController(inCallButtonUiDelegate));
     buttonControllers.add(new ButtonController.AddCallButtonController(inCallButtonUiDelegate));
     buttonControllers.add(new ButtonController.SwapButtonController(inCallButtonUiDelegate));
@@ -282,23 +276,6 @@ public class InCallFragment extends Fragment
   public void onDestroyView() {
     super.onDestroyView();
     inCallScreenDelegate.onInCallScreenUnready();
-  }
-
-  @Override
-  public void onClick(View view) {
-    if (view == endCallButton) {
-      LogUtil.i("InCallFragment.onClick", "end call button clicked");
-      inCallScreenDelegate.onEndCallClicked();
-    } else if (view == minimizeButton) {
-      LogUtil.i("InCallFragment.onClick", "minimize button clicked");
-      Intent homeIntent = new Intent(Intent.ACTION_MAIN);
-      homeIntent.addCategory(Intent.CATEGORY_HOME);
-      homeIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-      startActivity(homeIntent);
-    } else {
-      LogUtil.e("InCallFragment.onClick", "unknown view: " + view);
-      Assert.createAssertionFailException("");
-    }
   }
 
   @Override
@@ -370,12 +347,7 @@ public class InCallFragment extends Fragment
 
   @Override
   public void setEndCallButtonEnabled(boolean enabled, boolean animate) {
-    if (endCallButton != null) {
-      endCallButton.setEnabled(enabled);
-    }
-    if (minimizeButton != null) {
-      minimizeButton.setEnabled(enabled);
-    }
+    // This device uses a hardware end-call key and shows minimize inside the button grid.
   }
 
   @Override
