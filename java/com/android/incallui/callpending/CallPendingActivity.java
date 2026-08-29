@@ -202,12 +202,12 @@ public class CallPendingActivity extends FragmentActivity
             inCallButtonUi.showButton(InCallButtonIds.BUTTON_DIALPAD, true);
             inCallButtonUi.showButton(InCallButtonIds.BUTTON_MUTE, true);
             inCallButtonUi.showButton(InCallButtonIds.BUTTON_AUDIO, true);
-            inCallButtonUi.showButton(InCallButtonIds.BUTTON_ADD_CALL, true);
+            inCallButtonUi.showButton(InCallButtonIds.BUTTON_LOCK_SCREEN, true);
 
             inCallButtonUi.enableButton(InCallButtonIds.BUTTON_DIALPAD, false);
             inCallButtonUi.enableButton(InCallButtonIds.BUTTON_MUTE, false);
             inCallButtonUi.enableButton(InCallButtonIds.BUTTON_AUDIO, false);
-            inCallButtonUi.enableButton(InCallButtonIds.BUTTON_ADD_CALL, false);
+            inCallButtonUi.enableButton(InCallButtonIds.BUTTON_LOCK_SCREEN, false);
           }
 
           @Override

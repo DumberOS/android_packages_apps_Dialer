@@ -42,8 +42,8 @@ public class InCallButtonIdsExtension {
       return "DOWNGRADE_TO_AUDIO";
     } else if (id == InCallButtonIds.BUTTON_SWITCH_CAMERA) {
       return "SWITCH_CAMERA";
-    } else if (id == InCallButtonIds.BUTTON_ADD_CALL) {
-      return "ADD_CALL";
+    } else if (id == InCallButtonIds.BUTTON_LOCK_SCREEN) {
+      return "LOCK_SCREEN";
     } else if (id == InCallButtonIds.BUTTON_MERGE) {
       return "MERGE";
     } else if (id == InCallButtonIds.BUTTON_PAUSE_VIDEO) {

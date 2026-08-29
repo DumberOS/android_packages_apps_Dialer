@@ -32,7 +32,7 @@ import java.lang.annotation.RetentionPolicy;
   InCallButtonIds.BUTTON_UPGRADE_TO_VIDEO,
   InCallButtonIds.BUTTON_SWITCH_CAMERA,
   InCallButtonIds.BUTTON_DOWNGRADE_TO_AUDIO,
-  InCallButtonIds.BUTTON_ADD_CALL,
+  InCallButtonIds.BUTTON_LOCK_SCREEN,
   InCallButtonIds.BUTTON_MERGE,
   InCallButtonIds.BUTTON_PAUSE_VIDEO,
   InCallButtonIds.BUTTON_MANAGE_VIDEO_CONFERENCE,
@@ -54,7 +54,7 @@ public @interface InCallButtonIds {
   int BUTTON_UPGRADE_TO_VIDEO = 5;
   int BUTTON_SWITCH_CAMERA = 6;
   int BUTTON_DOWNGRADE_TO_AUDIO = 7;
-  int BUTTON_ADD_CALL = 8;
+  int BUTTON_LOCK_SCREEN = 8;
   int BUTTON_MERGE = 9;
   int BUTTON_PAUSE_VIDEO = 10;
   int BUTTON_MANAGE_VIDEO_CONFERENCE = 11;

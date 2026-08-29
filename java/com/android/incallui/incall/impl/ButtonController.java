@@ -18,6 +18,7 @@
 package com.android.incallui.incall.impl;
 
 import android.annotation.SuppressLint;
+import android.app.admin.DevicePolicyManager;
 import android.content.Intent;
 import android.content.res.Resources;
 import android.graphics.drawable.AnimationDrawable;
@@ -572,21 +573,20 @@ interface ButtonController {
     }
   }
 
-  class AddCallButtonController extends SimpleNonCheckableButtonController {
+  class LockScreenButtonController extends SimpleNonCheckableButtonController {
 
-    public AddCallButtonController(@NonNull InCallButtonUiDelegate delegate) {
+    public LockScreenButtonController() {
       super(
-          delegate,
-          InCallButtonIds.BUTTON_ADD_CALL,
+          null,
+          InCallButtonIds.BUTTON_LOCK_SCREEN,
           0,
-          R.string.incall_label_add_call,
-          R.drawable.ic_addcall_white);
-      Assert.isNotNull(delegate);
+          R.string.incall_label_lock_screen,
+          R.drawable.quantum_ic_phone_locked_vd_theme_24);
     }
 
     @Override
     public void onClick(View view) {
-      delegate.addCallClicked();
+      view.getContext().getSystemService(DevicePolicyManager.class).lockNow();
     }
   }
 

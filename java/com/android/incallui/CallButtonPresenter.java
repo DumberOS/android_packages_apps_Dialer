@@ -26,7 +26,6 @@ import android.os.UserManager;
 import android.telecom.CallAudioState;
 import android.telecom.PhoneAccountHandle;
 
-import androidx.core.os.UserManagerCompat;
 import androidx.fragment.app.Fragment;
 import androidx.preference.PreferenceManager;
 
@@ -481,8 +480,6 @@ public class CallButtonPresenter
             && call.can(android.telecom.Call.Details.CAPABILITY_HOLD);
     final boolean isCallOnHold = call.getState() == DialerCallState.ONHOLD;
 
-    final boolean showAddCall =
-        TelecomAdapter.getInstance().canAddCall() && UserManagerCompat.isUserUnlocked(context);
     final boolean showMerge = call.can(android.telecom.Call.Details.CAPABILITY_MERGE_CONFERENCE);
     final boolean showUpgradeToVideo = !isVideo && (hasVideoCallCapabilities(call));
     final boolean showDowngradeToAudio = isVideo && isDowngradeToAudioSupported(call);
@@ -521,8 +518,8 @@ public class CallButtonPresenter
     inCallButtonUi.setHold(isCallOnHold);
     inCallButtonUi.showButton(InCallButtonIds.BUTTON_MUTE, showMute);
     inCallButtonUi.showButton(InCallButtonIds.BUTTON_SWAP_SIM, showSwapSim);
-    inCallButtonUi.showButton(InCallButtonIds.BUTTON_ADD_CALL, true);
-    inCallButtonUi.enableButton(InCallButtonIds.BUTTON_ADD_CALL, showAddCall);
+    inCallButtonUi.showButton(InCallButtonIds.BUTTON_LOCK_SCREEN, true);
+    inCallButtonUi.enableButton(InCallButtonIds.BUTTON_LOCK_SCREEN, true);
     inCallButtonUi.showButton(InCallButtonIds.BUTTON_UPGRADE_TO_VIDEO, showUpgradeToVideo);
     inCallButtonUi.showButton(InCallButtonIds.BUTTON_UPGRADE_TO_RTT, showUpgradeToRtt);
     inCallButtonUi.enableButton(InCallButtonIds.BUTTON_UPGRADE_TO_RTT, enableUpgradeToRtt);

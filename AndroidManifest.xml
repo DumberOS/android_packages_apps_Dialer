@@ -51,6 +51,8 @@
     <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
     <uses-permission android:name="android.permission.MODIFY_PHONE_STATE" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <!-- Used by the in-call UI to lock the device without injecting a power-key event. -->
+    <uses-permission android:name="android.permission.LOCK_DEVICE" />
     <uses-permission android:name="android.permission.WRITE_SETTINGS" />
     <uses-permission android:name="android.permission.USE_CREDENTIALS" />
     <uses-permission android:name="android.permission.VIBRATE" />

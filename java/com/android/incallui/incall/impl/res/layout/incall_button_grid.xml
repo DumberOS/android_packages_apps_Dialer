@@ -49,7 +49,7 @@
       android:layout_width="0dp"
       android:layout_columnWeight="1"
       android:gravity="center"
-      app:incall_labelText="@string/incall_label_add_call"
+      app:incall_labelText="@string/incall_label_lock_screen"
       tools:background="#FFFF0000"
       tools:layout_height="@dimen/tools_button_height"
       tools:layout_width="@dimen/incall_labeled_button_size"/>

@@ -123,7 +123,7 @@ class ButtonChooserFactory {
     mapping.put(InCallButtonIds.BUTTON_AUDIO, MappingInfo.builder(2).build());
     mapping.put(InCallButtonIds.BUTTON_MINIMIZE, MappingInfo.builder(3).setSlotOrder(0).build());
     mapping.put(InCallButtonIds.BUTTON_MERGE, MappingInfo.builder(4).setSlotOrder(5).build());
-    mapping.put(InCallButtonIds.BUTTON_ADD_CALL, MappingInfo.builder(4).build());
+    mapping.put(InCallButtonIds.BUTTON_LOCK_SCREEN, MappingInfo.builder(4).build());
     mapping.put(InCallButtonIds.BUTTON_SWAP_SIM, MappingInfo.builder(5).build());
     return mapping;
   }

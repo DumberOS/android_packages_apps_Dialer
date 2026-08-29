@@ -20,5 +20,6 @@
         <permission name="android.permission.CAPTURE_AUDIO_OUTPUT"/>
         <permission name="android.permission.BROADCAST_CLOSE_SYSTEM_DIALOGS"/>
         <permission name="android.permission.RECEIVE_SMS"/>
+        <permission name="android.permission.LOCK_DEVICE"/>
     </privapp-permissions>
 </permissions>

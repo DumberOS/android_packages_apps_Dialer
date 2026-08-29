@@ -139,7 +139,7 @@ public class InCallFragment extends Fragment
         || id == InCallButtonIds.BUTTON_HOLD
         || id == InCallButtonIds.BUTTON_SWAP
         || id == InCallButtonIds.BUTTON_UPGRADE_TO_VIDEO
-        || id == InCallButtonIds.BUTTON_ADD_CALL
+        || id == InCallButtonIds.BUTTON_LOCK_SCREEN
         || id == InCallButtonIds.BUTTON_MERGE
         || id == InCallButtonIds.BUTTON_MANAGE_VOICE_CONFERENCE
         || id == InCallButtonIds.BUTTON_SWAP_SIM
@@ -249,7 +249,7 @@ public class InCallFragment extends Fragment
     minimizeButtonController.setEnabled(true);
     buttonControllers.add(minimizeButtonController);
     buttonControllers.add(new ButtonController.HoldButtonController(inCallButtonUiDelegate));
-    buttonControllers.add(new ButtonController.AddCallButtonController(inCallButtonUiDelegate));
+    buttonControllers.add(new ButtonController.LockScreenButtonController());
     buttonControllers.add(new ButtonController.SwapButtonController(inCallButtonUiDelegate));
     buttonControllers.add(new ButtonController.MergeButtonController(inCallButtonUiDelegate));
     buttonControllers.add(new ButtonController.SwapSimButtonController(inCallButtonUiDelegate));
