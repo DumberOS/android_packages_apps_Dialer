@@ -1,0 +1,22 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.android.dialer.calls.tests">
+    <queries>
+        <package android:name="com.android.messaging" />
+        <package android:name="com.android.dialer" />
+    </queries>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <application android:label="Encrypted call media tests">
+        <uses-library android:name="android.test.runner" />
+        <activity android:name="com.android.dialer.dumber.RouteTestActivity" android:exported="false" />
+        <service android:name="com.android.dialer.dumber.LocalTelecomTestService"
+            android:permission="android.permission.BIND_TELECOM_CONNECTION_SERVICE" android:exported="true">
+            <intent-filter><action android:name="android.telecom.ConnectionService" /></intent-filter>
+        </service>
+    </application>
+    <instrumentation android:name="android.test.InstrumentationTestRunner"
+        android:targetPackage="com.android.dialer.calls.tests" />
+</manifest>

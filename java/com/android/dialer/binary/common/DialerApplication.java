@@ -34,6 +34,7 @@ public abstract class DialerApplication extends Application implements HasRootCo
     Trace.beginSection("DialerApplication.onCreate");
     super.onCreate();
     NotificationChannelManager.initChannels(this);
+    com.android.dialer.dumber.CallManager.get(this).connect();
     Trace.endSection();
   }
 

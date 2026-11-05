@@ -50,6 +50,12 @@ import javax.inject.Inject;
 @SuppressWarnings("MissingPermission")
 public class CallingAccountSelector implements PreCallAction {
 
+  private static List<PhoneAccountHandle> cellularAccounts(TelecomManager manager) {
+    java.util.ArrayList<PhoneAccountHandle> accounts = new java.util.ArrayList<>(manager.getCallCapablePhoneAccounts());
+    accounts.removeIf(h -> h.getComponentName().getClassName().equals("com.android.dialer.dumber.EncryptedConnectionService"));
+    return accounts;
+  }
+
   private static final String TAG_CALLING_ACCOUNT_SELECTOR = "CallingAccountSelector";
 
   private SelectPhoneAccountDialogFragment selectPhoneAccountDialogFragment;
@@ -75,7 +81,7 @@ public class CallingAccountSelector implements PreCallAction {
     }
 
     TelecomManager telecomManager = context.getSystemService(TelecomManager.class);
-    List<PhoneAccountHandle> accounts = telecomManager.getCallCapablePhoneAccounts();
+    List<PhoneAccountHandle> accounts = cellularAccounts(telecomManager);
     return accounts.size() > 1;
   }
 
@@ -124,7 +130,7 @@ public class CallingAccountSelector implements PreCallAction {
     coordinator.listen(
         preferredAccountWorker.selectAccount(
             phoneNumber,
-            activity.getSystemService(TelecomManager.class).getCallCapablePhoneAccounts()),
+            cellularAccounts(activity.getSystemService(TelecomManager.class))),
         result -> {
           if (isDiscarding) {
             // pendingAction is dropped by the coordinator before onDiscard is triggered.

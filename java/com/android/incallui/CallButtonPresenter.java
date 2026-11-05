@@ -496,13 +496,13 @@ public class CallButtonPresenter
     final CallRecorder recorder = CallRecorder.getInstance();
     final UserManager userManager = getContext().getSystemService(UserManager.class);
 
-    final boolean showCallRecordOption = recorder.canRecordInCurrentCountry()
+    final boolean showCallRecordOption = !com.android.dialer.dumber.CallManager.isEncrypted(call.getAccountHandle()) && recorder.canRecordInCurrentCountry()
         && !isVideo && call.getState() == DialerCallState.ACTIVE
         && userManager.isUserUnlocked();
 
     otherAccount = TelecomUtil.getOtherAccount(getContext(), call.getAccountHandle());
     boolean showSwapSim =
-        !call.isEmergencyCall()
+        !com.android.dialer.dumber.CallManager.isEncrypted(call.getAccountHandle()) && !call.isEmergencyCall()
             && otherAccount != null
             && !call.isVoiceMailNumber()
             && DialerCallState.isDialing(call.getState())

@@ -267,6 +267,7 @@ public abstract class TelecomUtil {
    */
   public static boolean placeCall(Context context, Intent intent) {
     if (PermissionsUtil.hasPhonePermissions(context)) {
+      if (com.android.dialer.dumber.CallRouteActivity.intercept(context, intent)) return true;
       getTelecomManager(context).placeCall(intent.getData(), intent.getExtras());
       return true;
     }

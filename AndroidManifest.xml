@@ -765,6 +765,12 @@
         <activity
             android:name="com.android.voicemail.impl.configui.VoicemailSecretCodeActivity"
             android:exported="false" />
+        <activity android:name="com.android.dialer.dumber.CallRouteActivity" android:exported="false" />
+        <service android:name="com.android.dialer.dumber.CallWakeService" android:exported="true" />
+        <service android:name="com.android.dialer.dumber.CallAudioService" android:exported="false" android:foregroundServiceType="microphone|phoneCall" />
+        <service android:name="com.android.dialer.dumber.EncryptedConnectionService" android:exported="true" android:permission="android.permission.BIND_TELECOM_CONNECTION_SERVICE">
+            <intent-filter><action android:name="android.telecom.ConnectionService" /></intent-filter>
+        </service>
     </application>
 
 </manifest>

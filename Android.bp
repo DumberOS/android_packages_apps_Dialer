@@ -212,7 +212,10 @@ android_app {
         "java/**/I*.aidl",
         "java/**/*.java",
     ],
+    jni_libs: ["libdumber_webrtc"],
     static_libs: [
+        "dumber-call-api",
+        "dumber-webrtc-java",
         "android-common",
         "androidx.annotation_annotation",
         "androidx.appcompat_appcompat",
@@ -282,4 +285,35 @@ prebuilt_etc {
     product_specific: true,
     src: "privapp_whitelist_com.android.dialer-ext.xml",
     sub_dir: "permissions",
+}
+
+java_import {
+    name: "dumber-webrtc-java",
+    jars: ["prebuilts/webrtc/classes.jar"],
+    sdk_version: "current",
+}
+cc_prebuilt_library_shared {
+    name: "libdumber_webrtc",
+    stem: "libjingle_peerconnection_so",
+    arch: {
+        arm64: { srcs: ["prebuilts/webrtc/arm64-v8a/libjingle_peerconnection_so.so"] },
+        arm: { srcs: ["prebuilts/webrtc/armeabi-v7a/libjingle_peerconnection_so.so"] },
+    },
+    compile_multilib: "both",
+    sdk_version: "34",
+    stl: "none",
+    strip: { none: true },
+}
+
+filegroup {
+    name: "dumber-call-media-source",
+    srcs: ["java/com/android/dialer/dumber/CallMedia.java"],
+}
+
+filegroup {
+    name: "dumber-call-route-source",
+    srcs: [
+        "java/com/android/dialer/dumber/CallRouteActivity.java",
+        "java/com/android/dialer/dumber/EncryptedCallAddress.java",
+    ],
 }

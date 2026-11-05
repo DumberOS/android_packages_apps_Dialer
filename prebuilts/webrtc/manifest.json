@@ -1,0 +1,8 @@
+{
+  "revision": "5e07d59caf8106fcc1ecd8cfb3ce7af0a1c3316a",
+  "sha256": {
+    "classes.jar": "b721e000e9d83a53c9678438c393f8bd494afafc94b7cafccd48baade58a3620",
+    "armeabi-v7a/libjingle_peerconnection_so.so": "1c942e072b70113cba4fa528ebda7f1cfec2a7593d68788cf4ee7568764ee609",
+    "arm64-v8a/libjingle_peerconnection_so.so": "0f07d46681caf091b86fcddf8703fd8ec7caf838fa22ac83fa56bc3f6ee8af23"
+  }
+}

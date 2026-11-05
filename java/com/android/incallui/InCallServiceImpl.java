@@ -56,6 +56,7 @@ public class InCallServiceImpl extends InCallService {
   @Override
   public void onCallAdded(Call call) {
     Trace.beginSection("InCallServiceImpl.onCallAdded");
+    com.android.dialer.dumber.CallManager.get(this).observeTelecom(call);
     InCallPresenter.getInstance().onCallAdded(call);
     Trace.endSection();
   }

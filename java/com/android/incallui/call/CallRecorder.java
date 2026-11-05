@@ -130,7 +130,8 @@ public class CallRecorder implements CallList.Listener {
   }
 
   public boolean startRecording(final String phoneNumber, final long creationTime) {
-    if (service == null) {
+    DialerCall active = CallList.getInstance().getActiveCall();
+    if (service == null || (active != null && com.android.dialer.dumber.CallManager.isEncrypted(active.getAccountHandle()))) {
       return false;
     }
 
