@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Build official, pinned WebRTC Java/JNI artifacts before invoking Soong.
+# Maintainer-only rebuild of shipped WebRTC artifacts. Normal ROM builds do not run this.
 set -euo pipefail
 app_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 : "${DUMBER_WEBRTC_CHECKOUT:=/tmp/dumber-call-webrtc}"
@@ -81,8 +81,10 @@ with zipfile.ZipFile('out/dumber-webrtc.aar') as archive:
                 if not required.issubset(target.namelist()): raise RuntimeError('Missing WebRTC JNI registration')
             data=output.getvalue()
         p=root/dest;p.parent.mkdir(parents=True,exist_ok=True);p.write_bytes(data);checksums[dest]=hashlib.sha256(data).hexdigest()
-(root/'manifest.json').write_text(json.dumps({'revision':sys.argv[2],'sha256':checksums},indent=2)+'\n')
 (root/'LICENSE').write_bytes(Path('LICENSE').read_bytes())
 # Upstream emits all third-party notices next to the AAR, not inside it.
 (root/'THIRD_PARTY_LICENSES.md').write_bytes(Path('out/LICENSE.md').read_bytes())
+for name in ('LICENSE', 'THIRD_PARTY_LICENSES.md'):
+    checksums[name]=hashlib.sha256((root/name).read_bytes()).hexdigest()
+(root/'manifest.json').write_text(json.dumps({'revision':sys.argv[2],'sha256':checksums},indent=2)+'\n')
 PY
