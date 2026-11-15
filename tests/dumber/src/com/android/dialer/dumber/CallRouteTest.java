@@ -145,8 +145,14 @@ public final class CallRouteTest extends InstrumentationTestCase {
     assertEquals(0, RouteTestActivity.cellularCalls);
   }
 
-  public void testDifferentSimRequiresExplicitAccountSelection() throws Exception {
+  public void testUnmatchedAccountsRequireExplicitAccountSelection() throws Exception {
     accounts[0].subscription = Integer.MAX_VALUE - 1;
+    CallAccount other = new CallAccount();
+    other.id = "other-account";
+    other.phone = "+12025550125";
+    other.subscription = Integer.MAX_VALUE - 2;
+    // With no default voice SIM, a single account is intentionally selected automatically.
+    accounts = new CallAccount[] {accounts[0], other};
     supported = true;
     launch();
     AlertDialog picker = dialog("accountPicker");

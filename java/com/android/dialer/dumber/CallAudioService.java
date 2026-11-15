@@ -4,18 +4,21 @@ import android.app.*;
 import android.content.Intent;
 import android.content.pm.ServiceInfo;
 import android.os.IBinder;
+import com.android.dialer.notification.NotificationChannelId;
+import com.android.incallui.InCallActivity;
 
 public final class CallAudioService extends Service {
   public void onCreate() {
     super.onCreate();
-    NotificationManager manager = getSystemService(NotificationManager.class);
-    manager.createNotificationChannel(
-        new NotificationChannel(
-            "dumber_calls", "Encrypted calls", NotificationManager.IMPORTANCE_LOW));
     Notification n =
-        new Notification.Builder(this, "dumber_calls")
+        new Notification.Builder(this, NotificationChannelId.ENCRYPTED_CALL)
             .setContentTitle("Encrypted call")
             .setSmallIcon(android.R.drawable.sym_call_incoming)
+            .setContentIntent(PendingIntent.getActivity(
+                this,
+                8093,
+                InCallActivity.getIntent(this, false, false, false),
+                PendingIntent.FLAG_IMMUTABLE))
             .setOngoing(true)
             .setCategory(Notification.CATEGORY_CALL)
             .build();

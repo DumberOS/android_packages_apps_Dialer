@@ -1,0 +1,8 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.android.dialer.notification.tests">
+    <application android:label="Dialer notification tests">
+        <uses-library android:name="android.test.runner" />
+    </application>
+    <instrumentation android:name="android.test.InstrumentationTestRunner"
+        android:targetPackage="com.android.dialer" />
+</manifest>

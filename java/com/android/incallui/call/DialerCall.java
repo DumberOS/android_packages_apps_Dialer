@@ -381,6 +381,11 @@ public class DialerCall implements VideoTechListener {
     parseCallSpecificAppData();
   }
 
+  public boolean isEstablishingEncryptedCall() {
+    return com.android.dialer.dumber.EncryptedCallState.isEstablishing(
+        telecomCall.getDetails().getState(), telecomCall.getDetails().getExtras());
+  }
+
   private static int translateState(int state) {
     switch (state) {
       case Call.STATE_NEW:
@@ -548,7 +553,9 @@ public class DialerCall implements VideoTechListener {
     videoTechManager.dispatchCallStateChanged(telecomCall.getDetails().getState(),
             getAccountHandle());
 
-    final int translatedState = translateState(telecomCall.getDetails().getState());
+    final int translatedState = isEstablishingEncryptedCall()
+        ? DialerCallState.CONNECTING
+        : translateState(telecomCall.getDetails().getState());
     if (state != DialerCallState.BLOCKED) {
       setState(translatedState);
       setDisconnectCause(telecomCall.getDetails().getDisconnectCause());
@@ -805,7 +812,7 @@ public class DialerCall implements VideoTechListener {
   }
 
   public void setState(int state) {
-    if (state == DialerCallState.INCOMING) {
+    if (state == DialerCallState.INCOMING || isEstablishingEncryptedCall()) {
       logState.isIncoming = true;
     }
     updateCallTiming(state);
@@ -844,7 +851,8 @@ public class DialerCall implements VideoTechListener {
           logState.dialerConnectTimeMillisElapsedRealtime == 0
               ? 0
               : SystemClock.elapsedRealtime() - logState.dialerConnectTimeMillisElapsedRealtime;
-    } else if (state == DialerCallState.DIALING || state == DialerCallState.CONNECTING) {
+    } else if (!logState.isIncoming
+        && (state == DialerCallState.DIALING || state == DialerCallState.CONNECTING)) {
       isOutgoing = true;
     }
   }

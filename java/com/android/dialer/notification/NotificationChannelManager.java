@@ -81,6 +81,7 @@ public final class NotificationChannelManager {
     // Just recreate all desired channels. We won't do this often so it's ok to do this now.
     createIncomingCallChannel(context);
     createOngoingCallChannel(context);
+    createEncryptedCallChannel(context);
     createMissedCallChannel(context);
     createDefaultChannel(context);
     VoicemailChannelUtils.createAllChannels(context);
@@ -106,6 +107,9 @@ public final class NotificationChannelManager {
     Set<String> result = new ArraySet<>();
     result.add(NotificationChannelId.INCOMING_CALL);
     result.add(NotificationChannelId.ONGOING_CALL);
+    // CallAudioService can be running when another Dialer process initializes channels.
+    // Its foreground-service channel must never be treated as obsolete.
+    result.add(NotificationChannelId.ENCRYPTED_CALL);
     result.add(NotificationChannelId.MISSED_CALL);
     result.add(NotificationChannelId.DEFAULT);
     result.addAll(VoicemailChannelUtils.getAllChannelIds(context));
@@ -137,6 +141,15 @@ public final class NotificationChannelManager {
     channel.enableVibration(false);
     channel.setSound(
         null, new AudioAttributes.Builder().setUsage(AudioAttributes.USAGE_NOTIFICATION).build());
+    context.getSystemService(NotificationManager.class).createNotificationChannel(channel);
+  }
+
+  private static void createEncryptedCallChannel(@NonNull Context context) {
+    NotificationChannel channel =
+        new NotificationChannel(
+            NotificationChannelId.ENCRYPTED_CALL,
+            context.getText(R.string.notification_channel_encrypted_call),
+            NotificationManager.IMPORTANCE_LOW);
     context.getSystemService(NotificationManager.class).createNotificationChannel(channel);
   }
 

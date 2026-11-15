@@ -32,6 +32,9 @@
        in the connecting stage. -->
   <string name="incall_connecting">Calling…</string>
 
+  <!-- Shown after accepting an encrypted call until the audio connection is ready. -->
+  <string name="incall_establishing_encrypted_call">Establishing call…</string>
+
   <!-- Display information related to assisted dialing, for example Calling using +1 (US)… -->
   <string name="incall_connecting_assited_dialed">Calling using +<xliff:g example="1" id="ad_country_code">%1$s</xliff:g> (<xliff:g example="1" id="ad_user_home_locale">%2$s</xliff:g>)\u2026</string>
 

@@ -105,7 +105,8 @@ public class TopRow {
         || state.state() == DialerCallState.CONNECTING) {
       // [Wi-Fi icon] Calling via Google Guest
       // Calling...
-      label = getLabelForDialing(context, state);
+      label = !TextUtils.isEmpty(state.customLabel())
+          ? state.customLabel() : getLabelForDialing(context, state);
     } else if (state.state() == DialerCallState.ACTIVE && state.isRemotelyHeld()) {
       label = context.getString(R.string.incall_remotely_held);
     } else if (state.state() == DialerCallState.ACTIVE

@@ -446,7 +446,9 @@ public class CallCardPresenter
                   .setSupportsCallOnHold(supports2ndCallOnHold())
                   .setSwapToSecondaryButtonState(getSwapToSecondaryButtonState())
                   .setIsAssistedDialed(primary.isAssistedDialed())
-                  .setCustomLabel(null)
+                  .setCustomLabel(primary.getState() == DialerCallState.CONNECTING
+                      && primary.isEstablishingEncryptedCall()
+                      ? context.getString(R.string.incall_establishing_encrypted_call) : null)
                   .setAssistedDialingExtras(primary.getAssistedDialingExtras())
                   .build());
 

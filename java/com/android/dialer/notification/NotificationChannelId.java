@@ -26,6 +26,7 @@ import java.lang.annotation.RetentionPolicy;
 @StringDef({
   NotificationChannelId.INCOMING_CALL,
   NotificationChannelId.ONGOING_CALL,
+  NotificationChannelId.ENCRYPTED_CALL,
   NotificationChannelId.MISSED_CALL,
   NotificationChannelId.DEFAULT,
 })
@@ -35,6 +36,8 @@ public @interface NotificationChannelId {
   String INCOMING_CALL = "phone_incoming_call";
 
   String ONGOING_CALL = "phone_ongoing_call";
+
+  String ENCRYPTED_CALL = "dumber_calls";
 
   String MISSED_CALL = "phone_missed_call";
 

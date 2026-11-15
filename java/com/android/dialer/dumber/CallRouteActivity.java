@@ -7,11 +7,10 @@ import android.net.Uri;
 import android.os.*;
 import android.telecom.*;
 import android.telephony.*;
-import android.widget.*;
 import chat.dumber.calls.*;
 
 /**
- * User-visible routing and explicit cellular fallback. Never retries carrier calls automatically.
+ * Silent encrypted-call routing with explicit cellular fallback on failure.
  */
 public class CallRouteActivity extends Activity {
   private Intent original;
@@ -22,7 +21,7 @@ public class CallRouteActivity extends Activity {
   private boolean fallbackRequested;
   private boolean cellularConfirmed;
   private final Handler handler = new Handler(Looper.getMainLooper());
-  private TextView status;
+  private String failureReason = "Encrypted call could not connect.";
 
   public static boolean intercept(Context c, Intent intent) {
     Uri uri = intent.getData();
@@ -51,23 +50,7 @@ public class CallRouteActivity extends Activity {
       finish();
       return;
     }
-    LinearLayout layout = new LinearLayout(this);
-    layout.setOrientation(LinearLayout.VERTICAL);
-    layout.setPadding(16, 16, 16, 16);
-    status = new TextView(this);
-    status.setText("Checking encrypted calling…");
-    layout.addView(status);
-    Button regular = new Button(this);
-    regular.setText("Use regular call");
-    regular.setOnClickListener(v -> confirm());
-    layout.addView(regular);
-    Button cancel = new Button(this);
-    cancel.setText(android.R.string.cancel);
-    cancel.setOnClickListener(v -> onBackPressed());
-    layout.addView(cancel);
-    setContentView(layout);
     if (getIntent().getBooleanExtra("failed", false) || state != null) {
-      status.setText("Encrypted call could not connect.");
       confirm();
       return;
     }
@@ -110,7 +93,6 @@ public class CallRouteActivity extends Activity {
                     } else {
                       // A retained account can belong to a different SIM. Never silently
                       // substitute an identity or interpret this as a cellular-call choice.
-                      status.setText("Choose an account for the encrypted call.");
                       String[] labels = new String[accounts.length];
                       for (int i = 0; i < accounts.length; i++) labels[i] = accounts[i].phone;
                       accountPicker = new AlertDialog.Builder(this)
@@ -133,7 +115,6 @@ public class CallRouteActivity extends Activity {
 
   private void checkRecipient(CallAccount account) {
     if (finished || fallbackRequested) return;
-    status.setText("Checking encrypted calling…");
     manager.io.execute(
         () -> {
           try {
@@ -154,7 +135,6 @@ public class CallRouteActivity extends Activity {
                     unavailable("Encrypted calling is not available for this recipient. Check that it is enabled on both phones.");
                     return;
                   }
-                  status.setText("Starting encrypted call…");
                   manager.start(
                       account,
                       phone,
@@ -174,7 +154,7 @@ public class CallRouteActivity extends Activity {
 
   private void unavailable(String reason) {
     if (finished || fallbackRequested || isFinishing()) return;
-    status.setText(reason);
+    failureReason = reason;
     android.util.Log.println(android.util.Log.INFO, "DumberCallRoute", reason);
     confirm();
   }
@@ -187,7 +167,7 @@ public class CallRouteActivity extends Activity {
     handler.removeCallbacksAndMessages(null);
     confirmation =
         new AlertDialog.Builder(this)
-            .setMessage("Place a regular cellular call? It will not use dumber.chat encryption.")
+            .setMessage(failureReason + "\n\nPlace a regular cellular call? It will not use dumber.chat encryption.")
             .setTitle("Use a regular call?")
             .setPositiveButton("Use regular call", (d, w) -> {
               cellularConfirmed = true;

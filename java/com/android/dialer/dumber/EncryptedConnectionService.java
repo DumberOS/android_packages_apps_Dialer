@@ -13,6 +13,15 @@ public final class EncryptedConnectionService extends ConnectionService {
     return CallManager.get(this).attach(request, true);
   }
 
+  @Override
+  public void onCreateConnectionComplete(Connection connection) {
+    // Telecom applies the initial ringback flag before changing CONNECTING to DIALING.
+    // Requesting it in the initial connection makes RingbackPlayer throw and abort setup.
+    if (connection.getState() == Connection.STATE_DIALING) {
+      connection.setRingbackRequested(true);
+    }
+  }
+
   public void onCreateIncomingConnectionFailed(
       PhoneAccountHandle manager, ConnectionRequest request) {
     CallManager.get(this).failedIncoming();

@@ -315,5 +315,6 @@ filegroup {
     srcs: [
         "java/com/android/dialer/dumber/CallRouteActivity.java",
         "java/com/android/dialer/dumber/EncryptedCallAddress.java",
+        "java/com/android/dialer/dumber/EncryptedCallState.java",
     ],
 }

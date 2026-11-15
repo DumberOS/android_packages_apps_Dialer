@@ -22,6 +22,8 @@ public final class CallManager {
   final Context context;
   final Handler main = new Handler(Looper.getMainLooper());
   final ExecutorService io = Executors.newSingleThreadExecutor();
+  // A slow send/prepare must not keep the remote phone ringing after local hangup.
+  final ExecutorService endings = Executors.newSingleThreadExecutor();
   volatile ICallBroker broker;
   volatile CallAccount[] accounts = new CallAccount[0];
   private boolean bound;
@@ -75,6 +77,9 @@ public final class CallManager {
       };
 
   public void connect() {
+    // Application.onCreate also runs in the call-recording process. Only the process
+    // hosting our ConnectionService may subscribe and announce calls to Telecom.
+    if (!Application.getProcessName().equals(context.getApplicationInfo().processName)) return;
     main.post(
         () -> {
           if (bound) {
@@ -175,9 +180,12 @@ public final class CallManager {
     CallAccount account;
     String phone, id, room, remoteParty;
     CallSignal offer;
-    boolean incoming, accepted, connected, restarting, ended;
+    boolean incoming, accepted, connected, restarting;
+    volatile boolean ended;
     java.util.function.Consumer<Boolean> onReady;
     final Object iceRefreshToken = new Object();
+    final Object candidatesToken = new Object();
+    final List<IceCandidate> outgoingCandidates = new ArrayList<>();
     CallMedia media;
     CallSetup setup;
     Connection connection;
@@ -249,11 +257,7 @@ public final class CallManager {
                 main.post(
                     () -> {
                       if (active != a || a.ended) return;
-                      CallSignal s = signal(a, "CANDIDATES");
-                      s.candidates = new String[] {c.sdp};
-                      s.mids = new String[] {c.sdpMid};
-                      s.lines = new int[] {c.sdpMLineIndex};
-                      send(a, s, false);
+                      queueCandidate(a, c);
                     });
               }
 
@@ -289,7 +293,7 @@ public final class CallManager {
                         main.removeCallbacksAndMessages(a);
                         if (a.connection != null) {
                           a.connection.setRingbackRequested(false);
-                          a.connection.setActive();
+                          EncryptedCallState.connected(a.connection);
                         }
                         a.media.microphone(a.accepted && !muted());
                       } else if (state == PeerConnection.PeerConnectionState.DISCONNECTED
@@ -358,11 +362,40 @@ public final class CallManager {
     return context.getSystemService(AudioManager.class).isMicrophoneMute();
   }
 
+  private void queueCandidate(Active a, IceCandidate candidate) {
+    a.outgoingCandidates.add(candidate);
+    if (a.outgoingCandidates.size() == 32) {
+      main.removeCallbacksAndMessages(a.candidatesToken);
+      flushCandidates(a);
+    } else if (a.outgoingCandidates.size() == 1) {
+      main.postAtTime(() -> flushCandidates(a), a.candidatesToken,
+          SystemClock.uptimeMillis() + 100);
+    }
+  }
+
+  private void flushCandidates(Active a) {
+    if (a.ended || a.outgoingCandidates.isEmpty()) return;
+    CallSignal s = signal(a, "CANDIDATES");
+    int count = a.outgoingCandidates.size();
+    s.candidates = new String[count];
+    s.mids = new String[count];
+    s.lines = new int[count];
+    for (int i = 0; i < count; i++) {
+      IceCandidate c = a.outgoingCandidates.get(i);
+      s.candidates[i] = c.sdp;
+      s.mids[i] = c.sdpMid;
+      s.lines[i] = c.sdpMLineIndex;
+    }
+    a.outgoingCandidates.clear();
+    send(a, s, false);
+  }
+
   Connection attach(ConnectionRequest request, boolean incoming) {
     Active a = active;
     String id = request.getExtras() == null ? null : request.getExtras().getString(CALL_ID);
     if (a == null
         || a.ended
+        || a.connection != null
         || a.incoming != incoming
         || !a.account.id.equals(request.getAccountHandle().getId())
         || !a.id.equals(id))
@@ -403,7 +436,6 @@ public final class CallManager {
     else if (incoming) c.setRinging();
     else {
       c.setDialing();
-      c.setRingbackRequested(true);
       main.post(() -> {
         if (active != a || a.ended) return;
         try {
@@ -424,6 +456,7 @@ public final class CallManager {
   private void answer(Active a) {
     if (active != a || a.accepted || a.ended) return;
     a.accepted = true;
+    if (a.connection != null) EncryptedCallState.establishing(a.connection);
     timeout(a, 20000, "connection_failed");
     io.execute(
         () -> {
@@ -463,20 +496,31 @@ public final class CallManager {
   private void send(Active a, CallSignal signal, boolean fatal) {
     if (a.room == null) return;
     String transaction = uuid();
-    io.execute(
+    boolean terminal = "HANGUP".equals(signal.kind) || "REJECT".equals(signal.kind);
+    long queued = SystemClock.elapsedRealtime();
+    (terminal ? endings : io).execute(
         () -> {
+          if (a.ended && !terminal) return;
+          long started = SystemClock.elapsedRealtime();
+          android.util.Log.println(android.util.Log.INFO, "DumberCallSignal", "Sending " + signal.kind + " call=" + a.id
+              + " queuedMs=" + (started - queued));
           try {
             broker.send(a.account.id, a.room, signal, transaction);
           } catch (Exception first) {
+            if (a.ended && !terminal) return;
             try {
               broker.send(a.account.id, a.room, signal, transaction);
             } catch (Exception second) {
+              android.util.Log.w("DumberCallSignal", "Failed " + signal.kind + " call=" + a.id);
               if (fatal)
                 main.post(
                     () -> {
                       if (active == a) end(a, "connection_failed", false);
                     });
             }
+          } finally {
+            android.util.Log.println(android.util.Log.INFO, "DumberCallSignal", "Finished " + signal.kind + " call=" + a.id
+                + " elapsedMs=" + (SystemClock.elapsedRealtime() - started));
           }
         });
   }
@@ -493,6 +537,8 @@ public final class CallManager {
       return;
     }
     CallSignal s = e.signal;
+    android.util.Log.println(android.util.Log.INFO, "DumberCallSignal", "Received " + s.kind + " call=" + s.callId
+        + " ageMs=" + (now - s.sentAtMs));
     CallAccount account =
         Arrays.stream(accounts).filter(a -> a.id.equals(e.accountId)).findFirst().orElse(null);
     if (account == null) {
@@ -647,9 +693,13 @@ public final class CallManager {
   private void end(Active a, String reason, boolean signal) {
     if (a.ended) return;
     a.ended = true;
+    android.util.Log.println(android.util.Log.INFO, "DumberCallSignal", "Ending call=" + a.id + " reason=" + reason
+        + " notifyPeer=" + signal);
     ended.put(a.account.id + ":" + a.id, System.currentTimeMillis() + 90000);
     main.removeCallbacksAndMessages(a);
     main.removeCallbacksAndMessages(a.iceRefreshToken);
+    main.removeCallbacksAndMessages(a.candidatesToken);
+    a.outgoingCandidates.clear();
     if (signal && a.room != null) {
       CallSignal s = signal(a, "rejected".equals(reason) ? "REJECT" : "HANGUP");
       s.reason = reason;

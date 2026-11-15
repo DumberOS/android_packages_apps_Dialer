@@ -202,7 +202,9 @@ public abstract class PrimaryCallState {
     public PrimaryCallState build() {
       PrimaryCallState primaryCallState = autoBuild();
       if (!TextUtils.isEmpty(primaryCallState.customLabel())) {
-        Assert.checkArgument(primaryCallState.state() == DialerCallState.CALL_PENDING);
+        Assert.checkArgument(
+            primaryCallState.state() == DialerCallState.CALL_PENDING
+                || primaryCallState.state() == DialerCallState.CONNECTING);
       }
       return primaryCallState;
     }
