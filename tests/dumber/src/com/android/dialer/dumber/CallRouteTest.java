@@ -26,6 +26,7 @@ public final class CallRouteTest extends InstrumentationTestCase {
     lookupEntered = new CountDownLatch(1);
     lookupRelease = new CountDownLatch(0);
     RouteTestActivity.cellularCalls = 0;
+    CallFallbackHistory.cellularPlaced(getInstrumentation().getTargetContext(), "+12025550123");
     CallManager.instance.started = 0;
     CallAccount account = new CallAccount();
     account.id = "test-account";
@@ -66,7 +67,7 @@ public final class CallRouteTest extends InstrumentationTestCase {
       if (result != null && result.isShowing()) return result;
       Thread.sleep(25);
     }
-    fail("Routing must wait for a visible " + name + ", never dial automatically");
+    fail("Expected a visible " + name);
     return null;
   }
 
@@ -78,31 +79,79 @@ public final class CallRouteTest extends InstrumentationTestCase {
   }
 
   public void testMissingAccountWaitsForConfirmation() throws Exception {
+    previouslyEncrypted();
     accounts = new CallAccount[0];
     launch();
     confirmNothingDialed();
   }
 
-  public void testUnsupportedRecipientWaitsForConfirmation() throws Exception {
+  public void testUnsupportedRecipientPlacesCellularCallWithoutWarning() throws Exception {
     launch();
     assertTrue(lookupEntered.await(5, TimeUnit.SECONDS));
-    confirmNothingDialed();
+    awaitCellularCalls(1);
+    assertEquals(1, RouteTestActivity.cellularCalls);
+    assertEquals(0, CallManager.instance.started);
+    Field confirmation = CallRouteActivity.class.getDeclaredField("confirmation");
+    confirmation.setAccessible(true);
+    assertNull(confirmation.get(activity));
+    assertTrue(activity.isFinishing());
   }
 
   public void testFailedLookupWaitsForConfirmation() throws Exception {
+    previouslyEncrypted();
     failLookup = true;
     launch();
     assertTrue(lookupEntered.await(5, TimeUnit.SECONDS));
     confirmNothingDialed();
   }
 
+  public void testWarningReturnsOnlyAfterAnotherSuccessfulEncryptedCall() throws Exception {
+    android.content.Context context = getInstrumentation().getTargetContext();
+    CallFallbackHistory.encryptedConnected(context, "+12025550123");
+    launch();
+    AlertDialog confirmation = dialog("confirmation");
+    assertEquals(0, RouteTestActivity.cellularCalls);
+    getInstrumentation().runOnMainSync(() ->
+        confirmation.getButton(AlertDialog.BUTTON_POSITIVE).performClick());
+    getInstrumentation().waitForIdleSync();
+    assertEquals(1, RouteTestActivity.cellularCalls);
+
+    // A further regular call needs no warning, even across Activity instances.
+    launch();
+    awaitCellularCalls(2);
+    assertEquals(2, RouteTestActivity.cellularCalls);
+    assertTrue(activity.isFinishing());
+
+    CallFallbackHistory.encryptedConnected(context, "+12025550123");
+    launch();
+    dialog("confirmation");
+    assertEquals(2, RouteTestActivity.cellularCalls);
+    assertFalse(activity.isFinishing());
+  }
+
+  public void testCancellingWarningDoesNotClearIt() throws Exception {
+    android.content.Context context = getInstrumentation().getTargetContext();
+    CallFallbackHistory.encryptedConnected(context, "+12025550123");
+    launch();
+    AlertDialog confirmation = dialog("confirmation");
+    getInstrumentation().runOnMainSync(() ->
+        confirmation.getButton(AlertDialog.BUTTON_NEGATIVE).performClick());
+    getInstrumentation().waitForIdleSync();
+    launch();
+    dialog("confirmation");
+    assertEquals(0, RouteTestActivity.cellularCalls);
+  }
+
   public void testBrokerTimeoutWaitsForConfirmation() throws Exception {
+    previouslyEncrypted();
     CallManager.instance.broker = null;
     launch();
     confirmNothingDialed();
   }
 
-  public void testOnlyExplicitPositiveButtonPlacesCellularCall() throws Exception {
+  public void testFailedLookupPositiveButtonPlacesCellularCall() throws Exception {
+    previouslyEncrypted();
+    failLookup = true;
     launch();
     AlertDialog confirmation = dialog("confirmation");
     assertEquals(0, RouteTestActivity.cellularCalls);
@@ -113,6 +162,8 @@ public final class CallRouteTest extends InstrumentationTestCase {
   }
 
   public void testCancelPlacesNoCall() throws Exception {
+    previouslyEncrypted();
+    failLookup = true;
     launch();
     AlertDialog confirmation = dialog("confirmation");
     getInstrumentation().runOnMainSync(() -> confirmation.getButton(AlertDialog.BUTTON_NEGATIVE).performClick());
@@ -133,7 +184,6 @@ public final class CallRouteTest extends InstrumentationTestCase {
   }
 
   public void testCancelDuringLookupPreventsLateCall() throws Exception {
-    supported = true;
     lookupRelease = new CountDownLatch(1);
     launch();
     assertTrue(lookupEntered.await(5, TimeUnit.SECONDS));
@@ -143,6 +193,20 @@ public final class CallRouteTest extends InstrumentationTestCase {
     getInstrumentation().waitForIdleSync();
     assertEquals(0, CallManager.instance.started);
     assertEquals(0, RouteTestActivity.cellularCalls);
+  }
+
+  private void previouslyEncrypted() {
+    CallFallbackHistory.encryptedConnected(getInstrumentation().getTargetContext(), "+12025550123");
+  }
+
+  private void awaitCellularCalls(int expected) throws Exception {
+    long deadline = android.os.SystemClock.elapsedRealtime() + 5000;
+    while (android.os.SystemClock.elapsedRealtime() < deadline) {
+      getInstrumentation().waitForIdleSync();
+      if (RouteTestActivity.cellularCalls == expected) return;
+      Thread.sleep(25);
+    }
+    assertEquals(expected, RouteTestActivity.cellularCalls);
   }
 
   public void testUnmatchedAccountsRequireExplicitAccountSelection() throws Exception {

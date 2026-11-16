@@ -10,7 +10,7 @@ import android.telephony.*;
 import chat.dumber.calls.*;
 
 /**
- * Silent encrypted-call routing with explicit cellular fallback on failure.
+ * Silent call routing, warning once when a previously encrypted peer switches to cellular.
  */
 public class CallRouteActivity extends Activity {
   private Intent original;
@@ -19,9 +19,9 @@ public class CallRouteActivity extends Activity {
   private AlertDialog confirmation;
   private AlertDialog accountPicker;
   private boolean fallbackRequested;
-  private boolean cellularConfirmed;
   private final Handler handler = new Handler(Looper.getMainLooper());
   private String failureReason = "Encrypted call could not connect.";
+  private String phone;
 
   public static boolean intercept(Context c, Intent intent) {
     Uri uri = intent.getData();
@@ -46,6 +46,7 @@ public class CallRouteActivity extends Activity {
     super.onCreate(state);
     manager = CallManager.get(this);
     original = getIntent().getParcelableExtra("original", Intent.class);
+    phone = getIntent().getStringExtra("phone");
     if (original == null || original.getData() == null) {
       finish();
       return;
@@ -121,18 +122,19 @@ public class CallRouteActivity extends Activity {
             TelephonyManager tm = getSystemService(TelephonyManager.class);
             String raw = original.getData().getSchemeSpecificPart();
             String country = tm.createForSubscriptionId(account.subscription).getSimCountryIso();
-            String phone =
+            String normalizedPhone =
                 raw.startsWith("+")
                     ? PhoneNumberUtils.normalizeNumber(raw)
                     : PhoneNumberUtils.formatNumberToE164(
                         raw, country.toUpperCase(java.util.Locale.ROOT));
-            if (phone == null) throw new IllegalArgumentException();
-            boolean supported = manager.broker.supportsCall(account.id, phone);
+            if (normalizedPhone == null) throw new IllegalArgumentException();
+            runOnUiThread(() -> phone = normalizedPhone);
+            boolean supported = manager.broker.supportsCall(account.id, normalizedPhone);
             runOnUiThread(
                 () -> {
                   if (finished || fallbackRequested) return;
                   if (!supported) {
-                    unavailable("Encrypted calling is not available for this recipient. Check that it is enabled on both phones.");
+                    unavailable("Encrypted calling is currently unavailable for this number.");
                     return;
                   }
                   manager.start(
@@ -160,30 +162,59 @@ public class CallRouteActivity extends Activity {
   }
 
   private void confirm() {
-    if (finished || isFinishing() || (confirmation != null && confirmation.isShowing())) return;
+    if (finished || isFinishing() || fallbackRequested) return;
     fallbackRequested = true;
     if (accountPicker != null) accountPicker.dismiss();
     manager.cancelOutgoing();
     handler.removeCallbacksAndMessages(null);
+    manager.io.execute(() -> {
+      try {
+        String number = phone;
+        if (number == null) {
+          String raw = original.getData().getSchemeSpecificPart();
+          TelephonyManager tm = getSystemService(TelephonyManager.class);
+          PhoneAccountHandle handle = original.getParcelableExtra(
+              TelecomManager.EXTRA_PHONE_ACCOUNT_HANDLE, PhoneAccountHandle.class);
+          TelephonyManager selected = handle == null ? null : tm.createForPhoneAccountHandle(handle);
+          String country = (selected == null ? tm : selected).getSimCountryIso();
+          number = raw.startsWith("+") ? PhoneNumberUtils.normalizeNumber(raw)
+              : PhoneNumberUtils.formatNumberToE164(raw, country.toUpperCase(java.util.Locale.ROOT));
+        }
+        if (number == null) throw new IllegalArgumentException();
+        final String normalizedPhone = number;
+        boolean warn = CallFallbackHistory.requiresWarning(this, normalizedPhone);
+        runOnUiThread(() -> {
+          if (finished || isFinishing()) return;
+          phone = normalizedPhone;
+          if (warn) showConfirmation();
+          else cellular();
+        });
+      } catch (Exception e) {
+        // If history cannot be checked, keep the decision with the caller.
+        runOnUiThread(() -> showConfirmation());
+      }
+    });
+  }
+
+  private void showConfirmation() {
+    if (finished || isFinishing() || (confirmation != null && confirmation.isShowing())) return;
     confirmation =
         new AlertDialog.Builder(this)
             .setMessage(failureReason + "\n\nPlace a regular cellular call? It will not use dumber.chat encryption.")
             .setTitle("Use a regular call?")
-            .setPositiveButton("Use regular call", (d, w) -> {
-              cellularConfirmed = true;
-              cellular();
-            })
+            .setPositiveButton("Use regular call", (d, w) -> cellular())
             .setNegativeButton(android.R.string.cancel, (d, w) -> onBackPressed())
             .setOnCancelListener(d -> onBackPressed())
             .show();
   }
 
   private void cellular() {
-    if (finished || !cellularConfirmed) return;
+    if (finished) return;
     finished = true;
     manager.cancelOutgoing();
     original.putExtra(CallManager.BYPASS, true);
     placeCellularCall(original);
+    if (phone != null) CallFallbackHistory.cellularPlaced(this, phone);
     finish();
   }
 

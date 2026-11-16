@@ -288,6 +288,7 @@ public final class CallManager {
                     () -> {
                       if (active != a || a.ended) return;
                       if (state == PeerConnection.PeerConnectionState.CONNECTED) {
+                        if (!a.connected) CallFallbackHistory.encryptedConnected(context, a.phone);
                         a.connected = true;
                         a.restarting = false;
                         main.removeCallbacksAndMessages(a);
@@ -733,6 +734,7 @@ public final class CallManager {
           new Intent(context, CallRouteActivity.class)
               .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
               .putExtra("original", a.cellular)
+              .putExtra("phone", a.phone)
               .putExtra("failed", true);
       context.startActivity(fallback);
     }
