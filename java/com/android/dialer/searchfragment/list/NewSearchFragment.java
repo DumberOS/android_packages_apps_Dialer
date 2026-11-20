@@ -28,6 +28,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnTouchListener;
 import android.view.ViewGroup;
+import android.view.ViewTreeObserver.OnGlobalFocusChangeListener;
 import android.view.animation.Interpolator;
 import android.widget.FrameLayout;
 import android.widget.FrameLayout.LayoutParams;
@@ -130,6 +131,16 @@ public final class NewSearchFragment extends Fragment
 
   private Runnable updatePositionRunnable;
 
+  private final OnGlobalFocusChangeListener searchFocusListener =
+      (oldFocus, newFocus) -> {
+        if (recyclerView != null && newFocus != null && !newFocus.isInTouchMode()
+            && !TextUtils.isEmpty(query) && newFocus != recyclerView
+            && recyclerView.findContainingItemView(newFocus) != null) {
+          // Reveal the whole result list when navigating into it from the keypad or IME.
+          FragmentUtils.getParentUnsafe(this, SearchFragmentListener.class).onSearchListTouch();
+        }
+      };
+
   private final ActivityResultLauncher<String[]> contactPermissionLauncher =
           registerForActivityResult(new ActivityResultContracts.RequestMultiplePermissions(),
                   grantResults -> {
@@ -168,6 +179,7 @@ public final class NewSearchFragment extends Fragment
     recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
     recyclerView.setOnTouchListener(this);
     recyclerView.setAdapter(adapter);
+    recyclerView.getViewTreeObserver().addOnGlobalFocusChangeListener(searchFocusListener);
 
     if (!PermissionsUtil.hasContactsReadPermissions(getContext())) {
       emptyContentView.setDescription(R.string.new_permission_no_search);
@@ -189,6 +201,13 @@ public final class NewSearchFragment extends Fragment
       ViewUtil.doOnPreDraw(view, false, updatePositionRunnable);
     }
     return view;
+  }
+
+  @Override
+  public void onDestroyView() {
+    recyclerView.getViewTreeObserver().removeOnGlobalFocusChangeListener(searchFocusListener);
+    recyclerView = null;
+    super.onDestroyView();
   }
 
   @Override

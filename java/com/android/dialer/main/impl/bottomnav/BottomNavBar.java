@@ -61,7 +61,9 @@ public final class BottomNavBar extends LinearLayout {
   private BottomNavItem callLog;
   private BottomNavItem contacts;
   private BottomNavItem voicemail;
+  private BottomNavItem dialpad;
   private @TabIndex int selectedTab;
+  @Nullable private View searchToolbar;
 
   public BottomNavBar(Context context, @Nullable AttributeSet attrs) {
     super(context, attrs);
@@ -74,6 +76,7 @@ public final class BottomNavBar extends LinearLayout {
     callLog = findViewById(R.id.call_log_tab);
     contacts = findViewById(R.id.contacts_tab);
     voicemail = findViewById(R.id.voicemail_tab);
+    dialpad = findViewById(R.id.fab);
 
     speedDial.setup(R.string.tab_title_speed_dial, R.drawable.quantum_ic_star_outline_vd_theme_24,
             R.drawable.quantum_ic_star_vd_theme_24);
@@ -83,6 +86,10 @@ public final class BottomNavBar extends LinearLayout {
             R.drawable.quantum_ic_people_vd_theme_24);
     voicemail.setup(R.string.tab_title_voicemail, R.drawable.quantum_ic_voicemail_vd_theme_24,
             R.drawable.quantum_ic_voicemail_vd_theme_24);
+    dialpad.setup(R.string.tab_title_dialpad, R.drawable.quantum_ic_dialpad_vd_theme_24,
+            R.drawable.quantum_ic_dialpad_vd_theme_24);
+    // Dialpad opens an overlay; the current content tab remains selected underneath it.
+    dialpad.setSelected(false);
 
     speedDial.setOnClickListener(v -> selectTab(TabIndex.SPEED_DIAL));
     callLog.setOnClickListener(v -> selectTab(TabIndex.CALL_LOG));
@@ -95,6 +102,46 @@ public final class BottomNavBar extends LinearLayout {
     callLog.setSelected(view == callLog);
     contacts.setSelected(view == contacts);
     voicemail.setSelected(view == voicemail);
+    updateFocusNavigation();
+  }
+
+  /** Connects the top tabs to the collapsed search controls below them. */
+  public void setupFocusNavigation(View toolbar) {
+    searchToolbar = toolbar;
+    updateFocusNavigation();
+  }
+
+  @Override
+  protected void onLayout(boolean changed, int left, int top, int right, int bottom) {
+    super.onLayout(changed, left, top, right, bottom);
+    // Dialpad show/hide and optional voicemail change the last visible focus target.
+    updateFocusNavigation();
+  }
+
+  private void updateFocusNavigation() {
+    View[] controls = {speedDial, callLog, contacts, voicemail, dialpad};
+    List<View> visibleControls = new ArrayList<>();
+    for (View control : controls) {
+      if (control.getVisibility() == View.VISIBLE) {
+        visibleControls.add(control);
+      }
+    }
+    boolean rtl = getLayoutDirection() == View.LAYOUT_DIRECTION_RTL;
+    for (int index = 0; index < visibleControls.size(); index++) {
+      View control = visibleControls.get(index);
+      int previous = visibleControls.get(Math.max(0, index - 1)).getId();
+      int next = visibleControls.get(Math.min(visibleControls.size() - 1, index + 1)).getId();
+      control.setNextFocusLeftId(rtl ? next : previous);
+      control.setNextFocusRightId(rtl ? previous : next);
+      control.setNextFocusDownId(R.id.search_box_start_search);
+    }
+    if (searchToolbar != null && selectedTab >= 0 && selectedTab <= TabIndex.VOICEMAIL) {
+      int[] searchControls = {R.id.search_box_start_search, R.id.voice_search_button,
+          R.id.main_options_menu_button};
+      for (int id : searchControls) {
+        searchToolbar.findViewById(id).setNextFocusUpId(controls[selectedTab].getId());
+      }
+    }
   }
 
   /**
@@ -142,6 +189,7 @@ public final class BottomNavBar extends LinearLayout {
       LogUtil.i("OldMainActivityPeer.showVoicemail", "hid VM tab and moved to speed dial tab");
       selectTab(TabIndex.SPEED_DIAL);
     }
+    updateFocusNavigation();
   }
 
   public void setNotificationCount(@TabIndex int tab, int count) {

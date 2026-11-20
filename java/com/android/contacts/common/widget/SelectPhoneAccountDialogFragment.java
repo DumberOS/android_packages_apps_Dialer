@@ -21,6 +21,7 @@ import android.annotation.SuppressLint;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.graphics.drawable.StateListDrawable;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
@@ -39,6 +40,7 @@ import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListAdapter;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -133,6 +135,16 @@ public class SelectPhoneAccountDialogFragment extends DialogFragment {
                 options.hasTitle() ? options.getTitle() : R.string.select_account_dialog_title)
             .setAdapter(selectAccountListAdapter, selectionListener)
             .create();
+
+    // ListView owns keyboard selection; making its rows focusable would break item clicks.
+    ListView accountList = dialog.getListView();
+    StateListDrawable selector = new StateListDrawable();
+    selector.addState(
+        new int[] {android.R.attr.state_focused, -android.R.attr.state_pressed},
+        builder.getContext().getDrawable(R.drawable.dpad_focus));
+    selector.addState(new int[] {}, accountList.getSelector());
+    accountList.setSelector(selector);
+    accountList.setDrawSelectorOnTop(true);
 
     if (options.getCanSetDefault()) {
       // Generate custom checkbox view, lint suppressed since no appropriate parent (is dialog)

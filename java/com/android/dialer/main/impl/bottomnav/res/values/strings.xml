@@ -21,6 +21,8 @@
   <string name="tab_title_speed_dial">Favorites</string>
   <!-- Tab text to show users their voicemails  [CHAR LIMIT=10] -->
   <string name="tab_title_voicemail">Voicemail</string>
+  <!-- Top-panel action that opens the number dialpad. -->
+  <string name="tab_title_dialpad">Dialpad</string>
 
   <!-- Notification badge indicating that there are more than 9 notifications for the user [CHAR LIMIT=3] -->
   <string name="bottom_nav_count_9_plus">9+</string>

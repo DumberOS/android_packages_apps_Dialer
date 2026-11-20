@@ -17,6 +17,7 @@
 
 package com.android.dialer.speeddial;
 
+import android.view.KeyEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -40,6 +41,21 @@ public class HeaderViewHolder extends RecyclerView.ViewHolder implements OnClick
     headerText = view.findViewById(R.id.speed_dial_header_text);
     addButton = view.findViewById(R.id.speed_dial_add_button);
     addButton.setOnClickListener(this);
+    addButton.setOnKeyListener((button, keyCode, event) -> {
+      if (keyCode != KeyEvent.KEYCODE_DPAD_UP) {
+        return false;
+      }
+      // GridLayoutManager can select this same header again instead of leaving the grid.
+      // Resolve the toolbar outside the RecyclerView before its focus search runs.
+      View search = button.getRootView().findViewById(R.id.search_box_start_search);
+      if (search == null || !search.isShown()) {
+        return false;
+      }
+      if (event.getAction() == KeyEvent.ACTION_DOWN) {
+        return search.requestFocus(View.FOCUS_UP);
+      }
+      return event.getAction() == KeyEvent.ACTION_UP;
+    });
   }
 
   public void setHeaderText(@StringRes int header) {

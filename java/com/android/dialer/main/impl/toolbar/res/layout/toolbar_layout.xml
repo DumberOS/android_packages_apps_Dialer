@@ -54,8 +54,12 @@
 
         <TextView
             android:id="@+id/search_box_start_search"
+            android:focusable="true"
+            android:focusableInTouchMode="false"
+            android:foreground="@drawable/dpad_focus"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="48dp"
+            android:gravity="center_vertical"
             android:layout_marginStart="8dp"
             android:layout_centerVertical="true"
             android:layout_toEndOf="@+id/search_magnifying_glass"
@@ -66,6 +70,9 @@
 
         <ImageView
             android:id="@+id/voice_search_button"
+            android:focusable="true"
+            android:focusableInTouchMode="false"
+            android:foreground="@drawable/dpad_focus"
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:layout_toStartOf="@+id/main_options_menu_button"

@@ -128,6 +128,8 @@ public class CheckableLabeledButton extends LinearLayout implements Checkable {
     addView(labelView);
 
     setFocusable(true);
+    setFocusableInTouchMode(false);
+    setForeground(context.getDrawable(R.drawable.dpad_focus));
     setClickable(true);
     setEnabled(enabled);
     setOutlineProvider(null);

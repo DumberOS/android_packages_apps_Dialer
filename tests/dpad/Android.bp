@@ -1,0 +1,11 @@
+android_test {
+    name: "DialerDpadTests",
+    srcs: ["src/**/*.java"],
+    instrumentation_for: "Dialer",
+    libs: ["android.test.runner.stubs", "android.test.base.stubs"],
+    sdk_version: "system_current",
+    min_sdk_version: "34",
+    certificate: "shared",
+    test_suites: ["general-tests"],
+    optimize: { enabled: false },
+}

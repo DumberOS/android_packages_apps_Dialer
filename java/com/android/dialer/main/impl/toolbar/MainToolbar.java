@@ -51,6 +51,8 @@ public final class MainToolbar extends Toolbar implements PopupMenu.OnMenuItemCl
 
   public MainToolbar(Context context, AttributeSet attrs) {
     super(context, attrs);
+    // The toolbar theme otherwise excludes its controls from d-pad focus on touchscreens.
+    setTouchscreenBlocksFocus(false);
   }
 
   @Override
@@ -78,6 +80,7 @@ public final class MainToolbar extends Toolbar implements PopupMenu.OnMenuItemCl
 
   /** Slides the toolbar up and off the screen. */
   public void slideUp(boolean animate, View container) {
+    setDescendantFocusability(FOCUS_BLOCK_DESCENDANTS);
     if (hasGlobalLayoutListener) {
       // Return early since we've already scheduled the toolbar to slide up
       return;
@@ -114,6 +117,7 @@ public final class MainToolbar extends Toolbar implements PopupMenu.OnMenuItemCl
 
   /** Slides the toolbar down and back onto the screen. */
   public void slideDown(boolean animate, View container) {
+    setDescendantFocusability(FOCUS_AFTER_DESCENDANTS);
     if (getTranslationY() == 0) {
       LogUtil.e("MainToolbar.slideDown", "Already slide down.");
       return;

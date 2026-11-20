@@ -27,7 +27,6 @@ import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.view.View.OnKeyListener;
 import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.LinearLayout;
@@ -44,7 +43,7 @@ import java.util.Map;
 
 /** Fragment for call control buttons */
 public class DialpadFragment extends BaseFragment<DialpadPresenter, DialpadUi>
-    implements DialpadUi, OnKeyListener, OnClickListener, OnPressedListener {
+    implements DialpadUi, OnClickListener, OnPressedListener {
 
   /** Hash Map to map a view id to a character */
   private static final Map<Integer, Character> displayMap = new ArrayMap<>();
@@ -93,31 +92,6 @@ public class DialpadFragment extends BaseFragment<DialpadPresenter, DialpadUi>
     if (v.getId() == R.id.dialpad_back) {
       getActivity().onBackPressed();
     }
-  }
-
-  @Override
-  public boolean onKey(View v, int keyCode, KeyEvent event) {
-    Log.d(this, "onKey:  keyCode " + keyCode + ", view " + v);
-
-    if (keyCode == KeyEvent.KEYCODE_DPAD_CENTER || keyCode == KeyEvent.KEYCODE_ENTER) {
-      int viewId = v.getId();
-      if (displayMap.containsKey(viewId)) {
-        switch (event.getAction()) {
-          case KeyEvent.ACTION_DOWN:
-            if (event.getRepeatCount() == 0) {
-              getPresenter().processDtmf(displayMap.get(viewId));
-            }
-            break;
-          case KeyEvent.ACTION_UP:
-            getPresenter().stopDtmf();
-            break;
-          default: // fall out
-        }
-        // do not return true [handled] here, since we want the
-        // press / click animation to be handled by the framework.
-      }
-    }
-    return false;
   }
 
   @Override
@@ -235,7 +209,6 @@ public class DialpadFragment extends BaseFragment<DialpadPresenter, DialpadUi>
     DialpadKeyButton dialpadKey;
     for (int i = 0; i < buttonIds.length; i++) {
       dialpadKey = dialpadView.findViewById(buttonIds[i]);
-      dialpadKey.setOnKeyListener(this);
       dialpadKey.setOnClickListener(this);
       dialpadKey.setOnPressedListener(this);
     }

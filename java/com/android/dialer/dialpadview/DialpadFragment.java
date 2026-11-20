@@ -405,6 +405,9 @@ public class DialpadFragment extends Fragment
     digits.setOnLongClickListener(this);
     digits.addTextChangedListener(this);
     digits.setElegantTextHeight(false);
+    View callButton = fragmentView.findViewById(R.id.dialpad_call);
+    callButton.setVisibility(View.VISIBLE);
+    callButton.setOnClickListener(this);
 
     if (!MotorolaUtils.shouldDisablePhoneNumberFormatting(getContext())) {
       initPhoneNumberFormattingTextWatcherExecutor.executeSerial(getCurrentCountryIso());
@@ -920,7 +923,9 @@ public class DialpadFragment extends Fragment
   public boolean onKey(View view, int keyCode, KeyEvent event) {
     if (view.getId() == R.id.digits) {
       if (keyCode == KeyEvent.KEYCODE_ENTER || keyCode == KeyEvent.KEYCODE_CALL) {
-        handleDialButtonPressed();
+        if (event.getAction() == KeyEvent.ACTION_UP && !event.isCanceled()) {
+          handleDialButtonPressed();
+        }
         return true;
       }
     }
@@ -936,6 +941,11 @@ public class DialpadFragment extends Fragment
   @Override
   public void onPressed(View view, boolean pressed) {
     if (pressed) {
+      if (view.isInTouchMode()) {
+        // Keep hardware typing and the next d-pad movement in the dialer after a touch key.
+        // Only the editor takes touch focus; the buttons still activate on the first tap.
+        digits.requestFocus();
+      }
       int resId = view.getId();
       if (resId == R.id.one) {
         keyPressed(KeyEvent.KEYCODE_1);
@@ -1037,10 +1047,13 @@ public class DialpadFragment extends Fragment
   @Override
   public void onClick(View view) {
     int resId = view.getId();
-    if (resId == R.id.dialpad_floating_action_button) {
+    if (resId == R.id.dialpad_floating_action_button || resId == R.id.dialpad_call) {
       view.performHapticFeedback(HapticFeedbackConstants.VIRTUAL_KEY);
       handleDialButtonPressed();
     } else if (resId == R.id.deleteButton) {
+      if (view.isInTouchMode()) {
+        digits.requestFocus();
+      }
       keyPressed(KeyEvent.KEYCODE_DEL);
     } else if (resId == R.id.digits) {
       if (!isDigitsEmpty()) {
@@ -1712,6 +1725,23 @@ public class DialpadFragment extends Fragment
 
     public DialpadSlidingRelativeLayout(Context context, AttributeSet attrs, int defStyle) {
       super(context, attrs, defStyle);
+    }
+
+    @Override
+    public boolean dispatchKeyEvent(KeyEvent event) {
+      // A physical number/backspace/call key edits or calls the number even while an action
+      // button has focus. Center/Enter still activate the focused button normally.
+      int code = event.getKeyCode();
+      char character = event.getNumber();
+      boolean numberKey = (character >= '0' && character <= '9')
+          || character == '*' || character == '#'
+          || event.getUnicodeChar() == '+';
+      View digits = findViewById(R.id.digits);
+      if (digits != null && digits.isShown() && !digits.hasFocus()
+          && (numberKey || code == KeyEvent.KEYCODE_DEL || code == KeyEvent.KEYCODE_CALL)) {
+        return digits.dispatchKeyEvent(event);
+      }
+      return super.dispatchKeyEvent(event);
     }
 
     @UsedByReflection(value = "dialpad_fragment.xml")

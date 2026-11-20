@@ -89,6 +89,9 @@ public class DialpadKeyButton extends FrameLayout {
 
   @Override
   public void setPressed(boolean pressed) {
+    if (pressed == isPressed()) {
+      return;
+    }
     super.setPressed(pressed);
     if (onPressedListener != null) {
       onPressedListener.onPressed(this, pressed);

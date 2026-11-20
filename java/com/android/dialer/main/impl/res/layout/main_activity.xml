@@ -17,22 +17,33 @@
   -->
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/root_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+  <!-- Main tabs -->
+  <include
+      android:id="@+id/bottom_nav_bar"
+      layout="@layout/bottom_nav_bar_layout"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_alignParentTop="true"/>
+
   <!-- MainToolbar -->
   <include
       android:id="@+id/toolbar"
-      layout="@layout/toolbar_layout"/>
+      layout="@layout/toolbar_layout"
+      android:layout_width="match_parent"
+      android:layout_height="@dimen/expanded_search_bar_height"
+      android:layout_below="@id/bottom_nav_bar"
+      android:layout_alignWithParentIfMissing="true"/>
 
   <androidx.coordinatorlayout.widget.CoordinatorLayout
       android:id="@+id/coordinator_layout"
       android:layout_width="match_parent"
       android:layout_height="match_parent"
       android:layout_below="@+id/toolbar"
-      android:layout_above="@+id/bottom_nav_bar">
+      android:layout_alignParentBottom="true">
 
     <!-- Holds SpeedDial, Call Log, Contacts, Voicemail and Search fragments -->
     <FrameLayout
@@ -45,30 +56,9 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
 
-    <com.android.dialer.widget.DialerFloatingActionButton
-        android:id="@+id/fab"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:layout_gravity="end|bottom"
-        android:forceDarkAllowed="false"
-        android:src="@drawable/quantum_ic_dialpad_vd_theme_24"
-        android:tint="@color/dialer_fab_icon_color"
-        app:tint="@color/dialer_fab_icon_color"
-        android:contentDescription="@string/dialpad_button_content_description"
-        app:backgroundTint="@color/dialer_theme_color_light"/>
-
     <include android:id="@+id/promotion_bottom_sheet"
         layout="@layout/promotion_bottom_sheet"/>
   </androidx.coordinatorlayout.widget.CoordinatorLayout>
-
-  <!-- BottomNavBar -->
-  <include
-      android:id="@+id/bottom_nav_bar"
-      layout="@layout/bottom_nav_bar_layout"
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:layout_alignParentBottom="true"/>
 
   <!-- Holds Dialpad fragment -->
   <FrameLayout

@@ -34,7 +34,7 @@
       android:src="@drawable/quantum_ic_arrow_back_vd_theme_24"
       app:tint="?colorIcon" />
 
-  <EditText
+  <com.android.dialer.main.impl.toolbar.SearchEditText
       android:id="@+id/search_view"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
@@ -55,6 +55,9 @@
 
   <ImageView
       android:id="@+id/search_clear_button"
+      android:focusable="true"
+      android:focusableInTouchMode="false"
+      android:foreground="@drawable/dpad_focus"
       android:layout_width="48dp"
       android:layout_height="48dp"
       android:layout_alignParentEnd="true"

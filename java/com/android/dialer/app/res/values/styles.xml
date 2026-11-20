@@ -40,6 +40,10 @@
   </style>
 
   <style name="CallLogActionStyle">
+    <item name="android:focusable">true</item>
+    <item name="android:focusableInTouchMode">false</item>
+    <item name="android:descendantFocusability">blocksDescendants</item>
+    <item name="android:foreground">@drawable/dpad_focus</item>
     <item name="android:layout_width">match_parent</item>
     <item name="android:layout_height">@dimen/call_log_action_height</item>
     <item name="android:background">?android:attr/selectableItemBackground</item>
@@ -52,7 +56,7 @@
     <item name="android:layout_height">wrap_content</item>
     <item name="android:paddingStart">@dimen/call_log_action_horizontal_padding</item>
     <item name="android:paddingEnd">@dimen/call_log_action_horizontal_padding</item>
-    <item name="android:focusable">true</item>
+    <item name="android:focusable">false</item>
     <item name="android:importantForAccessibility">no</item>
   </style>
 
@@ -61,7 +65,7 @@
     <item name="android:layout_height">wrap_content</item>
     <item name="android:paddingStart">@dimen/call_log_action_horizontal_padding</item>
     <item name="android:paddingEnd">@dimen/call_log_action_horizontal_padding</item>
-    <item name="android:focusable">true</item>
+    <item name="android:focusable">false</item>
     <item name="android:importantForAccessibility">no</item>
   </style>
 

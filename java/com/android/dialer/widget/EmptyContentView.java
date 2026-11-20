@@ -70,6 +70,8 @@ public class EmptyContentView extends LinearLayout implements View.OnClickListen
 
     // Don't let touches fall through the empty view.
     setClickable(true);
+    // Only the visible actions are keyboard targets; the backdrop just absorbs touches.
+    setFocusable(false);
     imageView = (ImageView) findViewById(R.id.empty_list_view_image);
     descriptionView = (TextView) findViewById(R.id.empty_list_view_message);
     secondaryActionView = findViewById(R.id.empty_list_view_secondary_action);

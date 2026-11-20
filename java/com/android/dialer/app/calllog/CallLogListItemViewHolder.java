@@ -45,6 +45,7 @@ import android.text.TextDirectionHeuristics;
 import android.text.TextUtils;
 import android.transition.TransitionManager;
 import android.view.ContextMenu;
+import android.view.KeyEvent;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
@@ -277,6 +278,31 @@ public final class CallLogListItemViewHolder extends RecyclerView.ViewHolder
     primaryActionButtonView.setOnClickListener(this);
     primaryActionButtonView.setOnLongClickListener(this);
     primaryActionView.setOnClickListener(this.expandCollapseListener);
+    // Resolve horizontal targets within this holder: every recycled row has the same IDs.
+    View.OnKeyListener rowNavigation = (view, keyCode, event) -> {
+      View target = null;
+      if (keyCode == KeyEvent.KEYCODE_DPAD_RIGHT) {
+        target = view == quickContactView ? primaryActionView : primaryActionButtonView;
+      } else if (keyCode == KeyEvent.KEYCODE_DPAD_LEFT) {
+        target = view == primaryActionButtonView ? primaryActionView : quickContactView;
+      } else if (keyCode == KeyEvent.KEYCODE_CALL) {
+        if (event.getAction() == KeyEvent.ACTION_UP && !event.isCanceled()
+            && primaryActionButtonView.isShown() && primaryActionButtonView.isEnabled()) {
+          primaryActionButtonView.performClick();
+        }
+        return true;
+      }
+      if (target == null || target == view || !target.isShown() || !target.isEnabled()) {
+        return false;
+      }
+      if (event.getAction() == KeyEvent.ACTION_DOWN) {
+        target.requestFocus();
+      }
+      return true;
+    };
+    primaryActionView.setOnKeyListener(rowNavigation);
+    quickContactView.setOnKeyListener(rowNavigation);
+    primaryActionButtonView.setOnKeyListener(rowNavigation);
     if (this.voicemailPlaybackPresenter != null) {
       primaryActionView.setOnLongClickListener(longPressListener);
       quickContactView.setOnLongClickListener(longPressListener);

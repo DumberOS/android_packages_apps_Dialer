@@ -21,9 +21,11 @@ import android.content.Context;
 import android.graphics.Rect;
 import android.text.InputType;
 import android.util.AttributeSet;
+import android.view.KeyEvent;
 import android.view.MotionEvent;
 import android.view.inputmethod.InputMethodManager;
 
+import com.android.dialer.widget.DpadNavigation;
 import com.android.dialer.widget.ResizingTextEditText;
 
 /** EditText which suppresses IME show up. */
@@ -33,6 +35,18 @@ public class DigitsEditText extends ResizingTextEditText {
     super(context, attrs);
     setInputType(getInputType() | InputType.TYPE_TEXT_FLAG_NO_SUGGESTIONS);
     setShowSoftInputOnFocus(false);
+  }
+
+  @Override
+  public boolean onKeyPreIme(int keyCode, KeyEvent event) {
+    return DpadNavigation.moveVertically(this, keyCode, event)
+        || super.onKeyPreIme(keyCode, event);
+  }
+
+  @Override
+  public boolean onKeyDown(int keyCode, KeyEvent event) {
+    return DpadNavigation.moveVertically(this, keyCode, event)
+        || super.onKeyDown(keyCode, event);
   }
 
   @Override

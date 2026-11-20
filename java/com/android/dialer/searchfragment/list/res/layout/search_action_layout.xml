@@ -19,7 +19,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:minHeight="48dp">
+    android:background="?android:attr/selectableItemBackground"
+    android:minHeight="48dp"
+    android:focusable="true"
+    android:focusableInTouchMode="false"
+    android:foreground="@drawable/dpad_focus">
 
   <ImageView
       android:id="@+id/search_action_image"

@@ -93,7 +93,6 @@ import com.android.dialer.voicemailstatus.VisualVoicemailEnabledChecker;
 import com.android.dialer.voicemailstatus.VoicemailStatusHelper;
 import com.android.voicemail.VoicemailComponent;
 import com.google.android.material.bottomsheet.BottomSheetBehavior;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.common.util.concurrent.ListenableFuture;
 
 import java.util.Locale;
@@ -210,7 +209,7 @@ public class OldMainActivityPeer implements MainActivityPeer, FragmentUtilListen
     BottomSheetBehavior<View> bottomSheetBehavior = BottomSheetBehavior.from(bottomSheet);
     bottomSheetBehavior.setState(BottomSheetBehavior.STATE_HIDDEN);
 
-    FloatingActionButton fab = activity.findViewById(R.id.fab);
+    View fab = activity.findViewById(R.id.fab);
     fab.setOnClickListener(
         v -> {
           searchController.showDialpad(true);
@@ -225,6 +224,7 @@ public class OldMainActivityPeer implements MainActivityPeer, FragmentUtilListen
     activity.setSupportActionBar(activity.findViewById(R.id.toolbar));
 
     bottomNav = activity.findViewById(R.id.bottom_nav_bar);
+    bottomNav.setupFocusNavigation(toolbar);
     bottomNavTabListener =
         new MainBottomNavBarBottomNavTabListener(
             activity,
@@ -504,7 +504,7 @@ public class OldMainActivityPeer implements MainActivityPeer, FragmentUtilListen
 
   public MainSearchController getNewMainSearchController(
       BottomNavBar bottomNavBar,
-      FloatingActionButton fab,
+      View fab,
       MainToolbar mainToolbar,
       View fragmentContainer) {
     return new MainSearchController(
@@ -649,10 +649,10 @@ public class OldMainActivityPeer implements MainActivityPeer, FragmentUtilListen
   /** @see CallLogFragment.HostInterface */
   private static final class MainCallLogHost implements CallLogFragment.HostInterface {
 
-    private final FloatingActionButton fab;
+    private final View fab;
     private final MainSearchController searchController;
 
-    MainCallLogHost(MainSearchController searchController, FloatingActionButton fab) {
+    MainCallLogHost(MainSearchController searchController, View fab) {
       this.searchController = searchController;
       this.fab = fab;
     }
@@ -666,9 +666,9 @@ public class OldMainActivityPeer implements MainActivityPeer, FragmentUtilListen
     public void enableFloatingButton(boolean enabled) {
       LogUtil.i("MainCallLogHost.enableFloatingButton", "enabled: " + enabled);
       if (enabled) {
-        fab.show();
+        fab.setVisibility(View.VISIBLE);
       } else {
-        fab.hide();
+        fab.setVisibility(View.GONE);
       }
     }
   }
@@ -943,7 +943,7 @@ public class OldMainActivityPeer implements MainActivityPeer, FragmentUtilListen
 
     private final TransactionSafeActivity activity;
     private final FragmentManager fragmentManager;
-    private final FloatingActionButton fab;
+    private final View fab;
     private final View bottomSheet;
 
     @TabIndex private int selectedTab = TabIndex.NONE;
@@ -951,7 +951,7 @@ public class OldMainActivityPeer implements MainActivityPeer, FragmentUtilListen
     private MainBottomNavBarBottomNavTabListener(
         TransactionSafeActivity activity,
         FragmentManager fragmentManager,
-        FloatingActionButton fab,
+        View fab,
         View bottomSheet) {
       this.activity = activity;
       this.fragmentManager = fragmentManager;
@@ -970,7 +970,7 @@ public class OldMainActivityPeer implements MainActivityPeer, FragmentUtilListen
       Fragment fragment = fragmentManager.findFragmentByTag(SPEED_DIAL_TAG);
       showFragment(fragment == null ? SpeedDialFragment.newInstance() : fragment, SPEED_DIAL_TAG);
 
-      fab.show();
+      fab.setVisibility(View.VISIBLE);
     }
 
     @Override
@@ -984,7 +984,7 @@ public class OldMainActivityPeer implements MainActivityPeer, FragmentUtilListen
       Fragment fragment = fragmentManager.findFragmentByTag(CALL_LOG_TAG);
       showFragment(fragment == null ? new CallLogFragment() : fragment, CALL_LOG_TAG);
 
-      fab.show();
+      fab.setVisibility(View.VISIBLE);
       showPromotionBottomSheet(activity, bottomSheet);
     }
 
@@ -1029,7 +1029,7 @@ public class OldMainActivityPeer implements MainActivityPeer, FragmentUtilListen
       showFragment(
           fragment == null ? ContactsFragment.newInstance(Header.ADD_CONTACT) : fragment,
           CONTACTS_TAG);
-      fab.show();
+      fab.setVisibility(View.VISIBLE);
     }
 
     @Override

@@ -24,6 +24,7 @@ import android.speech.RecognizerIntent;
 import android.text.TextUtils;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.Animation.AnimationListener;
 import android.widget.Toast;
@@ -54,7 +55,6 @@ import com.android.dialer.searchfragment.list.NewSearchFragment.SearchFragmentLi
 import com.android.dialer.smartdial.util.SmartDialNameMatcher;
 import com.android.dialer.util.DialerUtils;
 import com.android.dialer.util.TransactionSafeActivity;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -85,7 +85,7 @@ public class MainSearchController implements SearchBarListener {
 
   private final TransactionSafeActivity activity;
   private final BottomNavBar bottomNav;
-  private final FloatingActionButton fab;
+  private final View fab;
   private final MainToolbar toolbar;
 
   /** View located underneath the toolbar that needs to animate with it. */
@@ -110,7 +110,7 @@ public class MainSearchController implements SearchBarListener {
   public MainSearchController(
       TransactionSafeActivity activity,
       BottomNavBar bottomNav,
-      FloatingActionButton fab,
+      View fab,
       MainToolbar toolbar,
       View fragmentContainer) {
     this.activity = activity;
@@ -157,7 +157,8 @@ public class MainSearchController implements SearchBarListener {
       return;
     }
 
-    fab.hide();
+    fab.setVisibility(View.GONE);
+    hideBottomNav();
     toolbar.slideUp(animate, fragmentContainer);
     toolbar.expand(animate, Optional.empty(), /* requestFocus */ false);
 
@@ -220,7 +221,7 @@ public class MainSearchController implements SearchBarListener {
       return;
     }
 
-    fab.show();
+    fab.setVisibility(View.VISIBLE);
     toolbar.slideDown(animate, fragmentContainer);
     toolbar.transferQueryFromDialpad(dialpadFragment.getQuery());
     activity.setTitle(R.string.main_activity_label);
@@ -331,7 +332,7 @@ public class MainSearchController implements SearchBarListener {
     if (isDialpadVisible()) {
       hideDialpad(animate);
     } else if (!fab.isShown()) {
-      fab.show();
+      fab.setVisibility(View.VISIBLE);
     }
     showBottomNav();
     updateStatusBarColor(android.R.attr.statusBarColor);
@@ -396,7 +397,7 @@ public class MainSearchController implements SearchBarListener {
   private void openSearch(Optional<String> query) {
     LogUtil.enterBlock("MainSearchController.openSearch");
 
-    fab.hide();
+    fab.setVisibility(View.GONE);
     toolbar.expand(/* animate=*/ true, query, /* requestFocus */ true);
     toolbar.showKeyboard();
     hideBottomNav();
@@ -530,8 +531,10 @@ public class MainSearchController implements SearchBarListener {
   }
 
   public void onRestoreInstanceState(Bundle savedInstanceState) {
+    setMainContentFocusable(!isSearchVisible());
+    bottomNav.setVisibility(isSearchVisible() || isDialpadVisible() ? View.GONE : View.VISIBLE);
     if (savedInstanceState.getBoolean(KEY_IS_FAB_HIDDEN, false)) {
-      fab.hide();
+      fab.setVisibility(View.GONE);
     }
     boolean isSlideUp = savedInstanceState.getBoolean(KEY_IS_TOOLBAR_SLIDE_UP, false);
     if (isSlideUp) {
@@ -550,15 +553,25 @@ public class MainSearchController implements SearchBarListener {
   }
 
   private void notifyListenersOnSearchOpen() {
+    setMainContentFocusable(false);
     for (OnSearchShowListener listener : onSearchShowListenerList) {
       listener.onSearchOpen();
     }
   }
 
   private void notifyListenersOnSearchClose() {
+    setMainContentFocusable(true);
     for (OnSearchShowListener listener : onSearchShowListenerList) {
       listener.onSearchClose();
     }
+  }
+
+  private void setMainContentFocusable(boolean focusable) {
+    // Search overlays the current tab. Its obscured rows must not receive key input.
+    ViewGroup content = activity.findViewById(R.id.fragment_container);
+    content.setDescendantFocusability(focusable
+        ? ViewGroup.FOCUS_AFTER_DESCENDANTS
+        : ViewGroup.FOCUS_BLOCK_DESCENDANTS);
   }
 
   /** Listener for search fragment show states change */

@@ -24,6 +24,9 @@
 
   <LinearLayout
       android:id="@+id/click_target"
+      android:focusable="true"
+      android:focusableInTouchMode="false"
+      android:foreground="@drawable/dpad_focus"
       android:orientation="horizontal"
       android:layout_width="match_parent"
       android:layout_height="match_parent"
@@ -40,6 +43,7 @@
         android:layout_width="@dimen/photo_size"
         android:layout_height="@dimen/photo_size"
         android:clickable="false"
+        android:focusable="false"
         android:forceDarkAllowed="false" />
 
     <com.android.dialer.widget.BidiTextView
