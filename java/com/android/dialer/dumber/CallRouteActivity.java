@@ -24,6 +24,14 @@ public class CallRouteActivity extends Activity {
   private String phone;
 
   public static boolean intercept(Context c, Intent intent) {
+    if (!canRoute(c, intent)) return false;
+    Intent route = new Intent(c, CallRouteActivity.class).putExtra("original", intent);
+    if (!(c instanceof Activity)) route.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+    c.startActivity(route);
+    return true;
+  }
+
+  static boolean canRoute(Context c, Intent intent) {
     Uri uri = intent.getData();
     if (intent.getBooleanExtra(CallManager.BYPASS, false)
         || uri == null
@@ -36,9 +44,6 @@ public class CallRouteActivity extends Activity {
         || number.contains(";")
         || c.getSystemService(TelephonyManager.class).isEmergencyNumber(number)) return false;
     if (intent.getIntExtra(TelecomManager.EXTRA_START_CALL_WITH_VIDEO_STATE, 0) != 0) return false;
-    Intent route = new Intent(c, CallRouteActivity.class).putExtra("original", intent);
-    if (!(c instanceof Activity)) route.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-    c.startActivity(route);
     return true;
   }
 
@@ -73,15 +78,7 @@ public class CallRouteActivity extends Activity {
         () -> {
           try {
             CallAccount[] accounts = manager.broker.accounts();
-            PhoneAccountHandle h =
-                original.getParcelableExtra(
-                    TelecomManager.EXTRA_PHONE_ACCOUNT_HANDLE, PhoneAccountHandle.class);
-            TelephonyManager tm = getSystemService(TelephonyManager.class);
-            TelephonyManager selected = h == null ? null : tm.createForPhoneAccountHandle(h);
-            int sub =
-                selected == null
-                    ? SubscriptionManager.getDefaultVoiceSubscriptionId()
-                    : selected.getSubscriptionId();
+            int sub = getOutgoingSubscriptionId();
             CallAccount match = null;
             for (CallAccount a : accounts) if (a.subscription == sub) match = a;
             if (match == null && accounts.length == 1 && sub < 0) match = accounts[0];
@@ -89,11 +86,14 @@ public class CallRouteActivity extends Activity {
               runOnUiThread(
                   () -> {
                     if (finished || fallbackRequested) return;
-                    if (accounts.length == 0) {
+                    if (SubscriptionManager.isValidSubscriptionId(sub)) {
+                      // Keep the selected voice SIM's identity even when another SIM
+                      // has an encrypted account. Use the normal cellular fallback.
+                      unavailable("Encrypted calling is not enabled for the selected SIM.");
+                    } else if (accounts.length == 0) {
                       unavailable("No enabled encrypted-call account is available. Check dumber.chat settings in Messaging.");
                     } else {
-                      // A retained account can belong to a different SIM. Never silently
-                      // substitute an identity or interpret this as a cellular-call choice.
+                      // No voice SIM was selected, so ask which encrypted identity to use.
                       String[] labels = new String[accounts.length];
                       for (int i = 0; i < accounts.length; i++) labels[i] = accounts[i].phone;
                       accountPicker = new AlertDialog.Builder(this)
@@ -114,6 +114,16 @@ public class CallRouteActivity extends Activity {
         });
   }
 
+  protected int getOutgoingSubscriptionId() {
+    PhoneAccountHandle handle = original.getParcelableExtra(
+        TelecomManager.EXTRA_PHONE_ACCOUNT_HANDLE, PhoneAccountHandle.class);
+    TelephonyManager tm = getSystemService(TelephonyManager.class);
+    TelephonyManager selected = handle == null ? null : tm.createForPhoneAccountHandle(handle);
+    return selected == null
+        ? SubscriptionManager.getDefaultVoiceSubscriptionId()
+        : selected.getSubscriptionId();
+  }
+
   private void checkRecipient(CallAccount account) {
     if (finished || fallbackRequested) return;
     manager.io.execute(
@@ -122,11 +132,7 @@ public class CallRouteActivity extends Activity {
             TelephonyManager tm = getSystemService(TelephonyManager.class);
             String raw = original.getData().getSchemeSpecificPart();
             String country = tm.createForSubscriptionId(account.subscription).getSimCountryIso();
-            String normalizedPhone =
-                raw.startsWith("+")
-                    ? PhoneNumberUtils.normalizeNumber(raw)
-                    : PhoneNumberUtils.formatNumberToE164(
-                        raw, country.toUpperCase(java.util.Locale.ROOT));
+            String normalizedPhone = EncryptedCallAvailability.normalizeNumber(raw, country);
             if (normalizedPhone == null) throw new IllegalArgumentException();
             runOnUiThread(() -> phone = normalizedPhone);
             boolean supported = manager.broker.supportsCall(account.id, normalizedPhone);

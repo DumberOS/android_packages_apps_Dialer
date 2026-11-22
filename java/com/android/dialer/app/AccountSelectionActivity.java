@@ -96,7 +96,8 @@ public class AccountSelectionActivity extends AppCompatActivity {
           .setCanSetDefault(false)
           .build();
       SelectPhoneAccountDialogFragment dialog =
-          SelectPhoneAccountDialogFragment.newInstance(options, listener);
+          SelectPhoneAccountDialogFragment.newInstance(
+              options, listener, new CallIntentBuilder(number, initiationType).build());
 
       dialog.show(getSupportFragmentManager(), "dialog");
     }

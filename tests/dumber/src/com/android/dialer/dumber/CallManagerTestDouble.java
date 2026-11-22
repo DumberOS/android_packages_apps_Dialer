@@ -14,10 +14,12 @@ final class CallManager {
   final ExecutorService io = Executors.newSingleThreadExecutor();
   volatile ICallBroker broker;
   volatile int started;
+  volatile String startedAccountId;
   static CallManager get(Context unused) { return instance; }
   void connect() {}
   void cancelOutgoing() {}
   void start(CallAccount account, String phone, Intent original, Consumer<Boolean> ready) {
+    startedAccountId = account.id;
     started++;
     ready.accept(true);
   }

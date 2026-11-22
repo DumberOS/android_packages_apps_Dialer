@@ -2,7 +2,10 @@ package com.android.dialer.dumber;
 
 import android.app.AlertDialog;
 import android.content.Intent;
+import android.content.ComponentName;
 import android.net.Uri;
+import android.telecom.PhoneAccountHandle;
+import android.telecom.TelecomManager;
 import android.telephony.SubscriptionManager;
 import android.test.InstrumentationTestCase;
 import chat.dumber.calls.*;
@@ -26,8 +29,11 @@ public final class CallRouteTest extends InstrumentationTestCase {
     lookupEntered = new CountDownLatch(1);
     lookupRelease = new CountDownLatch(0);
     RouteTestActivity.cellularCalls = 0;
+    RouteTestActivity.cellularIntent = null;
+    RouteTestActivity.outgoingSubscription = null;
     CallFallbackHistory.cellularPlaced(getInstrumentation().getTargetContext(), "+12025550123");
     CallManager.instance.started = 0;
+    CallManager.instance.startedAccountId = null;
     CallAccount account = new CallAccount();
     account.id = "test-account";
     account.phone = "+12025550124";
@@ -51,7 +57,10 @@ public final class CallRouteTest extends InstrumentationTestCase {
   }
 
   private void launch() {
-    Intent original = new Intent(Intent.ACTION_CALL, Uri.parse("tel:+12025550123"));
+    launch(new Intent(Intent.ACTION_CALL, Uri.parse("tel:+12025550123")));
+  }
+
+  private void launch(Intent original) {
     Intent intent = new Intent(getInstrumentation().getTargetContext(), RouteTestActivity.class)
         .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK).putExtra("original", original);
     activity = (RouteTestActivity) getInstrumentation().startActivitySync(intent);
@@ -209,7 +218,67 @@ public final class CallRouteTest extends InstrumentationTestCase {
     assertEquals(expected, RouteTestActivity.cellularCalls);
   }
 
-  public void testUnmatchedAccountsRequireExplicitAccountSelection() throws Exception {
+  public void testUnregisteredSelectedSimPlacesCellularCallOnOriginalAccount() throws Exception {
+    RouteTestActivity.outgoingSubscription = 2;
+    accounts[0].subscription = 1;
+    supported = true;
+    PhoneAccountHandle selected = new PhoneAccountHandle(
+        new ComponentName("com.android.phone", "com.android.services.telephony.TelephonyConnectionService"),
+        "selected-sim");
+    launch(new Intent(Intent.ACTION_CALL, Uri.parse("tel:+12025550123"))
+        .putExtra(TelecomManager.EXTRA_PHONE_ACCOUNT_HANDLE, selected));
+    awaitCellularCalls(1);
+    assertEquals(selected, RouteTestActivity.cellularIntent.getParcelableExtra(
+        TelecomManager.EXTRA_PHONE_ACCOUNT_HANDLE, PhoneAccountHandle.class));
+    assertEquals(Uri.parse("tel:+12025550123"), RouteTestActivity.cellularIntent.getData());
+    assertTrue(RouteTestActivity.cellularIntent.getBooleanExtra(CallManager.BYPASS, false));
+    assertEquals(1L, lookupEntered.getCount());
+    assertEquals(0, CallManager.instance.started);
+  }
+
+  public void testUnregisteredDefaultSimPlacesCellularCall() throws Exception {
+    RouteTestActivity.outgoingSubscription = 2;
+    accounts[0].subscription = 1;
+    supported = true;
+    launch();
+    awaitCellularCalls(1);
+    assertEquals(1L, lookupEntered.getCount());
+    assertEquals(0, CallManager.instance.started);
+  }
+
+  public void testUnregisteredSimStillWarnsForPreviouslyEncryptedRecipient() throws Exception {
+    RouteTestActivity.outgoingSubscription = 2;
+    accounts[0].subscription = 1;
+    previouslyEncrypted();
+    launch();
+    confirmNothingDialed();
+    assertEquals(1L, lookupEntered.getCount());
+    AlertDialog confirmation = dialog("confirmation");
+    getInstrumentation().runOnMainSync(() ->
+        confirmation.getButton(AlertDialog.BUTTON_POSITIVE).performClick());
+    awaitCellularCalls(1);
+  }
+
+  public void testRegisteredSelectedSimUsesItsEncryptedAccount() throws Exception {
+    RouteTestActivity.outgoingSubscription = 2;
+    accounts[0].subscription = 1;
+    CallAccount selected = new CallAccount();
+    selected.id = "selected-account";
+    selected.phone = "+12025550125";
+    selected.subscription = 2;
+    accounts = new CallAccount[] {accounts[0], selected};
+    supported = true;
+    launch();
+    assertTrue(lookupEntered.await(5, TimeUnit.SECONDS));
+    CallManager.instance.io.submit(() -> {}).get(5, TimeUnit.SECONDS);
+    getInstrumentation().waitForIdleSync();
+    assertEquals(1, CallManager.instance.started);
+    assertEquals(selected.id, CallManager.instance.startedAccountId);
+    assertEquals(0, RouteTestActivity.cellularCalls);
+  }
+
+  public void testUnmatchedAccountsWithoutSelectedSimRequireExplicitAccountSelection() throws Exception {
+    RouteTestActivity.outgoingSubscription = SubscriptionManager.INVALID_SUBSCRIPTION_ID;
     accounts[0].subscription = Integer.MAX_VALUE - 1;
     CallAccount other = new CallAccount();
     other.id = "other-account";

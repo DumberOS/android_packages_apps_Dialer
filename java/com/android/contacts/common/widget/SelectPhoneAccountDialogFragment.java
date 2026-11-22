@@ -21,6 +21,7 @@ import android.annotation.SuppressLint;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.graphics.drawable.StateListDrawable;
 import android.os.Bundle;
 import android.os.Handler;
@@ -39,7 +40,6 @@ import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -50,12 +50,17 @@ import androidx.fragment.app.DialogFragment;
 
 import com.android.contacts.common.compat.PhoneAccountCompat;
 import com.android.dialer.contacts.resources.R;
+import com.android.dialer.dumber.EncryptedCallAvailability;
 import com.android.dialer.location.GeoUtil;
 import com.android.dialer.phonenumberutil.PhoneNumberHelper;
 import com.android.dialer.protos.ProtoParsers;
 import com.android.dialer.telecom.TelecomUtil;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 import java.util.Optional;
+import java.util.Set;
 
 /**
  * Dialog that allows the user to select a phone accounts for a given action. Optionally provides
@@ -64,6 +69,7 @@ import java.util.Optional;
 public class SelectPhoneAccountDialogFragment extends DialogFragment {
 
   private static final String ARG_OPTIONS = "options";
+  private static final String ARG_CALL = "call";
 
   private static final String ARG_IS_DEFAULT_CHECKED = "is_default_checked";
 
@@ -73,14 +79,24 @@ public class SelectPhoneAccountDialogFragment extends DialogFragment {
 
   private boolean isDefaultChecked;
   private boolean isSelected;
+  private SelectAccountListAdapter selectAccountListAdapter;
+  private Runnable cancelAvailability;
 
   /** Create new fragment instance. */
   public static SelectPhoneAccountDialogFragment newInstance(
       SelectPhoneAccountDialogOptions options, SelectPhoneAccountListener listener) {
+    return newInstance(options, listener, null);
+  }
+
+  /** Supply a call only for pickers that precede encrypted-call routing. */
+  public static SelectPhoneAccountDialogFragment newInstance(
+      SelectPhoneAccountDialogOptions options, SelectPhoneAccountListener listener,
+      @Nullable Intent call) {
     SelectPhoneAccountDialogFragment fragment = new SelectPhoneAccountDialogFragment();
     fragment.setListener(listener);
     Bundle arguments = new Bundle();
     ProtoParsers.put(arguments, ARG_OPTIONS, options);
+    arguments.putParcelable(ARG_CALL, call);
     fragment.setArguments(arguments);
     return fragment;
   }
@@ -125,7 +141,7 @@ public class SelectPhoneAccountDialogFragment extends DialogFragment {
             (check, isChecked) -> isDefaultChecked = isChecked;
 
     AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
-    ListAdapter selectAccountListAdapter =
+    selectAccountListAdapter =
         new SelectAccountListAdapter(
             builder.getContext(), R.layout.select_account_list_item, options);
 
@@ -171,6 +187,35 @@ public class SelectPhoneAccountDialogFragment extends DialogFragment {
     }
 
     return dialog;
+  }
+
+  @Override
+  public void onStart() {
+    super.onStart();
+    Intent call = getArguments().getParcelable(ARG_CALL, Intent.class);
+    if (call == null) return;
+    selectAccountListAdapter.setEncryptedAccounts(Collections.emptySet());
+    List<PhoneAccountHandle> handles = new ArrayList<>();
+    for (SelectPhoneAccountDialogOptions.Entry entry : options.getEntriesList()) {
+      if (entry.getEnabled()) {
+        handles.add(SelectPhoneAccountDialogOptionsUtil.getPhoneAccountHandle(entry));
+      }
+    }
+    cancelAvailability = EncryptedCallAvailability.query(requireContext(), call, handles,
+        encrypted -> {
+          if (!isSelected && getDialog() != null && getDialog().isShowing()) {
+            selectAccountListAdapter.setEncryptedAccounts(encrypted);
+          }
+        });
+  }
+
+  @Override
+  public void onStop() {
+    if (cancelAvailability != null) {
+      cancelAvailability.run();
+      cancelAvailability = null;
+    }
+    super.onStop();
   }
 
   @Override
@@ -224,12 +269,18 @@ public class SelectPhoneAccountDialogFragment extends DialogFragment {
 
     private final int mResId;
     private final SelectPhoneAccountDialogOptions options;
+    private Set<PhoneAccountHandle> encryptedAccounts = Collections.emptySet();
 
     SelectAccountListAdapter(
         Context context, int resource, SelectPhoneAccountDialogOptions options) {
       super(context, resource, options.getEntriesList());
       this.options = options;
       mResId = resource;
+    }
+
+    void setEncryptedAccounts(Set<PhoneAccountHandle> accounts) {
+      encryptedAccounts = accounts;
+      notifyDataSetChanged();
     }
 
     @Override
@@ -272,7 +323,9 @@ public class SelectPhoneAccountDialogFragment extends DialogFragment {
       if (account == null) {
         return rowView;
       }
-      holder.labelTextView.setText(account.getLabel());
+      holder.labelTextView.setText(encryptedAccounts.contains(accountHandle)
+          ? getContext().getString(R.string.encrypted_call_account_label, account.getLabel())
+          : account.getLabel());
       if (account.getAddress() == null
           || TextUtils.isEmpty(account.getAddress().getSchemeSpecificPart())) {
         holder.numberTextView.setVisibility(View.GONE);

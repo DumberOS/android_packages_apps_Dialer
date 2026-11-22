@@ -185,7 +185,8 @@ public class CallingAccountSelector implements PreCallAction {
             new SelectedListener(
                 coordinator,
                 pendingAction,
-                new PreferredAccountRecorder(number, suggestion, dataId)));
+                new PreferredAccountRecorder(number, suggestion, dataId)),
+            coordinator.getBuilder().build());
     selectPhoneAccountDialogFragment.show(
         ((FragmentActivity) coordinator.getActivity()).getSupportFragmentManager(),
             TAG_CALLING_ACCOUNT_SELECTOR);

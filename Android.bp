@@ -313,6 +313,7 @@ filegroup {
 filegroup {
     name: "dumber-call-route-source",
     srcs: [
+        "java/com/android/dialer/dumber/EncryptedCallAvailability.java",
         "java/com/android/dialer/dumber/CallFallbackHistory.java",
         "java/com/android/dialer/dumber/CallRouteActivity.java",
         "java/com/android/dialer/dumber/EncryptedCallAddress.java",
