@@ -1,6 +1,6 @@
 package com.android.dialer.dumber;
 
-import android.app.AlertDialog;
+import androidx.appcompat.app.AlertDialog;
 import android.content.Intent;
 import android.content.ComponentName;
 import android.net.Uri;
@@ -34,6 +34,7 @@ public final class CallRouteTest extends InstrumentationTestCase {
     CallFallbackHistory.cellularPlaced(getInstrumentation().getTargetContext(), "+12025550123");
     CallManager.instance.started = 0;
     CallManager.instance.startedAccountId = null;
+    CallManager.instance.startSucceeds = true;
     CallAccount account = new CallAccount();
     account.id = "test-account";
     account.phone = "+12025550124";
@@ -64,6 +65,75 @@ public final class CallRouteTest extends InstrumentationTestCase {
     Intent intent = new Intent(getInstrumentation().getTargetContext(), RouteTestActivity.class)
         .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK).putExtra("original", original);
     activity = (RouteTestActivity) getInstrumentation().startActivitySync(intent);
+  }
+
+  private void launchFailedCall() {
+    Intent intent = new Intent(getInstrumentation().getTargetContext(), RouteTestActivity.class)
+        .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+        .putExtra("original", new Intent(Intent.ACTION_CALL, Uri.parse("tel:+12025550123")))
+        .putExtra("phone", "+12025550123")
+        .putExtra("failed", true);
+    activity = (RouteTestActivity) getInstrumentation().startActivitySync(intent);
+  }
+
+  public void testEveryFailedEncryptedCallRequiresConsent() throws Exception {
+    launchFailedCall();
+    confirmNothingDialed();
+    AlertDialog confirmation = dialog("confirmation");
+    getInstrumentation().runOnMainSync(() ->
+        confirmation.getButton(AlertDialog.BUTTON_POSITIVE).performClick());
+    awaitCellularCalls(1);
+
+    // Consenting to this fallback must not authorize the next failed encrypted call.
+    launchFailedCall();
+    dialog("confirmation");
+    assertEquals(1, RouteTestActivity.cellularCalls);
+    assertFalse(activity.isFinishing());
+  }
+
+  public void testFailedEncryptedCallCanBeCancelledWithoutDialing() throws Exception {
+    launchFailedCall();
+    AlertDialog confirmation = dialog("confirmation");
+    getInstrumentation().runOnMainSync(() ->
+        confirmation.getButton(AlertDialog.BUTTON_NEGATIVE).performClick());
+    getInstrumentation().waitForIdleSync();
+    assertEquals(0, RouteTestActivity.cellularCalls);
+    assertTrue(activity.isFinishing());
+  }
+
+  public void testEncryptedStartFailureRequiresConsentWithoutHistory() throws Exception {
+    supported = true;
+    CallManager.instance.startSucceeds = false;
+    launch();
+    dialog("confirmation");
+    assertEquals(1, CallManager.instance.started);
+    assertEquals(0, RouteTestActivity.cellularCalls);
+    assertFalse(activity.isFinishing());
+  }
+
+  public void testEncryptedStartFailureStillRequiresConsentAfterRecreation() throws Exception {
+    supported = true;
+    CallManager.instance.startSucceeds = false;
+    launch();
+    dialog("confirmation");
+    android.app.Instrumentation.ActivityMonitor monitor = getInstrumentation().addMonitor(
+        RouteTestActivity.class.getName(), null, false);
+    try {
+      getInstrumentation().runOnMainSync(() -> activity.recreate());
+      activity = (RouteTestActivity) monitor.waitForActivityWithTimeout(5000);
+      assertNotNull("Routing screen must be recreated", activity);
+    } finally {
+      getInstrumentation().removeMonitor(monitor);
+    }
+    AlertDialog confirmation = dialog("confirmation");
+    assertEquals(1, CallManager.instance.started);
+    assertEquals(0, RouteTestActivity.cellularCalls);
+    Field phone = CallRouteActivity.class.getDeclaredField("phone");
+    phone.setAccessible(true);
+    assertEquals("+12025550123", phone.get(activity));
+    getInstrumentation().runOnMainSync(() ->
+        confirmation.getButton(AlertDialog.BUTTON_POSITIVE).performClick());
+    awaitCellularCalls(1);
   }
 
   private AlertDialog dialog(String name) throws Exception {
@@ -115,6 +185,7 @@ public final class CallRouteTest extends InstrumentationTestCase {
   }
 
   public void testWarningReturnsOnlyAfterAnotherSuccessfulEncryptedCall() throws Exception {
+    failLookup = true;
     android.content.Context context = getInstrumentation().getTargetContext();
     CallFallbackHistory.encryptedConnected(context, "+12025550123");
     launch();
@@ -139,6 +210,7 @@ public final class CallRouteTest extends InstrumentationTestCase {
   }
 
   public void testCancellingWarningDoesNotClearIt() throws Exception {
+    failLookup = true;
     android.content.Context context = getInstrumentation().getTargetContext();
     CallFallbackHistory.encryptedConnected(context, "+12025550123");
     launch();
@@ -188,6 +260,131 @@ public final class CallRouteTest extends InstrumentationTestCase {
     assertTrue(lookupEntered.await(5, TimeUnit.SECONDS));
     CallManager.instance.io.submit(() -> {}).get(5, TimeUnit.SECONDS);
     getInstrumentation().waitForIdleSync();
+    assertEquals(1, CallManager.instance.started);
+    assertEquals(0, RouteTestActivity.cellularCalls);
+  }
+
+  public void testCheckingClosesAutomaticallyForSupportedRecipient() throws Exception {
+    lookupRelease = new CountDownLatch(1);
+    supported = true;
+    launch();
+    assertTrue(lookupEntered.await(5, TimeUnit.SECONDS));
+    AlertDialog checking = dialog("checking");
+    getInstrumentation().runOnMainSync(() -> {
+      android.widget.TextView message = checking.findViewById(android.R.id.message);
+      assertEquals("Checking encrypted call availability.", message.getText().toString());
+      assertEquals("Make a regular call",
+          checking.getButton(AlertDialog.BUTTON_POSITIVE).getText().toString());
+      assertEquals(android.view.View.GONE,
+          checking.getButton(AlertDialog.BUTTON_NEGATIVE).getVisibility());
+      assertEquals(android.view.View.GONE,
+          checking.getButton(AlertDialog.BUTTON_NEUTRAL).getVisibility());
+    });
+    lookupRelease.countDown();
+    CallManager.instance.io.submit(() -> {}).get(5, TimeUnit.SECONDS);
+    getInstrumentation().waitForIdleSync();
+    assertFalse(checking.isShowing());
+    assertEquals(1, CallManager.instance.started);
+    assertEquals(0, RouteTestActivity.cellularCalls);
+  }
+
+  public void testConfirmedUnsupportedRecipientAutomaticallyUsesCellularEvenWithHistory()
+      throws Exception {
+    previouslyEncrypted();
+    lookupRelease = new CountDownLatch(1);
+    launch();
+    assertTrue(lookupEntered.await(5, TimeUnit.SECONDS));
+    AlertDialog checking = dialog("checking");
+    lookupRelease.countDown();
+    awaitCellularCalls(1);
+    assertFalse(checking.isShowing());
+    assertEquals(0, CallManager.instance.started);
+  }
+
+  public void testDpadCenterImmediatelyUsesSelectedSimAndIgnoresLatePositiveLookup()
+      throws Exception {
+    previouslyEncrypted();
+    supported = true;
+    lookupRelease = new CountDownLatch(1);
+    PhoneAccountHandle selected = new PhoneAccountHandle(
+        new ComponentName("com.android.phone", "com.android.services.telephony.TelephonyConnectionService"),
+        "selected-sim");
+    launch(new Intent(Intent.ACTION_CALL, Uri.parse("tel:+12025550123"))
+        .putExtra(TelecomManager.EXTRA_PHONE_ACCOUNT_HANDLE, selected));
+    assertTrue(lookupEntered.await(5, TimeUnit.SECONDS));
+    AlertDialog checking = dialog("checking");
+    getInstrumentation().runOnMainSync(() ->
+        assertTrue(checking.getButton(AlertDialog.BUTTON_POSITIVE).hasFocus()));
+    getInstrumentation().sendKeyDownUpSync(android.view.KeyEvent.KEYCODE_DPAD_CENTER);
+    awaitCellularCalls(1);
+    assertEquals("Must dial while the lookup is still blocked", 1L, lookupRelease.getCount());
+    assertFalse(checking.isShowing());
+    assertEquals(selected, RouteTestActivity.cellularIntent.getParcelableExtra(
+        TelecomManager.EXTRA_PHONE_ACCOUNT_HANDLE, PhoneAccountHandle.class));
+    assertTrue(RouteTestActivity.cellularIntent.getBooleanExtra(CallManager.BYPASS, false));
+    lookupRelease.countDown();
+    CallManager.instance.io.submit(() -> {}).get(5, TimeUnit.SECONDS);
+    getInstrumentation().waitForIdleSync();
+    assertEquals(0, CallManager.instance.started);
+    assertEquals(1, RouteTestActivity.cellularCalls);
+  }
+
+  public void testRegularButtonIgnoresLateLookupFailure() throws Exception {
+    previouslyEncrypted();
+    failLookup = true;
+    lookupRelease = new CountDownLatch(1);
+    launch();
+    assertTrue(lookupEntered.await(5, TimeUnit.SECONDS));
+    AlertDialog checking = dialog("checking");
+    getInstrumentation().runOnMainSync(() ->
+        checking.getButton(AlertDialog.BUTTON_POSITIVE).performClick());
+    awaitCellularCalls(1);
+    assertEquals(1L, lookupRelease.getCount());
+    lookupRelease.countDown();
+    CallManager.instance.io.submit(() -> {}).get(5, TimeUnit.SECONDS);
+    getInstrumentation().waitForIdleSync();
+    Field confirmation = CallRouteActivity.class.getDeclaredField("confirmation");
+    confirmation.setAccessible(true);
+    assertNull(confirmation.get(activity));
+    assertEquals(1, RouteTestActivity.cellularCalls);
+    assertEquals(0, CallManager.instance.started);
+  }
+
+  public void testRegularButtonWorksWhileWaitingForMessaging() throws Exception {
+    CallManager.instance.broker = null;
+    launch();
+    AlertDialog checking = dialog("checking");
+    getInstrumentation().runOnMainSync(() ->
+        checking.getButton(AlertDialog.BUTTON_POSITIVE).performClick());
+    awaitCellularCalls(1);
+    assertFalse(checking.isShowing());
+    assertEquals(1L, lookupEntered.getCount());
+    assertEquals(0, CallManager.instance.started);
+  }
+
+  public void testRecreatedCheckingDialogStillRoutesAutomatically() throws Exception {
+    lookupRelease = new CountDownLatch(1);
+    supported = true;
+    launch();
+    assertTrue(lookupEntered.await(5, TimeUnit.SECONDS));
+    AlertDialog oldChecking = dialog("checking");
+    android.app.Instrumentation.ActivityMonitor monitor = getInstrumentation().addMonitor(
+        RouteTestActivity.class.getName(), null, false);
+    try {
+      getInstrumentation().runOnMainSync(() -> activity.recreate());
+      activity = (RouteTestActivity) monitor.waitForActivityWithTimeout(5000);
+      assertNotNull(activity);
+    } finally {
+      getInstrumentation().removeMonitor(monitor);
+    }
+    AlertDialog checking = dialog("checking");
+    assertFalse(oldChecking.isShowing());
+    lookupRelease.countDown();
+    long deadline = android.os.SystemClock.elapsedRealtime() + 5000;
+    while (CallManager.instance.started == 0
+        && android.os.SystemClock.elapsedRealtime() < deadline) Thread.sleep(25);
+    getInstrumentation().waitForIdleSync();
+    assertFalse(checking.isShowing());
     assertEquals(1, CallManager.instance.started);
     assertEquals(0, RouteTestActivity.cellularCalls);
   }

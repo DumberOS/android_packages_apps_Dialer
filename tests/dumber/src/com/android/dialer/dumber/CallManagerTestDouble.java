@@ -15,12 +15,13 @@ final class CallManager {
   volatile ICallBroker broker;
   volatile int started;
   volatile String startedAccountId;
+  boolean startSucceeds = true;
   static CallManager get(Context unused) { return instance; }
   void connect() {}
   void cancelOutgoing() {}
   void start(CallAccount account, String phone, Intent original, Consumer<Boolean> ready) {
     startedAccountId = account.id;
     started++;
-    ready.accept(true);
+    ready.accept(startSucceeds);
   }
 }

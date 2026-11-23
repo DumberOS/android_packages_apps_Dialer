@@ -766,7 +766,7 @@
             android:name="com.android.voicemail.impl.configui.VoicemailSecretCodeActivity"
             android:exported="false" />
         <activity android:name="com.android.dialer.dumber.CallRouteActivity" android:exported="false"
-            android:theme="@style/Theme.AppCompat.Translucent" />
+            android:theme="@style/Theme.PreCall.DialogHolder" />
         <service android:name="com.android.dialer.dumber.CallWakeService" android:exported="true" />
         <service android:name="com.android.dialer.dumber.CallAudioService" android:exported="false" android:foregroundServiceType="microphone|phoneCall" />
         <service android:name="com.android.dialer.dumber.EncryptedConnectionService" android:exported="true" android:permission="android.permission.BIND_TELECOM_CONNECTION_SERVICE">

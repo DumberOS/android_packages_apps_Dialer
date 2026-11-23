@@ -12,7 +12,7 @@
     <application android:label="Encrypted call media tests">
         <uses-library android:name="android.test.runner" />
         <activity android:name="com.android.dialer.dumber.RouteTestActivity" android:exported="false"
-            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <service android:name="com.android.dialer.dumber.LocalTelecomTestService"
             android:permission="android.permission.BIND_TELECOM_CONNECTION_SERVICE" android:exported="true">
             <intent-filter><action android:name="android.telecom.ConnectionService" /></intent-filter>

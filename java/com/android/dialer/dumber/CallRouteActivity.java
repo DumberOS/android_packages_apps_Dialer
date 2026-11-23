@@ -1,24 +1,26 @@
 package com.android.dialer.dumber;
 
 import android.app.Activity;
-import android.app.AlertDialog;
 import android.content.*;
 import android.net.Uri;
 import android.os.*;
 import android.telecom.*;
 import android.telephony.*;
+import androidx.appcompat.app.AlertDialog;
 import chat.dumber.calls.*;
 
 /**
- * Silent call routing, warning once when a previously encrypted peer switches to cellular.
+ * Visible, cancellable availability checks, with consent after failed encrypted calls.
  */
 public class CallRouteActivity extends Activity {
   private Intent original;
   private CallManager manager;
-  private boolean finished;
+  private volatile boolean finished;
+  private AlertDialog checking;
   private AlertDialog confirmation;
   private AlertDialog accountPicker;
   private boolean fallbackRequested;
+  private boolean encryptedAttempted;
   private final Handler handler = new Handler(Looper.getMainLooper());
   private String failureReason = "Encrypted call could not connect.";
   private String phone;
@@ -52,16 +54,49 @@ public class CallRouteActivity extends Activity {
     manager = CallManager.get(this);
     original = getIntent().getParcelableExtra("original", Intent.class);
     phone = getIntent().getStringExtra("phone");
+    if (phone == null && state != null) phone = state.getString("phone");
+    encryptedAttempted = getIntent().getBooleanExtra("failed", false)
+        || (state != null && state.getBoolean("encrypted_attempted", false));
     if (original == null || original.getData() == null) {
       finish();
       return;
     }
-    if (getIntent().getBooleanExtra("failed", false) || state != null) {
+    if (encryptedAttempted || (state != null && state.getBoolean("fallback_requested", false))) {
       confirm();
       return;
     }
+    showChecking();
     manager.connect();
     waitForBroker(SystemClock.elapsedRealtime() + 4000);
+  }
+
+  @Override
+  protected void onSaveInstanceState(Bundle state) {
+    state.putBoolean("encrypted_attempted", encryptedAttempted);
+    state.putBoolean("fallback_requested", fallbackRequested);
+    state.putString("phone", phone);
+    super.onSaveInstanceState(state);
+  }
+
+  private void showChecking() {
+    if (finished || fallbackRequested || (checking != null && checking.isShowing())) return;
+    checking = new AlertDialog.Builder(this)
+        .setMessage("Checking encrypted call availability.")
+        .setPositiveButton("Make a regular call", (dialog, which) -> cellular())
+        .setOnCancelListener(dialog -> onBackPressed())
+        .create();
+    checking.setOnShowListener(dialog -> {
+      android.widget.Button button = checking.getButton(AlertDialog.BUTTON_POSITIVE);
+      button.setAllCaps(false);
+      button.setFocusableInTouchMode(true);
+      button.requestFocus();
+    });
+    checking.setCanceledOnTouchOutside(false);
+    checking.show();
+  }
+
+  private void dismissChecking() {
+    if (checking != null) checking.dismiss();
   }
 
   private void waitForBroker(long deadline) {
@@ -76,6 +111,7 @@ public class CallRouteActivity extends Activity {
     }
     manager.io.execute(
         () -> {
+          if (finished) return;
           try {
             CallAccount[] accounts = manager.broker.accounts();
             int sub = getOutgoingSubscriptionId();
@@ -94,6 +130,7 @@ public class CallRouteActivity extends Activity {
                       unavailable("No enabled encrypted-call account is available. Check dumber.chat settings in Messaging.");
                     } else {
                       // No voice SIM was selected, so ask which encrypted identity to use.
+                      dismissChecking();
                       String[] labels = new String[accounts.length];
                       for (int i = 0; i < accounts.length; i++) labels[i] = accounts[i].phone;
                       accountPicker = new AlertDialog.Builder(this)
@@ -126,23 +163,29 @@ public class CallRouteActivity extends Activity {
 
   private void checkRecipient(CallAccount account) {
     if (finished || fallbackRequested) return;
+    showChecking();
     manager.io.execute(
         () -> {
+          if (finished) return;
           try {
             TelephonyManager tm = getSystemService(TelephonyManager.class);
             String raw = original.getData().getSchemeSpecificPart();
             String country = tm.createForSubscriptionId(account.subscription).getSimCountryIso();
             String normalizedPhone = EncryptedCallAvailability.normalizeNumber(raw, country);
             if (normalizedPhone == null) throw new IllegalArgumentException();
-            runOnUiThread(() -> phone = normalizedPhone);
+            runOnUiThread(() -> { if (!finished) phone = normalizedPhone; });
+            if (finished) return;
             boolean supported = manager.broker.supportsCall(account.id, normalizedPhone);
             runOnUiThread(
                 () -> {
                   if (finished || fallbackRequested) return;
+                  dismissChecking();
                   if (!supported) {
-                    unavailable("Encrypted calling is currently unavailable for this number.");
+                    // A definitive negative result completes routing automatically.
+                    cellular();
                     return;
                   }
+                  encryptedAttempted = true;
                   manager.start(
                       account,
                       phone,
@@ -170,9 +213,16 @@ public class CallRouteActivity extends Activity {
   private void confirm() {
     if (finished || isFinishing() || fallbackRequested) return;
     fallbackRequested = true;
+    dismissChecking();
     if (accountPicker != null) accountPicker.dismiss();
     manager.cancelOutgoing();
     handler.removeCallbacksAndMessages(null);
+    // A failed encrypted attempt always needs consent before changing transport,
+    // including the first call to this number and repeated failed attempts.
+    if (encryptedAttempted) {
+      showConfirmation();
+      return;
+    }
     manager.io.execute(() -> {
       try {
         String number = phone;
@@ -216,7 +266,10 @@ public class CallRouteActivity extends Activity {
 
   private void cellular() {
     if (finished) return;
+    // Do not wait for the broker worker: its late result must not start another call.
     finished = true;
+    dismissChecking();
+    handler.removeCallbacksAndMessages(null);
     manager.cancelOutgoing();
     original.putExtra(CallManager.BYPASS, true);
     placeCellularCall(original);
@@ -230,6 +283,8 @@ public class CallRouteActivity extends Activity {
 
   public void onBackPressed() {
     finished = true;
+    dismissChecking();
+    handler.removeCallbacksAndMessages(null);
     manager.cancelOutgoing();
     finish();
   }
@@ -240,6 +295,7 @@ public class CallRouteActivity extends Activity {
       manager.cancelOutgoing();
     }
     handler.removeCallbacksAndMessages(null);
+    dismissChecking();
     if (confirmation != null) confirmation.dismiss();
     if (accountPicker != null) accountPicker.dismiss();
     super.onDestroy();

@@ -21,6 +21,7 @@ import java.lang.reflect.Field;
 import java.util.Collections;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.TimeUnit;
+import java.util.concurrent.atomic.AtomicInteger;
 import java.util.function.BooleanSupplier;
 
 /** Real CallManager, ConnectionService, Telecom and notification; signaling stays local. */
@@ -34,8 +35,18 @@ public final class OutgoingCallTest extends InstrumentationTestCase {
   private Field instance;
   private boolean registered;
   private boolean replaced;
+  private final CountDownLatch preparationEntered = new CountDownLatch(1);
+  private CountDownLatch releasePreparation = new CountDownLatch(0);
+  private final AtomicInteger signalsSent = new AtomicInteger();
 
   private void startCall() throws Exception {
+    startCall(false);
+    assertTrue("Media setup must complete for an available recipient",
+        awaitMain(() -> call.media != null));
+  }
+
+  private void startCall(boolean delayedPreparation) throws Exception {
+    if (delayedPreparation) releasePreparation = new CountDownLatch(1);
     context = getInstrumentation().getTargetContext();
     telecom = context.getSystemService(TelecomManager.class);
     getInstrumentation().getUiAutomation().adoptShellPermissionIdentity(
@@ -67,8 +78,21 @@ public final class OutgoingCallTest extends InstrumentationTestCase {
       public CallAccount[] accounts() { return new CallAccount[] {account}; }
       public void subscribe(ICallListener listener) {}
       public boolean supportsCall(String id, String phone) { return true; }
-      public CallSetup prepare(String id, String phone, String conversation) { return setup; }
-      public void send(String id, String conversation, CallSignal signal, String transaction) {}
+      public CallSetup prepare(String id, String phone, String conversation) {
+        preparationEntered.countDown();
+        try {
+          if (!releasePreparation.await(30, TimeUnit.SECONDS)) {
+            throw new IllegalStateException("Test preparation timed out");
+          }
+        } catch (InterruptedException e) {
+          Thread.currentThread().interrupt();
+          throw new IllegalStateException(e);
+        }
+        return setup;
+      }
+      public void send(String id, String conversation, CallSignal signal, String transaction) {
+        signalsSent.incrementAndGet();
+      }
       public void acknowledge(String id, String event) {}
     };
     instance = CallManager.class.getDeclaredField("instance");
@@ -107,6 +131,33 @@ public final class OutgoingCallTest extends InstrumentationTestCase {
 
   public void testEndCallKeyEndsOutgoingCall() throws Exception {
     startCall();
+    checkHangup(KeyEvent.KEYCODE_ENDCALL);
+  }
+
+  public void testSlowPreparationShowsCallScreenAndCanBeCancelled() throws Exception {
+    startCall(true);
+    assertTrue(preparationEntered.await(2, TimeUnit.SECONDS));
+    assertNull("No media before preparation finishes", call.media);
+    assertEquals(0, signalsSent.get());
+    checkHangup(KeyEvent.KEYCODE_ENDCALL);
+    releasePreparation.countDown();
+    manager.io.submit(() -> {}).get(5, TimeUnit.SECONDS);
+    getInstrumentation().waitForIdleSync();
+    assertNull("A late preparation result must not restart media", call.media);
+    assertEquals("Cancelling during setup must not send an invitation", 0, signalsSent.get());
+    assertTrue(call.ended);
+  }
+
+  public void testSlowPreparationContinuesOnExistingConnection() throws Exception {
+    startCall(true);
+    assertTrue(preparationEntered.await(2, TimeUnit.SECONDS));
+    Connection original = call.connection;
+    assertNull(call.media);
+    releasePreparation.countDown();
+    assertTrue("Media must start after preparation completes", awaitMain(() -> call.media != null));
+    assertSame("Preparation must not create another Telecom call", original, call.connection);
+    assertEquals(Connection.STATE_DIALING, original.getState());
+    assertFalse(call.ended);
     checkHangup(KeyEvent.KEYCODE_ENDCALL);
   }
 
@@ -169,6 +220,7 @@ public final class OutgoingCallTest extends InstrumentationTestCase {
 
   @Override protected void tearDown() throws Exception {
     try {
+      releasePreparation.countDown();
       if (manager != null) {
         getInstrumentation().runOnMainSync(() -> {
           manager.cancelOutgoing();

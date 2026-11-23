@@ -210,32 +210,46 @@ public final class CallManager {
     a.onReady = ready;
     active = a;
     timeout(a, 15000, "connection_failed");
+    try {
+      Bundle extras = new Bundle();
+      extras.putParcelable(TelecomManager.EXTRA_PHONE_ACCOUNT_HANDLE, handle(account.id));
+      Bundle callExtras = new Bundle();
+      callExtras.putString(CALL_ID, a.id);
+      extras.putBundle(TelecomManager.EXTRA_OUTGOING_CALL_EXTRAS, callExtras);
+      // Show a cancellable outgoing call before waiting for an offline recipient
+      // to join the encrypted conversation. Preparation starts only after attach.
+      context.getSystemService(TelecomManager.class)
+          .placeCall(EncryptedCallAddress.outgoing(a.id), extras);
+    } catch (RuntimeException e) {
+      end(a, "connection_failed", true);
+    }
+  }
+
+  private void prepareOutgoing(Active a) {
     io.execute(
         () -> {
+          if (a.ended) return;
+          long started = SystemClock.elapsedRealtime();
           try {
-            CallSetup setup = broker.prepare(account.id, phone, null);
+            CallSetup setup = broker.prepare(a.account.id, a.phone, null);
             main.post(
                 () -> {
                   if (active != a || a.ended) return;
                   a.room = setup.conversationId;
                   a.setup = setup;
                   try {
-                    Bundle extras = new Bundle();
-                    extras.putParcelable(
-                        TelecomManager.EXTRA_PHONE_ACCOUNT_HANDLE, handle(account.id));
-                    Bundle callExtras = new Bundle();
-                    callExtras.putString(CALL_ID, a.id);
-                    extras.putBundle(TelecomManager.EXTRA_OUTGOING_CALL_EXTRAS, callExtras);
-                    context
-                        .getSystemService(TelecomManager.class)
-                        .placeCall(EncryptedCallAddress.outgoing(a.id), extras);
-                    // placeCall can return even when Telecom rejects the request.
-                    // Start signaling only after our ConnectionService attaches it.
+                    android.util.Log.i("DumberCallRoute", "Outgoing setup ready in "
+                        + (SystemClock.elapsedRealtime() - started) + "ms");
+                    media(a, setup);
+                    a.media.offer(false);
                   } catch (RuntimeException e) {
                     end(a, "connection_failed", true);
                   }
                 });
           } catch (Exception e) {
+            android.util.Log.w("DumberCallRoute", "Outgoing setup failed after "
+                + (SystemClock.elapsedRealtime() - started) + "ms: "
+                + e.getClass().getSimpleName());
             main.post(
                 () -> {
                   if (active == a) {
@@ -441,11 +455,12 @@ public final class CallManager {
         if (active != a || a.ended) return;
         try {
           a.accepted = true;
-          media(a, a.setup);
-          a.media.offer(false);
           java.util.function.Consumer<Boolean> ready = a.onReady;
           a.onReady = null;
+          // Telecom owns the visible call now; close the transparent routing screen
+          // even if encrypted preparation is still waiting for the other phone.
           if (ready != null) ready.accept(true);
+          prepareOutgoing(a);
         } catch (RuntimeException e) {
           end(a, "connection_failed", true);
         }
