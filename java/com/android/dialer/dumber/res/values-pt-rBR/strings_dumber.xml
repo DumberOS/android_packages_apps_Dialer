@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="encrypted_call_failed">Não foi possível conectar a chamada criptografada.</string>
+  <string name="encrypted_call_checking">Verificando a disponibilidade de chamadas criptografadas.</string>
+  <string name="encrypted_call_make_regular">Fazer uma chamada normal</string>
+  <string name="encrypted_call_messaging_unavailable">Não foi possível conectar ao app Mensagens para chamadas criptografadas.</string>
+  <string name="encrypted_call_sim_disabled">As chamadas criptografadas não estão ativadas para o SIM selecionado.</string>
+  <string name="encrypted_call_no_accounts">Nenhuma conta de chamadas criptografadas ativada está disponível. Verifique as configurações do dumber.chat no app Mensagens.</string>
+  <string name="encrypted_call_account_title">Conta de chamadas criptografadas</string>
+  <string name="encrypted_call_account_check_failed">Não foi possível verificar sua conta de chamadas criptografadas.</string>
+  <string name="encrypted_call_recipient_check_failed">Não foi possível verificar se este destinatário aceita chamadas criptografadas. Verifique sua conexão com a Internet e tente novamente.</string>
+  <string name="encrypted_call_fallback_message"><xliff:g id="reason">%1$s</xliff:g>\n\nFazer uma chamada celular normal? Ela não usará a criptografia do dumber.chat.</string>
+  <string name="encrypted_call_fallback_title">Usar uma chamada normal?</string>
+  <string name="encrypted_call_use_regular">Usar chamada normal</string>
+  <string name="encrypted_call_connection_label">Chamada criptografada</string>
+  <string name="encrypted_call_phone_account_label">Chamada criptografada · <xliff:g id="phone" example="+12025550123">%1$s</xliff:g></string>
+</resources>

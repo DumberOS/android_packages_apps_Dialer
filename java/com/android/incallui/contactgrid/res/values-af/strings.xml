@@ -23,4 +23,7 @@
   <string name="contact_grid_incoming_via_template">Inkomend via %s</string>
   <string name="contact_grid_incoming_suspected_spam">Verdagte strooiposbeller</string>
   <string name="contact_grid_callback_number">Hierdie foon se nommer: %1$s</string>
+
+  <!-- Encrypted calling and call-screen controls. -->
+  <string name="incall_establishing_encrypted_call">Besig om oproep te verbind…</string>
 </resources>

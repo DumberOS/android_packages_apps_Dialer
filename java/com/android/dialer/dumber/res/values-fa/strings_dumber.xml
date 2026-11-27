@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="encrypted_call_failed">تماس رمزگذاری‌شده برقرار نشد.</string>
+  <string name="encrypted_call_checking">درحال بررسی دسترسی به تماس رمزگذاری‌شده.</string>
+  <string name="encrypted_call_make_regular">برقراری تماس عادی</string>
+  <string name="encrypted_call_messaging_unavailable">اتصال به برنامه پیام‌ها برای تماس رمزگذاری‌شده ممکن نشد.</string>
+  <string name="encrypted_call_sim_disabled">تماس رمزگذاری‌شده برای سیم‌کارت انتخاب‌شده فعال نیست.</string>
+  <string name="encrypted_call_no_accounts">هیچ حساب فعال تماس رمزگذاری‌شده‌ای دردسترس نیست. تنظیمات dumber.chat را در پیام‌ها بررسی کنید.</string>
+  <string name="encrypted_call_account_title">حساب تماس رمزگذاری‌شده</string>
+  <string name="encrypted_call_account_check_failed">بررسی حساب تماس رمزگذاری‌شده شما ممکن نشد.</string>
+  <string name="encrypted_call_recipient_check_failed">بررسی پشتیبانی این گیرنده از تماس رمزگذاری‌شده ممکن نشد. اتصال اینترنت خود را بررسی کنید و دوباره امتحان کنید.</string>
+  <string name="encrypted_call_fallback_message"><xliff:g id="reason">%1$s</xliff:g>\n\nتماس عادی ازطریق شبکه تلفن همراه برقرار شود؟ این تماس از رمزگذاری dumber.chat استفاده نمی‌کند.</string>
+  <string name="encrypted_call_fallback_title">از تماس عادی استفاده شود؟</string>
+  <string name="encrypted_call_use_regular">استفاده از تماس عادی</string>
+  <string name="encrypted_call_connection_label">تماس رمزگذاری‌شده</string>
+  <string name="encrypted_call_phone_account_label">تماس رمزگذاری‌شده · <xliff:g id="phone" example="+12025550123">%1$s</xliff:g></string>
+</resources>

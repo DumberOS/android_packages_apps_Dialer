@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="encrypted_call_failed">Salattua puhelua ei voitu yhdistää.</string>
+  <string name="encrypted_call_checking">Tarkistetaan salattujen puhelujen saatavuutta.</string>
+  <string name="encrypted_call_make_regular">Soita tavallinen puhelu</string>
+  <string name="encrypted_call_messaging_unavailable">Salattuja puheluja varten ei voitu muodostaa yhteyttä Viestit-sovellukseen.</string>
+  <string name="encrypted_call_sim_disabled">Salattuja puheluja ei ole otettu käyttöön valitulla SIM-kortilla.</string>
+  <string name="encrypted_call_no_accounts">Yhtään käytössä olevaa salattujen puhelujen tiliä ei ole saatavilla. Tarkista dumber.chat-asetukset Viestit-sovelluksessa.</string>
+  <string name="encrypted_call_account_title">Salattujen puhelujen tili</string>
+  <string name="encrypted_call_account_check_failed">Salattujen puhelujen tiliäsi ei voitu tarkistaa.</string>
+  <string name="encrypted_call_recipient_check_failed">Tämän vastaanottajan salattujen puhelujen tukea ei voitu tarkistaa. Tarkista internetyhteytesi ja yritä uudelleen.</string>
+  <string name="encrypted_call_fallback_message"><xliff:g id="reason">%1$s</xliff:g>\n\nSoitetaanko tavallinen matkapuhelu? Siinä ei käytetä dumber.chat-salausta.</string>
+  <string name="encrypted_call_fallback_title">Käytetäänkö tavallista puhelua?</string>
+  <string name="encrypted_call_use_regular">Käytä tavallista puhelua</string>
+  <string name="encrypted_call_connection_label">Salattu puhelu</string>
+  <string name="encrypted_call_phone_account_label">Salattu puhelu · <xliff:g id="phone" example="+12025550123">%1$s</xliff:g></string>
+</resources>

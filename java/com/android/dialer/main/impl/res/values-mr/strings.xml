@@ -21,4 +21,7 @@
     <string name="tab_title_call_history" msgid="5191872501729332994">"कॉल इतिहास"</string>
     <string name="tab_title_speed_dial" msgid="1968484500112572774">"जलद डायल"</string>
     <string name="tab_title_voicemail" msgid="4777655983569268504">"व्हॉइसमेल"</string>
+
+    <!-- Encrypted calling and call-screen controls. -->
+    <string name="tab_title_dialpad">कीपॅड</string>
 </resources>

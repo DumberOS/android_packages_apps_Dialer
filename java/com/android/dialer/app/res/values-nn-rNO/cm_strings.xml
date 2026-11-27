@@ -34,4 +34,13 @@
     <string name="action_menu_helplines">Hjelpelinjer</string>
     <string name="default_dialer_text">Du må velja Telefon som standardapp for å bruka han.</string>
     <string name="default_dialer_action">Vel som standard</string>
+
+    <!-- Encrypted calling and call-screen controls. -->
+    <string name="encrypted_call_account_label"><xliff:g id="carrier">%1$s</xliff:g> (kryptert)</string>
+    <string name="tab_title_dialpad">Tastatur</string>
+    <string name="notification_channel_encrypted_call">Krypterte anrop</string>
+    <string name="incall_content_description_minimize_call">Minimer anropsskjermen</string>
+    <string name="incall_establishing_encrypted_call">Opprettar anrop…</string>
+    <string name="incall_label_lock_screen">Lås skjermen</string>
+    <string name="incall_label_minimize">Minimer</string>
 </resources>

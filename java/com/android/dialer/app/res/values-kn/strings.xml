@@ -118,4 +118,7 @@
   <string name="call_log_action_remove_spam">ಸ್ಪ್ಯಾಮ್‌ ಅಲ್ಲ</string>
   <string name="call_log_action_unblock_number">ಸಂಖ್ಯೆಯನ್ನು ಅನಿರ್ಬಂಧಿಸು</string>
   <string name="spam_number_call_log_label">ಸ್ಪ್ಯಾಮ್</string>
+
+  <!-- Encrypted calling and call-screen controls. -->
+  <string name="encrypted_call_account_label"><xliff:g id="carrier">%1$s</xliff:g> (ಎನ್‌ಕ್ರಿಪ್ಟ್ ಮಾಡಲಾಗಿದೆ)</string>
 </resources>

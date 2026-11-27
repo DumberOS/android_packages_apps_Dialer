@@ -5,4 +5,7 @@
   <string name="notification_channel_missed_call">تماس‌های بی‌پاسخ</string>
   <string name="notification_channel_voicemail">پست‌های صوتی</string>
   <string name="notification_channel_misc">پیش‌فرض</string>
+
+  <!-- Encrypted calling and call-screen controls. -->
+  <string name="notification_channel_encrypted_call">تماس‌های رمزگذاری‌شده</string>
 </resources>

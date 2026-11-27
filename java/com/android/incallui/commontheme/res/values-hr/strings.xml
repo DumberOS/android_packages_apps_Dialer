@@ -16,4 +16,7 @@
   <string name="incall_content_description_video_off">Videopoziv isključen</string>
   <string name="incall_content_description_swap_video">Zamijeni videopoziv</string>
   <string name="incall_label_speaker">Zvučnik</string>
+
+  <!-- Encrypted calling and call-screen controls. -->
+  <string name="incall_content_description_minimize_call">Minimiziraj zaslon poziva</string>
 </resources>

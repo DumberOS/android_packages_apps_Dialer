@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="encrypted_call_failed">Ezin izan da dei enkriptatua konektatu.</string>
+  <string name="encrypted_call_checking">Dei enkriptatuen erabilgarritasuna egiaztatzen.</string>
+  <string name="encrypted_call_make_regular">Egin dei arrunt bat</string>
+  <string name="encrypted_call_messaging_unavailable">Ezin izan da Mezuak aplikazioarekin konektatu dei enkriptatuetarako.</string>
+  <string name="encrypted_call_sim_disabled">Dei enkriptatuak ez daude gaituta hautatutako SIM txartelean.</string>
+  <string name="encrypted_call_no_accounts">Ez dago dei enkriptatuetarako gaitutako konturik erabilgarri. Egiaztatu dumber.chat-en ezarpenak Mezuak aplikazioan.</string>
+  <string name="encrypted_call_account_title">Dei enkriptatuen kontua</string>
+  <string name="encrypted_call_account_check_failed">Ezin izan da dei enkriptatuetarako zure kontua egiaztatu.</string>
+  <string name="encrypted_call_recipient_check_failed">Ezin izan da egiaztatu hartzaile honek dei enkriptatuak onartzen dituen. Egiaztatu Interneteko konexioa eta saiatu berriro.</string>
+  <string name="encrypted_call_fallback_message"><xliff:g id="reason">%1$s</xliff:g>\n\nMugikorreko dei arrunt bat egin nahi duzu? Ez du dumber.chat-en enkriptatzea erabiliko.</string>
+  <string name="encrypted_call_fallback_title">Dei arrunt bat erabili?</string>
+  <string name="encrypted_call_use_regular">Erabili dei arrunta</string>
+  <string name="encrypted_call_connection_label">Dei enkriptatua</string>
+  <string name="encrypted_call_phone_account_label">Dei enkriptatua · <xliff:g id="phone" example="+12025550123">%1$s</xliff:g></string>
+</resources>

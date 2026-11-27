@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="encrypted_call_failed">Neizdevās savienot šifrēto zvanu.</string>
+  <string name="encrypted_call_checking">Tiek pārbaudīta šifrētu zvanu pieejamība.</string>
+  <string name="encrypted_call_make_regular">Veikt parastu zvanu</string>
+  <string name="encrypted_call_messaging_unavailable">Neizdevās izveidot savienojumu ar lietotni Ziņojumi šifrētiem zvaniem.</string>
+  <string name="encrypted_call_sim_disabled">Atlasītajai SIM kartei nav iespējoti šifrēti zvani.</string>
+  <string name="encrypted_call_no_accounts">Nav pieejams neviens iespējots šifrētu zvanu konts. Pārbaudiet dumber.chat iestatījumus lietotnē Ziņojumi.</string>
+  <string name="encrypted_call_account_title">Šifrētu zvanu konts</string>
+  <string name="encrypted_call_account_check_failed">Neizdevās pārbaudīt jūsu šifrētu zvanu kontu.</string>
+  <string name="encrypted_call_recipient_check_failed">Neizdevās pārbaudīt, vai šis adresāts atbalsta šifrētus zvanus. Pārbaudiet interneta savienojumu un mēģiniet vēlreiz.</string>
+  <string name="encrypted_call_fallback_message"><xliff:g id="reason">%1$s</xliff:g>\n\nVai veikt parastu mobilo zvanu? Tajā netiks izmantota dumber.chat šifrēšana.</string>
+  <string name="encrypted_call_fallback_title">Vai izmantot parastu zvanu?</string>
+  <string name="encrypted_call_use_regular">Izmantot parastu zvanu</string>
+  <string name="encrypted_call_connection_label">Šifrēts zvans</string>
+  <string name="encrypted_call_phone_account_label">Šifrēts zvans · <xliff:g id="phone" example="+12025550123">%1$s</xliff:g></string>
+</resources>

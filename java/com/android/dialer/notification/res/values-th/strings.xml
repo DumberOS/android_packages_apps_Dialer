@@ -5,4 +5,7 @@
   <string name="notification_channel_missed_call">สายที่ไม่ได้รับ</string>
   <string name="notification_channel_voicemail">ข้อความเสียง</string>
   <string name="notification_channel_misc">ค่าเริ่มต้น</string>
+
+  <!-- Encrypted calling and call-screen controls. -->
+  <string name="notification_channel_encrypted_call">การโทรที่เข้ารหัส</string>
 </resources>

@@ -23,4 +23,7 @@
   <string name="contact_grid_incoming_via_template">Eingehender Anruf über %s</string>
   <string name="contact_grid_incoming_suspected_spam">Möglicher Spamanrufer</string>
   <string name="contact_grid_callback_number">Eigene Telefonnummer: %1$s</string>
+
+  <!-- Encrypted calling and call-screen controls. -->
+  <string name="incall_establishing_encrypted_call">Anruf wird aufgebaut…</string>
 </resources>

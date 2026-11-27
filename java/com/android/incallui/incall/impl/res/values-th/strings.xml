@@ -14,4 +14,8 @@
   <string name="incall_label_swap">สลับ</string>
   <string name="incall_label_swap_sim">เปลี่ยนซิม</string>
   <string name="incall_note_sent">ส่งโน้ตแล้ว</string>
+
+  <!-- Encrypted calling and call-screen controls. -->
+  <string name="incall_label_lock_screen">ล็อกหน้าจอ</string>
+  <string name="incall_label_minimize">ย่อ</string>
 </resources>

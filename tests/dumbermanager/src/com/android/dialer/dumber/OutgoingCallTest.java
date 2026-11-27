@@ -204,12 +204,13 @@ public final class OutgoingCallTest extends InstrumentationTestCase {
   }
 
   private boolean awaitCallScreen() throws Exception {
+    String label = context.getString(R.string.encrypted_call_connection_label);
     long deadline = SystemClock.elapsedRealtime() + 5000;
     while (SystemClock.elapsedRealtime() < deadline) {
       AccessibilityNodeInfo root = getInstrumentation().getUiAutomation().getRootInActiveWindow();
       if (root != null) {
         boolean visible = "com.android.dialer".contentEquals(root.getPackageName())
-            && !root.findAccessibilityNodeInfosByText("Encrypted call").isEmpty();
+            && !root.findAccessibilityNodeInfosByText(label).isEmpty();
         root.recycle();
         if (visible) return true;
       }

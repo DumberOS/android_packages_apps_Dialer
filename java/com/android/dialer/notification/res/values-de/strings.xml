@@ -5,4 +5,7 @@
   <string name="notification_channel_missed_call">Entgangene Anrufe</string>
   <string name="notification_channel_voicemail">Mailboxnachrichten</string>
   <string name="notification_channel_misc">Standard</string>
+
+  <!-- Encrypted calling and call-screen controls. -->
+  <string name="notification_channel_encrypted_call">Verschlüsselte Anrufe</string>
 </resources>

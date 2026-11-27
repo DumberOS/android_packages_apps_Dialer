@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="encrypted_call_failed">የተመሰጠረው ጥሪ ሊገናኝ አልቻለም።</string>
+  <string name="encrypted_call_checking">የተመሰጠረ ጥሪ መገኘቱን በመፈተሽ ላይ።</string>
+  <string name="encrypted_call_make_regular">መደበኛ ጥሪ አድርግ</string>
+  <string name="encrypted_call_messaging_unavailable">ለተመሰጠሩ ጥሪዎች ከመልዕክቶች መተግበሪያ ጋር መገናኘት አልተቻለም።</string>
+  <string name="encrypted_call_sim_disabled">ለተመረጠው ሲም የተመሰጠሩ ጥሪዎች አልነቁም።</string>
+  <string name="encrypted_call_no_accounts">የነቃ የተመሰጠረ ጥሪ መለያ አይገኝም። በመልዕክቶች ውስጥ ያሉትን የdumber.chat ቅንብሮች ይፈትሹ።</string>
+  <string name="encrypted_call_account_title">የተመሰጠረ ጥሪ መለያ</string>
+  <string name="encrypted_call_account_check_failed">የተመሰጠረ ጥሪ መለያዎን መፈተሽ አልተቻለም።</string>
+  <string name="encrypted_call_recipient_check_failed">ይህ ተቀባይ የተመሰጠሩ ጥሪዎችን መደገፉን መፈተሽ አልተቻለም። የበይነመረብ ግንኙነትዎን ይፈትሹና እንደገና ይሞክሩ።</string>
+  <string name="encrypted_call_fallback_message"><xliff:g id="reason">%1$s</xliff:g>\n\nመደበኛ የሞባይል ጥሪ ይደረግ? የdumber.chat ምስጠራን አይጠቀምም።</string>
+  <string name="encrypted_call_fallback_title">መደበኛ ጥሪ ይጠቀሙ?</string>
+  <string name="encrypted_call_use_regular">መደበኛ ጥሪ ተጠቀም</string>
+  <string name="encrypted_call_connection_label">የተመሰጠረ ጥሪ</string>
+  <string name="encrypted_call_phone_account_label">የተመሰጠረ ጥሪ · <xliff:g id="phone" example="+12025550123">%1$s</xliff:g></string>
+</resources>

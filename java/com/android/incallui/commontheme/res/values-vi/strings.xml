@@ -16,4 +16,7 @@
   <string name="incall_content_description_video_off">Tắt video</string>
   <string name="incall_content_description_swap_video">Hoán đổi video</string>
   <string name="incall_label_speaker">Loa</string>
+
+  <!-- Encrypted calling and call-screen controls. -->
+  <string name="incall_content_description_minimize_call">Thu nhỏ màn hình cuộc gọi</string>
 </resources>

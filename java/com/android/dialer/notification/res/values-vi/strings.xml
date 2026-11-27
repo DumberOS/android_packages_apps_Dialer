@@ -5,4 +5,7 @@
   <string name="notification_channel_missed_call">Cuộc gọi nhỡ</string>
   <string name="notification_channel_voicemail">Thư thoại</string>
   <string name="notification_channel_misc">Mặc định</string>
+
+  <!-- Encrypted calling and call-screen controls. -->
+  <string name="notification_channel_encrypted_call">Cuộc gọi được mã hóa</string>
 </resources>

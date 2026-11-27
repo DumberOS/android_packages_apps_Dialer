@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="encrypted_call_failed">De fersifere oprop koe net ferbûn wurde.</string>
+  <string name="encrypted_call_checking">Beskikberens fan fersifere oproppen kontrolearje.</string>
+  <string name="encrypted_call_make_regular">In gewoane oprop pleatse</string>
+  <string name="encrypted_call_messaging_unavailable">Der koe gjin ferbining mei Berjochten makke wurde foar fersifere oproppen.</string>
+  <string name="encrypted_call_sim_disabled">Fersifere oproppen binne net ynskeakele foar de selektearre simkaart.</string>
+  <string name="encrypted_call_no_accounts">Der is gjin ynskeakele akkount foar fersifere oproppen beskikber. Kontrolearje de ynstellingen fan dumber.chat yn Berjochten.</string>
+  <string name="encrypted_call_account_title">Akkount foar fersifere oproppen</string>
+  <string name="encrypted_call_account_check_failed">Dyn akkount foar fersifere oproppen koe net kontrolearre wurde.</string>
+  <string name="encrypted_call_recipient_check_failed">Der koe net kontrolearre wurde oft dizze ûntfanger fersifere oproppen stipet. Kontrolearje dyn ynternetferbining en besykje it opnij.</string>
+  <string name="encrypted_call_fallback_message"><xliff:g id="reason">%1$s</xliff:g>\n\nIn gewoane mobile oprop pleatse? Dizze brûkt gjin fersifering fan dumber.chat.</string>
+  <string name="encrypted_call_fallback_title">In gewoane oprop brûke?</string>
+  <string name="encrypted_call_use_regular">Gewoane oprop brûke</string>
+  <string name="encrypted_call_connection_label">Fersifere oprop</string>
+  <string name="encrypted_call_phone_account_label">Fersifere oprop · <xliff:g id="phone" example="+12025550123">%1$s</xliff:g></string>
+</resources>

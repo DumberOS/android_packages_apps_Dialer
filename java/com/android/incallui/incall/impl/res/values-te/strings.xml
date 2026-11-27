@@ -14,4 +14,8 @@
   <string name="incall_label_swap">మార్చు</string>
   <string name="incall_label_swap_sim">SIMని మార్చు</string>
   <string name="incall_note_sent">గమనిక పంపబడింది</string>
+
+  <!-- Encrypted calling and call-screen controls. -->
+  <string name="incall_label_lock_screen">స్క్రీన్‌ను లాక్ చేయండి</string>
+  <string name="incall_label_minimize">చిన్నది చేయండి</string>
 </resources>

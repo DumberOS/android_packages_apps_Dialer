@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="encrypted_call_failed">Šifrirani poziv se nije mogao povezati.</string>
+  <string name="encrypted_call_checking">Provjera dostupnosti šifriranih poziva.</string>
+  <string name="encrypted_call_make_regular">Uputi običan poziv</string>
+  <string name="encrypted_call_messaging_unavailable">Nije moguće povezati se s Porukama za šifrirane pozive.</string>
+  <string name="encrypted_call_sim_disabled">Šifrirani pozivi nisu omogućeni za odabranu SIM karticu.</string>
+  <string name="encrypted_call_no_accounts">Nije dostupan nijedan omogućen račun za šifrirane pozive. Provjerite postavke za dumber.chat u Porukama.</string>
+  <string name="encrypted_call_account_title">Račun za šifrirane pozive</string>
+  <string name="encrypted_call_account_check_failed">Nije moguće provjeriti vaš račun za šifrirane pozive.</string>
+  <string name="encrypted_call_recipient_check_failed">Nije moguće provjeriti podržava li ovaj primalac šifrirane pozive. Provjerite internetsku vezu i pokušajte ponovo.</string>
+  <string name="encrypted_call_fallback_message"><xliff:g id="reason">%1$s</xliff:g>\n\nUputiti običan mobilni poziv? Neće koristiti šifriranje usluge dumber.chat.</string>
+  <string name="encrypted_call_fallback_title">Koristiti običan poziv?</string>
+  <string name="encrypted_call_use_regular">Koristi običan poziv</string>
+  <string name="encrypted_call_connection_label">Šifrirani poziv</string>
+  <string name="encrypted_call_phone_account_label">Šifrirani poziv · <xliff:g id="phone" example="+12025550123">%1$s</xliff:g></string>
+</resources>

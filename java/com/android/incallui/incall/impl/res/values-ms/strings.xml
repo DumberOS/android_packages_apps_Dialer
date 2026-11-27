@@ -14,4 +14,8 @@
   <string name="incall_label_swap">Silih</string>
   <string name="incall_label_swap_sim">Tukar SIM</string>
   <string name="incall_note_sent">Nota dihantar</string>
+
+  <!-- Encrypted calling and call-screen controls. -->
+  <string name="incall_label_lock_screen">Kunci skrin</string>
+  <string name="incall_label_minimize">Minimumkan</string>
 </resources>

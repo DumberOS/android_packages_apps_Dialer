@@ -14,4 +14,8 @@
   <string name="incall_label_swap">Tukar</string>
   <string name="incall_label_swap_sim">Ubah SIM</string>
   <string name="incall_note_sent">Catatan telah dikirim</string>
+
+  <!-- Encrypted calling and call-screen controls. -->
+  <string name="incall_label_lock_screen">Kunci layar</string>
+  <string name="incall_label_minimize">Minimalkan</string>
 </resources>

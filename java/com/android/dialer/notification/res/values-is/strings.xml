@@ -5,4 +5,7 @@
   <string name="notification_channel_missed_call">Ósvöruð símtöl</string>
   <string name="notification_channel_voicemail">Talhólfsskilaboð</string>
   <string name="notification_channel_misc">Sjálfgefið</string>
+
+  <!-- Encrypted calling and call-screen controls. -->
+  <string name="notification_channel_encrypted_call">Dulkóðuð símtöl</string>
 </resources>

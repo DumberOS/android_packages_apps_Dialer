@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="encrypted_call_failed">No s’ha pogut connectar la trucada xifrada.</string>
+  <string name="encrypted_call_checking">S’està comprovant la disponibilitat de trucades xifrades.</string>
+  <string name="encrypted_call_make_regular">Fes una trucada normal</string>
+  <string name="encrypted_call_messaging_unavailable">No s’ha pogut connectar amb Missatges per a les trucades xifrades.</string>
+  <string name="encrypted_call_sim_disabled">Les trucades xifrades no estan activades per a la SIM seleccionada.</string>
+  <string name="encrypted_call_no_accounts">No hi ha cap compte activat per a trucades xifrades disponible. Comprova la configuració de dumber.chat a Missatges.</string>
+  <string name="encrypted_call_account_title">Compte de trucades xifrades</string>
+  <string name="encrypted_call_account_check_failed">No s’ha pogut comprovar el teu compte de trucades xifrades.</string>
+  <string name="encrypted_call_recipient_check_failed">No s’ha pogut comprovar si aquest destinatari admet trucades xifrades. Comprova la connexió a Internet i torna-ho a provar.</string>
+  <string name="encrypted_call_fallback_message"><xliff:g id="reason">%1$s</xliff:g>\n\nVols fer una trucada mòbil normal? No utilitzarà el xifratge de dumber.chat.</string>
+  <string name="encrypted_call_fallback_title">Vols utilitzar una trucada normal?</string>
+  <string name="encrypted_call_use_regular">Utilitza una trucada normal</string>
+  <string name="encrypted_call_connection_label">Trucada xifrada</string>
+  <string name="encrypted_call_phone_account_label">Trucada xifrada · <xliff:g id="phone" example="+12025550123">%1$s</xliff:g></string>
+</resources>

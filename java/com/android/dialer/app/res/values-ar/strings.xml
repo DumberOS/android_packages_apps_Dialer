@@ -126,4 +126,7 @@
   <string name="call_log_action_remove_spam">ليس رقمًا غير مرغوب فيه</string>
   <string name="call_log_action_unblock_number">إلغاء حظر الرقم</string>
   <string name="spam_number_call_log_label">تعليق غير مرغوب فيه</string>
+
+  <!-- Encrypted calling and call-screen controls. -->
+  <string name="encrypted_call_account_label"><xliff:g id="carrier">%1$s</xliff:g> (مشفّر)</string>
 </resources>

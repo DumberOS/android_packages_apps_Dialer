@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="encrypted_call_failed">暗号化通話を接続できませんでした。</string>
+  <string name="encrypted_call_checking">暗号化通話が利用可能か確認しています。</string>
+  <string name="encrypted_call_make_regular">通常の通話を発信</string>
+  <string name="encrypted_call_messaging_unavailable">暗号化通話のためにメッセージアプリに接続できませんでした。</string>
+  <string name="encrypted_call_sim_disabled">選択したSIMでは暗号化通話が有効になっていません。</string>
+  <string name="encrypted_call_no_accounts">有効な暗号化通話アカウントがありません。メッセージアプリでdumber.chatの設定を確認してください。</string>
+  <string name="encrypted_call_account_title">暗号化通話アカウント</string>
+  <string name="encrypted_call_account_check_failed">暗号化通話アカウントを確認できませんでした。</string>
+  <string name="encrypted_call_recipient_check_failed">この相手が暗号化通話に対応しているか確認できませんでした。インターネット接続を確認して、もう一度お試しください。</string>
+  <string name="encrypted_call_fallback_message"><xliff:g id="reason">%1$s</xliff:g>\n\n通常の携帯電話回線で発信しますか？dumber.chatの暗号化は使用されません。</string>
+  <string name="encrypted_call_fallback_title">通常の通話を使用しますか？</string>
+  <string name="encrypted_call_use_regular">通常の通話を使用</string>
+  <string name="encrypted_call_connection_label">暗号化通話</string>
+  <string name="encrypted_call_phone_account_label">暗号化通話 · <xliff:g id="phone" example="+12025550123">%1$s</xliff:g></string>
+</resources>

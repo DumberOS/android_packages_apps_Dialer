@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="encrypted_call_failed">Шифрленген чалуу туташкан жок.</string>
+  <string name="encrypted_call_checking">Шифрленген чалуунун жеткиликтүүлүгү текшерилүүдө.</string>
+  <string name="encrypted_call_make_regular">Кадимки чалуу жасоо</string>
+  <string name="encrypted_call_messaging_unavailable">Шифрленген чалуулар үчүн Билдирүүлөр колдонмосуна туташуу мүмкүн болгон жок.</string>
+  <string name="encrypted_call_sim_disabled">Тандалган SIM карта үчүн шифрленген чалуулар иштетилген эмес.</string>
+  <string name="encrypted_call_no_accounts">Шифрленген чалуулар үчүн иштетилген аккаунт жеткиликтүү эмес. Билдирүүлөр колдонмосундагы dumber.chat жөндөөлөрүн текшериңиз.</string>
+  <string name="encrypted_call_account_title">Шифрленген чалуу аккаунту</string>
+  <string name="encrypted_call_account_check_failed">Шифрленген чалуу аккаунтуңузду текшерүү мүмкүн болгон жок.</string>
+  <string name="encrypted_call_recipient_check_failed">Бул алуучу шифрленген чалууларды колдоорун текшерүү мүмкүн болгон жок. Интернет байланышыңызды текшерип, кайра аракет кылыңыз.</string>
+  <string name="encrypted_call_fallback_message"><xliff:g id="reason">%1$s</xliff:g>\n\nКадимки уюлдук чалуу жасалсынбы? Ал dumber.chat шифрлөөсүн колдонбойт.</string>
+  <string name="encrypted_call_fallback_title">Кадимки чалуу колдонулсунбу?</string>
+  <string name="encrypted_call_use_regular">Кадимки чалууну колдонуу</string>
+  <string name="encrypted_call_connection_label">Шифрленген чалуу</string>
+  <string name="encrypted_call_phone_account_label">Шифрленген чалуу · <xliff:g id="phone" example="+12025550123">%1$s</xliff:g></string>
+</resources>

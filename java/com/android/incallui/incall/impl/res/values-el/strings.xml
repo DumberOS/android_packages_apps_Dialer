@@ -14,4 +14,8 @@
   <string name="incall_label_swap">Ανταλλαγή</string>
   <string name="incall_label_swap_sim">Αλλαγή SIM</string>
   <string name="incall_note_sent">Η σημείωση εστάλη</string>
+
+  <!-- Encrypted calling and call-screen controls. -->
+  <string name="incall_label_lock_screen">Κλείδωμα οθόνης</string>
+  <string name="incall_label_minimize">Ελαχιστοποίηση</string>
 </resources>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="encrypted_call_failed">Shifrlangan qo‘ng‘iroq ulanib bo‘lmadi.</string>
+  <string name="encrypted_call_checking">Shifrlangan qo‘ng‘iroq mavjudligi tekshirilmoqda.</string>
+  <string name="encrypted_call_make_regular">Oddiy qo‘ng‘iroq qilish</string>
+  <string name="encrypted_call_messaging_unavailable">Shifrlangan qo‘ng‘iroqlar uchun Xabarlar ilovasiga ulanib bo‘lmadi.</string>
+  <string name="encrypted_call_sim_disabled">Tanlangan SIM uchun shifrlangan qo‘ng‘iroqlar yoqilmagan.</string>
+  <string name="encrypted_call_no_accounts">Yoqilgan shifrlangan qo‘ng‘iroq hisobi mavjud emas. Xabarlar ilovasida dumber.chat sozlamalarini tekshiring.</string>
+  <string name="encrypted_call_account_title">Shifrlangan qo‘ng‘iroq hisobi</string>
+  <string name="encrypted_call_account_check_failed">Shifrlangan qo‘ng‘iroq hisobingizni tekshirib bo‘lmadi.</string>
+  <string name="encrypted_call_recipient_check_failed">Bu qabul qiluvchi shifrlangan qo‘ng‘iroqlarni qo‘llab-quvvatlashini tekshirib bo‘lmadi. Internet aloqangizni tekshiring va qayta urinib ko‘ring.</string>
+  <string name="encrypted_call_fallback_message"><xliff:g id="reason">%1$s</xliff:g>\n\nOddiy mobil qo‘ng‘iroq qilinsinmi? Unda dumber.chat shifrlashi ishlatilmaydi.</string>
+  <string name="encrypted_call_fallback_title">Oddiy qo‘ng‘iroq ishlatilsinmi?</string>
+  <string name="encrypted_call_use_regular">Oddiy qo‘ng‘iroqdan foydalanish</string>
+  <string name="encrypted_call_connection_label">Shifrlangan qo‘ng‘iroq</string>
+  <string name="encrypted_call_phone_account_label">Shifrlangan qo‘ng‘iroq · <xliff:g id="phone" example="+12025550123">%1$s</xliff:g></string>
+</resources>

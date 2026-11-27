@@ -23,4 +23,7 @@
   <string name="contact_grid_incoming_via_template">%s மூலம் உள்வரும் அழைப்பு</string>
   <string name="contact_grid_incoming_suspected_spam">சந்தேகத்திற்குரிய ஸ்பேம் அழைப்பாளர்</string>
   <string name="contact_grid_callback_number">இந்த ஃபோனின் எண்: %1$s</string>
+
+  <!-- Encrypted calling and call-screen controls. -->
+  <string name="incall_establishing_encrypted_call">அழைப்பை இணைக்கிறது…</string>
 </resources>

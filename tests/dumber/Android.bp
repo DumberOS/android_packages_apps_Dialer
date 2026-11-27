@@ -1,7 +1,7 @@
 android_test {
     name: "DumberCallMediaTests",
     srcs: ["src/**/*.java", ":dumber-call-media-source", ":dumber-call-route-source"],
-    static_libs: ["dumber-call-api", "dumber-webrtc-java", "androidx.appcompat_appcompat"],
+    static_libs: ["dialer-dumber-res", "dumber-call-api", "dumber-webrtc-java", "androidx.appcompat_appcompat"],
     jni_libs: ["libdumber_webrtc"],
     libs: ["android.test.runner.stubs", "android.test.base.stubs"],
     sdk_version: "system_current",

@@ -5,4 +5,7 @@
   <string name="notification_channel_missed_call">چھوٹی ہوئی کالیں</string>
   <string name="notification_channel_voicemail">صوتی میلز</string>
   <string name="notification_channel_misc">ڈیفالٹ</string>
+
+  <!-- Encrypted calling and call-screen controls. -->
+  <string name="notification_channel_encrypted_call">مرموز کالز</string>
 </resources>

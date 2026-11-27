@@ -23,4 +23,7 @@
   <string name="contact_grid_incoming_via_template">%s을(를) 통해 걸려온 전화</string>
   <string name="contact_grid_incoming_suspected_spam">스팸으로 의심되는 발신자</string>
   <string name="contact_grid_callback_number">이 기기의 휴대전화 번호: %1$s</string>
+
+  <!-- Encrypted calling and call-screen controls. -->
+  <string name="incall_establishing_encrypted_call">통화 연결 중…</string>
 </resources>

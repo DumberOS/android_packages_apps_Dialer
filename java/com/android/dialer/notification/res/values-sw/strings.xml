@@ -5,4 +5,7 @@
   <string name="notification_channel_missed_call">Simu ambazo hukujibu</string>
   <string name="notification_channel_voicemail">Ujumbe wa sauti</string>
   <string name="notification_channel_misc">Chaguo msingi</string>
+
+  <!-- Encrypted calling and call-screen controls. -->
+  <string name="notification_channel_encrypted_call">Simu zilizosimbwa kwa njia fiche</string>
 </resources>

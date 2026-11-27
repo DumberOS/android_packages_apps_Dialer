@@ -5,4 +5,7 @@
   <string name="notification_channel_missed_call">Panggilan tak terjawab</string>
   <string name="notification_channel_voicemail">Pesan suara</string>
   <string name="notification_channel_misc">Default</string>
+
+  <!-- Encrypted calling and call-screen controls. -->
+  <string name="notification_channel_encrypted_call">Panggilan terenkripsi</string>
 </resources>

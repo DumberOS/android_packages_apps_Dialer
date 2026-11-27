@@ -16,4 +16,7 @@
   <string name="incall_content_description_video_off">ভিডিও বন্ধ আছে</string>
   <string name="incall_content_description_swap_video">ভিডিও অদল বদল করুন</string>
   <string name="incall_label_speaker">স্পিকার</string>
+
+  <!-- Encrypted calling and call-screen controls. -->
+  <string name="incall_content_description_minimize_call">কলের স্ক্রিন ছোট করুন</string>
 </resources>

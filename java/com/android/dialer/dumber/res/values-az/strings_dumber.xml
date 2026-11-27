@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="encrypted_call_failed">Şifrələnmiş zəng qoşula bilmədi.</string>
+  <string name="encrypted_call_checking">Şifrələnmiş zənglərin əlçatanlığı yoxlanılır.</string>
+  <string name="encrypted_call_make_regular">Adi zəng et</string>
+  <string name="encrypted_call_messaging_unavailable">Şifrələnmiş zənglər üçün Mesajlara qoşulmaq mümkün olmadı.</string>
+  <string name="encrypted_call_sim_disabled">Seçilmiş SIM üçün şifrələnmiş zənglər aktiv deyil.</string>
+  <string name="encrypted_call_no_accounts">Şifrələnmiş zənglər üçün aktiv hesab mövcud deyil. Mesajlarda dumber.chat ayarlarını yoxlayın.</string>
+  <string name="encrypted_call_account_title">Şifrələnmiş zəng hesabı</string>
+  <string name="encrypted_call_account_check_failed">Şifrələnmiş zəng hesabınızı yoxlamaq mümkün olmadı.</string>
+  <string name="encrypted_call_recipient_check_failed">Bu alıcının şifrələnmiş zəng dəstəyini yoxlamaq mümkün olmadı. İnternet bağlantınızı yoxlayın və yenidən cəhd edin.</string>
+  <string name="encrypted_call_fallback_message"><xliff:g id="reason">%1$s</xliff:g>\n\nAdi mobil zəng edilsin? Bu zəng dumber.chat şifrələməsindən istifadə etməyəcək.</string>
+  <string name="encrypted_call_fallback_title">Adi zəng istifadə edilsin?</string>
+  <string name="encrypted_call_use_regular">Adi zəngdən istifadə et</string>
+  <string name="encrypted_call_connection_label">Şifrələnmiş zəng</string>
+  <string name="encrypted_call_phone_account_label">Şifrələnmiş zəng · <xliff:g id="phone" example="+12025550123">%1$s</xliff:g></string>
+</resources>

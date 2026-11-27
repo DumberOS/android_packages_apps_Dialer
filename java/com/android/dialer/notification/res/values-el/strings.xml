@@ -5,4 +5,7 @@
   <string name="notification_channel_missed_call">Αναπάντητες κλήσεις</string>
   <string name="notification_channel_voicemail">Μηνύματα αυτόματου τηλεφωνητή</string>
   <string name="notification_channel_misc">Προεπιλογή</string>
+
+  <!-- Encrypted calling and call-screen controls. -->
+  <string name="notification_channel_encrypted_call">Κρυπτογραφημένες κλήσεις</string>
 </resources>

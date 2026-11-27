@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="encrypted_call_failed">Asiwel awgelhan ur yezmir ara ad yeqqen.</string>
+  <string name="encrypted_call_checking">Asenqed n tilin n yisawalen iwgelhanen.</string>
+  <string name="encrypted_call_make_regular">Eg asiwel amagnu</string>
+  <string name="encrypted_call_messaging_unavailable">Ur yezmir ara ad yeqqen ɣer Yiznan i yisawalen iwgelhanen.</string>
+  <string name="encrypted_call_sim_disabled">Isawalen iwgelhanen ur ttwasermden ara i SIM yettwafernen.</string>
+  <string name="encrypted_call_no_accounts">Ulac amiḍan n yisawalen iwgelhanen yermden i yellan. Senqed iɣewwaren n dumber.chat deg Yiznan.</string>
+  <string name="encrypted_call_account_title">Amiḍan n yisawalen iwgelhanen</string>
+  <string name="encrypted_call_account_check_failed">Ur yezmir ara ad isenqed amiḍan-ik n yisawalen iwgelhanen.</string>
+  <string name="encrypted_call_recipient_check_failed">Ur yezmir ara ad isenqed ma yella aɣerwaḍ-a isefrak isawalen iwgelhanen. Senqed tuqqna-ik ɣer Internet, sakin ɛreḍ tikkelt-nniḍen.</string>
+  <string name="encrypted_call_fallback_message"><xliff:g id="reason">%1$s</xliff:g>\n\nAd tegeḍ asiwel amagnu s uzeṭṭa n tiliɣri? Ur yettuseqdac ara uwgelhen n dumber.chat.</string>
+  <string name="encrypted_call_fallback_title">Seqdec asiwel amagnu?</string>
+  <string name="encrypted_call_use_regular">Seqdec asiwel amagnu</string>
+  <string name="encrypted_call_connection_label">Asiwel awgelhan</string>
+  <string name="encrypted_call_phone_account_label">Asiwel awgelhan · <xliff:g id="phone" example="+12025550123">%1$s</xliff:g></string>
+</resources>

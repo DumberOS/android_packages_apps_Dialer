@@ -5,4 +5,7 @@
   <string name="notification_channel_missed_call">தவறிய அழைப்புகள்</string>
   <string name="notification_channel_voicemail">குரலஞ்சல்கள்</string>
   <string name="notification_channel_misc">இயல்பு</string>
+
+  <!-- Encrypted calling and call-screen controls. -->
+  <string name="notification_channel_encrypted_call">என்க்ரிப்ட் செய்யப்பட்ட அழைப்புகள்</string>
 </resources>

@@ -14,4 +14,8 @@
   <string name="incall_label_swap">切換</string>
   <string name="incall_label_swap_sim">變更 SIM 卡</string>
   <string name="incall_note_sent">備註已送出</string>
+
+  <!-- Encrypted calling and call-screen controls. -->
+  <string name="incall_label_lock_screen">鎖定螢幕</string>
+  <string name="incall_label_minimize">最小化</string>
 </resources>

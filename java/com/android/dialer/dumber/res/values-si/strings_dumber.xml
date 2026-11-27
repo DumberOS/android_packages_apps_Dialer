@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="encrypted_call_failed">සංකේතනය කළ ඇමතුම සම්බන්ධ කළ නොහැකි විය.</string>
+  <string name="encrypted_call_checking">සංකේතනය කළ ඇමතුම් ලබා ගත හැකිදැයි පරීක්ෂා කරමින්.</string>
+  <string name="encrypted_call_make_regular">සාමාන්‍ය ඇමතුමක් ගන්න</string>
+  <string name="encrypted_call_messaging_unavailable">සංකේතනය කළ ඇමතුම් සඳහා පණිවිඩ යෙදුමට සම්බන්ධ විය නොහැකි විය.</string>
+  <string name="encrypted_call_sim_disabled">තෝරාගත් SIM සඳහා සංකේතනය කළ ඇමතුම් සක්‍රිය කර නැත.</string>
+  <string name="encrypted_call_no_accounts">සක්‍රිය කළ සංකේතනය කළ ඇමතුම් ගිණුමක් නොමැත. පණිවිඩ යෙදුමේ dumber.chat සැකසීම් පරීක්ෂා කරන්න.</string>
+  <string name="encrypted_call_account_title">සංකේතනය කළ ඇමතුම් ගිණුම</string>
+  <string name="encrypted_call_account_check_failed">සංකේතනය කළ ඇමතුම් සඳහා ඔබේ ගිණුම පරීක්ෂා කළ නොහැකි විය.</string>
+  <string name="encrypted_call_recipient_check_failed">මෙම ලබන්නා සංකේතනය කළ ඇමතුම් සඳහා සහාය දක්වන්නේදැයි පරීක්ෂා කළ නොහැකි විය. ඔබේ අන්තර්ජාල සම්බන්ධතාව පරීක්ෂා කර නැවත උත්සාහ කරන්න.</string>
+  <string name="encrypted_call_fallback_message"><xliff:g id="reason">%1$s</xliff:g>\n\nසාමාන්‍ය ජංගම ඇමතුමක් ගන්නද? එය dumber.chat සංකේතනය භාවිත නොකරනු ඇත.</string>
+  <string name="encrypted_call_fallback_title">සාමාන්‍ය ඇමතුමක් භාවිත කරන්නද?</string>
+  <string name="encrypted_call_use_regular">සාමාන්‍ය ඇමතුමක් භාවිත කරන්න</string>
+  <string name="encrypted_call_connection_label">සංකේතනය කළ ඇමතුම</string>
+  <string name="encrypted_call_phone_account_label">සංකේතනය කළ ඇමතුම · <xliff:g id="phone" example="+12025550123">%1$s</xliff:g></string>
+</resources>

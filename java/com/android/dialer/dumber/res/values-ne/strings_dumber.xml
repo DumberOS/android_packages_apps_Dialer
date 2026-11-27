@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="encrypted_call_failed">इन्क्रिप्ट गरिएको कल जडान हुन सकेन।</string>
+  <string name="encrypted_call_checking">इन्क्रिप्ट गरिएको कलको उपलब्धता जाँच गरिँदै छ।</string>
+  <string name="encrypted_call_make_regular">सामान्य कल गर्नुहोस्</string>
+  <string name="encrypted_call_messaging_unavailable">इन्क्रिप्ट गरिएका कलहरूका लागि सन्देश एपमा जडान हुन सकेन।</string>
+  <string name="encrypted_call_sim_disabled">चयन गरिएको SIM का लागि इन्क्रिप्ट गरिएका कलहरू सक्षम छैनन्।</string>
+  <string name="encrypted_call_no_accounts">इन्क्रिप्ट गरिएका कलहरूको कुनै सक्षम खाता उपलब्ध छैन। सन्देश एपमा dumber.chat का सेटिङहरू जाँच गर्नुहोस्।</string>
+  <string name="encrypted_call_account_title">इन्क्रिप्ट गरिएको कलको खाता</string>
+  <string name="encrypted_call_account_check_failed">इन्क्रिप्ट गरिएका कलहरूका लागि तपाईंको खाता जाँच गर्न सकिएन।</string>
+  <string name="encrypted_call_recipient_check_failed">यो प्रापकले इन्क्रिप्ट गरिएका कलहरू समर्थन गर्छ कि गर्दैन भनी जाँच गर्न सकिएन। आफ्नो इन्टरनेट जडान जाँच गरेर फेरि प्रयास गर्नुहोस्।</string>
+  <string name="encrypted_call_fallback_message"><xliff:g id="reason">%1$s</xliff:g>\n\nसामान्य मोबाइल कल गर्ने हो? यसमा dumber.chat को इन्क्रिप्सन प्रयोग हुने छैन।</string>
+  <string name="encrypted_call_fallback_title">सामान्य कल प्रयोग गर्ने हो?</string>
+  <string name="encrypted_call_use_regular">सामान्य कल प्रयोग गर्नुहोस्</string>
+  <string name="encrypted_call_connection_label">इन्क्रिप्ट गरिएको कल</string>
+  <string name="encrypted_call_phone_account_label">इन्क्रिप्ट गरिएको कल · <xliff:g id="phone" example="+12025550123">%1$s</xliff:g></string>
+</resources>

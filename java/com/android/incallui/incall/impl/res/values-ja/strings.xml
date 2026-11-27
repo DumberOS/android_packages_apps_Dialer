@@ -14,4 +14,8 @@
   <string name="incall_label_swap">切り替え</string>
   <string name="incall_label_swap_sim">SIM を変更</string>
   <string name="incall_note_sent">メモを送信しました</string>
+
+  <!-- Encrypted calling and call-screen controls. -->
+  <string name="incall_label_lock_screen">画面をロック</string>
+  <string name="incall_label_minimize">最小化</string>
 </resources>

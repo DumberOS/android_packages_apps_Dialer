@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="encrypted_call_failed">Ekki tókst að tengja dulkóðað símtal.</string>
+  <string name="encrypted_call_checking">Athuga hvort dulkóðuð símtöl séu tiltæk.</string>
+  <string name="encrypted_call_make_regular">Hringja venjulegt símtal</string>
+  <string name="encrypted_call_messaging_unavailable">Ekki tókst að tengjast Skilaboðum fyrir dulkóðuð símtöl.</string>
+  <string name="encrypted_call_sim_disabled">Dulkóðuð símtöl eru ekki virk fyrir valið SIM-kort.</string>
+  <string name="encrypted_call_no_accounts">Enginn virkur reikningur fyrir dulkóðuð símtöl er tiltækur. Athugaðu stillingar dumber.chat í Skilaboðum.</string>
+  <string name="encrypted_call_account_title">Reikningur fyrir dulkóðuð símtöl</string>
+  <string name="encrypted_call_account_check_failed">Ekki tókst að athuga reikninginn þinn fyrir dulkóðuð símtöl.</string>
+  <string name="encrypted_call_recipient_check_failed">Ekki tókst að athuga hvort þessi viðtakandi styðji dulkóðuð símtöl. Athugaðu nettenginguna og reyndu aftur.</string>
+  <string name="encrypted_call_fallback_message"><xliff:g id="reason">%1$s</xliff:g>\n\nHringja venjulegt farsímtal? Það notar ekki dulkóðun dumber.chat.</string>
+  <string name="encrypted_call_fallback_title">Nota venjulegt símtal?</string>
+  <string name="encrypted_call_use_regular">Nota venjulegt símtal</string>
+  <string name="encrypted_call_connection_label">Dulkóðað símtal</string>
+  <string name="encrypted_call_phone_account_label">Dulkóðað símtal · <xliff:g id="phone" example="+12025550123">%1$s</xliff:g></string>
+</resources>

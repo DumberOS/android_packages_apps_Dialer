@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="encrypted_call_failed">Apelul criptat nu s-a putut conecta.</string>
+  <string name="encrypted_call_checking">Se verifică disponibilitatea apelurilor criptate.</string>
+  <string name="encrypted_call_make_regular">Efectuează un apel obișnuit</string>
+  <string name="encrypted_call_messaging_unavailable">Nu s-a putut conecta la Mesaje pentru apelurile criptate.</string>
+  <string name="encrypted_call_sim_disabled">Apelurile criptate nu sunt activate pentru SIM-ul selectat.</string>
+  <string name="encrypted_call_no_accounts">Nu este disponibil niciun cont activat pentru apeluri criptate. Verifică setările dumber.chat din Mesaje.</string>
+  <string name="encrypted_call_account_title">Cont pentru apeluri criptate</string>
+  <string name="encrypted_call_account_check_failed">Nu s-a putut verifica contul tău pentru apeluri criptate.</string>
+  <string name="encrypted_call_recipient_check_failed">Nu s-a putut verifica dacă acest destinatar acceptă apeluri criptate. Verifică conexiunea la internet și încearcă din nou.</string>
+  <string name="encrypted_call_fallback_message"><xliff:g id="reason">%1$s</xliff:g>\n\nEfectuezi un apel mobil obișnuit? Acesta nu va folosi criptarea dumber.chat.</string>
+  <string name="encrypted_call_fallback_title">Folosești un apel obișnuit?</string>
+  <string name="encrypted_call_use_regular">Folosește un apel obișnuit</string>
+  <string name="encrypted_call_connection_label">Apel criptat</string>
+  <string name="encrypted_call_phone_account_label">Apel criptat · <xliff:g id="phone" example="+12025550123">%1$s</xliff:g></string>
+</resources>

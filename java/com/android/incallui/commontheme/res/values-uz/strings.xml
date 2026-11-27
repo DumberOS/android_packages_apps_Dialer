@@ -16,4 +16,7 @@
   <string name="incall_content_description_video_off">Video o‘chiq</string>
   <string name="incall_content_description_swap_video">Videoni yoqish/ochirish</string>
   <string name="incall_label_speaker">Karnay</string>
+
+  <!-- Encrypted calling and call-screen controls. -->
+  <string name="incall_content_description_minimize_call">Qo‘ng‘iroq ekranini kichraytirish</string>
 </resources>

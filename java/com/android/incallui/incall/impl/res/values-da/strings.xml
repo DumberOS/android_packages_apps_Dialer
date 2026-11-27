@@ -14,4 +14,8 @@
   <string name="incall_label_swap">Byt</string>
   <string name="incall_label_swap_sim">Skift SIM</string>
   <string name="incall_note_sent">Noten blev sendt</string>
+
+  <!-- Encrypted calling and call-screen controls. -->
+  <string name="incall_label_lock_screen">Lås skærmen</string>
+  <string name="incall_label_minimize">Minimer</string>
 </resources>

@@ -118,4 +118,7 @@
   <string name="call_log_action_remove_spam">ਸਪੈਮ ਨਹੀਂ</string>
   <string name="call_log_action_unblock_number">ਨੰਬਰ ਨੂੰ ਅਨਬਲੌਕ ਕਰੋ</string>
   <string name="spam_number_call_log_label">ਸਪੈਮ</string>
+
+  <!-- Encrypted calling and call-screen controls. -->
+  <string name="encrypted_call_account_label"><xliff:g id="carrier">%1$s</xliff:g> (ਇਨਕ੍ਰਿਪਟ ਕੀਤਾ)</string>
 </resources>

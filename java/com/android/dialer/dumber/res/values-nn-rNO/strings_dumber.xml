@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="encrypted_call_failed">Det krypterte anropet kunne ikkje koplast til.</string>
+  <string name="encrypted_call_checking">Sjekkar om krypterte anrop er tilgjengelege.</string>
+  <string name="encrypted_call_make_regular">Ring eit vanleg anrop</string>
+  <string name="encrypted_call_messaging_unavailable">Krypterte anrop kunne ikkje kople til Meldingar.</string>
+  <string name="encrypted_call_sim_disabled">Krypterte anrop er ikkje aktiverte for det valde SIM-kortet.</string>
+  <string name="encrypted_call_no_accounts">Ingen aktivert konto for krypterte anrop er tilgjengeleg. Sjekk innstillingane for dumber.chat i Meldingar.</string>
+  <string name="encrypted_call_account_title">Konto for krypterte anrop</string>
+  <string name="encrypted_call_account_check_failed">Kunne ikkje sjekke kontoen din for krypterte anrop.</string>
+  <string name="encrypted_call_recipient_check_failed">Kunne ikkje sjekke om denne mottakaren støttar krypterte anrop. Sjekk internettsambandet og prøv igjen.</string>
+  <string name="encrypted_call_fallback_message"><xliff:g id="reason">%1$s</xliff:g>\n\nRinge eit vanleg mobilanrop? Det brukar ikkje kryptering frå dumber.chat.</string>
+  <string name="encrypted_call_fallback_title">Bruke eit vanleg anrop?</string>
+  <string name="encrypted_call_use_regular">Bruk vanleg anrop</string>
+  <string name="encrypted_call_connection_label">Kryptert anrop</string>
+  <string name="encrypted_call_phone_account_label">Kryptert anrop · <xliff:g id="phone" example="+12025550123">%1$s</xliff:g></string>
+</resources>

@@ -34,4 +34,13 @@
     <string name="action_menu_helplines">ياردەم تېلېفونى</string>
     <string name="default_dialer_text">نومۇر بۇرىغۇچنى كۆڭۈلدىكى تېلېفون ئەپى قىلىپ تەڭشەش كېرەك.</string>
     <string name="default_dialer_action">كۆڭۈلدىكى قىممەتكە تەڭشە</string>
+
+    <!-- Encrypted calling and call-screen controls. -->
+    <string name="encrypted_call_account_label"><xliff:g id="carrier">%1$s</xliff:g> (شىفىرلانغان)</string>
+    <string name="tab_title_dialpad">نومۇر تاختىسى</string>
+    <string name="notification_channel_encrypted_call">شىفىرلانغان چاقىرىشلار</string>
+    <string name="incall_content_description_minimize_call">چاقىرىش ئېكرانىنى كىچىكلىتىش</string>
+    <string name="incall_establishing_encrypted_call">چاقىرىش ئۇلىنىۋاتىدۇ…</string>
+    <string name="incall_label_lock_screen">ئېكراننى قۇلۇپلاش</string>
+    <string name="incall_label_minimize">كىچىكلىتىش</string>
 </resources>

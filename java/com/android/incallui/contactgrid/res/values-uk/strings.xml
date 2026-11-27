@@ -23,4 +23,7 @@
   <string name="contact_grid_incoming_via_template">Вхідні виклики через оператора %s</string>
   <string name="contact_grid_incoming_suspected_spam">Підозрілий абонент</string>
   <string name="contact_grid_callback_number">Номер цього телефону: %1$s</string>
+
+  <!-- Encrypted calling and call-screen controls. -->
+  <string name="incall_establishing_encrypted_call">Установлення з’єднання…</string>
 </resources>

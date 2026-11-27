@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="encrypted_call_failed">មិនអាចភ្ជាប់ការហៅដែលបានអ៊ិនគ្រីបបានទេ។</string>
+  <string name="encrypted_call_checking">កំពុងពិនិត្យភាពអាចប្រើបាននៃការហៅដែលបានអ៊ិនគ្រីប។</string>
+  <string name="encrypted_call_make_regular">ធ្វើការហៅធម្មតា</string>
+  <string name="encrypted_call_messaging_unavailable">មិនអាចភ្ជាប់ទៅកម្មវិធីសារសម្រាប់ការហៅដែលបានអ៊ិនគ្រីបបានទេ។</string>
+  <string name="encrypted_call_sim_disabled">ការហៅដែលបានអ៊ិនគ្រីបមិនត្រូវបានបើកសម្រាប់ស៊ីមដែលបានជ្រើសរើសទេ។</string>
+  <string name="encrypted_call_no_accounts">មិនមានគណនីការហៅដែលបានអ៊ិនគ្រីបដែលបានបើកទេ។ សូមពិនិត្យការកំណត់ dumber.chat ក្នុងកម្មវិធីសារ។</string>
+  <string name="encrypted_call_account_title">គណនីការហៅដែលបានអ៊ិនគ្រីប</string>
+  <string name="encrypted_call_account_check_failed">មិនអាចពិនិត្យគណនីការហៅដែលបានអ៊ិនគ្រីបរបស់អ្នកបានទេ។</string>
+  <string name="encrypted_call_recipient_check_failed">មិនអាចពិនិត្យថាអ្នកទទួលនេះគាំទ្រការហៅដែលបានអ៊ិនគ្រីបឬអត់បានទេ។ សូមពិនិត្យការតភ្ជាប់អ៊ីនធឺណិតរបស់អ្នក ហើយព្យាយាមម្ដងទៀត។</string>
+  <string name="encrypted_call_fallback_message"><xliff:g id="reason">%1$s</xliff:g>\n\nធ្វើការហៅតាមបណ្ដាញទូរសព្ទធម្មតាឬ? វានឹងមិនប្រើការអ៊ិនគ្រីបរបស់ dumber.chat ទេ។</string>
+  <string name="encrypted_call_fallback_title">ប្រើការហៅធម្មតាឬ?</string>
+  <string name="encrypted_call_use_regular">ប្រើការហៅធម្មតា</string>
+  <string name="encrypted_call_connection_label">ការហៅដែលបានអ៊ិនគ្រីប</string>
+  <string name="encrypted_call_phone_account_label">ការហៅដែលបានអ៊ិនគ្រីប · <xliff:g id="phone" example="+12025550123">%1$s</xliff:g></string>
+</resources>

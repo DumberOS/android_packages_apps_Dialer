@@ -5,4 +5,7 @@
   <string name="notification_channel_missed_call">છૂટેલા કૉલ</string>
   <string name="notification_channel_voicemail">વૉઇસમેઇલ</string>
   <string name="notification_channel_misc">ડિફૉલ્ટ</string>
+
+  <!-- Encrypted calling and call-screen controls. -->
+  <string name="notification_channel_encrypted_call">એન્ક્રિપ્ટ કરેલા કૉલ</string>
 </resources>

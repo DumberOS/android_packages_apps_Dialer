@@ -23,4 +23,7 @@
   <string name="contact_grid_incoming_via_template">Kiruvchi chaqiruv (operator: %s)</string>
   <string name="contact_grid_incoming_suspected_spam">Shubhali abonent</string>
   <string name="contact_grid_callback_number">Bu telefonning raqami: %1$s</string>
+
+  <!-- Encrypted calling and call-screen controls. -->
+  <string name="incall_establishing_encrypted_call">Qo‘ng‘iroq ulanmoqda…</string>
 </resources>

@@ -23,4 +23,7 @@
   <string name="contact_grid_incoming_via_template">透過 %s 的來電</string>
   <string name="contact_grid_incoming_suspected_spam">疑似垃圾來電者</string>
   <string name="contact_grid_callback_number">這部手機的號碼：%1$s</string>
+
+  <!-- Encrypted calling and call-screen controls. -->
+  <string name="incall_establishing_encrypted_call">正在建立通話…</string>
 </resources>

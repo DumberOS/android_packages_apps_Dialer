@@ -14,4 +14,8 @@
   <string name="incall_label_swap">Przełącz</string>
   <string name="incall_label_swap_sim">Zmień kartę SIM</string>
   <string name="incall_note_sent">Notatka wysłana</string>
+
+  <!-- Encrypted calling and call-screen controls. -->
+  <string name="incall_label_lock_screen">Zablokuj ekran</string>
+  <string name="incall_label_minimize">Zminimalizuj</string>
 </resources>

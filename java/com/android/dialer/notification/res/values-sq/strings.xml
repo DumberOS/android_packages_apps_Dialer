@@ -5,4 +5,7 @@
   <string name="notification_channel_missed_call">Telefonatat e humbura</string>
   <string name="notification_channel_voicemail">Postat zanore</string>
   <string name="notification_channel_misc">I parazgjedhur</string>
+
+  <!-- Encrypted calling and call-screen controls. -->
+  <string name="notification_channel_encrypted_call">Thirrje të enkriptuara</string>
 </resources>

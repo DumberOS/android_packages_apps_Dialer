@@ -14,4 +14,8 @@
   <string name="incall_label_swap">Vaheta</string>
   <string name="incall_label_swap_sim">Muuda SIM-k.</string>
   <string name="incall_note_sent">Märge on saadetud</string>
+
+  <!-- Encrypted calling and call-screen controls. -->
+  <string name="incall_label_lock_screen">Lukusta ekraan</string>
+  <string name="incall_label_minimize">Minimeeri</string>
 </resources>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="encrypted_call_failed">ไม่สามารถเชื่อมต่อการโทรที่เข้ารหัสได้</string>
+  <string name="encrypted_call_checking">กำลังตรวจสอบความพร้อมใช้งานของการโทรที่เข้ารหัส</string>
+  <string name="encrypted_call_make_regular">โทรแบบปกติ</string>
+  <string name="encrypted_call_messaging_unavailable">ไม่สามารถเชื่อมต่อกับแอปข้อความเพื่อโทรแบบเข้ารหัสได้</string>
+  <string name="encrypted_call_sim_disabled">ยังไม่ได้เปิดใช้การโทรที่เข้ารหัสสำหรับซิมที่เลือก</string>
+  <string name="encrypted_call_no_accounts">ไม่มีบัญชีการโทรที่เข้ารหัสที่เปิดใช้งานอยู่และพร้อมใช้งาน ตรวจสอบการตั้งค่า dumber.chat ในแอปข้อความ</string>
+  <string name="encrypted_call_account_title">บัญชีการโทรที่เข้ารหัส</string>
+  <string name="encrypted_call_account_check_failed">ไม่สามารถตรวจสอบบัญชีการโทรที่เข้ารหัสของคุณได้</string>
+  <string name="encrypted_call_recipient_check_failed">ไม่สามารถตรวจสอบว่าผู้รับรายนี้รองรับการโทรที่เข้ารหัสหรือไม่ ตรวจสอบการเชื่อมต่ออินเทอร์เน็ตแล้วลองอีกครั้ง</string>
+  <string name="encrypted_call_fallback_message"><xliff:g id="reason">%1$s</xliff:g>\n\nโทรผ่านเครือข่ายมือถือแบบปกติไหม การโทรนี้จะไม่ใช้การเข้ารหัสของ dumber.chat</string>
+  <string name="encrypted_call_fallback_title">ใช้การโทรแบบปกติไหม</string>
+  <string name="encrypted_call_use_regular">ใช้การโทรแบบปกติ</string>
+  <string name="encrypted_call_connection_label">การโทรที่เข้ารหัส</string>
+  <string name="encrypted_call_phone_account_label">การโทรที่เข้ารหัส · <xliff:g id="phone" example="+12025550123">%1$s</xliff:g></string>
+</resources>

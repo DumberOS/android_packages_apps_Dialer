@@ -5,4 +5,7 @@
   <string name="notification_channel_missed_call">මඟ හැරුණු ඇමතුම්</string>
   <string name="notification_channel_voicemail">හඬ තැපැල්</string>
   <string name="notification_channel_misc">පෙරනිමි</string>
+
+  <!-- Encrypted calling and call-screen controls. -->
+  <string name="notification_channel_encrypted_call">සංකේතනය කළ ඇමතුම්</string>
 </resources>

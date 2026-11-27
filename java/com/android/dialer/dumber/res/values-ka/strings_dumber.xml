@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="encrypted_call_failed">დაშიფრული ზარის დაკავშირება ვერ მოხერხდა.</string>
+  <string name="encrypted_call_checking">მოწმდება დაშიფრული ზარების ხელმისაწვდომობა.</string>
+  <string name="encrypted_call_make_regular">ჩვეულებრივი ზარის განხორციელება</string>
+  <string name="encrypted_call_messaging_unavailable">დაშიფრული ზარებისთვის შეტყობინებების აპთან დაკავშირება ვერ მოხერხდა.</string>
+  <string name="encrypted_call_sim_disabled">არჩეული SIM ბარათისთვის დაშიფრული ზარები ჩართული არ არის.</string>
+  <string name="encrypted_call_no_accounts">დაშიფრული ზარებისთვის ჩართული ანგარიში ხელმისაწვდომი არ არის. შეამოწმეთ dumber.chat-ის პარამეტრები შეტყობინებების აპში.</string>
+  <string name="encrypted_call_account_title">დაშიფრული ზარების ანგარიში</string>
+  <string name="encrypted_call_account_check_failed">თქვენი დაშიფრული ზარების ანგარიშის შემოწმება ვერ მოხერხდა.</string>
+  <string name="encrypted_call_recipient_check_failed">ვერ შემოწმდა, მხარს უჭერს თუ არა ეს მიმღები დაშიფრულ ზარებს. შეამოწმეთ ინტერნეტკავშირი და სცადეთ ხელახლა.</string>
+  <string name="encrypted_call_fallback_message"><xliff:g id="reason">%1$s</xliff:g>\n\nგანახორციელოთ ჩვეულებრივი მობილური ზარი? ის არ გამოიყენებს dumber.chat-ის დაშიფვრას.</string>
+  <string name="encrypted_call_fallback_title">გამოიყენოთ ჩვეულებრივი ზარი?</string>
+  <string name="encrypted_call_use_regular">ჩვეულებრივი ზარის გამოყენება</string>
+  <string name="encrypted_call_connection_label">დაშიფრული ზარი</string>
+  <string name="encrypted_call_phone_account_label">დაშიფრული ზარი · <xliff:g id="phone" example="+12025550123">%1$s</xliff:g></string>
+</resources>

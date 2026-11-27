@@ -14,4 +14,8 @@
   <string name="incall_label_swap">Växla</string>
   <string name="incall_label_swap_sim">Ändra SIM</string>
   <string name="incall_note_sent">Anteckning skickad</string>
+
+  <!-- Encrypted calling and call-screen controls. -->
+  <string name="incall_label_lock_screen">Lås skärmen</string>
+  <string name="incall_label_minimize">Minimera</string>
 </resources>

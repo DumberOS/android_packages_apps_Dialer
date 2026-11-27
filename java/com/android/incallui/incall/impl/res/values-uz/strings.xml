@@ -14,4 +14,8 @@
   <string name="incall_label_swap">Almashish</string>
   <string name="incall_label_swap_sim">SIMni o‘zg.</string>
   <string name="incall_note_sent">Qayd yuborildi</string>
+
+  <!-- Encrypted calling and call-screen controls. -->
+  <string name="incall_label_lock_screen">Ekranni qulflash</string>
+  <string name="incall_label_minimize">Kichraytirish</string>
 </resources>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="encrypted_call_failed">ບໍ່ສາມາດເຊື່ອມຕໍ່ການໂທແບບເຂົ້າລະຫັດໄດ້.</string>
+  <string name="encrypted_call_checking">ກຳລັງກວດສອບຄວາມພ້ອມໃຊ້ຂອງການໂທແບບເຂົ້າລະຫັດ.</string>
+  <string name="encrypted_call_make_regular">ໂທແບບປົກກະຕິ</string>
+  <string name="encrypted_call_messaging_unavailable">ບໍ່ສາມາດເຊື່ອມຕໍ່ກັບແອັບຂໍ້ຄວາມເພື່ອໂທແບບເຂົ້າລະຫັດໄດ້.</string>
+  <string name="encrypted_call_sim_disabled">ບໍ່ໄດ້ເປີດໃຊ້ການໂທແບບເຂົ້າລະຫັດສຳລັບ SIM ທີ່ເລືອກ.</string>
+  <string name="encrypted_call_no_accounts">ບໍ່ມີບັນຊີການໂທແບບເຂົ້າລະຫັດທີ່ເປີດໃຊ້ຢູ່. ກວດສອບການຕັ້ງຄ່າ dumber.chat ໃນແອັບຂໍ້ຄວາມ.</string>
+  <string name="encrypted_call_account_title">ບັນຊີການໂທແບບເຂົ້າລະຫັດ</string>
+  <string name="encrypted_call_account_check_failed">ບໍ່ສາມາດກວດສອບບັນຊີການໂທແບບເຂົ້າລະຫັດຂອງທ່ານໄດ້.</string>
+  <string name="encrypted_call_recipient_check_failed">ບໍ່ສາມາດກວດສອບວ່າຜູ້ຮັບນີ້ຮອງຮັບການໂທແບບເຂົ້າລະຫັດຫຼືບໍ່. ກວດສອບອິນເຕີເນັດຂອງທ່ານ ແລ້ວລອງອີກຄັ້ງ.</string>
+  <string name="encrypted_call_fallback_message"><xliff:g id="reason">%1$s</xliff:g>\n\nໂທຜ່ານເຄືອຂ່າຍມືຖືແບບປົກກະຕິບໍ? ການໂທນີ້ຈະບໍ່ໃຊ້ການເຂົ້າລະຫັດຂອງ dumber.chat.</string>
+  <string name="encrypted_call_fallback_title">ໃຊ້ການໂທແບບປົກກະຕິບໍ?</string>
+  <string name="encrypted_call_use_regular">ໃຊ້ການໂທແບບປົກກະຕິ</string>
+  <string name="encrypted_call_connection_label">ການໂທແບບເຂົ້າລະຫັດ</string>
+  <string name="encrypted_call_phone_account_label">ການໂທແບບເຂົ້າລະຫັດ · <xliff:g id="phone" example="+12025550123">%1$s</xliff:g></string>
+</resources>

@@ -5,4 +5,7 @@
   <string name="notification_channel_missed_call">Apeluri nepreluate</string>
   <string name="notification_channel_voicemail">Mesaje vocale</string>
   <string name="notification_channel_misc">Prestabilit</string>
+
+  <!-- Encrypted calling and call-screen controls. -->
+  <string name="notification_channel_encrypted_call">Apeluri criptate</string>
 </resources>

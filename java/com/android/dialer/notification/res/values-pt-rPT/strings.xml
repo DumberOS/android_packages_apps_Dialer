@@ -5,4 +5,7 @@
   <string name="notification_channel_missed_call">Chamadas não atendidas</string>
   <string name="notification_channel_voicemail">Mensagens de correio de voz</string>
   <string name="notification_channel_misc">Predefinição</string>
+
+  <!-- Encrypted calling and call-screen controls. -->
+  <string name="notification_channel_encrypted_call">Chamadas encriptadas</string>
 </resources>

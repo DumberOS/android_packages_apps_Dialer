@@ -16,4 +16,7 @@
   <string name="incall_content_description_video_off">Video kapalı</string>
   <string name="incall_content_description_swap_video">Videoyu değiştirin</string>
   <string name="incall_label_speaker">Hoparlör</string>
+
+  <!-- Encrypted calling and call-screen controls. -->
+  <string name="incall_content_description_minimize_call">Arama ekranını küçült</string>
 </resources>

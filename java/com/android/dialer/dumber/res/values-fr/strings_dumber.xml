@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="encrypted_call_failed">L’appel chiffré n’a pas pu aboutir.</string>
+  <string name="encrypted_call_checking">Vérification de la disponibilité des appels chiffrés.</string>
+  <string name="encrypted_call_make_regular">Passer un appel classique</string>
+  <string name="encrypted_call_messaging_unavailable">Impossible de se connecter à l’application Messages pour les appels chiffrés.</string>
+  <string name="encrypted_call_sim_disabled">Les appels chiffrés ne sont pas activés pour la carte SIM sélectionnée.</string>
+  <string name="encrypted_call_no_accounts">Aucun compte d’appels chiffrés activé n’est disponible. Vérifiez les paramètres de dumber.chat dans Messages.</string>
+  <string name="encrypted_call_account_title">Compte d’appels chiffrés</string>
+  <string name="encrypted_call_account_check_failed">Impossible de vérifier votre compte d’appels chiffrés.</string>
+  <string name="encrypted_call_recipient_check_failed">Impossible de vérifier si ce destinataire peut recevoir des appels chiffrés. Vérifiez votre connexion Internet et réessayez.</string>
+  <string name="encrypted_call_fallback_message"><xliff:g id="reason">%1$s</xliff:g>\n\nPasser un appel mobile classique ? Il n’utilisera pas le chiffrement de dumber.chat.</string>
+  <string name="encrypted_call_fallback_title">Utiliser un appel classique ?</string>
+  <string name="encrypted_call_use_regular">Utiliser un appel classique</string>
+  <string name="encrypted_call_connection_label">Appel chiffré</string>
+  <string name="encrypted_call_phone_account_label">Appel chiffré · <xliff:g id="phone" example="+12025550123">%1$s</xliff:g></string>
+</resources>

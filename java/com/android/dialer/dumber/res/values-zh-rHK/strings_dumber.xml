@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="encrypted_call_failed">無法接通加密通話。</string>
+  <string name="encrypted_call_checking">正在檢查加密通話是否可用。</string>
+  <string name="encrypted_call_make_regular">撥打一般電話</string>
+  <string name="encrypted_call_messaging_unavailable">加密通話無法連線至「訊息」應用程式。</string>
+  <string name="encrypted_call_sim_disabled">所選 SIM 卡尚未啟用加密通話。</string>
+  <string name="encrypted_call_no_accounts">沒有可用且已啟用的加密通話帳戶。請檢查「訊息」中的 dumber.chat 設定。</string>
+  <string name="encrypted_call_account_title">加密通話帳戶</string>
+  <string name="encrypted_call_account_check_failed">無法檢查您的加密通話帳戶。</string>
+  <string name="encrypted_call_recipient_check_failed">無法檢查這位收件者是否支援加密通話。請檢查網際網路連線，然後再試一次。</string>
+  <string name="encrypted_call_fallback_message"><xliff:g id="reason">%1$s</xliff:g>\n\n撥打一般行動電話？這通電話不會使用 dumber.chat 加密。</string>
+  <string name="encrypted_call_fallback_title">使用一般通話？</string>
+  <string name="encrypted_call_use_regular">使用一般通話</string>
+  <string name="encrypted_call_connection_label">加密通話</string>
+  <string name="encrypted_call_phone_account_label">加密通話 · <xliff:g id="phone" example="+12025550123">%1$s</xliff:g></string>
+</resources>

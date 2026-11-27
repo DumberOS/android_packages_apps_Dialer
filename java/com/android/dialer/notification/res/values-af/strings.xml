@@ -5,4 +5,7 @@
   <string name="notification_channel_missed_call">Gemiste oproepe</string>
   <string name="notification_channel_voicemail">Stemboodskappe</string>
   <string name="notification_channel_misc">Verstek</string>
+
+  <!-- Encrypted calling and call-screen controls. -->
+  <string name="notification_channel_encrypted_call">Geënkripteerde oproepe</string>
 </resources>

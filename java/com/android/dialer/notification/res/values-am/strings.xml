@@ -5,4 +5,7 @@
   <string name="notification_channel_missed_call">ያመለጡ ጥሪዎች</string>
   <string name="notification_channel_voicemail">የድምፅ መልዕክቶች</string>
   <string name="notification_channel_misc">ነባሪ</string>
+
+  <!-- Encrypted calling and call-screen controls. -->
+  <string name="notification_channel_encrypted_call">የተመሰጠሩ ጥሪዎች</string>
 </resources>

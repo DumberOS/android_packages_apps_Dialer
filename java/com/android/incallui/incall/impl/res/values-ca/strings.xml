@@ -14,4 +14,8 @@
   <string name="incall_label_swap">Canvia</string>
   <string name="incall_label_swap_sim">Canvia de SIM</string>
   <string name="incall_note_sent">La nota s\'ha enviat</string>
+
+  <!-- Encrypted calling and call-screen controls. -->
+  <string name="incall_label_lock_screen">Bloqueja la pantalla</string>
+  <string name="incall_label_minimize">Minimitza</string>
 </resources>

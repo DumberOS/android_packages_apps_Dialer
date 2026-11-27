@@ -23,4 +23,7 @@
   <string name="contact_grid_incoming_via_template">%s bidez jasotzen</string>
   <string name="contact_grid_incoming_suspected_spam">Ustezko spam-deitzailea</string>
   <string name="contact_grid_callback_number">Telefono-zenbaki hau: %1$s</string>
+
+  <!-- Encrypted calling and call-screen controls. -->
+  <string name="incall_establishing_encrypted_call">Deia konektatzen…</string>
 </resources>

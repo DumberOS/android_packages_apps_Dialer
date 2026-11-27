@@ -23,4 +23,7 @@
   <string name="contact_grid_incoming_via_template">%s မှတစ်ဆင့် အဝင်ခေါ်ဆိုမှု</string>
   <string name="contact_grid_incoming_suspected_spam">မသင်္ကာဖွယ်ရာ စပမ်းခေါ်ဆိုသူ</string>
   <string name="contact_grid_callback_number">ဤဖုန်း၏နံပါတ် - %1$s</string>
+
+  <!-- Encrypted calling and call-screen controls. -->
+  <string name="incall_establishing_encrypted_call">ခေါ်ဆိုမှု ချိတ်ဆက်နေသည်…</string>
 </resources>

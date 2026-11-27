@@ -14,4 +14,8 @@
   <string name="incall_label_swap">මාරු කරන්න</string>
   <string name="incall_label_swap_sim">SIM වෙනස් කර</string>
   <string name="incall_note_sent">සටහන යවන ලදී</string>
+
+  <!-- Encrypted calling and call-screen controls. -->
+  <string name="incall_label_lock_screen">තිරය අගුළු දමන්න</string>
+  <string name="incall_label_minimize">කුඩා කරන්න</string>
 </resources>

@@ -14,4 +14,8 @@
   <string name="incall_label_swap">جابه‌جایی</string>
   <string name="incall_label_swap_sim">تغییر سیم‌کارت</string>
   <string name="incall_note_sent">یادداشت ارسال شد</string>
+
+  <!-- Encrypted calling and call-screen controls. -->
+  <string name="incall_label_lock_screen">قفل کردن صفحه</string>
+  <string name="incall_label_minimize">کوچک کردن</string>
 </resources>

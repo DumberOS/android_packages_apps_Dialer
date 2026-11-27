@@ -5,4 +5,7 @@
   <string name="notification_channel_missed_call">Llamadas perdidas</string>
   <string name="notification_channel_voicemail">Mensajes de voz</string>
   <string name="notification_channel_misc">Predeterminado</string>
+
+  <!-- Encrypted calling and call-screen controls. -->
+  <string name="notification_channel_encrypted_call">Llamadas cifradas</string>
 </resources>

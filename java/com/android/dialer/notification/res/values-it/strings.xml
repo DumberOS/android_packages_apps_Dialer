@@ -5,4 +5,7 @@
   <string name="notification_channel_missed_call">Chiamate perse</string>
   <string name="notification_channel_voicemail">Messaggi vocali</string>
   <string name="notification_channel_misc">Predefinito</string>
+
+  <!-- Encrypted calling and call-screen controls. -->
+  <string name="notification_channel_encrypted_call">Chiamate crittografate</string>
 </resources>

@@ -21,4 +21,7 @@
     <string name="tab_title_call_history" msgid="5191872501729332994">"కాల్ చరిత్ర"</string>
     <string name="tab_title_speed_dial" msgid="1968484500112572774">"స్పీడ్ డయల్"</string>
     <string name="tab_title_voicemail" msgid="4777655983569268504">"వాయిస్ మెయిల్"</string>
+
+    <!-- Encrypted calling and call-screen controls. -->
+    <string name="tab_title_dialpad">కీప్యాడ్</string>
 </resources>

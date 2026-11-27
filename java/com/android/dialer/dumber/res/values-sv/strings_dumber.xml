@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="encrypted_call_failed">Det krypterade samtalet kunde inte anslutas.</string>
+  <string name="encrypted_call_checking">Kontrollerar om krypterade samtal är tillgängliga.</string>
+  <string name="encrypted_call_make_regular">Ring ett vanligt samtal</string>
+  <string name="encrypted_call_messaging_unavailable">Krypterade samtal kunde inte ansluta till Meddelanden.</string>
+  <string name="encrypted_call_sim_disabled">Krypterade samtal är inte aktiverade för det valda SIM-kortet.</string>
+  <string name="encrypted_call_no_accounts">Inget aktiverat konto för krypterade samtal är tillgängligt. Kontrollera inställningarna för dumber.chat i Meddelanden.</string>
+  <string name="encrypted_call_account_title">Konto för krypterade samtal</string>
+  <string name="encrypted_call_account_check_failed">Det gick inte att kontrollera ditt konto för krypterade samtal.</string>
+  <string name="encrypted_call_recipient_check_failed">Det gick inte att kontrollera den här mottagaren för krypterade samtal. Kontrollera internetanslutningen och försök igen.</string>
+  <string name="encrypted_call_fallback_message"><xliff:g id="reason">%1$s</xliff:g>\n\nRing ett vanligt mobilsamtal? Det använder inte kryptering från dumber.chat.</string>
+  <string name="encrypted_call_fallback_title">Använd ett vanligt samtal?</string>
+  <string name="encrypted_call_use_regular">Använd vanligt samtal</string>
+  <string name="encrypted_call_connection_label">Krypterat samtal</string>
+  <string name="encrypted_call_phone_account_label">Krypterat samtal · <xliff:g id="phone" example="+12025550123">%1$s</xliff:g></string>
+</resources>

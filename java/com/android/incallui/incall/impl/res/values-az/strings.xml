@@ -14,4 +14,8 @@
   <string name="incall_label_swap">Dəyişdirin</string>
   <string name="incall_label_swap_sim">SIM-i dəyişin</string>
   <string name="incall_note_sent">Qeyd göndərildi</string>
+
+  <!-- Encrypted calling and call-screen controls. -->
+  <string name="incall_label_lock_screen">Ekranı kilidlə</string>
+  <string name="incall_label_minimize">Kiçilt</string>
 </resources>

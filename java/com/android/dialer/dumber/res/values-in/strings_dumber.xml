@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="encrypted_call_failed">Panggilan terenkripsi tidak dapat tersambung.</string>
+  <string name="encrypted_call_checking">Memeriksa ketersediaan panggilan terenkripsi.</string>
+  <string name="encrypted_call_make_regular">Lakukan panggilan biasa</string>
+  <string name="encrypted_call_messaging_unavailable">Tidak dapat terhubung ke Pesan untuk panggilan terenkripsi.</string>
+  <string name="encrypted_call_sim_disabled">Panggilan terenkripsi tidak diaktifkan untuk SIM yang dipilih.</string>
+  <string name="encrypted_call_no_accounts">Tidak ada akun panggilan terenkripsi yang aktif dan tersedia. Periksa setelan dumber.chat di Pesan.</string>
+  <string name="encrypted_call_account_title">Akun panggilan terenkripsi</string>
+  <string name="encrypted_call_account_check_failed">Tidak dapat memeriksa akun panggilan terenkripsi Anda.</string>
+  <string name="encrypted_call_recipient_check_failed">Tidak dapat memeriksa dukungan panggilan terenkripsi penerima ini. Periksa koneksi internet Anda dan coba lagi.</string>
+  <string name="encrypted_call_fallback_message"><xliff:g id="reason">%1$s</xliff:g>\n\nLakukan panggilan seluler biasa? Panggilan ini tidak akan menggunakan enkripsi dumber.chat.</string>
+  <string name="encrypted_call_fallback_title">Gunakan panggilan biasa?</string>
+  <string name="encrypted_call_use_regular">Gunakan panggilan biasa</string>
+  <string name="encrypted_call_connection_label">Panggilan terenkripsi</string>
+  <string name="encrypted_call_phone_account_label">Panggilan terenkripsi · <xliff:g id="phone" example="+12025550123">%1$s</xliff:g></string>
+</resources>

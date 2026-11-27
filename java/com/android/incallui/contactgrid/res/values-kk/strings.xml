@@ -23,4 +23,7 @@
   <string name="contact_grid_incoming_via_template">%s арқылы кіріс</string>
   <string name="contact_grid_incoming_suspected_spam">Спам қоңырау шалушы болуы мүмкін</string>
   <string name="contact_grid_callback_number">Телефон нөмірі: %1$s</string>
+
+  <!-- Encrypted calling and call-screen controls. -->
+  <string name="incall_establishing_encrypted_call">Қоңырау қосылуда…</string>
 </resources>

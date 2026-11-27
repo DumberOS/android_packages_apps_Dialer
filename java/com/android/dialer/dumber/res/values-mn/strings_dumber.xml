@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="encrypted_call_failed">Шифрлэсэн дуудлага холбогдсонгүй.</string>
+  <string name="encrypted_call_checking">Шифрлэсэн дуудлага хийх боломжийг шалгаж байна.</string>
+  <string name="encrypted_call_make_regular">Энгийн дуудлага хийх</string>
+  <string name="encrypted_call_messaging_unavailable">Шифрлэсэн дуудлагад зориулж Мессеж апптай холбогдож чадсангүй.</string>
+  <string name="encrypted_call_sim_disabled">Сонгосон SIM-д шифрлэсэн дуудлага идэвхжээгүй байна.</string>
+  <string name="encrypted_call_no_accounts">Шифрлэсэн дуудлагын идэвхтэй бүртгэл алга. Мессеж апп дахь dumber.chat тохиргоог шалгана уу.</string>
+  <string name="encrypted_call_account_title">Шифрлэсэн дуудлагын бүртгэл</string>
+  <string name="encrypted_call_account_check_failed">Таны шифрлэсэн дуудлагын бүртгэлийг шалгаж чадсангүй.</string>
+  <string name="encrypted_call_recipient_check_failed">Энэ хүлээн авагч шифрлэсэн дуудлага дэмждэг эсэхийг шалгаж чадсангүй. Интернэт холболтоо шалгаад дахин оролдоно уу.</string>
+  <string name="encrypted_call_fallback_message"><xliff:g id="reason">%1$s</xliff:g>\n\nЭнгийн үүрэн дуудлага хийх үү? Энэ нь dumber.chat шифрлэлтийг ашиглахгүй.</string>
+  <string name="encrypted_call_fallback_title">Энгийн дуудлага ашиглах уу?</string>
+  <string name="encrypted_call_use_regular">Энгийн дуудлага ашиглах</string>
+  <string name="encrypted_call_connection_label">Шифрлэсэн дуудлага</string>
+  <string name="encrypted_call_phone_account_label">Шифрлэсэн дуудлага · <xliff:g id="phone" example="+12025550123">%1$s</xliff:g></string>
+</resources>

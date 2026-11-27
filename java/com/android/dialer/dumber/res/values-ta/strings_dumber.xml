@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="encrypted_call_failed">என்க்ரிப்ட் செய்யப்பட்ட அழைப்பை இணைக்க முடியவில்லை.</string>
+  <string name="encrypted_call_checking">என்க்ரிப்ட் செய்யப்பட்ட அழைப்பு கிடைக்குமா எனச் சரிபார்க்கிறது.</string>
+  <string name="encrypted_call_make_regular">வழக்கமான அழைப்பை மேற்கொள்</string>
+  <string name="encrypted_call_messaging_unavailable">என்க்ரிப்ட் செய்யப்பட்ட அழைப்புகளுக்காக Messages ஆப்ஸுடன் இணைக்க முடியவில்லை.</string>
+  <string name="encrypted_call_sim_disabled">தேர்ந்தெடுத்த SIMமிற்கு என்க்ரிப்ட் செய்யப்பட்ட அழைப்புகள் இயக்கப்படவில்லை.</string>
+  <string name="encrypted_call_no_accounts">இயக்கப்பட்ட என்க்ரிப்ட் அழைப்புக் கணக்கு எதுவும் கிடைக்கவில்லை. Messages ஆப்ஸில் dumber.chat அமைப்புகளைச் சரிபார்க்கவும்.</string>
+  <string name="encrypted_call_account_title">என்க்ரிப்ட் அழைப்புக் கணக்கு</string>
+  <string name="encrypted_call_account_check_failed">என்க்ரிப்ட் செய்யப்பட்ட அழைப்புகளுக்கான உங்கள் கணக்கைச் சரிபார்க்க முடியவில்லை.</string>
+  <string name="encrypted_call_recipient_check_failed">இந்தப் பெறுநர் என்க்ரிப்ட் செய்யப்பட்ட அழைப்புகளை ஆதரிக்கிறாரா எனச் சரிபார்க்க முடியவில்லை. இணைய இணைப்பைச் சரிபார்த்து மீண்டும் முயலவும்.</string>
+  <string name="encrypted_call_fallback_message"><xliff:g id="reason">%1$s</xliff:g>\n\nவழக்கமான மொபைல் அழைப்பை மேற்கொள்ளவா? இதில் dumber.chat என்க்ரிப்ஷன் பயன்படுத்தப்படாது.</string>
+  <string name="encrypted_call_fallback_title">வழக்கமான அழைப்பைப் பயன்படுத்தவா?</string>
+  <string name="encrypted_call_use_regular">வழக்கமான அழைப்பைப் பயன்படுத்து</string>
+  <string name="encrypted_call_connection_label">என்க்ரிப்ட் செய்யப்பட்ட அழைப்பு</string>
+  <string name="encrypted_call_phone_account_label">என்க்ரிப்ட் செய்யப்பட்ட அழைப்பு · <xliff:g id="phone" example="+12025550123">%1$s</xliff:g></string>
+</resources>

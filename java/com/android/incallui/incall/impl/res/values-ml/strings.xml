@@ -14,4 +14,8 @@
   <string name="incall_label_swap">സ്വാപ്പുചെയ്യുക</string>
   <string name="incall_label_swap_sim">സിം മാറ്റുക</string>
   <string name="incall_note_sent">കുറിപ്പ് അയച്ചു</string>
+
+  <!-- Encrypted calling and call-screen controls. -->
+  <string name="incall_label_lock_screen">സ്‌ക്രീൻ ലോക്ക് ചെയ്യുക</string>
+  <string name="incall_label_minimize">ചെറുതാക്കുക</string>
 </resources>

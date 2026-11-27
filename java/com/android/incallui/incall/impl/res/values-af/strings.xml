@@ -14,4 +14,8 @@
   <string name="incall_label_swap">Verwissel</string>
   <string name="incall_label_swap_sim">Verander SIM</string>
   <string name="incall_note_sent">Nota is gestuur</string>
+
+  <!-- Encrypted calling and call-screen controls. -->
+  <string name="incall_label_lock_screen">Sluit skerm</string>
+  <string name="incall_label_minimize">Minimeer</string>
 </resources>

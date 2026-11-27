@@ -12,7 +12,7 @@ public final class CallAudioService extends Service {
     super.onCreate();
     Notification n =
         new Notification.Builder(this, NotificationChannelId.ENCRYPTED_CALL)
-            .setContentTitle("Encrypted call")
+            .setContentTitle(getString(R.string.encrypted_call_connection_label))
             .setSmallIcon(android.R.drawable.sym_call_incoming)
             .setContentIntent(PendingIntent.getActivity(
                 this,

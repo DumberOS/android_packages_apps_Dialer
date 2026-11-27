@@ -5,4 +5,7 @@
   <string name="notification_channel_missed_call">გამოტოვებული ზარები</string>
   <string name="notification_channel_voicemail">ხმოვანი ფოსტა</string>
   <string name="notification_channel_misc">ნაგულისხმევი</string>
+
+  <!-- Encrypted calling and call-screen controls. -->
+  <string name="notification_channel_encrypted_call">დაშიფრული ზარები</string>
 </resources>

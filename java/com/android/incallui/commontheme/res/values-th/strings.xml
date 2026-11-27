@@ -16,4 +16,7 @@
   <string name="incall_content_description_video_off">ปิดวิดีโอ</string>
   <string name="incall_content_description_swap_video">สลับวิดีโอ</string>
   <string name="incall_label_speaker">ลำโพง</string>
+
+  <!-- Encrypted calling and call-screen controls. -->
+  <string name="incall_content_description_minimize_call">ย่อหน้าจอการโทร</string>
 </resources>

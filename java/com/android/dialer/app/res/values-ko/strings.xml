@@ -118,4 +118,7 @@
   <string name="call_log_action_remove_spam">스팸 해제</string>
   <string name="call_log_action_unblock_number">번호 차단 해제</string>
   <string name="spam_number_call_log_label">스팸</string>
+
+  <!-- Encrypted calling and call-screen controls. -->
+  <string name="encrypted_call_account_label"><xliff:g id="carrier">%1$s</xliff:g>(암호화됨)</string>
 </resources>

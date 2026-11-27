@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <!-- Encrypted-call routing dialogs. Messaging is the messaging app; dumber.chat is a brand. -->
+  <!-- fallback_message includes the localized failure reason, then the cellular-call consent prompt. -->
+  <string name="encrypted_call_failed">Encrypted call could not connect.</string>
+  <string name="encrypted_call_checking">Checking encrypted call availability.</string>
+  <string name="encrypted_call_make_regular">Make a regular call</string>
+  <string name="encrypted_call_messaging_unavailable">Encrypted calling could not connect to Messaging.</string>
+  <string name="encrypted_call_sim_disabled">Encrypted calling is not enabled for the selected SIM.</string>
+  <string name="encrypted_call_no_accounts">No enabled encrypted-call account is available. Check dumber.chat settings in Messaging.</string>
+  <string name="encrypted_call_account_title">Encrypted call account</string>
+  <string name="encrypted_call_account_check_failed">Encrypted calling could not check your account.</string>
+  <string name="encrypted_call_recipient_check_failed">Encrypted calling could not check this recipient. Check your internet connection and try again.</string>
+  <string name="encrypted_call_fallback_message"><xliff:g id="reason">%1$s</xliff:g>\n\nPlace a regular cellular call? It will not use dumber.chat encryption.</string>
+  <string name="encrypted_call_fallback_title">Use a regular call?</string>
+  <string name="encrypted_call_use_regular">Use regular call</string>
+  <!-- Telecom status hint and ongoing call notification title. -->
+  <string name="encrypted_call_connection_label">Encrypted call</string>
+  <!-- Telecom account name; phone identifies the local encrypted-call account. -->
+  <string name="encrypted_call_phone_account_label">Encrypted call · <xliff:g id="phone" example="+12025550123">%1$s</xliff:g></string>
+</resources>

@@ -20,4 +20,13 @@
     <string name="call_log_outgoing_header">Solo llamadas salientes</string>
     <string name="call_log_missed_header">Solo llamadas perdidas</string>
     <string name="call_log_voicemail_header">Solo llamadas con buzón de voz</string>
+
+    <!-- Encrypted calling and call-screen controls. -->
+    <string name="encrypted_call_account_label"><xliff:g id="carrier">%1$s</xliff:g> (cifrado)</string>
+    <string name="tab_title_dialpad">Teclado</string>
+    <string name="notification_channel_encrypted_call">Llamadas cifradas</string>
+    <string name="incall_content_description_minimize_call">Minimizar pantalla de llamada</string>
+    <string name="incall_establishing_encrypted_call">Estableciendo llamada…</string>
+    <string name="incall_label_lock_screen">Bloquear pantalla</string>
+    <string name="incall_label_minimize">Minimizar</string>
 </resources>

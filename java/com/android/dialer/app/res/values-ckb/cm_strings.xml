@@ -34,4 +34,13 @@
     <string name="action_menu_helplines">هێڵی یارمەتی</string>
     <string name="default_dialer_text">پێویستە بەرنامەی Dialer وەک بەرنامەی بنەڕەتیی پەیوەندی دابنێیت بۆ ئەوەی بتوانیت بەکاری بهێنیت.</string>
     <string name="default_dialer_action">دانان وەک بنەڕەتی</string>
+
+    <!-- Encrypted calling and call-screen controls. -->
+    <string name="encrypted_call_account_label"><xliff:g id="carrier">%1$s</xliff:g> (کۆدکراو)</string>
+    <string name="tab_title_dialpad">تەختەی ژمارە</string>
+    <string name="notification_channel_encrypted_call">پەیوەندییە کۆدکراوەکان</string>
+    <string name="incall_content_description_minimize_call">بچووککردنەوەی شاشەی پەیوەندی</string>
+    <string name="incall_establishing_encrypted_call">پەیوەندی دادەمەزرێت…</string>
+    <string name="incall_label_lock_screen">قفڵکردنی شاشە</string>
+    <string name="incall_label_minimize">بچووککردنەوە</string>
 </resources>

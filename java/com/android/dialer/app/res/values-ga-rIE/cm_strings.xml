@@ -34,4 +34,13 @@
     <string name="action_menu_helplines">Línte cabhrach</string>
     <string name="default_dialer_text">Ní mór duit Dialer a shocrú mar an aip ghutháin réamhshocraithe chun é a úsáid.</string>
     <string name="default_dialer_action">Socraigh mar réamhshocrú</string>
+
+    <!-- Encrypted calling and call-screen controls. -->
+    <string name="encrypted_call_account_label"><xliff:g id="carrier">%1$s</xliff:g> (criptithe)</string>
+    <string name="tab_title_dialpad">Ceap diailithe</string>
+    <string name="notification_channel_encrypted_call">Glaonna criptithe</string>
+    <string name="incall_content_description_minimize_call">Íoslaghdaigh scáileán an ghlao</string>
+    <string name="incall_establishing_encrypted_call">Glao á nascadh…</string>
+    <string name="incall_label_lock_screen">Cuir an scáileán faoi ghlas</string>
+    <string name="incall_label_minimize">Íoslaghdaigh</string>
 </resources>

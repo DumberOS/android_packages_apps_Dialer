@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="encrypted_call_failed">Nie udało się nawiązać połączenia szyfrowanego.</string>
+  <string name="encrypted_call_checking">Sprawdzanie dostępności połączenia szyfrowanego.</string>
+  <string name="encrypted_call_make_regular">Wykonaj zwykłe połączenie</string>
+  <string name="encrypted_call_messaging_unavailable">Nie udało się połączyć z aplikacją Wiadomości w celu wykonania połączenia szyfrowanego.</string>
+  <string name="encrypted_call_sim_disabled">Połączenia szyfrowane nie są włączone dla wybranej karty SIM.</string>
+  <string name="encrypted_call_no_accounts">Brak aktywnego konta do połączeń szyfrowanych. Sprawdź ustawienia dumber.chat w aplikacji Wiadomości.</string>
+  <string name="encrypted_call_account_title">Konto połączeń szyfrowanych</string>
+  <string name="encrypted_call_account_check_failed">Nie udało się sprawdzić Twojego konta do połączeń szyfrowanych.</string>
+  <string name="encrypted_call_recipient_check_failed">Nie udało się sprawdzić tego odbiorcy pod kątem połączeń szyfrowanych. Sprawdź połączenie z internetem i spróbuj ponownie.</string>
+  <string name="encrypted_call_fallback_message"><xliff:g id="reason">%1$s</xliff:g>\n\nWykonać zwykłe połączenie komórkowe? Nie będzie ono korzystać z szyfrowania dumber.chat.</string>
+  <string name="encrypted_call_fallback_title">Użyć zwykłego połączenia?</string>
+  <string name="encrypted_call_use_regular">Użyj zwykłego połączenia</string>
+  <string name="encrypted_call_connection_label">Połączenie szyfrowane</string>
+  <string name="encrypted_call_phone_account_label">Połączenie szyfrowane · <xliff:g id="phone" example="+12025550123">%1$s</xliff:g></string>
+</resources>

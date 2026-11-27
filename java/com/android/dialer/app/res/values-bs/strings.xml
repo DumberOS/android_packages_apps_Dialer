@@ -120,4 +120,7 @@
   <string name="call_log_action_remove_spam">Ovo nije neželjeni sadržaj</string>
   <string name="call_log_action_unblock_number">Deblokiraj broj</string>
   <string name="spam_number_call_log_label">Neželjena pošta</string>
+
+  <!-- Encrypted calling and call-screen controls. -->
+  <string name="encrypted_call_account_label"><xliff:g id="carrier">%1$s</xliff:g> (šifrirano)</string>
 </resources>

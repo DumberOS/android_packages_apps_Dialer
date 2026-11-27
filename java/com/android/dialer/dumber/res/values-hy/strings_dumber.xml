@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="encrypted_call_failed">Չհաջողվեց միացնել գաղտնագրված զանգը։</string>
+  <string name="encrypted_call_checking">Ստուգվում է գաղտնագրված զանգերի հասանելիությունը։</string>
+  <string name="encrypted_call_make_regular">Կատարել սովորական զանգ</string>
+  <string name="encrypted_call_messaging_unavailable">Չհաջողվեց միանալ Հաղորդագրություններ հավելվածին՝ գաղտնագրված զանգերի համար։</string>
+  <string name="encrypted_call_sim_disabled">Ընտրված SIM քարտի համար գաղտնագրված զանգերը միացված չեն։</string>
+  <string name="encrypted_call_no_accounts">Գաղտնագրված զանգերի միացված հաշիվ հասանելի չէ։ Ստուգեք dumber.chat-ի կարգավորումները Հաղորդագրություններ հավելվածում։</string>
+  <string name="encrypted_call_account_title">Գաղտնագրված զանգերի հաշիվ</string>
+  <string name="encrypted_call_account_check_failed">Չհաջողվեց ստուգել ձեր գաղտնագրված զանգերի հաշիվը։</string>
+  <string name="encrypted_call_recipient_check_failed">Չհաջողվեց ստուգել՝ արդյոք այս ստացողն աջակցում է գաղտնագրված զանգերին։ Ստուգեք ինտերնետ կապը և կրկին փորձեք։</string>
+  <string name="encrypted_call_fallback_message"><xliff:g id="reason">%1$s</xliff:g>\n\nԿատարե՞լ սովորական բջջային զանգ։ Այն չի օգտագործի dumber.chat-ի գաղտնագրումը։</string>
+  <string name="encrypted_call_fallback_title">Օգտագործե՞լ սովորական զանգ։</string>
+  <string name="encrypted_call_use_regular">Օգտագործել սովորական զանգ</string>
+  <string name="encrypted_call_connection_label">Գաղտնագրված զանգ</string>
+  <string name="encrypted_call_phone_account_label">Գաղտնագրված զանգ · <xliff:g id="phone" example="+12025550123">%1$s</xliff:g></string>
+</resources>

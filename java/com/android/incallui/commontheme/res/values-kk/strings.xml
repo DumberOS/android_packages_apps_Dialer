@@ -16,4 +16,7 @@
   <string name="incall_content_description_video_off">Бейне өшірулі</string>
   <string name="incall_content_description_swap_video">Бейнені ауыстыру</string>
   <string name="incall_label_speaker">Динамик</string>
+
+  <!-- Encrypted calling and call-screen controls. -->
+  <string name="incall_content_description_minimize_call">Қоңырау экранын кішірейту</string>
 </resources>

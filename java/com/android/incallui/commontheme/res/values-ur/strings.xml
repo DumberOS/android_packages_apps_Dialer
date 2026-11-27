@@ -16,4 +16,7 @@
   <string name="incall_content_description_video_off">ویڈیو آف ہے</string>
   <string name="incall_content_description_swap_video">ویڈیو کا تبادلہ کریں</string>
   <string name="incall_label_speaker">اسپیکر</string>
+
+  <!-- Encrypted calling and call-screen controls. -->
+  <string name="incall_content_description_minimize_call">کال کی اسکرین چھوٹی کریں</string>
 </resources>

@@ -16,4 +16,7 @@
   <string name="incall_content_description_video_off">Video izslēgts</string>
   <string name="incall_content_description_swap_video">Mainīt video</string>
   <string name="incall_label_speaker">Skaļrunis</string>
+
+  <!-- Encrypted calling and call-screen controls. -->
+  <string name="incall_content_description_minimize_call">Minimizēt zvana ekrānu</string>
 </resources>

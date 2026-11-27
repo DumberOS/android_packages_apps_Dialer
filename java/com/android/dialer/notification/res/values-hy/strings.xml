@@ -5,4 +5,7 @@
   <string name="notification_channel_missed_call">Բաց թողնված զանգեր</string>
   <string name="notification_channel_voicemail">Ձայնային փոստ</string>
   <string name="notification_channel_misc">Կանխադրված</string>
+
+  <!-- Encrypted calling and call-screen controls. -->
+  <string name="notification_channel_encrypted_call">Գաղտնագրված զանգեր</string>
 </resources>

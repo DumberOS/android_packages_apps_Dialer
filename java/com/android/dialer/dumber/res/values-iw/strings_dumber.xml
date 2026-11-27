@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="encrypted_call_failed">לא ניתן היה לחבר את השיחה המוצפנת.</string>
+  <string name="encrypted_call_checking">זמינות השיחות המוצפנות נבדקת.</string>
+  <string name="encrypted_call_make_regular">ביצוע שיחה רגילה</string>
+  <string name="encrypted_call_messaging_unavailable">לא ניתן היה להתחבר לאפליקציית ההודעות לצורך שיחות מוצפנות.</string>
+  <string name="encrypted_call_sim_disabled">שיחות מוצפנות אינן מופעלות עבור כרטיס ה-SIM שנבחר.</string>
+  <string name="encrypted_call_no_accounts">אין חשבון פעיל זמין לשיחות מוצפנות. יש לבדוק את הגדרות dumber.chat באפליקציית ההודעות.</string>
+  <string name="encrypted_call_account_title">חשבון לשיחות מוצפנות</string>
+  <string name="encrypted_call_account_check_failed">לא ניתן היה לבדוק את החשבון שלך לשיחות מוצפנות.</string>
+  <string name="encrypted_call_recipient_check_failed">לא ניתן היה לבדוק אם הנמען הזה תומך בשיחות מוצפנות. יש לבדוק את החיבור לאינטרנט ולנסות שוב.</string>
+  <string name="encrypted_call_fallback_message"><xliff:g id="reason">%1$s</xliff:g>\n\nלבצע שיחה סלולרית רגילה? היא לא תשתמש בהצפנה של dumber.chat.</string>
+  <string name="encrypted_call_fallback_title">להשתמש בשיחה רגילה?</string>
+  <string name="encrypted_call_use_regular">שימוש בשיחה רגילה</string>
+  <string name="encrypted_call_connection_label">שיחה מוצפנת</string>
+  <string name="encrypted_call_phone_account_label">שיחה מוצפנת · <xliff:g id="phone" example="+12025550123">%1$s</xliff:g></string>
+</resources>

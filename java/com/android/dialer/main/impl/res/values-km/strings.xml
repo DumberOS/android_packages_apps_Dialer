@@ -21,4 +21,7 @@
     <string name="tab_title_call_history" msgid="5191872501729332994">"ប្រវត្តិហៅ​ទូរសព្ទ"</string>
     <string name="tab_title_speed_dial" msgid="1968484500112572774">"ការហៅរហ័ស"</string>
     <string name="tab_title_voicemail" msgid="4777655983569268504">"សារ​ជា​សំឡេង"</string>
+
+    <!-- Encrypted calling and call-screen controls. -->
+    <string name="tab_title_dialpad">បន្ទះ​​ចុច​លេខ</string>
 </resources>

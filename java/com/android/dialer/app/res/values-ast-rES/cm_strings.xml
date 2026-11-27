@@ -34,4 +34,13 @@
     <string name="action_menu_helplines">Llinies d\'ayuda</string>
     <string name="default_dialer_text">Tienes de predeterminar l\'aplicación de teléfonu «Marcador» pa usala.</string>
     <string name="default_dialer_action">Predeterminar</string>
+
+    <!-- Encrypted calling and call-screen controls. -->
+    <string name="encrypted_call_account_label"><xliff:g id="carrier">%1$s</xliff:g> (cifráu)</string>
+    <string name="tab_title_dialpad">Tecláu</string>
+    <string name="notification_channel_encrypted_call">Llamaes cifraes</string>
+    <string name="incall_content_description_minimize_call">Minimizar la pantalla de llamada</string>
+    <string name="incall_establishing_encrypted_call">Estableciendo la llamada…</string>
+    <string name="incall_label_lock_screen">Bloquiar la pantalla</string>
+    <string name="incall_label_minimize">Minimizar</string>
 </resources>

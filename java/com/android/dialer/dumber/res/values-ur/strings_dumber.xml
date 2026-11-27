@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="encrypted_call_failed">مرموز کال منسلک نہیں ہو سکی۔</string>
+  <string name="encrypted_call_checking">مرموز کال کی دستیابی کی جانچ ہو رہی ہے۔</string>
+  <string name="encrypted_call_make_regular">عام کال کریں</string>
+  <string name="encrypted_call_messaging_unavailable">مرموز کال کے لیے پیغامات ایپ سے منسلک نہیں ہو سکا۔</string>
+  <string name="encrypted_call_sim_disabled">منتخب کردہ SIM کے لیے مرموز کال فعال نہیں ہے۔</string>
+  <string name="encrypted_call_no_accounts">مرموز کال کا کوئی فعال اکاؤنٹ دستیاب نہیں ہے۔ پیغامات ایپ میں dumber.chat کی ترتیبات چیک کریں۔</string>
+  <string name="encrypted_call_account_title">مرموز کال کا اکاؤنٹ</string>
+  <string name="encrypted_call_account_check_failed">مرموز کال کے لیے آپ کے اکاؤنٹ کی جانچ نہیں ہو سکی۔</string>
+  <string name="encrypted_call_recipient_check_failed">اس وصول کنندہ کی مرموز کال کی معاونت کی جانچ نہیں ہو سکی۔ اپنا انٹرنیٹ کنکشن چیک کریں اور دوبارہ کوشش کریں۔</string>
+  <string name="encrypted_call_fallback_message"><xliff:g id="reason">%1$s</xliff:g>\n\nعام موبائل کال کریں؟ اس میں dumber.chat کی مرموز کاری استعمال نہیں ہوگی۔</string>
+  <string name="encrypted_call_fallback_title">عام کال استعمال کریں؟</string>
+  <string name="encrypted_call_use_regular">عام کال استعمال کریں</string>
+  <string name="encrypted_call_connection_label">مرموز کال</string>
+  <string name="encrypted_call_phone_account_label">مرموز کال · <xliff:g id="phone" example="+12025550123">%1$s</xliff:g></string>
+</resources>

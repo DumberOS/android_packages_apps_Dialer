@@ -17,4 +17,13 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="call_log_stats_title">Статистика</string>
+
+    <!-- Encrypted calling and call-screen controls. -->
+    <string name="encrypted_call_account_label"><xliff:g id="carrier">%1$s</xliff:g> (шифрланган)</string>
+    <string name="tab_title_dialpad">Җыю тактасы</string>
+    <string name="notification_channel_encrypted_call">Шифрланган шалтыратулар</string>
+    <string name="incall_content_description_minimize_call">Шалтырату экранын кечерәйтү</string>
+    <string name="incall_establishing_encrypted_call">Шалтырату тоташтырыла…</string>
+    <string name="incall_label_lock_screen">Экранны бикләү</string>
+    <string name="incall_label_minimize">Кечерәйтү</string>
 </resources>

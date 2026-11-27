@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="encrypted_call_failed">ಎನ್‌ಕ್ರಿಪ್ಟ್ ಮಾಡಿದ ಕರೆಯನ್ನು ಸಂಪರ್ಕಿಸಲು ಸಾಧ್ಯವಾಗಲಿಲ್ಲ.</string>
+  <string name="encrypted_call_checking">ಎನ್‌ಕ್ರಿಪ್ಟ್ ಮಾಡಿದ ಕರೆಗಳ ಲಭ್ಯತೆಯನ್ನು ಪರಿಶೀಲಿಸಲಾಗುತ್ತಿದೆ.</string>
+  <string name="encrypted_call_make_regular">ಸಾಮಾನ್ಯ ಕರೆ ಮಾಡಿ</string>
+  <string name="encrypted_call_messaging_unavailable">ಎನ್‌ಕ್ರಿಪ್ಟ್ ಮಾಡಿದ ಕರೆಗಳಿಗಾಗಿ ಸಂದೇಶಗಳ ಆ್ಯಪ್‌ಗೆ ಸಂಪರ್ಕಿಸಲು ಸಾಧ್ಯವಾಗಲಿಲ್ಲ.</string>
+  <string name="encrypted_call_sim_disabled">ಆಯ್ಕೆಮಾಡಿದ SIM ಗಾಗಿ ಎನ್‌ಕ್ರಿಪ್ಟ್ ಮಾಡಿದ ಕರೆಗಳನ್ನು ಸಕ್ರಿಯಗೊಳಿಸಿಲ್ಲ.</string>
+  <string name="encrypted_call_no_accounts">ಸಕ್ರಿಯಗೊಳಿಸಿದ ಎನ್‌ಕ್ರಿಪ್ಟ್ ಕರೆ ಖಾತೆ ಲಭ್ಯವಿಲ್ಲ. ಸಂದೇಶಗಳ ಆ್ಯಪ್‌ನಲ್ಲಿ dumber.chat ಸೆಟ್ಟಿಂಗ್‌ಗಳನ್ನು ಪರಿಶೀಲಿಸಿ.</string>
+  <string name="encrypted_call_account_title">ಎನ್‌ಕ್ರಿಪ್ಟ್ ಕರೆ ಖಾತೆ</string>
+  <string name="encrypted_call_account_check_failed">ಎನ್‌ಕ್ರಿಪ್ಟ್ ಮಾಡಿದ ಕರೆಗಳಿಗಾಗಿ ನಿಮ್ಮ ಖಾತೆಯನ್ನು ಪರಿಶೀಲಿಸಲು ಸಾಧ್ಯವಾಗಲಿಲ್ಲ.</string>
+  <string name="encrypted_call_recipient_check_failed">ಈ ಸ್ವೀಕೃತದಾರರು ಎನ್‌ಕ್ರಿಪ್ಟ್ ಮಾಡಿದ ಕರೆಗಳನ್ನು ಬೆಂಬಲಿಸುತ್ತಾರೆಯೇ ಎಂದು ಪರಿಶೀಲಿಸಲು ಸಾಧ್ಯವಾಗಲಿಲ್ಲ. ನಿಮ್ಮ ಇಂಟರ್ನೆಟ್ ಸಂಪರ್ಕವನ್ನು ಪರಿಶೀಲಿಸಿ ಮತ್ತು ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ.</string>
+  <string name="encrypted_call_fallback_message"><xliff:g id="reason">%1$s</xliff:g>\n\nಸಾಮಾನ್ಯ ಮೊಬೈಲ್ ಕರೆ ಮಾಡುವುದೇ? ಇದು dumber.chat ಎನ್‌ಕ್ರಿಪ್ಶನ್ ಬಳಸುವುದಿಲ್ಲ.</string>
+  <string name="encrypted_call_fallback_title">ಸಾಮಾನ್ಯ ಕರೆ ಬಳಸುವುದೇ?</string>
+  <string name="encrypted_call_use_regular">ಸಾಮಾನ್ಯ ಕರೆ ಬಳಸಿ</string>
+  <string name="encrypted_call_connection_label">ಎನ್‌ಕ್ರಿಪ್ಟ್ ಮಾಡಿದ ಕರೆ</string>
+  <string name="encrypted_call_phone_account_label">ಎನ್‌ಕ್ರಿಪ್ಟ್ ಮಾಡಿದ ಕರೆ · <xliff:g id="phone" example="+12025550123">%1$s</xliff:g></string>
+</resources>

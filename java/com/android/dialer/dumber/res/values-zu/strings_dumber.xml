@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="encrypted_call_failed">Ikholi ebethelwe ayikwazanga ukuxhuma.</string>
+  <string name="encrypted_call_checking">Kuhlolwa ukutholakala kwamakholi abethelwe.</string>
+  <string name="encrypted_call_make_regular">Shaya ikholi evamile</string>
+  <string name="encrypted_call_messaging_unavailable">Ayikwazanga ukuxhuma kuhlelo lokusebenza lwemilayezo ukuze kushaywe amakholi abethelwe.</string>
+  <string name="encrypted_call_sim_disabled">Amakholi abethelwe awavunyelwe ku-SIM ekhethiwe.</string>
+  <string name="encrypted_call_no_accounts">Ayikho i-akhawunti evunyelwe yamakholi abethelwe etholakalayo. Hlola izilungiselelo ze-dumber.chat kuhlelo lokusebenza lwemilayezo.</string>
+  <string name="encrypted_call_account_title">I-akhawunti yamakholi abethelwe</string>
+  <string name="encrypted_call_account_check_failed">Ayikwazanga ukuhlola i-akhawunti yakho yamakholi abethelwe.</string>
+  <string name="encrypted_call_recipient_check_failed">Ayikwazanga ukuhlola ukuthi lo mamukeli uyawasekela yini amakholi abethelwe. Hlola uxhumano lwakho lwe-inthanethi bese uzama futhi.</string>
+  <string name="encrypted_call_fallback_message"><xliff:g id="reason">%1$s</xliff:g>\n\nShaya ikholi evamile yeselula? Ngeke isebenzise ukubethela kwe-dumber.chat.</string>
+  <string name="encrypted_call_fallback_title">Sebenzisa ikholi evamile?</string>
+  <string name="encrypted_call_use_regular">Sebenzisa ikholi evamile</string>
+  <string name="encrypted_call_connection_label">Ikholi ebethelwe</string>
+  <string name="encrypted_call_phone_account_label">Ikholi ebethelwe · <xliff:g id="phone" example="+12025550123">%1$s</xliff:g></string>
+</resources>

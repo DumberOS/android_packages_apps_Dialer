@@ -23,4 +23,7 @@
   <string name="contact_grid_incoming_via_template">%s मार्फत गरिएको आगमन कल</string>
   <string name="contact_grid_incoming_suspected_spam">शङ्कास्पद स्प्याम कल गर्ने व्यक्ति</string>
   <string name="contact_grid_callback_number">यस फोनको नम्बर: %1$s</string>
+
+  <!-- Encrypted calling and call-screen controls. -->
+  <string name="incall_establishing_encrypted_call">कल जडान हुँदै छ…</string>
 </resources>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="encrypted_call_failed">Der verschlüsselte Anruf konnte nicht verbunden werden.</string>
+  <string name="encrypted_call_checking">Verfügbarkeit verschlüsselter Anrufe wird geprüft.</string>
+  <string name="encrypted_call_make_regular">Normalen Anruf tätigen</string>
+  <string name="encrypted_call_messaging_unavailable">Für verschlüsselte Anrufe konnte keine Verbindung zur Nachrichten-App hergestellt werden.</string>
+  <string name="encrypted_call_sim_disabled">Verschlüsselte Anrufe sind für die ausgewählte SIM-Karte nicht aktiviert.</string>
+  <string name="encrypted_call_no_accounts">Es ist kein aktiviertes Konto für verschlüsselte Anrufe verfügbar. Prüfe die Einstellungen für dumber.chat in der Nachrichten-App.</string>
+  <string name="encrypted_call_account_title">Konto für verschlüsselte Anrufe</string>
+  <string name="encrypted_call_account_check_failed">Dein Konto für verschlüsselte Anrufe konnte nicht geprüft werden.</string>
+  <string name="encrypted_call_recipient_check_failed">Dieser Empfänger konnte nicht auf verschlüsselte Anrufe geprüft werden. Prüfe deine Internetverbindung und versuche es erneut.</string>
+  <string name="encrypted_call_fallback_message"><xliff:g id="reason">%1$s</xliff:g>\n\nEinen normalen Mobilfunkanruf tätigen? Dabei wird keine Verschlüsselung von dumber.chat verwendet.</string>
+  <string name="encrypted_call_fallback_title">Normalen Anruf verwenden?</string>
+  <string name="encrypted_call_use_regular">Normalen Anruf verwenden</string>
+  <string name="encrypted_call_connection_label">Verschlüsselter Anruf</string>
+  <string name="encrypted_call_phone_account_label">Verschlüsselter Anruf · <xliff:g id="phone" example="+12025550123">%1$s</xliff:g></string>
+</resources>

@@ -118,4 +118,7 @@
   <string name="call_log_action_remove_spam">迷惑電話ではない</string>
   <string name="call_log_action_unblock_number">番号のブロックを解除</string>
   <string name="spam_number_call_log_label">スパム</string>
+
+  <!-- Encrypted calling and call-screen controls. -->
+  <string name="encrypted_call_account_label"><xliff:g id="carrier">%1$s</xliff:g>（暗号化）</string>
 </resources>

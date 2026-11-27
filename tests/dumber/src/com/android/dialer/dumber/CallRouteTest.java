@@ -272,8 +272,9 @@ public final class CallRouteTest extends InstrumentationTestCase {
     AlertDialog checking = dialog("checking");
     getInstrumentation().runOnMainSync(() -> {
       android.widget.TextView message = checking.findViewById(android.R.id.message);
-      assertEquals("Checking encrypted call availability.", message.getText().toString());
-      assertEquals("Make a regular call",
+      assertEquals(activity.getString(R.string.encrypted_call_checking),
+          message.getText().toString());
+      assertEquals(activity.getString(R.string.encrypted_call_make_regular),
           checking.getButton(AlertDialog.BUTTON_POSITIVE).getText().toString());
       assertEquals(android.view.View.GONE,
           checking.getButton(AlertDialog.BUTTON_NEGATIVE).getVisibility());

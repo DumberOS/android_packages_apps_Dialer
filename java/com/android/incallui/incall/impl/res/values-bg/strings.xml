@@ -14,4 +14,8 @@
   <string name="incall_label_swap">Размяна</string>
   <string name="incall_label_swap_sim">Смяна на SIM</string>
   <string name="incall_note_sent">Бележката е изпратена</string>
+
+  <!-- Encrypted calling and call-screen controls. -->
+  <string name="incall_label_lock_screen">Заключване на екрана</string>
+  <string name="incall_label_minimize">Минимизиране</string>
 </resources>

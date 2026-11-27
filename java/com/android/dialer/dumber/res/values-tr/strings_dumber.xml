@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="encrypted_call_failed">Şifreli arama bağlanamadı.</string>
+  <string name="encrypted_call_checking">Şifreli arama kullanılabilirliği kontrol ediliyor.</string>
+  <string name="encrypted_call_make_regular">Normal arama yap</string>
+  <string name="encrypted_call_messaging_unavailable">Şifreli aramalar için Mesajlar uygulamasına bağlanılamadı.</string>
+  <string name="encrypted_call_sim_disabled">Seçilen SIM için şifreli aramalar etkin değil.</string>
+  <string name="encrypted_call_no_accounts">Etkinleştirilmiş bir şifreli arama hesabı yok. Mesajlar uygulamasındaki dumber.chat ayarlarını kontrol edin.</string>
+  <string name="encrypted_call_account_title">Şifreli arama hesabı</string>
+  <string name="encrypted_call_account_check_failed">Şifreli arama hesabınız kontrol edilemedi.</string>
+  <string name="encrypted_call_recipient_check_failed">Bu alıcının şifreli arama desteği kontrol edilemedi. İnternet bağlantınızı kontrol edip tekrar deneyin.</string>
+  <string name="encrypted_call_fallback_message"><xliff:g id="reason">%1$s</xliff:g>\n\nNormal bir hücresel arama yapılsın mı? dumber.chat şifrelemesi kullanılmayacak.</string>
+  <string name="encrypted_call_fallback_title">Normal arama kullanılsın mı?</string>
+  <string name="encrypted_call_use_regular">Normal arama kullan</string>
+  <string name="encrypted_call_connection_label">Şifreli arama</string>
+  <string name="encrypted_call_phone_account_label">Şifreli arama · <xliff:g id="phone" example="+12025550123">%1$s</xliff:g></string>
+</resources>

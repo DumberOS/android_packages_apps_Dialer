@@ -5,4 +5,7 @@
   <string name="notification_channel_missed_call">ਖੁੰਝੀਆਂ ਕਾਲਾਂ</string>
   <string name="notification_channel_voicemail">ਵੌਇਸਮੇਲਾਂ</string>
   <string name="notification_channel_misc">ਪੂਰਵ-ਨਿਰਧਾਰਤ</string>
+
+  <!-- Encrypted calling and call-screen controls. -->
+  <string name="notification_channel_encrypted_call">ਇਨਕ੍ਰਿਪਟ ਕੀਤੀਆਂ ਕਾਲਾਂ</string>
 </resources>

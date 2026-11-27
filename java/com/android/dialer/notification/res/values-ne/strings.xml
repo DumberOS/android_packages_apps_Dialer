@@ -5,4 +5,7 @@
   <string name="notification_channel_missed_call">छुटेका कलहरू</string>
   <string name="notification_channel_voicemail">भ्वाइस मेलहरू</string>
   <string name="notification_channel_misc">पूर्वनिर्धारित मान</string>
+
+  <!-- Encrypted calling and call-screen controls. -->
+  <string name="notification_channel_encrypted_call">इन्क्रिप्ट गरिएका कलहरू</string>
 </resources>

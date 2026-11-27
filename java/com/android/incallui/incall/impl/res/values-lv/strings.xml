@@ -14,4 +14,8 @@
   <string name="incall_label_swap">Pārslēgt</string>
   <string name="incall_label_swap_sim">Mainīt SIM</string>
   <string name="incall_note_sent">Piezīme nosūtīta</string>
+
+  <!-- Encrypted calling and call-screen controls. -->
+  <string name="incall_label_lock_screen">Bloķēt ekrānu</string>
+  <string name="incall_label_minimize">Minimizēt</string>
 </resources>

@@ -5,4 +5,7 @@
   <string name="notification_channel_missed_call">Praleisti skambučiai</string>
   <string name="notification_channel_voicemail">Balso pašto pranešimai</string>
   <string name="notification_channel_misc">Numatytasis</string>
+
+  <!-- Encrypted calling and call-screen controls. -->
+  <string name="notification_channel_encrypted_call">Šifruoti skambučiai</string>
 </resources>

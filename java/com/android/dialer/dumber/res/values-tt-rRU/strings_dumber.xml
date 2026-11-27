@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="encrypted_call_failed">Шифрланган шалтырату тоташа алмады.</string>
+  <string name="encrypted_call_checking">Шифрланган шалтырату мөмкинлеге тикшерелә.</string>
+  <string name="encrypted_call_make_regular">Гадәти шалтырату ясау</string>
+  <string name="encrypted_call_messaging_unavailable">Шифрланган шалтыратулар өчен Хәбәрләр кушымтасына тоташып булмады.</string>
+  <string name="encrypted_call_sim_disabled">Сайланган SIM өчен шифрланган шалтыратулар кабызылмаган.</string>
+  <string name="encrypted_call_no_accounts">Шифрланган шалтыратулар өчен кабызылган хисап язмасы юк. Хәбәрләр кушымтасында dumber.chat көйләүләрен тикшерегез.</string>
+  <string name="encrypted_call_account_title">Шифрланган шалтырату хисап язмасы</string>
+  <string name="encrypted_call_account_check_failed">Шифрланган шалтыратулар өчен хисап язмагызны тикшереп булмады.</string>
+  <string name="encrypted_call_recipient_check_failed">Бу алучының шифрланган шалтыратуларны хуплавын тикшереп булмады. Интернет тоташуын тикшерегез һәм кабатлап карагыз.</string>
+  <string name="encrypted_call_fallback_message"><xliff:g id="reason">%1$s</xliff:g>\n\nГадәти кәрәзле шалтырату ясалсынмы? Ул dumber.chat шифрлавын кулланмаячак.</string>
+  <string name="encrypted_call_fallback_title">Гадәти шалтырату кулланылсынмы?</string>
+  <string name="encrypted_call_use_regular">Гадәти шалтыратуны куллану</string>
+  <string name="encrypted_call_connection_label">Шифрланган шалтырату</string>
+  <string name="encrypted_call_phone_account_label">Шифрланган шалтырату · <xliff:g id="phone" example="+12025550123">%1$s</xliff:g></string>
+</resources>

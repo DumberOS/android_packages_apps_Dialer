@@ -5,4 +5,7 @@
   <string name="notification_channel_missed_call">Buraxılmış zənglər</string>
   <string name="notification_channel_voicemail">Səsli məktublar</string>
   <string name="notification_channel_misc">Defolt</string>
+
+  <!-- Encrypted calling and call-screen controls. -->
+  <string name="notification_channel_encrypted_call">Şifrələnmiş zənglər</string>
 </resources>

@@ -5,4 +5,7 @@
   <string name="notification_channel_missed_call">Mga hindi nasagot na tawag</string>
   <string name="notification_channel_voicemail">Mga voicemail</string>
   <string name="notification_channel_misc">Default</string>
+
+  <!-- Encrypted calling and call-screen controls. -->
+  <string name="notification_channel_encrypted_call">Mga naka-encrypt na tawag</string>
 </resources>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="encrypted_call_failed">Hindi makakonekta ang naka-encrypt na tawag.</string>
+  <string name="encrypted_call_checking">Sinusuri kung available ang naka-encrypt na pagtawag.</string>
+  <string name="encrypted_call_make_regular">Gumawa ng regular na tawag</string>
+  <string name="encrypted_call_messaging_unavailable">Hindi makakonekta sa Messages para sa naka-encrypt na pagtawag.</string>
+  <string name="encrypted_call_sim_disabled">Hindi naka-enable ang naka-encrypt na pagtawag para sa napiling SIM.</string>
+  <string name="encrypted_call_no_accounts">Walang available na naka-enable na account para sa naka-encrypt na pagtawag. Suriin ang mga setting ng dumber.chat sa Messages.</string>
+  <string name="encrypted_call_account_title">Account para sa naka-encrypt na pagtawag</string>
+  <string name="encrypted_call_account_check_failed">Hindi masuri ang iyong account para sa naka-encrypt na pagtawag.</string>
+  <string name="encrypted_call_recipient_check_failed">Hindi masuri kung sinusuportahan ng tatanggap na ito ang naka-encrypt na pagtawag. Suriin ang iyong koneksyon sa internet at subukang muli.</string>
+  <string name="encrypted_call_fallback_message"><xliff:g id="reason">%1$s</xliff:g>\n\nGumawa ng regular na cellular na tawag? Hindi nito gagamitin ang encryption ng dumber.chat.</string>
+  <string name="encrypted_call_fallback_title">Gumamit ng regular na tawag?</string>
+  <string name="encrypted_call_use_regular">Gumamit ng regular na tawag</string>
+  <string name="encrypted_call_connection_label">Naka-encrypt na tawag</string>
+  <string name="encrypted_call_phone_account_label">Naka-encrypt na tawag · <xliff:g id="phone" example="+12025550123">%1$s</xliff:g></string>
+</resources>

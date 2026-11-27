@@ -1,0 +1,7 @@
+// Resources shared by Dialer and the standalone call-routing tests.
+android_library {
+    name: "dialer-dumber-res",
+    manifest: "AndroidManifest.xml",
+    resource_dirs: ["res"],
+    sdk_version: "system_current",
+}

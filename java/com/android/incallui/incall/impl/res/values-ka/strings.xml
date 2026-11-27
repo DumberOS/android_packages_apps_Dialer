@@ -14,4 +14,8 @@
   <string name="incall_label_swap">შენაცვლება</string>
   <string name="incall_label_swap_sim">SIMის შეცვლა</string>
   <string name="incall_note_sent">ჩანიშვნა გაიგზავნა</string>
+
+  <!-- Encrypted calling and call-screen controls. -->
+  <string name="incall_label_lock_screen">ეკრანის ჩაკეტვა</string>
+  <string name="incall_label_minimize">ჩაკეცვა</string>
 </resources>

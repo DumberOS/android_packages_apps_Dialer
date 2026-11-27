@@ -14,4 +14,8 @@
   <string name="incall_label_swap">Skipta milli</string>
   <string name="incall_label_swap_sim">Breyta SIM</string>
   <string name="incall_note_sent">Glósa send</string>
+
+  <!-- Encrypted calling and call-screen controls. -->
+  <string name="incall_label_lock_screen">Læsa skjá</string>
+  <string name="incall_label_minimize">Minnka</string>
 </resources>

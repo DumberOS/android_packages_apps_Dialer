@@ -23,4 +23,7 @@
   <string name="contact_grid_incoming_via_template">Chamada entrante a través de %s</string>
   <string name="contact_grid_incoming_suspected_spam">Chamada sospeitosa de spam</string>
   <string name="contact_grid_callback_number">Número deste teléfono: %1$s</string>
+
+  <!-- Encrypted calling and call-screen controls. -->
+  <string name="incall_establishing_encrypted_call">Establecendo chamada…</string>
 </resources>

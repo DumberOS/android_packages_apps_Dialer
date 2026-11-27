@@ -23,4 +23,7 @@
   <string name="contact_grid_incoming_via_template">%s મારફતે ઇનકમિંગ</string>
   <string name="contact_grid_incoming_suspected_spam">શંકાસ્પદ સ્પામ કૉલર</string>
   <string name="contact_grid_callback_number">આ ફોનનો નંબર: %1$s</string>
+
+  <!-- Encrypted calling and call-screen controls. -->
+  <string name="incall_establishing_encrypted_call">કૉલ કનેક્ટ થઈ રહ્યો છે…</string>
 </resources>

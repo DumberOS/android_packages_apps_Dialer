@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="encrypted_call_failed">Methu cysylltu’r alwad wedi’i hamgryptio.</string>
+  <string name="encrypted_call_checking">Gwirio argaeledd galwadau wedi’u hamgryptio.</string>
+  <string name="encrypted_call_make_regular">Gwneud galwad arferol</string>
+  <string name="encrypted_call_messaging_unavailable">Methu cysylltu â Negeseuon ar gyfer galwadau wedi’u hamgryptio.</string>
+  <string name="encrypted_call_sim_disabled">Nid yw galwadau wedi’u hamgryptio wedi’u galluogi ar gyfer y SIM a ddewiswyd.</string>
+  <string name="encrypted_call_no_accounts">Nid oes cyfrif galwadau wedi’u hamgryptio wedi’i alluogi ar gael. Gwiriwch osodiadau dumber.chat yn Negeseuon.</string>
+  <string name="encrypted_call_account_title">Cyfrif galwadau wedi’u hamgryptio</string>
+  <string name="encrypted_call_account_check_failed">Methu gwirio eich cyfrif galwadau wedi’u hamgryptio.</string>
+  <string name="encrypted_call_recipient_check_failed">Methu gwirio a yw’r derbynnydd hwn yn cefnogi galwadau wedi’u hamgryptio. Gwiriwch eich cysylltiad rhyngrwyd a rhowch gynnig arall arni.</string>
+  <string name="encrypted_call_fallback_message"><xliff:g id="reason">%1$s</xliff:g>\n\nGwneud galwad symudol arferol? Ni fydd yn defnyddio amgryptio dumber.chat.</string>
+  <string name="encrypted_call_fallback_title">Defnyddio galwad arferol?</string>
+  <string name="encrypted_call_use_regular">Defnyddio galwad arferol</string>
+  <string name="encrypted_call_connection_label">Galwad wedi’i hamgryptio</string>
+  <string name="encrypted_call_phone_account_label">Galwad wedi’i hamgryptio · <xliff:g id="phone" example="+12025550123">%1$s</xliff:g></string>
+</resources>

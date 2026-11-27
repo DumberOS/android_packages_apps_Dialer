@@ -14,4 +14,8 @@
   <string name="incall_label_swap">Vaihda</string>
   <string name="incall_label_swap_sim">Vaihda SIM</string>
   <string name="incall_note_sent">Muistiinpano lähetettiin.</string>
+
+  <!-- Encrypted calling and call-screen controls. -->
+  <string name="incall_label_lock_screen">Lukitse näyttö</string>
+  <string name="incall_label_minimize">Pienennä</string>
 </resources>

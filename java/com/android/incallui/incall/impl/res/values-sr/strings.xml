@@ -14,4 +14,8 @@
   <string name="incall_label_swap">Замени</string>
   <string name="incall_label_swap_sim">Промени SIM</string>
   <string name="incall_note_sent">Белешка је послата</string>
+
+  <!-- Encrypted calling and call-screen controls. -->
+  <string name="incall_label_lock_screen">Закључај екран</string>
+  <string name="incall_label_minimize">Умањи</string>
 </resources>

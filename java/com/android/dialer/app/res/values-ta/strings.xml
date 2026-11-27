@@ -118,4 +118,7 @@
   <string name="call_log_action_remove_spam">ஸ்பேமில்லை</string>
   <string name="call_log_action_unblock_number">எண்ணை அனுமதி</string>
   <string name="spam_number_call_log_label">ஸ்பேம்</string>
+
+  <!-- Encrypted calling and call-screen controls. -->
+  <string name="encrypted_call_account_label"><xliff:g id="carrier">%1$s</xliff:g> (என்க்ரிப்ட் செய்யப்பட்டது)</string>
 </resources>

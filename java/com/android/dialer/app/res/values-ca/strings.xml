@@ -118,4 +118,7 @@
   <string name="call_log_action_remove_spam">No és una trucada brossa</string>
   <string name="call_log_action_unblock_number">Desbloqueja el número</string>
   <string name="spam_number_call_log_label">Trucada brossa</string>
+
+  <!-- Encrypted calling and call-screen controls. -->
+  <string name="encrypted_call_account_label"><xliff:g id="carrier">%1$s</xliff:g> (xifrat)</string>
 </resources>

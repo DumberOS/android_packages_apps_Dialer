@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="encrypted_call_failed">Nepavyko sujungti šifruoto skambučio.</string>
+  <string name="encrypted_call_checking">Tikrinamas šifruotų skambučių pasiekiamumas.</string>
+  <string name="encrypted_call_make_regular">Skambinti įprastai</string>
+  <string name="encrypted_call_messaging_unavailable">Nepavyko prisijungti prie programos „Žinutės“ šifruotiems skambučiams.</string>
+  <string name="encrypted_call_sim_disabled">Pasirinktoje SIM kortelėje šifruoti skambučiai neįjungti.</string>
+  <string name="encrypted_call_no_accounts">Nėra pasiekiamos įjungtos šifruotų skambučių paskyros. Patikrinkite dumber.chat nustatymus programoje „Žinutės“.</string>
+  <string name="encrypted_call_account_title">Šifruotų skambučių paskyra</string>
+  <string name="encrypted_call_account_check_failed">Nepavyko patikrinti jūsų šifruotų skambučių paskyros.</string>
+  <string name="encrypted_call_recipient_check_failed">Nepavyko patikrinti, ar šis gavėjas palaiko šifruotus skambučius. Patikrinkite interneto ryšį ir bandykite dar kartą.</string>
+  <string name="encrypted_call_fallback_message"><xliff:g id="reason">%1$s</xliff:g>\n\nSkambinti įprastu mobiliuoju ryšiu? Nebus naudojamas dumber.chat šifravimas.</string>
+  <string name="encrypted_call_fallback_title">Skambinti įprastai?</string>
+  <string name="encrypted_call_use_regular">Skambinti įprastai</string>
+  <string name="encrypted_call_connection_label">Šifruotas skambutis</string>
+  <string name="encrypted_call_phone_account_label">Šifruotas skambutis · <xliff:g id="phone" example="+12025550123">%1$s</xliff:g></string>
+</resources>

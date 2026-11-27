@@ -5,4 +5,7 @@
   <string name="notification_channel_missed_call">Кабыл алынбаган чалуулар</string>
   <string name="notification_channel_voicemail">Үнкаттар</string>
   <string name="notification_channel_misc">Демейки</string>
+
+  <!-- Encrypted calling and call-screen controls. -->
+  <string name="notification_channel_encrypted_call">Шифрленген чалуулар</string>
 </resources>

@@ -9,7 +9,7 @@
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
     <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
-    <application android:label="Encrypted call media tests">
+    <application android:label="@string/test_app_name">
         <uses-library android:name="android.test.runner" />
         <activity android:name="com.android.dialer.dumber.RouteTestActivity" android:exported="false"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />

@@ -14,4 +14,8 @@
   <string name="incall_label_swap">સ્વેપ કરો</string>
   <string name="incall_label_swap_sim">સિમ બદલો</string>
   <string name="incall_note_sent">નોંધ મોકલી</string>
+
+  <!-- Encrypted calling and call-screen controls. -->
+  <string name="incall_label_lock_screen">સ્ક્રીન લૉક કરો</string>
+  <string name="incall_label_minimize">નાનું કરો</string>
 </resources>

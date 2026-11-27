@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="encrypted_call_failed">De versleutelde oproep kon niet worden verbonden.</string>
+  <string name="encrypted_call_checking">Beschikbaarheid van versleutelde oproepen controleren.</string>
+  <string name="encrypted_call_make_regular">Een gewone oproep plaatsen</string>
+  <string name="encrypted_call_messaging_unavailable">Er kon geen verbinding worden gemaakt met Berichten voor versleutelde oproepen.</string>
+  <string name="encrypted_call_sim_disabled">Versleutelde oproepen zijn niet ingeschakeld voor de geselecteerde simkaart.</string>
+  <string name="encrypted_call_no_accounts">Er is geen ingeschakeld account voor versleutelde oproepen beschikbaar. Controleer de instellingen van dumber.chat in Berichten.</string>
+  <string name="encrypted_call_account_title">Account voor versleutelde oproepen</string>
+  <string name="encrypted_call_account_check_failed">Je account voor versleutelde oproepen kon niet worden gecontroleerd.</string>
+  <string name="encrypted_call_recipient_check_failed">Er kon niet worden gecontroleerd of deze ontvanger versleutelde oproepen ondersteunt. Controleer je internetverbinding en probeer het opnieuw.</string>
+  <string name="encrypted_call_fallback_message"><xliff:g id="reason">%1$s</xliff:g>\n\nEen gewone mobiele oproep plaatsen? Deze gebruikt geen versleuteling van dumber.chat.</string>
+  <string name="encrypted_call_fallback_title">Een gewone oproep gebruiken?</string>
+  <string name="encrypted_call_use_regular">Gewone oproep gebruiken</string>
+  <string name="encrypted_call_connection_label">Versleutelde oproep</string>
+  <string name="encrypted_call_phone_account_label">Versleutelde oproep · <xliff:g id="phone" example="+12025550123">%1$s</xliff:g></string>
+</resources>

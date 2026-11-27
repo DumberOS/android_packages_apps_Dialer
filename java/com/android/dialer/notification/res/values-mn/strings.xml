@@ -5,4 +5,7 @@
   <string name="notification_channel_missed_call">Аваагүй дуудлага</string>
   <string name="notification_channel_voicemail">Дуут шуудан</string>
   <string name="notification_channel_misc">Өгөгдмөл</string>
+
+  <!-- Encrypted calling and call-screen controls. -->
+  <string name="notification_channel_encrypted_call">Шифрлэсэн дуудлага</string>
 </resources>

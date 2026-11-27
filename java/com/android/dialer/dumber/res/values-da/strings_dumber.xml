@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="encrypted_call_failed">Det krypterede opkald kunne ikke forbindes.</string>
+  <string name="encrypted_call_checking">Kontrollerer tilgængeligheden af krypterede opkald.</string>
+  <string name="encrypted_call_make_regular">Foretag et almindeligt opkald</string>
+  <string name="encrypted_call_messaging_unavailable">Krypterede opkald kunne ikke oprette forbindelse til Beskeder.</string>
+  <string name="encrypted_call_sim_disabled">Krypterede opkald er ikke aktiveret for det valgte SIM-kort.</string>
+  <string name="encrypted_call_no_accounts">Ingen aktiveret konto til krypterede opkald er tilgængelig. Kontroller indstillingerne for dumber.chat i Beskeder.</string>
+  <string name="encrypted_call_account_title">Konto til krypterede opkald</string>
+  <string name="encrypted_call_account_check_failed">Din konto til krypterede opkald kunne ikke kontrolleres.</string>
+  <string name="encrypted_call_recipient_check_failed">Det kunne ikke kontrolleres, om denne modtager understøtter krypterede opkald. Kontroller din internetforbindelse, og prøv igen.</string>
+  <string name="encrypted_call_fallback_message"><xliff:g id="reason">%1$s</xliff:g>\n\nForetag et almindeligt mobilopkald? Det bruger ikke kryptering fra dumber.chat.</string>
+  <string name="encrypted_call_fallback_title">Brug et almindeligt opkald?</string>
+  <string name="encrypted_call_use_regular">Brug almindeligt opkald</string>
+  <string name="encrypted_call_connection_label">Krypteret opkald</string>
+  <string name="encrypted_call_phone_account_label">Krypteret opkald · <xliff:g id="phone" example="+12025550123">%1$s</xliff:g></string>
+</resources>

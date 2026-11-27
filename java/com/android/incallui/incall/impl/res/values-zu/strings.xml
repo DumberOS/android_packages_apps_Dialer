@@ -14,4 +14,8 @@
   <string name="incall_label_swap">Shintsha</string>
   <string name="incall_label_swap_sim">Shintsha i-SIM</string>
   <string name="incall_note_sent">Inothi lithunyelwe</string>
+
+  <!-- Encrypted calling and call-screen controls. -->
+  <string name="incall_label_lock_screen">Khiya isikrini</string>
+  <string name="incall_label_minimize">Nciphisa</string>
 </resources>

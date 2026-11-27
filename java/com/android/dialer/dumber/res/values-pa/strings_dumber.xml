@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="encrypted_call_failed">ਇਨਕ੍ਰਿਪਟ ਕੀਤੀ ਕਾਲ ਕਨੈਕਟ ਨਹੀਂ ਹੋ ਸਕੀ।</string>
+  <string name="encrypted_call_checking">ਇਨਕ੍ਰਿਪਟ ਕੀਤੀਆਂ ਕਾਲਾਂ ਦੀ ਉਪਲਬਧਤਾ ਜਾਂਚੀ ਜਾ ਰਹੀ ਹੈ।</string>
+  <string name="encrypted_call_make_regular">ਆਮ ਕਾਲ ਕਰੋ</string>
+  <string name="encrypted_call_messaging_unavailable">ਇਨਕ੍ਰਿਪਟ ਕੀਤੀਆਂ ਕਾਲਾਂ ਲਈ ਸੁਨੇਹੇ ਐਪ ਨਾਲ ਕਨੈਕਟ ਨਹੀਂ ਹੋ ਸਕਿਆ।</string>
+  <string name="encrypted_call_sim_disabled">ਚੁਣੇ ਹੋਏ SIM ਲਈ ਇਨਕ੍ਰਿਪਟ ਕੀਤੀਆਂ ਕਾਲਾਂ ਚਾਲੂ ਨਹੀਂ ਹਨ।</string>
+  <string name="encrypted_call_no_accounts">ਇਨਕ੍ਰਿਪਟ ਕੀਤੀਆਂ ਕਾਲਾਂ ਲਈ ਕੋਈ ਚਾਲੂ ਖਾਤਾ ਉਪਲਬਧ ਨਹੀਂ ਹੈ। ਸੁਨੇਹੇ ਐਪ ਵਿੱਚ dumber.chat ਦੀਆਂ ਸੈਟਿੰਗਾਂ ਜਾਂਚੋ।</string>
+  <string name="encrypted_call_account_title">ਇਨਕ੍ਰਿਪਟ ਕੀਤੀਆਂ ਕਾਲਾਂ ਦਾ ਖਾਤਾ</string>
+  <string name="encrypted_call_account_check_failed">ਇਨਕ੍ਰਿਪਟ ਕੀਤੀਆਂ ਕਾਲਾਂ ਲਈ ਤੁਹਾਡਾ ਖਾਤਾ ਜਾਂਚਿਆ ਨਹੀਂ ਜਾ ਸਕਿਆ।</string>
+  <string name="encrypted_call_recipient_check_failed">ਇਹ ਪ੍ਰਾਪਤਕਰਤਾ ਇਨਕ੍ਰਿਪਟ ਕੀਤੀਆਂ ਕਾਲਾਂ ਦਾ ਸਮਰਥਨ ਕਰਦਾ ਹੈ ਜਾਂ ਨਹੀਂ, ਇਹ ਜਾਂਚਿਆ ਨਹੀਂ ਜਾ ਸਕਿਆ। ਆਪਣਾ ਇੰਟਰਨੈੱਟ ਕਨੈਕਸ਼ਨ ਜਾਂਚੋ ਅਤੇ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ।</string>
+  <string name="encrypted_call_fallback_message"><xliff:g id="reason">%1$s</xliff:g>\n\nਆਮ ਮੋਬਾਈਲ ਕਾਲ ਕਰਨੀ ਹੈ? ਇਸ ਵਿੱਚ dumber.chat ਦੀ ਇਨਕ੍ਰਿਪਸ਼ਨ ਨਹੀਂ ਵਰਤੀ ਜਾਵੇਗੀ।</string>
+  <string name="encrypted_call_fallback_title">ਆਮ ਕਾਲ ਵਰਤਣੀ ਹੈ?</string>
+  <string name="encrypted_call_use_regular">ਆਮ ਕਾਲ ਵਰਤੋ</string>
+  <string name="encrypted_call_connection_label">ਇਨਕ੍ਰਿਪਟ ਕੀਤੀ ਕਾਲ</string>
+  <string name="encrypted_call_phone_account_label">ਇਨਕ੍ਰਿਪਟ ਕੀਤੀ ਕਾਲ · <xliff:g id="phone" example="+12025550123">%1$s</xliff:g></string>
+</resources>

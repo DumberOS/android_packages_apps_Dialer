@@ -5,4 +5,7 @@
   <string name="notification_channel_missed_call">Пропуснати обаждания</string>
   <string name="notification_channel_voicemail">Гласови съобщения</string>
   <string name="notification_channel_misc">По подразбиране</string>
+
+  <!-- Encrypted calling and call-screen controls. -->
+  <string name="notification_channel_encrypted_call">Шифровани обаждания</string>
 </resources>

@@ -122,7 +122,9 @@ public final class CallManager {
                   for (CallAccount a : loaded) {
                     ids.add(a.id);
                     PhoneAccount p =
-                        PhoneAccount.builder(handle(a.id), "Encrypted call · " + a.phone)
+                        PhoneAccount.builder(
+                            handle(a.id),
+                            context.getString(R.string.encrypted_call_phone_account_label, a.phone))
                             .setCapabilities(PhoneAccount.CAPABILITY_CALL_PROVIDER)
                             .setSupportedUriSchemes(Collections.singletonList(SCHEME))
                             .setAddress(Uri.fromParts("tel", a.phone, null))
@@ -446,7 +448,8 @@ public final class CallManager {
     c.setCallerDisplayName(a.phone, TelecomManager.PRESENTATION_ALLOWED);
     c.setAudioModeIsVoip(true);
     c.setConnectionCapabilities(Connection.CAPABILITY_MUTE);
-    c.setStatusHints(new StatusHints("Encrypted call", null, null));
+    c.setStatusHints(
+        new StatusHints(context.getString(R.string.encrypted_call_connection_label), null, null));
     if (a.connected) c.setActive();
     else if (incoming) c.setRinging();
     else {

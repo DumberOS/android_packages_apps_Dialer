@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="encrypted_call_failed">Simu iliyosimbwa kwa njia fiche haikuweza kuunganishwa.</string>
+  <string name="encrypted_call_checking">Inakagua upatikanaji wa simu zilizosimbwa kwa njia fiche.</string>
+  <string name="encrypted_call_make_regular">Piga simu ya kawaida</string>
+  <string name="encrypted_call_messaging_unavailable">Haikuweza kuunganisha na programu ya Ujumbe kwa simu zilizosimbwa kwa njia fiche.</string>
+  <string name="encrypted_call_sim_disabled">Simu zilizosimbwa kwa njia fiche hazijawashwa kwa SIM iliyochaguliwa.</string>
+  <string name="encrypted_call_no_accounts">Hakuna akaunti iliyowashwa ya simu zilizosimbwa kwa njia fiche inayopatikana. Kagua mipangilio ya dumber.chat katika Ujumbe.</string>
+  <string name="encrypted_call_account_title">Akaunti ya simu zilizosimbwa kwa njia fiche</string>
+  <string name="encrypted_call_account_check_failed">Haikuweza kukagua akaunti yako ya simu zilizosimbwa kwa njia fiche.</string>
+  <string name="encrypted_call_recipient_check_failed">Haikuweza kukagua ikiwa mpokeaji huyu anakubali simu zilizosimbwa kwa njia fiche. Kagua muunganisho wako wa intaneti na ujaribu tena.</string>
+  <string name="encrypted_call_fallback_message"><xliff:g id="reason">%1$s</xliff:g>\n\nUngependa kupiga simu ya kawaida ya mtandao wa simu? Haitatumia usimbaji fiche wa dumber.chat.</string>
+  <string name="encrypted_call_fallback_title">Utumie simu ya kawaida?</string>
+  <string name="encrypted_call_use_regular">Tumia simu ya kawaida</string>
+  <string name="encrypted_call_connection_label">Simu iliyosimbwa kwa njia fiche</string>
+  <string name="encrypted_call_phone_account_label">Simu iliyosimbwa kwa njia fiche · <xliff:g id="phone" example="+12025550123">%1$s</xliff:g></string>
+</resources>

@@ -14,4 +14,8 @@
   <string name="incall_label_swap">አገላብጥ</string>
   <string name="incall_label_swap_sim">ሲም ቀይር</string>
   <string name="incall_note_sent">ማስታወሻ ተልኳል</string>
+
+  <!-- Encrypted calling and call-screen controls. -->
+  <string name="incall_label_lock_screen">ማያ ገጹን ቆልፍ</string>
+  <string name="incall_label_minimize">አሳንስ</string>
 </resources>

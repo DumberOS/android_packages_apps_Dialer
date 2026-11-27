@@ -122,4 +122,7 @@
   <string name="call_log_action_remove_spam">Ne šlamštas</string>
   <string name="call_log_action_unblock_number">Panaikinti numerio blokavimą</string>
   <string name="spam_number_call_log_label">Šlamštas</string>
+
+  <!-- Encrypted calling and call-screen controls. -->
+  <string name="encrypted_call_account_label"><xliff:g id="carrier">%1$s</xliff:g> (šifruota)</string>
 </resources>

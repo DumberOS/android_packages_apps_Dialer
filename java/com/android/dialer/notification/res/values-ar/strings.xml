@@ -5,4 +5,7 @@
   <string name="notification_channel_missed_call">المكالمات الفائتة</string>
   <string name="notification_channel_voicemail">رسائل البريد الصوتي</string>
   <string name="notification_channel_misc">تلقائي</string>
+
+  <!-- Encrypted calling and call-screen controls. -->
+  <string name="notification_channel_encrypted_call">المكالمات المشفّرة</string>
 </resources>

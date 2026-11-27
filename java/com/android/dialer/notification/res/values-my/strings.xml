@@ -5,4 +5,7 @@
   <string name="notification_channel_missed_call">လွဲသွားသော ခေါ်ဆိုမှုများ</string>
   <string name="notification_channel_voicemail">အသံစာပို့စနစ်များ</string>
   <string name="notification_channel_misc">မူရင်း</string>
+
+  <!-- Encrypted calling and call-screen controls. -->
+  <string name="notification_channel_encrypted_call">ကုဒ်ဝှက်ထားသော ခေါ်ဆိုမှုများ</string>
 </resources>

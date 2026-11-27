@@ -21,4 +21,7 @@
     <string name="tab_title_call_history" msgid="5191872501729332994">"Историја"</string>
     <string name="tab_title_speed_dial" msgid="1968484500112572774">"Брзо бирање"</string>
     <string name="tab_title_voicemail" msgid="4777655983569268504">"Гов. пошта"</string>
+
+    <!-- Encrypted calling and call-screen controls. -->
+    <string name="tab_title_dialpad">Тастатура</string>
 </resources>

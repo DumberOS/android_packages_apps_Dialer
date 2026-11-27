@@ -14,4 +14,8 @@
   <string name="incall_label_swap">ਅਦਲੋ-ਬਦਲੋ</string>
   <string name="incall_label_swap_sim">ਸਿਮ ਬਦਲੋ</string>
   <string name="incall_note_sent">ਨੋਟ-ਕਥਨ ਭੇਜਿਆ ਗਿਆ</string>
+
+  <!-- Encrypted calling and call-screen controls. -->
+  <string name="incall_label_lock_screen">ਸਕ੍ਰੀਨ ਲਾਕ ਕਰੋ</string>
+  <string name="incall_label_minimize">ਛੋਟਾ ਕਰੋ</string>
 </resources>

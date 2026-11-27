@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="encrypted_call_failed">Panggilan disulitkan tidak dapat disambungkan.</string>
+  <string name="encrypted_call_checking">Menyemak ketersediaan panggilan disulitkan.</string>
+  <string name="encrypted_call_make_regular">Buat panggilan biasa</string>
+  <string name="encrypted_call_messaging_unavailable">Tidak dapat menyambung ke Mesej untuk panggilan disulitkan.</string>
+  <string name="encrypted_call_sim_disabled">Panggilan disulitkan tidak didayakan untuk SIM yang dipilih.</string>
+  <string name="encrypted_call_no_accounts">Tiada akaun panggilan disulitkan yang didayakan tersedia. Semak tetapan dumber.chat dalam Mesej.</string>
+  <string name="encrypted_call_account_title">Akaun panggilan disulitkan</string>
+  <string name="encrypted_call_account_check_failed">Akaun panggilan disulitkan anda tidak dapat disemak.</string>
+  <string name="encrypted_call_recipient_check_failed">Sokongan panggilan disulitkan penerima ini tidak dapat disemak. Semak sambungan Internet anda dan cuba lagi.</string>
+  <string name="encrypted_call_fallback_message"><xliff:g id="reason">%1$s</xliff:g>\n\nBuat panggilan selular biasa? Panggilan ini tidak akan menggunakan penyulitan dumber.chat.</string>
+  <string name="encrypted_call_fallback_title">Gunakan panggilan biasa?</string>
+  <string name="encrypted_call_use_regular">Gunakan panggilan biasa</string>
+  <string name="encrypted_call_connection_label">Panggilan disulitkan</string>
+  <string name="encrypted_call_phone_account_label">Panggilan disulitkan · <xliff:g id="phone" example="+12025550123">%1$s</xliff:g></string>
+</resources>

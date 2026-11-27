@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="encrypted_call_failed">Δεν ήταν δυνατή η σύνδεση της κρυπτογραφημένης κλήσης.</string>
+  <string name="encrypted_call_checking">Έλεγχος διαθεσιμότητας κρυπτογραφημένων κλήσεων.</string>
+  <string name="encrypted_call_make_regular">Πραγματοποίηση κανονικής κλήσης</string>
+  <string name="encrypted_call_messaging_unavailable">Δεν ήταν δυνατή η σύνδεση με τα Μηνύματα για κρυπτογραφημένες κλήσεις.</string>
+  <string name="encrypted_call_sim_disabled">Οι κρυπτογραφημένες κλήσεις δεν είναι ενεργοποιημένες για την επιλεγμένη SIM.</string>
+  <string name="encrypted_call_no_accounts">Δεν υπάρχει διαθέσιμος ενεργοποιημένος λογαριασμός κρυπτογραφημένων κλήσεων. Ελέγξτε τις ρυθμίσεις του dumber.chat στα Μηνύματα.</string>
+  <string name="encrypted_call_account_title">Λογαριασμός κρυπτογραφημένων κλήσεων</string>
+  <string name="encrypted_call_account_check_failed">Δεν ήταν δυνατός ο έλεγχος του λογαριασμού σας για κρυπτογραφημένες κλήσεις.</string>
+  <string name="encrypted_call_recipient_check_failed">Δεν ήταν δυνατός ο έλεγχος υποστήριξης κρυπτογραφημένων κλήσεων για αυτόν τον παραλήπτη. Ελέγξτε τη σύνδεσή σας στο διαδίκτυο και δοκιμάστε ξανά.</string>
+  <string name="encrypted_call_fallback_message"><xliff:g id="reason">%1$s</xliff:g>\n\nΝα πραγματοποιηθεί κανονική κλήση κινητής τηλεφωνίας; Δεν θα χρησιμοποιεί την κρυπτογράφηση του dumber.chat.</string>
+  <string name="encrypted_call_fallback_title">Να χρησιμοποιηθεί κανονική κλήση;</string>
+  <string name="encrypted_call_use_regular">Χρήση κανονικής κλήσης</string>
+  <string name="encrypted_call_connection_label">Κρυπτογραφημένη κλήση</string>
+  <string name="encrypted_call_phone_account_label">Κρυπτογραφημένη κλήση · <xliff:g id="phone" example="+12025550123">%1$s</xliff:g></string>
+</resources>

@@ -23,4 +23,7 @@
   <string name="contact_grid_incoming_via_template">Մուտքային զանգ %s ցանցից</string>
   <string name="contact_grid_incoming_suspected_spam">Հավանաբար սպամ է</string>
   <string name="contact_grid_callback_number">Այս հեռախոսի համարը՝ %1$s</string>
+
+  <!-- Encrypted calling and call-screen controls. -->
+  <string name="incall_establishing_encrypted_call">Զանգը միացվում է…</string>
 </resources>

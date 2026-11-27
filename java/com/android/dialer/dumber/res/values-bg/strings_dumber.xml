@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="encrypted_call_failed">Шифрованото обаждане не можа да се свърже.</string>
+  <string name="encrypted_call_checking">Проверява се наличността на шифровани обаждания.</string>
+  <string name="encrypted_call_make_regular">Осъществяване на обикновено обаждане</string>
+  <string name="encrypted_call_messaging_unavailable">Неуспешно свързване със „Съобщения“ за шифровани обаждания.</string>
+  <string name="encrypted_call_sim_disabled">Шифрованите обаждания не са активирани за избраната SIM карта.</string>
+  <string name="encrypted_call_no_accounts">Няма наличен активиран профил за шифровани обаждания. Проверете настройките на dumber.chat в „Съобщения“.</string>
+  <string name="encrypted_call_account_title">Профил за шифровани обаждания</string>
+  <string name="encrypted_call_account_check_failed">Профилът ви за шифровани обаждания не можа да бъде проверен.</string>
+  <string name="encrypted_call_recipient_check_failed">Не можа да се провери дали този получател поддържа шифровани обаждания. Проверете връзката си с интернет и опитайте отново.</string>
+  <string name="encrypted_call_fallback_message"><xliff:g id="reason">%1$s</xliff:g>\n\nДа се осъществи ли обикновено мобилно обаждане? То няма да използва шифроването на dumber.chat.</string>
+  <string name="encrypted_call_fallback_title">Да се използва ли обикновено обаждане?</string>
+  <string name="encrypted_call_use_regular">Използване на обикновено обаждане</string>
+  <string name="encrypted_call_connection_label">Шифровано обаждане</string>
+  <string name="encrypted_call_phone_account_label">Шифровано обаждане · <xliff:g id="phone" example="+12025550123">%1$s</xliff:g></string>
+</resources>

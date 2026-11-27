@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="encrypted_call_failed">Шифрланған қоңырау қосылмады.</string>
+  <string name="encrypted_call_checking">Шифрланған қоңыраудың қолжетімділігі тексерілуде.</string>
+  <string name="encrypted_call_make_regular">Кәдімгі қоңырау шалу</string>
+  <string name="encrypted_call_messaging_unavailable">Шифрланған қоңыраулар үшін Хабарлар қолданбасына қосылу мүмкін болмады.</string>
+  <string name="encrypted_call_sim_disabled">Таңдалған SIM картасында шифрланған қоңыраулар қосылмаған.</string>
+  <string name="encrypted_call_no_accounts">Қосылған шифрланған қоңырау есептік жазбасы қолжетімді емес. Хабарлар қолданбасындағы dumber.chat параметрлерін тексеріңіз.</string>
+  <string name="encrypted_call_account_title">Шифрланған қоңырау есептік жазбасы</string>
+  <string name="encrypted_call_account_check_failed">Шифрланған қоңырау есептік жазбаңызды тексеру мүмкін болмады.</string>
+  <string name="encrypted_call_recipient_check_failed">Бұл алушының шифрланған қоңырауларды қолдайтынын тексеру мүмкін болмады. Интернет байланысын тексеріп, әрекетті қайталаңыз.</string>
+  <string name="encrypted_call_fallback_message"><xliff:g id="reason">%1$s</xliff:g>\n\nКәдімгі ұялы қоңырау шалынсын ба? Ол dumber.chat шифрлауын қолданбайды.</string>
+  <string name="encrypted_call_fallback_title">Кәдімгі қоңырау қолданылсын ба?</string>
+  <string name="encrypted_call_use_regular">Кәдімгі қоңырауды қолдану</string>
+  <string name="encrypted_call_connection_label">Шифрланған қоңырау</string>
+  <string name="encrypted_call_phone_account_label">Шифрланған қоңырау · <xliff:g id="phone" example="+12025550123">%1$s</xliff:g></string>
+</resources>

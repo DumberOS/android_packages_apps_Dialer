@@ -14,4 +14,8 @@
   <string name="incall_label_swap">ဖလှယ်ရန်</string>
   <string name="incall_label_swap_sim">ဆင်းမ်ကဒ် ပြောင်းရန်</string>
   <string name="incall_note_sent">မှတ်စုပို့ပြီးပါပြီ</string>
+
+  <!-- Encrypted calling and call-screen controls. -->
+  <string name="incall_label_lock_screen">မျက်နှာပြင် လော့ခ်ချရန်</string>
+  <string name="incall_label_minimize">ချုံ့ရန်</string>
 </resources>

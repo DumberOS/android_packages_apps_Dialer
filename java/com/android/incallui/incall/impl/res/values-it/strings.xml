@@ -14,4 +14,8 @@
   <string name="incall_label_swap">Scambia</string>
   <string name="incall_label_swap_sim">Cambia SIM</string>
   <string name="incall_note_sent">Nota inviata</string>
+
+  <!-- Encrypted calling and call-screen controls. -->
+  <string name="incall_label_lock_screen">Blocca schermo</string>
+  <string name="incall_label_minimize">Riduci</string>
 </resources>

@@ -5,4 +5,7 @@
   <string name="notification_channel_missed_call">Прапушчаныя выклікі</string>
   <string name="notification_channel_voicemail">Галасавая пошта</string>
   <string name="notification_channel_misc">Стандартны</string>
+
+  <!-- Encrypted calling and call-screen controls. -->
+  <string name="notification_channel_encrypted_call">Зашыфраваныя выклікі</string>
 </resources>

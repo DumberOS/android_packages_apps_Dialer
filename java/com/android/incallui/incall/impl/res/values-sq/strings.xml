@@ -14,4 +14,8 @@
   <string name="incall_label_swap">Shkëmbe</string>
   <string name="incall_label_swap_sim">Ndrysho kartën SIM</string>
   <string name="incall_note_sent">Shënimi u dërgua</string>
+
+  <!-- Encrypted calling and call-screen controls. -->
+  <string name="incall_label_lock_screen">Kyç ekranin</string>
+  <string name="incall_label_minimize">Minimizo</string>
 </resources>

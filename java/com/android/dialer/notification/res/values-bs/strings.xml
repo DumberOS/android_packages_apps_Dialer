@@ -5,4 +5,7 @@
   <string name="notification_channel_missed_call">Propušteni pozivi</string>
   <string name="notification_channel_voicemail">Poruke govorne pošte</string>
   <string name="notification_channel_misc">Zadano</string>
+
+  <!-- Encrypted calling and call-screen controls. -->
+  <string name="notification_channel_encrypted_call">Šifrirani pozivi</string>
 </resources>

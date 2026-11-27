@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="encrypted_call_failed">تعذّر اتصال المكالمة المشفّرة.</string>
+  <string name="encrypted_call_checking">جارٍ التحقق من توفّر المكالمات المشفّرة.</string>
+  <string name="encrypted_call_make_regular">إجراء مكالمة عادية</string>
+  <string name="encrypted_call_messaging_unavailable">تعذّر الاتصال بتطبيق الرسائل لإجراء مكالمات مشفّرة.</string>
+  <string name="encrypted_call_sim_disabled">المكالمات المشفّرة غير مفعّلة لشريحة SIM المحددة.</string>
+  <string name="encrypted_call_no_accounts">لا يتوفّر حساب مفعّل للمكالمات المشفّرة. تحقّق من إعدادات dumber.chat في تطبيق الرسائل.</string>
+  <string name="encrypted_call_account_title">حساب المكالمات المشفّرة</string>
+  <string name="encrypted_call_account_check_failed">تعذّر التحقق من حسابك للمكالمات المشفّرة.</string>
+  <string name="encrypted_call_recipient_check_failed">تعذّر التحقق من دعم هذا المستلِم للمكالمات المشفّرة. تحقّق من اتصالك بالإنترنت وحاوِل مرة أخرى.</string>
+  <string name="encrypted_call_fallback_message"><xliff:g id="reason">%1$s</xliff:g>\n\nهل تريد إجراء مكالمة خلوية عادية؟ لن تستخدم تشفير dumber.chat.</string>
+  <string name="encrypted_call_fallback_title">هل تريد استخدام مكالمة عادية؟</string>
+  <string name="encrypted_call_use_regular">استخدام مكالمة عادية</string>
+  <string name="encrypted_call_connection_label">مكالمة مشفّرة</string>
+  <string name="encrypted_call_phone_account_label">مكالمة مشفّرة · <xliff:g id="phone" example="+12025550123">%1$s</xliff:g></string>
+</resources>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="encrypted_call_failed">Не удалось установить зашифрованное соединение.</string>
+  <string name="encrypted_call_checking">Проверка доступности зашифрованных вызовов.</string>
+  <string name="encrypted_call_make_regular">Совершить обычный вызов</string>
+  <string name="encrypted_call_messaging_unavailable">Не удалось подключиться к приложению «Сообщения» для зашифрованных вызовов.</string>
+  <string name="encrypted_call_sim_disabled">Зашифрованные вызовы не включены для выбранной SIM-карты.</string>
+  <string name="encrypted_call_no_accounts">Нет доступных включённых аккаунтов для зашифрованных вызовов. Проверьте настройки dumber.chat в приложении «Сообщения».</string>
+  <string name="encrypted_call_account_title">Аккаунт для зашифрованных вызовов</string>
+  <string name="encrypted_call_account_check_failed">Не удалось проверить ваш аккаунт для зашифрованных вызовов.</string>
+  <string name="encrypted_call_recipient_check_failed">Не удалось проверить поддержку зашифрованных вызовов у этого получателя. Проверьте подключение к интернету и повторите попытку.</string>
+  <string name="encrypted_call_fallback_message"><xliff:g id="reason">%1$s</xliff:g>\n\nСовершить обычный сотовый вызов? Шифрование dumber.chat использоваться не будет.</string>
+  <string name="encrypted_call_fallback_title">Использовать обычный вызов?</string>
+  <string name="encrypted_call_use_regular">Использовать обычный вызов</string>
+  <string name="encrypted_call_connection_label">Зашифрованный вызов</string>
+  <string name="encrypted_call_phone_account_label">Зашифрованный вызов · <xliff:g id="phone" example="+12025550123">%1$s</xliff:g></string>
+</resources>

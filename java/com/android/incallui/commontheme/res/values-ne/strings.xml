@@ -16,4 +16,7 @@
   <string name="incall_content_description_video_off">निष्क्रिय भिडियो</string>
   <string name="incall_content_description_swap_video">भिडियो साट्नुहोस्</string>
   <string name="incall_label_speaker">स्पिकर</string>
+
+  <!-- Encrypted calling and call-screen controls. -->
+  <string name="incall_content_description_minimize_call">कल स्क्रिन सानो बनाउनुहोस्</string>
 </resources>

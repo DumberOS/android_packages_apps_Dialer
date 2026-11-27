@@ -23,4 +23,7 @@
   <string name="contact_grid_incoming_via_template">%s හරහා එන</string>
   <string name="contact_grid_incoming_suspected_spam">සැකසහිත අයාචිත තැපැල් අමතන්නා</string>
   <string name="contact_grid_callback_number">මෙම දුරකථනයෙහි අංකය වන්නේ: %1$s</string>
+
+  <!-- Encrypted calling and call-screen controls. -->
+  <string name="incall_establishing_encrypted_call">ඇමතුම සම්බන්ධ කරමින්…</string>
 </resources>

@@ -5,4 +5,7 @@
   <string name="notification_channel_missed_call">שיחות שלא נענו</string>
   <string name="notification_channel_voicemail">הודעות קוליות</string>
   <string name="notification_channel_misc">ברירת מחדל</string>
+
+  <!-- Encrypted calling and call-screen controls. -->
+  <string name="notification_channel_encrypted_call">שיחות מוצפנות</string>
 </resources>

@@ -122,4 +122,7 @@
   <string name="call_log_action_remove_spam">לא ספאם</string>
   <string name="call_log_action_unblock_number">בטל חסימת מספר</string>
   <string name="spam_number_call_log_label">ספאם</string>
+
+  <!-- Encrypted calling and call-screen controls. -->
+  <string name="encrypted_call_account_label"><xliff:g id="carrier">%1$s</xliff:g> (מוצפן)</string>
 </resources>

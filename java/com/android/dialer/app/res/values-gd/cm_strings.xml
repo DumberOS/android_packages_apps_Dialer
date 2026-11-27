@@ -32,4 +32,13 @@
     <string name="call_via_dialog_title">Cuir fòn slighe\u2026</string>
     <string name="call_log_stats_title">Stadastaireachd</string>
     <string name="action_menu_helplines">Loidhnichean-taice</string>
+
+    <!-- Encrypted calling and call-screen controls. -->
+    <string name="encrypted_call_account_label"><xliff:g id="carrier">%1$s</xliff:g> (crioptaichte)</string>
+    <string name="tab_title_dialpad">Pada dìolaidh</string>
+    <string name="notification_channel_encrypted_call">Gairmean crioptaichte</string>
+    <string name="incall_content_description_minimize_call">Fìor-lùghdaich sgrìn a’ ghairm</string>
+    <string name="incall_establishing_encrypted_call">A’ ceangal a’ ghairm…</string>
+    <string name="incall_label_lock_screen">Glais an sgrìn</string>
+    <string name="incall_label_minimize">Fìor-lùghdaich</string>
 </resources>

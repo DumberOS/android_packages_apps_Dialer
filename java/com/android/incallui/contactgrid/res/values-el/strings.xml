@@ -23,4 +23,7 @@
   <string name="contact_grid_incoming_via_template">Εισερχόμενη κλήση μέσω %s</string>
   <string name="contact_grid_incoming_suspected_spam">Πιθανώς ανεπιθύμητος</string>
   <string name="contact_grid_callback_number">Ο αριθμός αυτού του τηλεφώνου: %1$s</string>
+
+  <!-- Encrypted calling and call-screen controls. -->
+  <string name="incall_establishing_encrypted_call">Πραγματοποίηση σύνδεσης…</string>
 </resources>

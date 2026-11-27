@@ -5,4 +5,7 @@
   <string name="notification_channel_missed_call">Tapte anrop</string>
   <string name="notification_channel_voicemail">Talepost</string>
   <string name="notification_channel_misc">Standard</string>
+
+  <!-- Encrypted calling and call-screen controls. -->
+  <string name="notification_channel_encrypted_call">Krypterte anrop</string>
 </resources>

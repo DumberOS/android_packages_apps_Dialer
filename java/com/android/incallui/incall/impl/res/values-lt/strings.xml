@@ -14,4 +14,8 @@
   <string name="incall_label_swap">Sukeisti</string>
   <string name="incall_label_swap_sim">Pak. SIM k.</string>
   <string name="incall_note_sent">Užrašas išsiųstas</string>
+
+  <!-- Encrypted calling and call-screen controls. -->
+  <string name="incall_label_lock_screen">Užrakinti ekraną</string>
+  <string name="incall_label_minimize">Sumažinti</string>
 </resources>

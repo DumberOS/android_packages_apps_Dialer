@@ -14,4 +14,8 @@
   <string name="incall_label_swap">साट्नुहोस्</string>
   <string name="incall_label_swap_sim">SIM बदल्नु…</string>
   <string name="incall_note_sent">टिपोट पठाइयो</string>
+
+  <!-- Encrypted calling and call-screen controls. -->
+  <string name="incall_label_lock_screen">स्क्रिन लक गर्नुहोस्</string>
+  <string name="incall_label_minimize">सानो बनाउनुहोस्</string>
 </resources>

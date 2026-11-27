@@ -14,4 +14,8 @@
   <string name="incall_label_swap">Wisselen</string>
   <string name="incall_label_swap_sim">Sim wijzigen</string>
   <string name="incall_note_sent">Notitie verzonden</string>
+
+  <!-- Encrypted calling and call-screen controls. -->
+  <string name="incall_label_lock_screen">Scherm vergrendelen</string>
+  <string name="incall_label_minimize">Minimaliseren</string>
 </resources>

@@ -23,4 +23,7 @@
   <string name="contact_grid_incoming_via_template">واردة عبر %s</string>
   <string name="contact_grid_incoming_suspected_spam">اشتباه في متصل غير مرغوب فيه</string>
   <string name="contact_grid_callback_number">رقم الهاتف هذا: %1$s</string>
+
+  <!-- Encrypted calling and call-screen controls. -->
+  <string name="incall_establishing_encrypted_call">جارٍ إنشاء الاتصال…</string>
 </resources>

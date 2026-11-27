@@ -5,4 +5,7 @@
   <string name="notification_channel_missed_call">Dei galduak</string>
   <string name="notification_channel_voicemail">Ahots-mezuak</string>
   <string name="notification_channel_misc">Lehenetsia</string>
+
+  <!-- Encrypted calling and call-screen controls. -->
+  <string name="notification_channel_encrypted_call">Dei enkriptatuak</string>
 </resources>

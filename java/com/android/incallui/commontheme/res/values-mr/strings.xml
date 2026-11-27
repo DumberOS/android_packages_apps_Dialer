@@ -16,4 +16,7 @@
   <string name="incall_content_description_video_off">व्हिडिओ बंद</string>
   <string name="incall_content_description_swap_video">व्हिडिओ बदला</string>
   <string name="incall_label_speaker">स्पीकर</string>
+
+  <!-- Encrypted calling and call-screen controls. -->
+  <string name="incall_content_description_minimize_call">कॉल स्क्रीन लहान करा</string>
 </resources>

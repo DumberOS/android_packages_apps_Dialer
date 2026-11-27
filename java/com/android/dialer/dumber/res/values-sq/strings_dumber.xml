@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="encrypted_call_failed">Thirrja e enkriptuar nuk mund të lidhej.</string>
+  <string name="encrypted_call_checking">Po kontrollohet disponueshmëria e thirrjeve të enkriptuara.</string>
+  <string name="encrypted_call_make_regular">Bëj një thirrje të zakonshme</string>
+  <string name="encrypted_call_messaging_unavailable">Nuk mund të lidhej me Mesazhet për thirrjet e enkriptuara.</string>
+  <string name="encrypted_call_sim_disabled">Thirrjet e enkriptuara nuk janë aktivizuar për SIM-in e zgjedhur.</string>
+  <string name="encrypted_call_no_accounts">Nuk ka llogari të aktivizuar për thirrje të enkriptuara. Kontrollo cilësimet e dumber.chat te Mesazhet.</string>
+  <string name="encrypted_call_account_title">Llogaria e thirrjeve të enkriptuara</string>
+  <string name="encrypted_call_account_check_failed">Llogaria jote e thirrjeve të enkriptuara nuk mund të kontrollohej.</string>
+  <string name="encrypted_call_recipient_check_failed">Nuk mund të kontrollohej nëse ky marrës mbështet thirrje të enkriptuara. Kontrollo lidhjen e internetit dhe provo sërish.</string>
+  <string name="encrypted_call_fallback_message"><xliff:g id="reason">%1$s</xliff:g>\n\nTë bëhet një thirrje e zakonshme celulare? Nuk do të përdorë enkriptimin e dumber.chat.</string>
+  <string name="encrypted_call_fallback_title">Të përdoret një thirrje e zakonshme?</string>
+  <string name="encrypted_call_use_regular">Përdor thirrje të zakonshme</string>
+  <string name="encrypted_call_connection_label">Thirrje e enkriptuar</string>
+  <string name="encrypted_call_phone_account_label">Thirrje e enkriptuar · <xliff:g id="phone" example="+12025550123">%1$s</xliff:g></string>
+</resources>

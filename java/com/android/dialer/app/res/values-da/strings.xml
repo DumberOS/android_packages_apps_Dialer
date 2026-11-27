@@ -118,4 +118,7 @@
   <string name="call_log_action_remove_spam">Ikke spam</string>
   <string name="call_log_action_unblock_number">Fjern blokering af nummer</string>
   <string name="spam_number_call_log_label">Spam</string>
+
+  <!-- Encrypted calling and call-screen controls. -->
+  <string name="encrypted_call_account_label"><xliff:g id="carrier">%1$s</xliff:g> (krypteret)</string>
 </resources>

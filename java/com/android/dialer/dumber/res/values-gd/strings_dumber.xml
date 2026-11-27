@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="encrypted_call_failed">Cha b’ urrainn dhuinn an gairm crioptaichte a cheangal.</string>
+  <string name="encrypted_call_checking">A’ dearbhadh a bheil gairmean crioptaichte ri fhaighinn.</string>
+  <string name="encrypted_call_make_regular">Dèan gairm àbhaisteach</string>
+  <string name="encrypted_call_messaging_unavailable">Cha b’ urrainn dhuinn ceangal ri Teachdaireachdan airson gairmean crioptaichte.</string>
+  <string name="encrypted_call_sim_disabled">Chan eil gairmean crioptaichte an comas air an SIM a thagh thu.</string>
+  <string name="encrypted_call_no_accounts">Chan eil cunntas an comas airson gairmean crioptaichte ri fhaighinn. Thoir sùil air roghainnean dumber.chat ann an Teachdaireachdan.</string>
+  <string name="encrypted_call_account_title">Cunntas gairmean crioptaichte</string>
+  <string name="encrypted_call_account_check_failed">Cha b’ urrainn dhuinn an cunntas agad airson gairmean crioptaichte a dhearbhadh.</string>
+  <string name="encrypted_call_recipient_check_failed">Cha b’ urrainn dhuinn dearbhadh a bheil an neach-faighinn seo a’ cur taic ri gairmean crioptaichte. Thoir sùil air a’ cheangal eadar-lìn agad is feuch ris a-rithist.</string>
+  <string name="encrypted_call_fallback_message"><xliff:g id="reason">%1$s</xliff:g>\n\nAn dèan thu gairm àbhaisteach air an lìonra fòn-làimhe? Cha chleachd e crioptachadh dumber.chat.</string>
+  <string name="encrypted_call_fallback_title">An cleachd thu gairm àbhaisteach?</string>
+  <string name="encrypted_call_use_regular">Cleachd gairm àbhaisteach</string>
+  <string name="encrypted_call_connection_label">Gairm crioptaichte</string>
+  <string name="encrypted_call_phone_account_label">Gairm crioptaichte · <xliff:g id="phone" example="+12025550123">%1$s</xliff:g></string>
+</resources>

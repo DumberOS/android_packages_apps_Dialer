@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="encrypted_call_failed">Krüpteeritud kõnet ei saanud ühendada.</string>
+  <string name="encrypted_call_checking">Krüpteeritud kõnede saadavuse kontrollimine.</string>
+  <string name="encrypted_call_make_regular">Tee tavaline kõne</string>
+  <string name="encrypted_call_messaging_unavailable">Krüpteeritud kõnede jaoks ei saanud rakendusega Sõnumid ühendust luua.</string>
+  <string name="encrypted_call_sim_disabled">Valitud SIM-kaardil pole krüpteeritud kõned lubatud.</string>
+  <string name="encrypted_call_no_accounts">Ühtegi lubatud krüpteeritud kõnede kontot pole saadaval. Kontrolli dumber.chati seadeid rakenduses Sõnumid.</string>
+  <string name="encrypted_call_account_title">Krüpteeritud kõnede konto</string>
+  <string name="encrypted_call_account_check_failed">Sinu krüpteeritud kõnede kontot ei saanud kontrollida.</string>
+  <string name="encrypted_call_recipient_check_failed">Selle adressaadi krüpteeritud kõnede tuge ei saanud kontrollida. Kontrolli internetiühendust ja proovi uuesti.</string>
+  <string name="encrypted_call_fallback_message"><xliff:g id="reason">%1$s</xliff:g>\n\nKas teha tavaline mobiilikõne? See ei kasuta dumber.chati krüpteeringut.</string>
+  <string name="encrypted_call_fallback_title">Kas kasutada tavalist kõnet?</string>
+  <string name="encrypted_call_use_regular">Kasuta tavalist kõnet</string>
+  <string name="encrypted_call_connection_label">Krüpteeritud kõne</string>
+  <string name="encrypted_call_phone_account_label">Krüpteeritud kõne · <xliff:g id="phone" example="+12025550123">%1$s</xliff:g></string>
+</resources>

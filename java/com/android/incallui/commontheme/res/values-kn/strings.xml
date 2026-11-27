@@ -16,4 +16,7 @@
   <string name="incall_content_description_video_off">ವೀಡಿಯೊ ಆಫ್</string>
   <string name="incall_content_description_swap_video">ವೀಡಿಯೊ ಬದಲಾಯಿಸಿ</string>
   <string name="incall_label_speaker">ಸ್ಪೀಕರ್‌</string>
+
+  <!-- Encrypted calling and call-screen controls. -->
+  <string name="incall_content_description_minimize_call">ಕರೆ ಪರದೆಯನ್ನು ಚಿಕ್ಕದಾಗಿಸಿ</string>
 </resources>

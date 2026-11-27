@@ -14,4 +14,8 @@
   <string name="incall_label_swap">Солих</string>
   <string name="incall_label_swap_sim">SIM өөрчлөх</string>
   <string name="incall_note_sent">Тэмдэглэлийг илгээсэн</string>
+
+  <!-- Encrypted calling and call-screen controls. -->
+  <string name="incall_label_lock_screen">Дэлгэц түгжих</string>
+  <string name="incall_label_minimize">Жижигрүүлэх</string>
 </resources>

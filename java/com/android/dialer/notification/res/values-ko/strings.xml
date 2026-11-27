@@ -5,4 +5,7 @@
   <string name="notification_channel_missed_call">부재중 전화</string>
   <string name="notification_channel_voicemail">음성사서함</string>
   <string name="notification_channel_misc">기본</string>
+
+  <!-- Encrypted calling and call-screen controls. -->
+  <string name="notification_channel_encrypted_call">암호화 통화</string>
 </resources>

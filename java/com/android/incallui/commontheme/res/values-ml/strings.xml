@@ -16,4 +16,7 @@
   <string name="incall_content_description_video_off">വീഡിയോ ഓഫാണ്</string>
   <string name="incall_content_description_swap_video">വീഡിയോ സ്വാപ്പുചെയ്യുക</string>
   <string name="incall_label_speaker">സ്പീക്കർ</string>
+
+  <!-- Encrypted calling and call-screen controls. -->
+  <string name="incall_content_description_minimize_call">കോൾ സ്‌ക്രീൻ ചെറുതാക്കുക</string>
 </resources>

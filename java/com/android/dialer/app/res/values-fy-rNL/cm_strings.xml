@@ -31,4 +31,13 @@
     <string name="call_via">Belje fia</string>
     <string name="call_via_dialog_title">Belje fia\u2026</string>
     <string name="call_log_stats_title">Statistiken</string>
+
+    <!-- Encrypted calling and call-screen controls. -->
+    <string name="encrypted_call_account_label"><xliff:g id="carrier">%1$s</xliff:g> (fersifere)</string>
+    <string name="tab_title_dialpad">Toetseboerd</string>
+    <string name="notification_channel_encrypted_call">Fersifere oproppen</string>
+    <string name="incall_content_description_minimize_call">Opropskerm minimalisearje</string>
+    <string name="incall_establishing_encrypted_call">Oprop ferbine…</string>
+    <string name="incall_label_lock_screen">Skerm beskoattelje</string>
+    <string name="incall_label_minimize">Minimalisearje</string>
 </resources>

@@ -5,4 +5,7 @@
   <string name="notification_channel_missed_call">Połączenia nieodebrane</string>
   <string name="notification_channel_voicemail">Wiadomości głosowe</string>
   <string name="notification_channel_misc">Domyślny</string>
+
+  <!-- Encrypted calling and call-screen controls. -->
+  <string name="notification_channel_encrypted_call">Połączenia szyfrowane</string>
 </resources>

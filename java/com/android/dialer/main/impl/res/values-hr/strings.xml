@@ -21,4 +21,7 @@
     <string name="tab_title_call_history" msgid="5191872501729332994">"Povijest poziva"</string>
     <string name="tab_title_speed_dial" msgid="1968484500112572774">"Brzo biranje"</string>
     <string name="tab_title_voicemail" msgid="4777655983569268504">"Govorna pošta"</string>
+
+    <!-- Encrypted calling and call-screen controls. -->
+    <string name="tab_title_dialpad">Tipkovnica</string>
 </resources>

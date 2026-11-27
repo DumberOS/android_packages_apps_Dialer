@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="encrypted_call_failed">ကုဒ်ဝှက်ထားသော ခေါ်ဆိုမှုကို ချိတ်ဆက်၍မရပါ။</string>
+  <string name="encrypted_call_checking">ကုဒ်ဝှက်ထားသော ခေါ်ဆိုမှု ရနိုင်မှုကို စစ်ဆေးနေသည်။</string>
+  <string name="encrypted_call_make_regular">ပုံမှန်ဖုန်းခေါ်ရန်</string>
+  <string name="encrypted_call_messaging_unavailable">ကုဒ်ဝှက်ထားသော ခေါ်ဆိုမှုများအတွက် မက်ဆေ့ဂျ်အက်ပ်သို့ ချိတ်ဆက်၍မရပါ။</string>
+  <string name="encrypted_call_sim_disabled">ရွေးထားသော SIM အတွက် ကုဒ်ဝှက်ထားသော ခေါ်ဆိုမှုများကို ဖွင့်မထားပါ။</string>
+  <string name="encrypted_call_no_accounts">ဖွင့်ထားသော ကုဒ်ဝှက်ခေါ်ဆိုမှုအကောင့် မရှိပါ။ မက်ဆေ့ဂျ်အက်ပ်ရှိ dumber.chat ဆက်တင်များကို စစ်ဆေးပါ။</string>
+  <string name="encrypted_call_account_title">ကုဒ်ဝှက်ခေါ်ဆိုမှုအကောင့်</string>
+  <string name="encrypted_call_account_check_failed">သင့်ကုဒ်ဝှက်ခေါ်ဆိုမှုအကောင့်ကို စစ်ဆေး၍မရပါ။</string>
+  <string name="encrypted_call_recipient_check_failed">ဤလက်ခံသူက ကုဒ်ဝှက်ထားသော ခေါ်ဆိုမှုများကို ပံ့ပိုးခြင်းရှိမရှိ စစ်ဆေး၍မရပါ။ သင့်အင်တာနက်ချိတ်ဆက်မှုကို စစ်ဆေးပြီး ထပ်စမ်းကြည့်ပါ။</string>
+  <string name="encrypted_call_fallback_message"><xliff:g id="reason">%1$s</xliff:g>\n\nပုံမှန်မိုဘိုင်းဖုန်းခေါ်မလား။ dumber.chat ကုဒ်ဝှက်စနစ်ကို အသုံးပြုမည်မဟုတ်ပါ။</string>
+  <string name="encrypted_call_fallback_title">ပုံမှန်ခေါ်ဆိုမှုကို သုံးမလား။</string>
+  <string name="encrypted_call_use_regular">ပုံမှန်ခေါ်ဆိုမှု သုံးရန်</string>
+  <string name="encrypted_call_connection_label">ကုဒ်ဝှက်ထားသော ခေါ်ဆိုမှု</string>
+  <string name="encrypted_call_phone_account_label">ကုဒ်ဝှက်ထားသော ခေါ်ဆိုမှု · <xliff:g id="phone" example="+12025550123">%1$s</xliff:g></string>
+</resources>

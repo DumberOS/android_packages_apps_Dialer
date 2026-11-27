@@ -14,4 +14,8 @@
   <string name="incall_label_swap">ສະຫຼັບສາຍ</string>
   <string name="incall_label_swap_sim">ປ່ຽນຊິມ</string>
   <string name="incall_note_sent">ສົ່ງບັນທຶກແລ້ວ</string>
+
+  <!-- Encrypted calling and call-screen controls. -->
+  <string name="incall_label_lock_screen">ລັອກໜ້າຈໍ</string>
+  <string name="incall_label_minimize">ຫຍໍ້</string>
 </resources>

@@ -34,4 +34,13 @@
     <string name="action_menu_helplines">Lìnias de agiudu</string>
     <string name="default_dialer_text">Depes cunfigurare su Tecladu comente aplicatzione de telèfonu predefinida pro dd\'impreare.</string>
     <string name="default_dialer_action">Cunfigura comente predeterminadu</string>
+
+    <!-- Encrypted calling and call-screen controls. -->
+    <string name="encrypted_call_account_label"><xliff:g id="carrier">%1$s</xliff:g> (tzifradu)</string>
+    <string name="tab_title_dialpad">Tastiera</string>
+    <string name="notification_channel_encrypted_call">Tzerriadas tzifradas</string>
+    <string name="incall_content_description_minimize_call">Minimiza sa ischermada de sa tzerriada</string>
+    <string name="incall_establishing_encrypted_call">Connessione de sa tzerriada…</string>
+    <string name="incall_label_lock_screen">Bloca s’ischermu</string>
+    <string name="incall_label_minimize">Minimiza</string>
 </resources>

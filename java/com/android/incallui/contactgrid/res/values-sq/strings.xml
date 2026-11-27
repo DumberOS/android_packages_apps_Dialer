@@ -23,4 +23,7 @@
   <string name="contact_grid_incoming_via_template">Telefonatë hyrëse nëpërmjet %s</string>
   <string name="contact_grid_incoming_suspected_spam">Telefonues i dyshuar si i padëshiruar</string>
   <string name="contact_grid_callback_number">Numri i këtij telefoni: %1$s</string>
+
+  <!-- Encrypted calling and call-screen controls. -->
+  <string name="incall_establishing_encrypted_call">Po lidhet thirrja…</string>
 </resources>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="encrypted_call_failed">Nun se pudo conectar la llamada cifrada.</string>
+  <string name="encrypted_call_checking">Comprobando la disponibilidá de llamaes cifraes.</string>
+  <string name="encrypted_call_make_regular">Facer una llamada normal</string>
+  <string name="encrypted_call_messaging_unavailable">Nun se pudo conectar con Mensaxes pa les llamaes cifraes.</string>
+  <string name="encrypted_call_sim_disabled">Les llamaes cifraes nun tán activaes pa la SIM esbillada.</string>
+  <string name="encrypted_call_no_accounts">Nun hai nenguna cuenta activada de llamaes cifraes disponible. Comprueba la configuración de dumber.chat en Mensaxes.</string>
+  <string name="encrypted_call_account_title">Cuenta de llamaes cifraes</string>
+  <string name="encrypted_call_account_check_failed">Nun se pudo comprobar la to cuenta de llamaes cifraes.</string>
+  <string name="encrypted_call_recipient_check_failed">Nun se pudo comprobar si esti destinatariu almite llamaes cifraes. Comprueba la conexón a Internet y volvi intentalo.</string>
+  <string name="encrypted_call_fallback_message"><xliff:g id="reason">%1$s</xliff:g>\n\n¿Facer una llamada móvil normal? Nun va usar el cifráu de dumber.chat.</string>
+  <string name="encrypted_call_fallback_title">¿Usar una llamada normal?</string>
+  <string name="encrypted_call_use_regular">Usar una llamada normal</string>
+  <string name="encrypted_call_connection_label">Llamada cifrada</string>
+  <string name="encrypted_call_phone_account_label">Llamada cifrada · <xliff:g id="phone" example="+12025550123">%1$s</xliff:g></string>
+</resources>

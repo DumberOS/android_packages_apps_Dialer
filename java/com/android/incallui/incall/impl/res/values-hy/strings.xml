@@ -14,4 +14,8 @@
   <string name="incall_label_swap">Փոխարկել</string>
   <string name="incall_label_swap_sim">Փոխել SIM-ը</string>
   <string name="incall_note_sent">Գրառումն ուղարկվեց</string>
+
+  <!-- Encrypted calling and call-screen controls. -->
+  <string name="incall_label_lock_screen">Կողպել էկրանը</string>
+  <string name="incall_label_minimize">Նվազեցնել</string>
 </resources>

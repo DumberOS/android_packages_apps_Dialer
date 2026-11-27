@@ -25,4 +25,13 @@
     <string name="call_via">Siwel s</string>
     <string name="call_via_dialog_title">Siwel s\u2026</string>
     <string name="call_log_stats_title">Tiddadanin</string>
+
+    <!-- Encrypted calling and call-screen controls. -->
+    <string name="encrypted_call_account_label"><xliff:g id="carrier">%1$s</xliff:g> (yettwawgelhen)</string>
+    <string name="tab_title_dialpad">Tafelwit n usuḍen</string>
+    <string name="notification_channel_encrypted_call">Isawalen iwgelhanen</string>
+    <string name="incall_content_description_minimize_call">Simẓi agdil n usiwel</string>
+    <string name="incall_establishing_encrypted_call">Asiwel yettqqen…</string>
+    <string name="incall_label_lock_screen">Sekkeṛ agdil</string>
+    <string name="incall_label_minimize">Simẓi</string>
 </resources>

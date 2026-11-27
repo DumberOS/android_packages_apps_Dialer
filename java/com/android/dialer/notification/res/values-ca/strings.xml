@@ -5,4 +5,7 @@
   <string name="notification_channel_missed_call">Trucades perdudes</string>
   <string name="notification_channel_voicemail">Missatges de veu</string>
   <string name="notification_channel_misc">Predeterminat</string>
+
+  <!-- Encrypted calling and call-screen controls. -->
+  <string name="notification_channel_encrypted_call">Trucades xifrades</string>
 </resources>

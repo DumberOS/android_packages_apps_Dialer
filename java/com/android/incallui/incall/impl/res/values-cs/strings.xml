@@ -14,4 +14,8 @@
   <string name="incall_label_swap">Přepnout</string>
   <string name="incall_label_swap_sim">Změnit SIM kartu</string>
   <string name="incall_note_sent">Poznámka byla odeslána</string>
+
+  <!-- Encrypted calling and call-screen controls. -->
+  <string name="incall_label_lock_screen">Zamknout obrazovku</string>
+  <string name="incall_label_minimize">Minimalizovat</string>
 </resources>

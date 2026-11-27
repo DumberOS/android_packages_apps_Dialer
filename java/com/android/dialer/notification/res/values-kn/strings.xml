@@ -5,4 +5,7 @@
   <string name="notification_channel_missed_call">ಮಿಸ್ಡ್‌ ಕರೆಗಳು</string>
   <string name="notification_channel_voicemail">ಧ್ವನಿಮೇಲ್‌ಗಳು</string>
   <string name="notification_channel_misc">ಡಿಫಾಲ್ಟ್</string>
+
+  <!-- Encrypted calling and call-screen controls. -->
+  <string name="notification_channel_encrypted_call">ಎನ್‌ಕ್ರಿಪ್ಟ್ ಮಾಡಿದ ಕರೆಗಳು</string>
 </resources>

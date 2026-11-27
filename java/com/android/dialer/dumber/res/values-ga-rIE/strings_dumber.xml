@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="encrypted_call_failed">Níorbh fhéidir an glao criptithe a nascadh.</string>
+  <string name="encrypted_call_checking">Infhaighteacht glaonna criptithe á seiceáil.</string>
+  <string name="encrypted_call_make_regular">Déan gnáthghlao</string>
+  <string name="encrypted_call_messaging_unavailable">Níorbh fhéidir ceangal le Teachtaireachtaí le haghaidh glaonna criptithe.</string>
+  <string name="encrypted_call_sim_disabled">Níl glaonna criptithe cumasaithe don SIM roghnaithe.</string>
+  <string name="encrypted_call_no_accounts">Níl aon chuntas cumasaithe le haghaidh glaonna criptithe ar fáil. Seiceáil socruithe dumber.chat in Teachtaireachtaí.</string>
+  <string name="encrypted_call_account_title">Cuntas glaonna criptithe</string>
+  <string name="encrypted_call_account_check_failed">Níorbh fhéidir do chuntas glaonna criptithe a sheiceáil.</string>
+  <string name="encrypted_call_recipient_check_failed">Níorbh fhéidir a sheiceáil an dtacaíonn an faighteoir seo le glaonna criptithe. Seiceáil do cheangal idirlín agus bain triail eile as.</string>
+  <string name="encrypted_call_fallback_message"><xliff:g id="reason">%1$s</xliff:g>\n\nDéan gnáthghlao soghluaiste? Ní úsáidfidh sé criptiú dumber.chat.</string>
+  <string name="encrypted_call_fallback_title">Úsáid gnáthghlao?</string>
+  <string name="encrypted_call_use_regular">Úsáid gnáthghlao</string>
+  <string name="encrypted_call_connection_label">Glao criptithe</string>
+  <string name="encrypted_call_phone_account_label">Glao criptithe · <xliff:g id="phone" example="+12025550123">%1$s</xliff:g></string>
+</resources>

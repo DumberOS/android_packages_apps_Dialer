@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="encrypted_call_failed">암호화 통화를 연결하지 못했습니다.</string>
+  <string name="encrypted_call_checking">암호화 통화 사용 가능 여부를 확인하는 중입니다.</string>
+  <string name="encrypted_call_make_regular">일반 통화 걸기</string>
+  <string name="encrypted_call_messaging_unavailable">암호화 통화를 위해 메시지 앱에 연결하지 못했습니다.</string>
+  <string name="encrypted_call_sim_disabled">선택한 SIM에 암호화 통화가 사용 설정되어 있지 않습니다.</string>
+  <string name="encrypted_call_no_accounts">사용 설정된 암호화 통화 계정이 없습니다. 메시지 앱에서 dumber.chat 설정을 확인하세요.</string>
+  <string name="encrypted_call_account_title">암호화 통화 계정</string>
+  <string name="encrypted_call_account_check_failed">암호화 통화 계정을 확인하지 못했습니다.</string>
+  <string name="encrypted_call_recipient_check_failed">이 수신자의 암호화 통화 지원 여부를 확인하지 못했습니다. 인터넷 연결을 확인하고 다시 시도하세요.</string>
+  <string name="encrypted_call_fallback_message"><xliff:g id="reason">%1$s</xliff:g>\n\n일반 이동통신 통화를 걸까요? dumber.chat 암호화가 사용되지 않습니다.</string>
+  <string name="encrypted_call_fallback_title">일반 통화를 사용할까요?</string>
+  <string name="encrypted_call_use_regular">일반 통화 사용</string>
+  <string name="encrypted_call_connection_label">암호화 통화</string>
+  <string name="encrypted_call_phone_account_label">암호화 통화 · <xliff:g id="phone" example="+12025550123">%1$s</xliff:g></string>
+</resources>

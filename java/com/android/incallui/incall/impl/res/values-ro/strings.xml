@@ -14,4 +14,8 @@
   <string name="incall_label_swap">Schimbați</string>
   <string name="incall_label_swap_sim">Schimbați SIM</string>
   <string name="incall_note_sent">Nota a fost trimisă</string>
+
+  <!-- Encrypted calling and call-screen controls. -->
+  <string name="incall_label_lock_screen">Blochează ecranul</string>
+  <string name="incall_label_minimize">Minimizează</string>
 </resources>

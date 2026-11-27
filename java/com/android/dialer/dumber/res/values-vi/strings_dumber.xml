@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="encrypted_call_failed">Không thể kết nối cuộc gọi được mã hóa.</string>
+  <string name="encrypted_call_checking">Đang kiểm tra khả năng gọi được mã hóa.</string>
+  <string name="encrypted_call_make_regular">Gọi thông thường</string>
+  <string name="encrypted_call_messaging_unavailable">Không thể kết nối với ứng dụng Tin nhắn để gọi được mã hóa.</string>
+  <string name="encrypted_call_sim_disabled">Cuộc gọi được mã hóa chưa được bật cho SIM đã chọn.</string>
+  <string name="encrypted_call_no_accounts">Không có tài khoản gọi được mã hóa nào đã bật và khả dụng. Hãy kiểm tra cài đặt dumber.chat trong Tin nhắn.</string>
+  <string name="encrypted_call_account_title">Tài khoản gọi được mã hóa</string>
+  <string name="encrypted_call_account_check_failed">Không thể kiểm tra tài khoản gọi được mã hóa của bạn.</string>
+  <string name="encrypted_call_recipient_check_failed">Không thể kiểm tra khả năng nhận cuộc gọi được mã hóa của người nhận này. Hãy kiểm tra kết nối Internet rồi thử lại.</string>
+  <string name="encrypted_call_fallback_message"><xliff:g id="reason">%1$s</xliff:g>\n\nThực hiện cuộc gọi di động thông thường? Cuộc gọi sẽ không dùng tính năng mã hóa của dumber.chat.</string>
+  <string name="encrypted_call_fallback_title">Dùng cuộc gọi thông thường?</string>
+  <string name="encrypted_call_use_regular">Dùng cuộc gọi thông thường</string>
+  <string name="encrypted_call_connection_label">Cuộc gọi được mã hóa</string>
+  <string name="encrypted_call_phone_account_label">Cuộc gọi được mã hóa · <xliff:g id="phone" example="+12025550123">%1$s</xliff:g></string>
+</resources>

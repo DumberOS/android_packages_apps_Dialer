@@ -23,4 +23,7 @@
   <string name="contact_grid_incoming_via_template">Ienākošie zvani, ko nodrošina %s</string>
   <string name="contact_grid_incoming_suspected_spam">Nevēlams zvanītājs</string>
   <string name="contact_grid_callback_number">Šis tālruņa numurs: %1$s</string>
+
+  <!-- Encrypted calling and call-screen controls. -->
+  <string name="incall_establishing_encrypted_call">Tiek veidots savienojums…</string>
 </resources>

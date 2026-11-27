@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="encrypted_call_failed">एन्क्रिप्ट केलेला कॉल कनेक्ट होऊ शकला नाही.</string>
+  <string name="encrypted_call_checking">एन्क्रिप्ट केलेल्या कॉलची उपलब्धता तपासत आहे.</string>
+  <string name="encrypted_call_make_regular">सामान्य कॉल करा</string>
+  <string name="encrypted_call_messaging_unavailable">एन्क्रिप्ट केलेल्या कॉलसाठी मेसेज ॲपशी कनेक्ट होऊ शकले नाही.</string>
+  <string name="encrypted_call_sim_disabled">निवडलेल्या SIM साठी एन्क्रिप्ट केलेले कॉल सुरू नाहीत.</string>
+  <string name="encrypted_call_no_accounts">एन्क्रिप्ट केलेल्या कॉलचे कोणतेही सुरू असलेले खाते उपलब्ध नाही. मेसेज ॲपमध्ये dumber.chat ची सेटिंग्ज तपासा.</string>
+  <string name="encrypted_call_account_title">एन्क्रिप्ट केलेल्या कॉलचे खाते</string>
+  <string name="encrypted_call_account_check_failed">एन्क्रिप्ट केलेल्या कॉलसाठी तुमचे खाते तपासता आले नाही.</string>
+  <string name="encrypted_call_recipient_check_failed">हा प्राप्तकर्ता एन्क्रिप्ट केलेल्या कॉलना सपोर्ट करतो का हे तपासता आले नाही. तुमचे इंटरनेट कनेक्शन तपासा आणि पुन्हा प्रयत्न करा.</string>
+  <string name="encrypted_call_fallback_message"><xliff:g id="reason">%1$s</xliff:g>\n\nसामान्य मोबाइल कॉल करायचा आहे? त्यामध्ये dumber.chat चे एन्क्रिप्शन वापरले जाणार नाही.</string>
+  <string name="encrypted_call_fallback_title">सामान्य कॉल वापरायचा आहे?</string>
+  <string name="encrypted_call_use_regular">सामान्य कॉल वापरा</string>
+  <string name="encrypted_call_connection_label">एन्क्रिप्ट केलेला कॉल</string>
+  <string name="encrypted_call_phone_account_label">एन्क्रिप्ट केलेला कॉल · <xliff:g id="phone" example="+12025550123">%1$s</xliff:g></string>
+</resources>

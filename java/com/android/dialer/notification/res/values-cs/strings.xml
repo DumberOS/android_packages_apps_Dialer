@@ -5,4 +5,7 @@
   <string name="notification_channel_missed_call">Zmeškané hovory</string>
   <string name="notification_channel_voicemail">Hlasové zprávy</string>
   <string name="notification_channel_misc">Výchozí</string>
+
+  <!-- Encrypted calling and call-screen controls. -->
+  <string name="notification_channel_encrypted_call">Šifrované hovory</string>
 </resources>

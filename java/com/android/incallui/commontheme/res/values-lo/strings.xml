@@ -16,4 +16,7 @@
   <string name="incall_content_description_video_off">ວິດີໂອປິດ</string>
   <string name="incall_content_description_swap_video">ສະຫຼັບວິດີໂອ</string>
   <string name="incall_label_speaker">ລຳໂພງ</string>
+
+  <!-- Encrypted calling and call-screen controls. -->
+  <string name="incall_content_description_minimize_call">ຫຍໍ້ໜ້າຈໍການໂທ</string>
 </resources>

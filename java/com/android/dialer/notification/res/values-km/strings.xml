@@ -5,4 +5,7 @@
   <string name="notification_channel_missed_call">ការ​ហៅ​ដែល​មិន​បាន​ទទួល</string>
   <string name="notification_channel_voicemail">សារ​ជា​សំឡេង</string>
   <string name="notification_channel_misc">លំ​នាំ​ដើម</string>
+
+  <!-- Encrypted calling and call-screen controls. -->
+  <string name="notification_channel_encrypted_call">ការហៅដែលបានអ៊ិនគ្រីប</string>
 </resources>

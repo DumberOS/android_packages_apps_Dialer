@@ -14,4 +14,8 @@
   <string name="incall_label_swap">전환</string>
   <string name="incall_label_swap_sim">SIM 변경</string>
   <string name="incall_note_sent">메모가 전송되었습니다.</string>
+
+  <!-- Encrypted calling and call-screen controls. -->
+  <string name="incall_label_lock_screen">화면 잠금</string>
+  <string name="incall_label_minimize">최소화</string>
 </resources>

@@ -34,4 +34,13 @@
     <string name="action_menu_helplines">Liniis di jutori</string>
     <string name="default_dialer_text">Tu âs di stabilî il Tastierin telefonic come aplicazion di telefon predefinie par doprâle.</string>
     <string name="default_dialer_action">Met come predefinide</string>
+
+    <!-- Encrypted calling and call-screen controls. -->
+    <string name="encrypted_call_account_label"><xliff:g id="carrier">%1$s</xliff:g> (cifrât)</string>
+    <string name="tab_title_dialpad">Tastiere</string>
+    <string name="notification_channel_encrypted_call">Clamadis cifradis</string>
+    <string name="incall_content_description_minimize_call">Minimize la schermade de clamade</string>
+    <string name="incall_establishing_encrypted_call">Daûr a stabilî la clamade…</string>
+    <string name="incall_label_lock_screen">Bloche il schermi</string>
+    <string name="incall_label_minimize">Minimize</string>
 </resources>

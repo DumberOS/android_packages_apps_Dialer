@@ -5,4 +5,7 @@
   <string name="notification_channel_missed_call">Vastamata kõned</string>
   <string name="notification_channel_voicemail">Kõnepostisõnumid</string>
   <string name="notification_channel_misc">Vaikeseade</string>
+
+  <!-- Encrypted calling and call-screen controls. -->
+  <string name="notification_channel_encrypted_call">Krüpteeritud kõned</string>
 </resources>

@@ -14,4 +14,8 @@
   <string name="incall_label_swap">Swap</string>
   <string name="incall_label_swap_sim">Change SIM</string>
   <string name="incall_note_sent">Note sent</string>
+
+  <!-- Encrypted calling and call-screen controls. -->
+  <string name="incall_label_lock_screen">Lock screen</string>
+  <string name="incall_label_minimize">Minimise</string>
 </resources>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="encrypted_call_failed">No est istadu possìbile a connètere sa tzerriada tzifrada.</string>
+  <string name="encrypted_call_checking">Verìfica de sa disponibilidade de tzerriadas tzifradas.</string>
+  <string name="encrypted_call_make_regular">Faghe una tzerriada normale</string>
+  <string name="encrypted_call_messaging_unavailable">No est istadu possìbile a si connètere a Messàgios pro sas tzerriadas tzifradas.</string>
+  <string name="encrypted_call_sim_disabled">Sas tzerriadas tzifradas no sunt atzivadas pro sa SIM seletzionada.</string>
+  <string name="encrypted_call_no_accounts">Nissunu contu atzivadu pro sas tzerriadas tzifradas est disponibile. Controlla sa cunfiguratzione de dumber.chat in Messàgios.</string>
+  <string name="encrypted_call_account_title">Contu de tzerriadas tzifradas</string>
+  <string name="encrypted_call_account_check_failed">No est istadu possìbile a verificare su contu tuo de tzerriadas tzifradas.</string>
+  <string name="encrypted_call_recipient_check_failed">No est istadu possìbile a verificare si custu destinatàriu suportat sas tzerriadas tzifradas. Controlla sa connessione a Internet e torra a proare.</string>
+  <string name="encrypted_call_fallback_message"><xliff:g id="reason">%1$s</xliff:g>\n\nFàghere una tzerriada mòbile normale? No at a impreare sa tzifradura de dumber.chat.</string>
+  <string name="encrypted_call_fallback_title">Impreare una tzerriada normale?</string>
+  <string name="encrypted_call_use_regular">Imprea una tzerriada normale</string>
+  <string name="encrypted_call_connection_label">Tzerriada tzifrada</string>
+  <string name="encrypted_call_phone_account_label">Tzerriada tzifrada · <xliff:g id="phone" example="+12025550123">%1$s</xliff:g></string>
+</resources>

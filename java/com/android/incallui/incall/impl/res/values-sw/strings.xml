@@ -14,4 +14,8 @@
   <string name="incall_label_swap">Badili</string>
   <string name="incall_label_swap_sim">Badilisha SIM</string>
   <string name="incall_note_sent">Dokezo limetumwa</string>
+
+  <!-- Encrypted calling and call-screen controls. -->
+  <string name="incall_label_lock_screen">Funga skrini</string>
+  <string name="incall_label_minimize">Punguza</string>
 </resources>

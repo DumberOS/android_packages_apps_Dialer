@@ -5,4 +5,7 @@
   <string name="notification_channel_missed_call">未接电话</string>
   <string name="notification_channel_voicemail">语音邮件</string>
   <string name="notification_channel_misc">默认</string>
+
+  <!-- Encrypted calling and call-screen controls. -->
+  <string name="notification_channel_encrypted_call">加密通话</string>
 </resources>

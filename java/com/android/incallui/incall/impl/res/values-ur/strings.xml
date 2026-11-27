@@ -14,4 +14,8 @@
   <string name="incall_label_swap">تبادلہ کریں</string>
   <string name="incall_label_swap_sim">‏SIM تبدیل کریں</string>
   <string name="incall_note_sent">نوٹ بھیج دیا گیا</string>
+
+  <!-- Encrypted calling and call-screen controls. -->
+  <string name="incall_label_lock_screen">اسکرین مقفل کریں</string>
+  <string name="incall_label_minimize">چھوٹا کریں</string>
 </resources>

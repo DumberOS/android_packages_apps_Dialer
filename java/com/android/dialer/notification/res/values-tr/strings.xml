@@ -5,4 +5,7 @@
   <string name="notification_channel_missed_call">Cevapsız çağrılar</string>
   <string name="notification_channel_voicemail">Sesli mesajlar</string>
   <string name="notification_channel_misc">Varsayılan</string>
+
+  <!-- Encrypted calling and call-screen controls. -->
+  <string name="notification_channel_encrypted_call">Şifreli aramalar</string>
 </resources>

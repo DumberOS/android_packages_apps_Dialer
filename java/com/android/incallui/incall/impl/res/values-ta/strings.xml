@@ -14,4 +14,8 @@
   <string name="incall_label_swap">மாற்று</string>
   <string name="incall_label_swap_sim">சிம்மை மாற்று</string>
   <string name="incall_note_sent">குறிப்பு அனுப்பப்பட்டது</string>
+
+  <!-- Encrypted calling and call-screen controls. -->
+  <string name="incall_label_lock_screen">திரையைப் பூட்டு</string>
+  <string name="incall_label_minimize">சிறிதாக்கு</string>
 </resources>

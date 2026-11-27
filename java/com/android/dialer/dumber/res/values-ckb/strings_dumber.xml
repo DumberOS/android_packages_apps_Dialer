@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="encrypted_call_failed">پەیوەندییە کۆدکراوەکە نەیتوانی پەیوەست ببێت.</string>
+  <string name="encrypted_call_checking">بەردەستبوونی پەیوەندیی کۆدکراو دەپشکنرێت.</string>
+  <string name="encrypted_call_make_regular">پەیوەندیی ئاسایی بکە</string>
+  <string name="encrypted_call_messaging_unavailable">نەتوانرا بۆ پەیوەندییە کۆدکراوەکان بە ئەپی نامەکانەوە پەیوەست بکرێت.</string>
+  <string name="encrypted_call_sim_disabled">پەیوەندییە کۆدکراوەکان بۆ سیمکارتی هەڵبژێردراو چالاک نەکراون.</string>
+  <string name="encrypted_call_no_accounts">هیچ هەژمارێکی چالاککراوی پەیوەندیی کۆدکراو بەردەست نییە. ڕێکخستنەکانی dumber.chat لە نامەکان بپشکنە.</string>
+  <string name="encrypted_call_account_title">هەژماری پەیوەندیی کۆدکراو</string>
+  <string name="encrypted_call_account_check_failed">نەتوانرا هەژماری پەیوەندیی کۆدکراوی تۆ بپشکنرێت.</string>
+  <string name="encrypted_call_recipient_check_failed">نەتوانرا بپشکنرێت کە ئەم وەرگرە پشتگیریی پەیوەندیی کۆدکراو دەکات یان نا. پەیوەندیی ئینتەرنێتەکەت بپشکنە و دووبارە هەوڵ بدەوە.</string>
+  <string name="encrypted_call_fallback_message"><xliff:g id="reason">%1$s</xliff:g>\n\nپەیوەندییەکی ئاسایی مۆبایل بکرێت؟ کۆدکردنی dumber.chat بەکار ناهێنێت.</string>
+  <string name="encrypted_call_fallback_title">پەیوەندیی ئاسایی بەکاربهێنرێت؟</string>
+  <string name="encrypted_call_use_regular">پەیوەندیی ئاسایی بەکاربهێنە</string>
+  <string name="encrypted_call_connection_label">پەیوەندیی کۆدکراو</string>
+  <string name="encrypted_call_phone_account_label">پەیوەندیی کۆدکراو · <xliff:g id="phone" example="+12025550123">%1$s</xliff:g></string>
+</resources>

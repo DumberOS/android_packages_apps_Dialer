@@ -14,4 +14,8 @@
   <string name="incall_label_swap">החלף</string>
   <string name="incall_label_swap_sim">‏החלפת SIM</string>
   <string name="incall_note_sent">ההערה נשלחה</string>
+
+  <!-- Encrypted calling and call-screen controls. -->
+  <string name="incall_label_lock_screen">נעילת המסך</string>
+  <string name="incall_label_minimize">מזעור</string>
 </resources>

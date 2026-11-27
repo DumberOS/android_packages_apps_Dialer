@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="encrypted_call_failed">Šifrovaný hovor sa nepodarilo spojiť.</string>
+  <string name="encrypted_call_checking">Overovanie dostupnosti šifrovaných hovorov.</string>
+  <string name="encrypted_call_make_regular">Uskutočniť bežný hovor</string>
+  <string name="encrypted_call_messaging_unavailable">Pre šifrované hovory sa nepodarilo pripojiť k aplikácii Správy.</string>
+  <string name="encrypted_call_sim_disabled">Šifrované hovory nie sú pre vybranú SIM kartu povolené.</string>
+  <string name="encrypted_call_no_accounts">Nie je k dispozícii žiadny povolený účet pre šifrované hovory. Skontrolujte nastavenia dumber.chat v aplikácii Správy.</string>
+  <string name="encrypted_call_account_title">Účet pre šifrované hovory</string>
+  <string name="encrypted_call_account_check_failed">Nepodarilo sa overiť váš účet pre šifrované hovory.</string>
+  <string name="encrypted_call_recipient_check_failed">Nepodarilo sa overiť podporu šifrovaných hovorov u tohto príjemcu. Skontrolujte internetové pripojenie a skúste to znova.</string>
+  <string name="encrypted_call_fallback_message"><xliff:g id="reason">%1$s</xliff:g>\n\nUskutočniť bežný mobilný hovor? Nebude používať šifrovanie dumber.chat.</string>
+  <string name="encrypted_call_fallback_title">Použiť bežný hovor?</string>
+  <string name="encrypted_call_use_regular">Použiť bežný hovor</string>
+  <string name="encrypted_call_connection_label">Šifrovaný hovor</string>
+  <string name="encrypted_call_phone_account_label">Šifrovaný hovor · <xliff:g id="phone" example="+12025550123">%1$s</xliff:g></string>
+</resources>

@@ -215,6 +215,7 @@ android_app {
     jni_libs: ["libdumber_webrtc"],
     static_libs: [
         "dumber-call-api",
+        "dialer-dumber-res",
         "dumber-webrtc-java",
         "android-common",
         "androidx.annotation_annotation",

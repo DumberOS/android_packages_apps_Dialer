@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="encrypted_call_failed">شىفىرلانغان چاقىرىش ئۇلىنالمىدى.</string>
+  <string name="encrypted_call_checking">شىفىرلانغان چاقىرىشنىڭ ئىشلىتىلىشچانلىقى تەكشۈرۈلۈۋاتىدۇ.</string>
+  <string name="encrypted_call_make_regular">ئادەتتىكى چاقىرىش قىلىش</string>
+  <string name="encrypted_call_messaging_unavailable">شىفىرلانغان چاقىرىش ئۈچۈن ئۇچۇر ئەپىگە ئۇلىنالمىدى.</string>
+  <string name="encrypted_call_sim_disabled">تاللانغان SIM ئۈچۈن شىفىرلانغان چاقىرىش قوزغىتىلمىغان.</string>
+  <string name="encrypted_call_no_accounts">قوزغىتىلغان شىفىرلانغان چاقىرىش ھېساباتى يوق. ئۇچۇر ئەپىدىكى dumber.chat تەڭشەكلىرىنى تەكشۈرۈڭ.</string>
+  <string name="encrypted_call_account_title">شىفىرلانغان چاقىرىش ھېساباتى</string>
+  <string name="encrypted_call_account_check_failed">شىفىرلانغان چاقىرىش ھېساباتىڭىزنى تەكشۈرەلمىدى.</string>
+  <string name="encrypted_call_recipient_check_failed">بۇ تاپشۇرۇۋالغۇچىنىڭ شىفىرلانغان چاقىرىشنى قوللايدىغانلىقىنى تەكشۈرەلمىدى. تور ئۇلىنىشىڭىزنى تەكشۈرۈپ قايتا سىناڭ.</string>
+  <string name="encrypted_call_fallback_message"><xliff:g id="reason">%1$s</xliff:g>\n\nئادەتتىكى كۆچمە چاقىرىش قىلىنسۇنمۇ؟ بۇ چاقىرىشتا dumber.chat شىفىرلاش ئىشلىتىلمەيدۇ.</string>
+  <string name="encrypted_call_fallback_title">ئادەتتىكى چاقىرىش ئىشلىتىلسۇنمۇ؟</string>
+  <string name="encrypted_call_use_regular">ئادەتتىكى چاقىرىشنى ئىشلىتىش</string>
+  <string name="encrypted_call_connection_label">شىفىرلانغان چاقىرىش</string>
+  <string name="encrypted_call_phone_account_label">شىفىرلانغان چاقىرىش · <xliff:g id="phone" example="+12025550123">%1$s</xliff:g></string>
+</resources>

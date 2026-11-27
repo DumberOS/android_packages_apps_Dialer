@@ -5,4 +5,7 @@
   <string name="notification_channel_missed_call">Chamadas perdidas</string>
   <string name="notification_channel_voicemail">Correios de voz</string>
   <string name="notification_channel_misc">Padrão</string>
+
+  <!-- Encrypted calling and call-screen controls. -->
+  <string name="notification_channel_encrypted_call">Chamadas criptografadas</string>
 </resources>

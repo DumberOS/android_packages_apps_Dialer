@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="encrypted_call_failed">Impussibil coneti la clamade cifrade.</string>
+  <string name="encrypted_call_checking">Daûr a verificâ la disponibilitât des clamadis cifradis.</string>
+  <string name="encrypted_call_make_regular">Fâs une clamade normâl</string>
+  <string name="encrypted_call_messaging_unavailable">Impussibil conetisi a Messaçs pes clamadis cifradis.</string>
+  <string name="encrypted_call_sim_disabled">Lis clamadis cifradis no son abilitadis pe SIM selezionade.</string>
+  <string name="encrypted_call_no_accounts">Nissun account abilitât pes clamadis cifradis al è disponibil. Controle lis impostazions di dumber.chat in Messaçs.</string>
+  <string name="encrypted_call_account_title">Account pes clamadis cifradis</string>
+  <string name="encrypted_call_account_check_failed">Impussibil verificâ il to account pes clamadis cifradis.</string>
+  <string name="encrypted_call_recipient_check_failed">Impussibil verificâ se chest destinatari al supuarte lis clamadis cifradis. Controle la conession a Internet e torne prove.</string>
+  <string name="encrypted_call_fallback_message"><xliff:g id="reason">%1$s</xliff:g>\n\nFâ une clamade celulâr normâl? No doprarà la cifradure di dumber.chat.</string>
+  <string name="encrypted_call_fallback_title">Doprâ une clamade normâl?</string>
+  <string name="encrypted_call_use_regular">Dopre une clamade normâl</string>
+  <string name="encrypted_call_connection_label">Clamade cifrade</string>
+  <string name="encrypted_call_phone_account_label">Clamade cifrade · <xliff:g id="phone" example="+12025550123">%1$s</xliff:g></string>
+</resources>

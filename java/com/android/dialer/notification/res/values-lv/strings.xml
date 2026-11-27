@@ -5,4 +5,7 @@
   <string name="notification_channel_missed_call">Neatbildētie zvani</string>
   <string name="notification_channel_voicemail">Balss pasta ziņojumi</string>
   <string name="notification_channel_misc">Noklusējums</string>
+
+  <!-- Encrypted calling and call-screen controls. -->
+  <string name="notification_channel_encrypted_call">Šifrēti zvani</string>
 </resources>
